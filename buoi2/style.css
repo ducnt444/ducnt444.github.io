@@ -44,9 +44,6 @@ footer {
 
 .copyRight{
     text-align: center;
-}
-
-.copyRight {
     color: gray;
 }
 
@@ -66,7 +63,7 @@ main {
 }
 
 .mainImage {
-    width: 50%;
+    width: 30%;
     margin-right: 2%;
 }
 
@@ -75,7 +72,7 @@ main {
     flex-wrap: nowrap;
 }
 
-.Posts {
+.posts {
     width: 32%;
     padding-bottom: 0px;
     
@@ -101,5 +98,5 @@ main {
 }
 
 .pageTitle {
-    font-size: 1.4em;
+    font-size: 2.5em;
 }
