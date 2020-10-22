@@ -12,34 +12,94 @@ ul {
     flex-direction: row;
     justify-content: space-around;
     padding-left: 0;
+    margin: 2px;
+    height: 30px;
 }
 
-a {
+.navLink {
+    display: block;
     text-decoration: none;
     list-style-type: none;
     color: black;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
 a:hover {
-    color: red;
+    background-color: grey;
+    color: burlywood
 }
 
 li {
-    padding: 10px;
     width: 33%;
     text-align: center;
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 60px;
     text-align: center;
-}
-
-.postImage {
-    width: 300px;
 }
 
 .copyRight{
     text-align: center;
 }
 
+.copyRight {
+    color: gray;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.mainPost {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.mainImage {
+    width: 50%;
+    margin-right: 2%;
+}
+
+.smallPosts {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Posts {
+    width: 32%;
+    padding-bottom: 0px;
+    
+}
+
+#secondPost {
+    padding-left: 1%;
+    padding-right: 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#firstPost {
+    margin-right: 1%;
+}
+
+#thirdPost {
+    margin-left: 1%;
+}
+
+* {
+    background-color: whitesmoke;
+}
+
+.pageTitle {
+    font-size: 1.4em;
+}
