@@ -27,7 +27,7 @@ ul {
     font-weight: 500;
 }
 
-a:hover {
+li a:hover {
     background-color: grey;
     color: burlywood
 }
@@ -35,16 +35,6 @@ a:hover {
 li {
     width: 33%;
     text-align: center;
-}
-
-footer {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.copyRight{
-    text-align: center;
-    color: gray;
 }
 
 main {
@@ -99,4 +89,53 @@ main {
 
 .pageTitle {
     font-size: 2.5em;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    margin-top: 60px;
+
+    
+}
+
+.copyRight{
+    color: gray;
+}
+
+/*
+.contacts {
+    margin-left: 7%;
+    margin-right:7%;
+}
+*/
+
+.contacts a, .social a{
+    text-decoration: none;
+    color: black;
+}
+
+.contacts a:hover, .social a:hover{
+    color: red;
+}
+
+.contacts h3{
+    margin: 6px 0 20px 0;
+   
+}
+
+.telephone h3{
+    margin: 6px 0 20px 0;
+    
+}
+
+.telephone p{
+    margin: 0;
+}
+
+.social h3{
+    margin: 6px 0 20px 0;
+    
 }
