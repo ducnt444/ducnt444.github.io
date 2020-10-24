@@ -26,6 +26,8 @@ header {
   background-color: black;
   display: flex;
   flex-flow: row nowrap;
+  height: 100px;
+  align-items: center;
 }
 
 .top-nav-list {
@@ -35,6 +37,21 @@ header {
 }
 
 .top-nav-items a {
-  color: white;
+  color: #b8b6b4;
+  font-family: "Motiva Sans", Sans-serif;
+  text-transform: uppercase;
 }
 
+.main-logo img{
+  height: 45px;
+}
+
+.main-logo {
+  margin-left: 50px;
+}
+
+.top-nav-container {
+  width: 400px;
+}
+
+.
