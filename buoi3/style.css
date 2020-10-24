@@ -8,3 +8,33 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.page-container {
+  width: 960px;
+  background-color: rosybrown;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.top-nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.top-nav-items a {
+  color: white;
+}
+
