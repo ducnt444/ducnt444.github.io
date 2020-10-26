@@ -356,3 +356,9 @@ footer {
   width: 25%;
   justify-content: space-around;
 }
+
+.error {
+  margin-left: 40px;
+  font-weight: 100;
+  font-family: "Motiva Sans", Sans-serif;
+}
