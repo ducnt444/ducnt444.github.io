@@ -365,6 +365,7 @@ footer {
   flex-flow: row nowrap;
   width: 25%;
   justify-content: space-around;
+  background-color: rgb(red, green, blue);
 }
 
 
