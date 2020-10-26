@@ -106,7 +106,7 @@ header {
   width: 25%;
 }
 
-/* ------style chung toàn bộ main content------ */
+/* ---------------------------style chung toàn bộ main content--------------------------- */
 
 main {
   display: flex;
@@ -263,13 +263,17 @@ main {
   background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
 }
 
+/* ---đổi màu hover lên các items--- */
 .products-link:hover, .discounted-products-link:hover, .more-button a:hover {
   box-shadow: 0 0 10px rgb(218, 218, 218)
 }
+
+/* ---giới hạn kích thước ảnh products--- */
 .products-link img, .discounted-products-link img {
   width: 100%;
 }
 
+/* ---tạo khung cho phần giá--- */
 .products-link p, .discounted-products-link p {
   margin: 0;
   margin: 3px;
@@ -279,6 +283,7 @@ main {
   color: #acdbf5;
 }
 
+/* ---style cho nút see more--- */
 .more-button {
   align-self: flex-end;
   margin-top: 20px;
@@ -292,9 +297,9 @@ main {
   color:  rgb(241, 241, 241);
 }
 
+/* ----------------------------------style cho footer---------------------------------- */
 footer {
   margin-top: 80px;
-  
 }
 
 .copyright {
@@ -362,6 +367,8 @@ footer {
   justify-content: space-around;
 }
 
+
+/* ---------------------------style thông báo lỗi--------------------------- */
 .error {
   margin-left: 40px;
   font-weight: 100;
