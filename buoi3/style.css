@@ -106,7 +106,7 @@ header {
   width: 25%;
 }
 
-/* ------style cho toàn bộ mainr------ */
+/* ------style chung toàn bộ main content------ */
 
 main {
   display: flex;
@@ -227,6 +227,8 @@ main {
   box-shadow: 0 0 10px rgb(218, 218, 218)
 }
 
+/* ---style cho các đề mục--- */
+
 .categories {
   margin-left: 15px;
   margin-right: 15px;
@@ -234,12 +236,14 @@ main {
   flex-flow: column nowrap;
 }
 
+/* ---style cho gói sp: link + không gian bao quanh--- */
 .products {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
 
+/* ---style cho gói link: link là ảnh + giá dạng cột--- */
 .products-link {
   display: flex;
   flex-flow: column wrap;
@@ -249,6 +253,7 @@ main {
   background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
 }
 
+/* ---style cho gói link mục giảm giá: link là ảnh + 2 mức giá dạng row--- */
 .discounted-products-link {
   display: flex;
   flex-flow: row wrap;
