@@ -136,7 +136,7 @@ table {
   margin-top: 5px;
   border: 5px solid rgb(63, 63, 63);
   font-weight: 800;
-  line-height: 40px;
+  line-height: 38px;
   font-size: 18px;
 }
 
@@ -146,6 +146,10 @@ table {
 
 #special-number {
   font-size: 1.5em;
+}
+
+.marked {
+  background-color: rgb(236, 242, 243);
 }
 
 th {
