@@ -299,3 +299,23 @@ footer {
   font-size: 19px;
   font-weight: bold;
 }
+
+#out-link {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e80ec;
+  );
+  height: 100px;
+}
+
+#out-link a {
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+}

@@ -43,6 +43,7 @@ main {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 #left-container img, #left-container h1, #left-container p {
@@ -57,10 +58,9 @@ main {
   width: 183px;
 }
 
-#left-container img:first-of-type {
-  margin-bottom: 30px;
+#logo {
+  margin-bottom: 20px;
 }
-
 
 #left-container {
   display: flex;
@@ -76,7 +76,7 @@ main {
 
 #left-container p {
   font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #recent-login-container {
@@ -113,17 +113,153 @@ main {
 /* --------- kết thúc left container ---------  */
 /* --------- bắt đầu right container ---------  */
 
+#right-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  margin-top: 10%;
+}
 
+#area-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items:center ;
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  margin-top: -110px;
+  box-shadow: 0 2px 8px 5px #dddfe2;
+  border-radius: 7px;
+}
 
+#form-container {
+  width: 100%;
+}
 
+#area-container > *{
+  display: block;
+}
 
+#area-container a:nth-child(2) {
+  color: #1877f2;
+  font-size: 15px;
+  margin: 10px 0px 20px 0px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  padding-bottom: 20px;
+  width: 90%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+#area-container a:nth-child(2):hover {
+  text-decoration: underline;
+}
 
+#log-in-form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#log-in-form > * {
+  margin: 10px 0px 5px 0px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 7px;
+  width: 90%;
+  height: 50px;
+}
+
+#log-in-form:first-child {
+  margin-top: 5px;
+}
+
+input[type="text"], input[type="password"] {
+  font-size: 18px;
+  color: black;
+  padding: 0px 15px 0px 15px;
+}
+
+#log-in-id:focus, #log-in-ps:focus {
+  background-color: #f0f0f5;
+  border-color: #016dfb;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 18px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 18px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-size: 18px;
+}
+
+#log-in-btn {
+  background-color: #1877f2;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#log-in-btn:hover {
+  background-color: #125ab9
+}
+
+#sign-up-btn {
+  border-radius: 7px;
+  width: 50%;
+  height: 50px;
+  background-color: #42b72a;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#sign-up-btn:hover {
+  background-color: #2e831d;
+}
+
+#right-container p {
+  margin-top: 35px;
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+}
+
+#right-container p a {
+  font-weight: bold;
+}
+
+#right-container p a:hover {
+  text-decoration: underline;
+}
 
 footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  color: rgb(114, 114, 114);
+}
+
+footer a {
+  color: rgb(117, 117, 117);
+  font-size: 14px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 25px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 #footer-container {
@@ -133,6 +269,9 @@ footer {
 #language-list {
   display: flex;
   align-items: center;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(209, 209, 209);
 }
 
 .language-list-items, .footer-list-items {
@@ -142,5 +281,32 @@ footer {
 #footer-list {
   display: flex;
   flex-flow: row wrap;
-  
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.out-link {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #dd6060;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.out-link a {
+  color: white;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-form {
+  ;
 }
