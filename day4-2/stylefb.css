@@ -1,0 +1,146 @@
+/* ---------- reset css ----------*/
+* {
+  outline: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------- hết reset css ----------*/
+
+
+/* ---------- style chung cho page ----------*/
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+}
+
+#page-container {
+  height: 715px;
+  width: 980px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#left-container img, #left-container h1, #left-container p {
+  display: block;
+}
+
+#left-container h1, #left-container p {
+  width: 100%;
+}
+
+#left-container img {
+  width: 183px;
+}
+
+#left-container img:first-of-type {
+  margin-bottom: 30px;
+}
+
+
+#left-container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 70%;
+}
+
+#left-container h1 {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 28px;
+}
+
+#left-container p {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+#recent-login-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 20px;
+}
+
+.recent-login-items:first-of-type {
+  margin-right: 25px;
+}
+
+.recent-login-items p{
+  text-align: center;
+  padding: 12px 0px 12px 0px;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+
+.recent-login-items {
+  background-color: white;
+  width: 185px;
+  border: 1px solid rgb(218, 210, 210);
+}
+
+#plus-icon {
+  display: flex; align-items: center; justify-content: center; height: 184px; background-color: #f0f2f5;
+}
+
+.recent-login-items:hover {
+  box-shadow: 0 1px 8px 5px #dddfe2;
+}
+
+/* --------- kết thúc left container ---------  */
+/* --------- bắt đầu right container ---------  */
+
+
+
+
+
+
+
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#footer-container {
+  width: 980px;
+}
+
+#language-list {
+  display: flex;
+  align-items: center;
+}
+
+.language-list-items, .footer-list-items {
+  margin-right: 12px;
+}
+
+#footer-list {
+  display: flex;
+  flex-flow: row wrap;
+  
+}
