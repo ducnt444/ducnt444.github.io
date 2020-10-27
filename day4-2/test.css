@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+*:not(#new-form) {
+  opacity: 0.8;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -306,4 +310,15 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#new-form {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #dd6060;
+  z-index: 1;
+  opacity: 1;
 }
