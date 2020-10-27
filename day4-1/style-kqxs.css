@@ -128,8 +128,6 @@ main {
   text-align: center;
 }
 
-
-
 table, tr, td, th {
   border: 1px solid black;
 }
@@ -140,6 +138,14 @@ table {
   font-weight: 800;
   line-height: 40px;
   font-size: 18px;
+}
+
+#special-header, #special-number {
+  color: red;
+}
+
+#special-number {
+  font-size: 1.5em;
 }
 
 th {
