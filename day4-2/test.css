@@ -1,14 +1,11 @@
-/* ---------- reset css ----------*/
+
+/* ---------- bắt đầu reset css ----------*/
 * {
   outline: 0;
 	padding: 0;
 	margin: 0;
 	border: 0;
   box-sizing: border-box;
-}
-
-*:not(#new-form) {
-  opacity: 0.8;
 }
 
 a {
@@ -23,10 +20,8 @@ table {
   border-spacing: 0;
 }
 
-/* ---------- hết reset css ----------*/
-
-
-/* ---------- style chung cho page ----------*/
+/* ---------- kết thúc reset css ----------*/
+/* ---------- bắt đầu style chung cho page ----------*/
 
 body {
   display: flex;
@@ -42,89 +37,39 @@ main {
 }
 
 #page-container {
-  height: 715px;
+  height: 750px;
   width: 980px;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   align-items: center;
-  position: relative;
 }
 
-#left-container img, #left-container h1, #left-container p {
+/* ---------- kết thúc style chung cho page ----------*/
+/* --------- bắt đầu upper container ---------  */
+#upper-containerr img {
   display: block;
 }
 
-#left-container h1, #left-container p {
-  width: 100%;
-}
-
-#left-container img {
+#upper-container img {
   width: 183px;
+  margin: 40px 0px 90px 0px
 }
 
-#logo {
-  margin-bottom: 20px;
-}
-
-#left-container {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 70%;
-}
-
-#left-container h1 {
-  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  font-size: 28px;
-}
-
-#left-container p {
-  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-
-#recent-login-container {
+#upper-container {
   display: flex;
   flex-flow: row nowrap;
-  margin-top: 20px;
 }
 
-.recent-login-items:first-of-type {
-  margin-right: 25px;
-}
+/* --------- kết thúc upper container ---------  */
+/* --------- bắt đầu lower container ---------  */
 
-.recent-login-items p{
-  text-align: center;
-  padding: 12px 0px 12px 0px;
-  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
-  font-size: 30px;
-}
-
-.recent-login-items {
-  background-color: white;
-  width: 185px;
-  border: 1px solid rgb(218, 210, 210);
-}
-
-#plus-icon {
-  display: flex; align-items: center; justify-content: center; height: 184px; background-color: #f0f2f5;
-}
-
-.recent-login-items:hover {
-  box-shadow: 0 1px 8px 5px #dddfe2;
-}
-
-/* --------- kết thúc left container ---------  */
-/* --------- bắt đầu right container ---------  */
-
-#right-container {
+#lower-container {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  height: 90%;
-  margin-top: 10%;
+  height: 80%;
 }
 
 #area-container {
@@ -133,7 +78,7 @@ main {
   align-items:center ;
   background-color: white;
   width: 400px;
-  height: 350px;
+  height: 600px;
   margin-top: -110px;
   box-shadow: 0 2px 8px 5px #dddfe2;
   border-radius: 7px;
@@ -147,38 +92,77 @@ main {
   display: block;
 }
 
-#area-container a:nth-child(2) {
-  color: #1877f2;
-  font-size: 15px;
-  margin: 10px 0px 20px 0px;
-  border-bottom: 1px solid rgb(209, 209, 209);
-  padding-bottom: 20px;
-  width: 90%;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#area-container a:nth-child(2):hover {
-  text-decoration: underline;
-}
-
-#log-in-form {
+#sign-up-form {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
-#log-in-form > * {
+.labels {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 93%;
+  border: none !important;
+}
+
+.half-size {
+  width: 45%;
+  height: 40px;
+}
+
+.full-size {
+  width: 93%;
+  height: 40px;
+}
+
+.third-size {
+  width: 28%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.third-size label, .third-size input {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sign-up-form > *:not(#dob-label) {
   margin: 10px 0px 5px 0px;
   border: 1px solid rgb(195, 195, 195);
   border-radius: 7px;
-  width: 90%;
-  height: 50px;
 }
 
-#log-in-form:first-child {
+#sign-up-form:first-child {
   margin-top: 5px;
 }
+
+#title-container {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(195, 195, 195);
+  width: 93%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+#title-container h1, #title-container p {
+  font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+}
+
+#title-container p {
+  color: rgb(121, 121, 121);
+  line-height: 30px;
+}
+
 
 input[type="text"], input[type="password"] {
   font-size: 18px;
@@ -186,10 +170,12 @@ input[type="text"], input[type="password"] {
   padding: 0px 15px 0px 15px;
 }
 
-#log-in-id:focus, #log-in-ps:focus {
+#sign-up-last:focus, #sign-up-first:focus, #sign-up-id:focus, #sign-up-ps:focus {
   background-color: #f0f0f5;
   border-color: #016dfb;
 }
+
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-size: 18px;
@@ -203,28 +189,21 @@ input[type="text"], input[type="password"] {
   font-size: 18px;
 }
 
-#log-in-btn {
-  background-color: #1877f2;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
+#buttons {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-#log-in-btn:hover {
-  background-color: #125ab9
-}
-
-#sign-up-btn {
+#sign-up-btn, #log-in-btn {
   border-radius: 7px;
   width: 50%;
   height: 50px;
-  background-color: #42b72a;
+  width: 45%;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -236,18 +215,28 @@ input[type="text"], input[type="password"] {
   background-color: #2e831d;
 }
 
-#right-container p {
-  margin-top: 35px;
+#lower-container p:nth-child(3) {
   font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  text-align: justify; 
+  width: 93%; 
+  margin-top: 15px;
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  margin-bottom: 15px;
 }
 
-#right-container p a {
-  font-weight: bold;
+#lower-container p a {
+  color:rgb(35, 118, 251);
 }
 
-#right-container p a:hover {
+#lower-container p a:hover {
   text-decoration: underline;
 }
+
+
+/* --------- kết thúc lower container ---------  */
+/* --------- bắt đầu footer ---------  */
+
 
 footer {
   width: 100%;
@@ -288,37 +277,4 @@ footer a:hover {
   flex-flow: row wrap;
   padding-top: 10px;
   margin-bottom: 20px;
-}
-
-.out-link {
-  width: 100%;
-  text-align: center;
-  margin-top: 40px;
-  background-color: #dd6060;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.out-link a {
-  color: white;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#new-form {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: #dd6060;
-  z-index: 1;
-  opacity: 1;
 }
