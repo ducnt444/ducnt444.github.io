@@ -124,7 +124,7 @@ main {
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .third-size label, .third-size input {
@@ -132,6 +132,23 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.third-size label {
+  width: 60%;
+}
+
+#that {
+  margin-right: 15px;
+}
+
+select {
+  text-align-last: center;
+  -moz-text-align-last: center;
+  -ms-text-align-last: center;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 #sign-up-form > *:not(#dob-label) {
