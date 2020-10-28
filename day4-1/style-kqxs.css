@@ -138,6 +138,7 @@ table {
   font-weight: 800;
   line-height: 38px;
   font-size: 18px;
+  width: 100%;
 }
 
 #special-header, #special-number {
