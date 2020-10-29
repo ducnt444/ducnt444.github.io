@@ -40,6 +40,11 @@ main {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  
+}
+
+body {
+  
 }
 
 #left-container img, #left-container h1, #left-container p {
@@ -301,4 +306,206 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*----------------------------------------------------------------*/
+
+#reg-area-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items:center ;
+  background-color: white;
+  width: 430px;
+  height: 520px;
+  box-shadow: 0 2px 8px 5px #dddfe2;
+  border-radius: 7px;
+  line-height: 1.34;
+  position: absolute;
+  top: 97px;
+  right: 275px;
+}
+
+#reg-form-container {
+  width: 100%;
+}
+
+#reg-area-container > *{
+  display: block;
+}
+
+#reg-sign-up-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.reg-labels {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 93%;
+  border: none !important;
+  margin: 10px 0px 0px 2px !important;
+  font-size: 14px;
+  color: #606770;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.half-size {
+  width: 45%;
+  height: 40px;
+}
+
+.full-size {
+  width: 93%;
+  height: 40px;
+}
+
+.third-size {
+  width: 28%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px !important;
+}
+
+.third-size label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding-left: 10px;
+  width: 97px;
+  font-size: 15px;
+}
+
+.third-size input {
+  position: relative;
+  right: 10px;
+  height: 100%;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+reg-area-container select {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#reg-sign-up-form > *:not(#reg-dob-label) {
+  margin: 5px 0px 5px 0px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 7px;
+}
+
+#reg-sign-up-form:first-child {
+  margin-top: 5px;
+}
+
+#reg-title-container {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(195, 195, 195);
+  width: 93%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+#reg-title-container h1, #reg-title-container p {
+  font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+}
+
+#reg-sign-up-ps {
+  margin: 5px 0px 0px 0px !important;
+}
+
+#reg-title-container p {
+  color: rgb(121, 121, 121);
+  line-height: 30px;
+}
+
+
+reg-area-container input[type="text"], reg-area-container input[type="password"] {
+  font-size: 18px;
+  color: black;
+  padding: 0px 15px 0px 5px;
+}
+
+#reg-sign-up-last:focus, #reg-sign-up-first:focus, #reg-sign-up-id:focus, #reg-sign-up-ps:focus {
+  background-color: #f0f0f5;
+  border-color: #016dfb;
+}
+
+
+
+reg-area-container::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 15px;
+}
+
+reg-area-container:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 15px;
+}
+
+reg-area-container::-ms-input-placeholder { /* Microsoft Edge */
+  font-size: 15px;
+}
+
+#reg-buttons {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#reg-sign-up-btn, #reg-log-in-btn {
+  border-radius: 7px;
+  width: 50%;
+  height: 40px;
+  width: 45%;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#reg-sign-up-btn:hover {
+  background-color: #2e831d;
+}
+
+#reg-container p:nth-child(3) {
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  text-align: justify; 
+  width: 93%; 
+  margin-top: 15px;
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+
+#reg-area-container p a:hover {
+  text-decoration: underline;
+}
+
+#reg-notice {
+  margin-top: 15px;
+  display: block;
+  width: 93%;
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #777 ;
+  font-family: Helvetica, Arial, sans-serif;
+}
+#reg-notice a {
+  color:rgb(35, 118, 251);
 }

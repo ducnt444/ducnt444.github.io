@@ -23,59 +23,19 @@ table {
 /* ---------- kết thúc reset css ----------*/
 /* ---------- bắt đầu style chung cho page ----------*/
 
-main {
-  width: 100%;
-  background-color: #f0f2f5;
-  display: flex;
-  justify-content: center;
-}
-
-#reg-page-container {
-  height: 750px;
-  width: 980px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/* ---------- kết thúc style chung cho page ----------*/
-/* --------- bắt đầu upper container ---------  */
-#reg-upper-container img {
-  display: block;
-}
-
-#reg-upper-container img {
-  width: 183px;
-  margin: 40px 0px 90px 0px
-}
-
-#reg-upper-container {
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-/* --------- kết thúc upper container ---------  */
-/* --------- bắt đầu lower container ---------  */
-
-#reg-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  height: 80%;
-}
-
 #reg-area-container {
   display: flex;
   flex-flow: column wrap;
   align-items:center ;
   background-color: white;
-  width: 400px;
-  height: 600px;
-  margin-top: -110px;
+  width: 430px;
+  height: 520px;
   box-shadow: 0 2px 8px 5px #dddfe2;
   border-radius: 7px;
+  margin-top: 30px;
+  margin-left: 30px;
+  line-height: 1.34;
+  position: ;
 }
 
 #reg-form-container {
@@ -101,6 +61,10 @@ main {
   justify-content: flex-start;
   width: 93%;
   border: none !important;
+  margin: 10px 0px 0px 2px !important;
+  font-size: 14px;
+  color: #606770;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .half-size {
@@ -118,35 +82,36 @@ main {
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.third-size label, .third-size input {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  justify-content: space-between;
+  margin: 0px !important;
 }
 
 .third-size label {
-  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding-left: 10px;
+  width: 97px;
+  font-size: 15px;
 }
 
-#that {
-  margin-right: 15px;
+.third-size input {
+  position: relative;
+  right: 10px;
+  height: 100%;
+  padding-right: 10px;
+  cursor: pointer;
 }
 
-select {
-  text-align-last: center;
-  -moz-text-align-last: center;
-  -ms-text-align-last: center;
+reg-area-container select {
   font-size: 15px;
   cursor: pointer;
 }
 
 #reg-sign-up-form > *:not(#reg-dob-label) {
-  margin: 10px 0px 5px 0px;
+  margin: 5px 0px 5px 0px;
   border: 1px solid rgb(195, 195, 195);
   border-radius: 7px;
 }
@@ -157,7 +122,7 @@ select {
 
 #reg-title-container {
   margin-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgb(195, 195, 195);
   width: 93%;
   display: flex;
@@ -169,16 +134,20 @@ select {
   font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
 }
 
+#reg-sign-up-ps {
+  margin: 5px 0px 0px 0px !important;
+}
+
 #reg-title-container p {
   color: rgb(121, 121, 121);
   line-height: 30px;
 }
 
 
-input[type="text"], input[type="password"] {
+reg-area-container input[type="text"], reg-area-container input[type="password"] {
   font-size: 18px;
   color: black;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px 0px 5px;
 }
 
 #reg-sign-up-last:focus, #reg-sign-up-first:focus, #reg-sign-up-id:focus, #reg-sign-up-ps:focus {
@@ -188,16 +157,16 @@ input[type="text"], input[type="password"] {
 
 
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-size: 18px;
+reg-area-container::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 15px;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-size: 18px;
+reg-area-container:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 15px;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  font-size: 18px;
+reg-area-container::-ms-input-placeholder { /* Microsoft Edge */
+  font-size: 15px;
 }
 
 #reg-buttons {
@@ -208,10 +177,10 @@ input[type="text"], input[type="password"] {
   align-items: center;
 }
 
-#reg-sign-up-btn, #log-in-btn {
+#reg-sign-up-btn, #reg-log-in-btn {
   border-radius: 7px;
   width: 50%;
-  height: 50px;
+  height: 40px;
   width: 45%;
   color: white;
   font-size: 15px;
@@ -236,14 +205,23 @@ input[type="text"], input[type="password"] {
   margin-bottom: 15px;
 }
 
-#reg-container p a {
-  color:rgb(35, 118, 251);
-}
 
-#reg-container p a:hover {
+#reg-area-container p a:hover {
   text-decoration: underline;
 }
 
+#reg-notice {
+  margin-top: 15px;
+  display: block;
+  width: 93%;
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #777 ;
+  font-family: Helvetica, Arial, sans-serif;
+}
+#reg-notice a {
+  color:rgb(35, 118, 251);
+}
 
 /* --------- kết thúc lower container ---------  */
 /* --------- bắt đầu footer ---------  */
