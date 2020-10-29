@@ -1,0 +1,60 @@
+/* Style cho menu to */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu_item {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.menu_link {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+/* Style cho menu nhỏ */
+.sub_menu {
+  width: 80px;
+  display: none;
+  list-style: none;
+  padding: 10px 0 10px 10px;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+
+.menu_item:hover .sub_menu {
+  display: block;
+}
+
+.sub_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.sub_link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Style cho sub2 menu */
+.sub2_menu {
+  display: none;
+  width: 80px;
+  list-style: none;
+  padding: 10px 0 10px 10px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  top: 0;
+  left: 100%;
+}
+
+.sub_item:hover > .sub2_menu {
+  display: block;
+}
