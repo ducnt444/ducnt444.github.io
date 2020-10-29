@@ -58,7 +58,7 @@ main {
 /* --------- kết thúc upper container ---------  */
 /* --------- bắt đầu lower container ---------  */
 
-#lower-container {
+#reg-container {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -66,7 +66,7 @@ main {
   height: 80%;
 }
 
-#area-container {
+#reg-area-container {
   display: flex;
   flex-flow: column wrap;
   align-items:center ;
@@ -78,15 +78,15 @@ main {
   border-radius: 7px;
 }
 
-#form-container {
+#reg-form-container {
   width: 100%;
 }
 
-#area-container > *{
+#reg-area-container > *{
   display: block;
 }
 
-#sign-up-form {
+#reg-sign-up-form {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -94,7 +94,7 @@ main {
   width: 100%;
 }
 
-.labels {
+.reg-labels {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -145,17 +145,17 @@ select {
   cursor: pointer;
 }
 
-#sign-up-form > *:not(#dob-label) {
+#reg-sign-up-form > *:not(#reg-dob-label) {
   margin: 10px 0px 5px 0px;
   border: 1px solid rgb(195, 195, 195);
   border-radius: 7px;
 }
 
-#sign-up-form:first-child {
+#reg-sign-up-form:first-child {
   margin-top: 5px;
 }
 
-#title-container {
+#reg-title-container {
   margin-top: 10px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(195, 195, 195);
@@ -165,11 +165,11 @@ select {
   align-items: flex-start;
 }
 
-#title-container h1, #title-container p {
+#reg-title-container h1, #reg-title-container p {
   font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
 }
 
-#title-container p {
+#reg-title-container p {
   color: rgb(121, 121, 121);
   line-height: 30px;
 }
@@ -181,7 +181,7 @@ input[type="text"], input[type="password"] {
   padding: 0px 15px 0px 15px;
 }
 
-#sign-up-last:focus, #sign-up-first:focus, #sign-up-id:focus, #sign-up-ps:focus {
+#reg-sign-up-last:focus, #reg-sign-up-first:focus, #reg-sign-up-id:focus, #reg-sign-up-ps:focus {
   background-color: #f0f0f5;
   border-color: #016dfb;
 }
@@ -200,7 +200,7 @@ input[type="text"], input[type="password"] {
   font-size: 18px;
 }
 
-#buttons {
+#reg-buttons {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -208,7 +208,7 @@ input[type="text"], input[type="password"] {
   align-items: center;
 }
 
-#sign-up-btn, #log-in-btn {
+#reg-sign-up-btn, #log-in-btn {
   border-radius: 7px;
   width: 50%;
   height: 50px;
@@ -222,11 +222,11 @@ input[type="text"], input[type="password"] {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#sign-up-btn:hover {
+#reg-sign-up-btn:hover {
   background-color: #2e831d;
 }
 
-#lower-container p:nth-child(3) {
+#reg-container p:nth-child(3) {
   font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
   text-align: justify; 
   width: 93%; 
@@ -236,11 +236,11 @@ input[type="text"], input[type="password"] {
   margin-bottom: 15px;
 }
 
-#lower-container p a {
+#reg-container p a {
   color:rgb(35, 118, 251);
 }
 
-#lower-container p a:hover {
+#reg-container p a:hover {
   text-decoration: underline;
 }
 

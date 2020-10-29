@@ -1,3 +1,4 @@
+
 /* ---------- reset css ----------*/
 * {
   outline: 0;
@@ -23,12 +24,6 @@ table {
 
 
 /* ---------- style chung cho page ----------*/
-
-body {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
 
 main {
   width: 100%;
