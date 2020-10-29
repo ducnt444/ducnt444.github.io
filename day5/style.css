@@ -11,6 +11,7 @@ a {
 
 ul {
   list-style: none;
+  
 }
 
 img {
@@ -29,12 +30,12 @@ header {
   width: 980px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* ---------- hết style chung header ----------*/
 
-/* ---------- style cụm upper-header ----------*/
+/* ---------- style upper-header ----------*/
 #upper-header {
   display: flex;
   justify-content: space-between;
@@ -45,7 +46,7 @@ header {
   border-bottom: 1px solid rgb(197, 197, 197);
 }
 
-  /* ---------- style logo ----------*/
+  /* ---------- style: logo, search box, search icon, small banner ----------*/
 #logo-link {
   width: 150px;
   margin-left: 15px;
@@ -80,4 +81,14 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
+}
+  /* ------ kết thúc style: logo, search box, search icon, small banner ------*/
+
+/* ---------- kết thúc style upper-header ----------*/
+
+/* ---------- style nav ----------*/
+.lv1-list {
+  display: flex;
+  flex-flow: column wrap;
+  
 }
