@@ -1,0 +1,83 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+/* ---------- style chung header ----------*/
+header {
+  width: 980px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* ---------- hết style chung header ----------*/
+
+/* ---------- style cụm upper-header ----------*/
+#upper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+  /* ---------- style logo ----------*/
+#logo-link {
+  width: 150px;
+  margin-left: 15px;
+}
+
+#cart {
+  width: 30px;
+}
+
+#small-banner {
+  width: 190px;
+}
+
+#search-form {
+  width: 545px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+input[type="image"] {
+  width: 45px;
+  padding: 10px;
+  background-color: #F57227;
+}
+
+input[type="text"] {
+  width: 500px;
+  padding: 10px;
+  border: none;
+  background-color: #eff0f5;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
