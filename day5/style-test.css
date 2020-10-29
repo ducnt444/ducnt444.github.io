@@ -26,13 +26,14 @@ table {
 
 /* ---------- style chung ----------*/
 
-header {
+#header-container {
   width: 980px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   margin-right: auto;
   margin-left: auto;
+  background-color: white;
 }
 
 /* ---------- hết style chung header ----------*/
