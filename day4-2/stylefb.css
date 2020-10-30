@@ -332,7 +332,7 @@ footer a:hover {
   box-shadow: 0 2px 8px 5px #dddfe2;
   background-color: white;
   line-height: 1.34;
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 12px;
 }
 
@@ -498,7 +498,8 @@ reg-area-container::-ms-input-placeholder { /* Microsoft Edge */
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 3px;
 }
 
 #reg-sign-up-btn:hover {
@@ -521,10 +522,10 @@ reg-area-container::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 #reg-notice {
-  margin: 15px auto 15px auto;
+  margin: 15px 5px 15px 5px;
   display: block;
   width: 100%;
-  font-size: 12px;
+  font-size: 11px;
   color: #777 ;
   font-family: Helvetica, Arial, sans-serif;
   margin-block-start: 1em;
