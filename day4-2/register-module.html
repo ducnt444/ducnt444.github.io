@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon-16x16.png">
-  <link rel="stylesheet" href="register-style.css">
+  <link rel="stylesheet" href="stylefb.css">
   <title>Facebook</title>
 </head>
 <body>
   <main>
 
-  <div id="reg-area-container">
+  <div id="reg-area-container" class="form-wrapper">
 
     <div id="reg-title-container">
       <h1>Đăng ký</h1>
       <p>Nhanh chóng và dễ dàng.</p>
     </div>
 
-    <div id="reg-form-container">
-            <form id="reg-sign-up-form"action="#">
+    <form id="reg-sign-up-form"action="#">
               <input class="half-size" id="reg-sign-up-last" type="text" placeholder="Họ">
               <input class="half-size" id="reg-sign-up-first" type="text" placeholder="Tên">
               <input class="full-size" id="reg-sign-up-id" type="text" placeholder="Số di dộng hoặc email">
@@ -123,14 +122,13 @@
                 </div>
               </form>
 
-            </form>
-    </div>
+    </form>
 
       <p id="reg-notice">Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính sách dữ liệu</a> và <a href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào</p>
 
       <div id="reg-buttons">
         <a href="#"id="reg-sign-up-btn" style="background-color: #42b72a;">Đăng ký</a>
-        <a href="index.html"id="reg-log-in-btn" style="background-color: #125ab9;">Quay về đăng nhập</a>
+        <label id="close" for="signup">X</label>
       </div>
   </div>
 

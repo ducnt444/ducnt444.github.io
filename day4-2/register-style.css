@@ -70,11 +70,13 @@ table {
 .half-size {
   width: 45%;
   height: 40px;
+  padding-left: 10px;
 }
 
 .full-size {
   width: 93%;
   height: 40px;
+  padding-left: 10px;
 }
 
 .third-size {
@@ -84,6 +86,7 @@ table {
   align-items: center;
   justify-content: space-between;
   margin: 0px !important;
+  padding-left: 10px;
 }
 
 .third-size label {
@@ -92,7 +95,7 @@ table {
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
-  padding-left: 10px;
+  padding-left: 4px;
   width: 97px;
   font-size: 15px;
 }
@@ -157,16 +160,19 @@ reg-area-container input[type="text"], reg-area-container input[type="password"]
 
 
 
-reg-area-container::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.full-size::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-size: 15px;
+  text-align: left;
 }
 
 reg-area-container:-ms-input-placeholder { /* Internet Explorer 10-11 */
   font-size: 15px;
+  text-align: left;
 }
 
 reg-area-container::-ms-input-placeholder { /* Microsoft Edge */
   font-size: 15px;
+  text-align: left;
 }
 
 #reg-buttons {
