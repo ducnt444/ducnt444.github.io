@@ -212,3 +212,22 @@ input[type="text"]:focus {
 nav {
   border-bottom: 1px solid rgb(197, 197, 197);
 }
+
+#main-container {
+  width: 400px;
+  height: 100px;
+  margin: 30px auto 30px auto;
+  background-color: #016dfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-container a {
+  color: white;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
