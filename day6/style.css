@@ -25,6 +25,11 @@ table {
 
 /* ---------- kết thúc reset css ----------*/
 
+.page-wrapper {
+  width: 1080px;
+  background-color: ;
+}
+
 .logo-container {
   width: 225px;
 }
