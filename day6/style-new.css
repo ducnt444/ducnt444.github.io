@@ -170,7 +170,7 @@ section {
 
 .section-title a{
   float: right;
-  padding: 10px 20px 10px 25px;
+  padding: 13px 20px 13px 30px;
   background-color: #4371d4;
   color: white;
   margin: 30px 20px 10px 0px;
@@ -180,9 +180,10 @@ section {
 
 .section-title h1{
   padding: 10px 10px 10px 10px;
-  margin: 30px 20px 10px 0px;
+  margin: 30px 20px 10px 20px;
   font-family: poppins,sans-serif;
   font-weight: 300;
+  font-size: 27px;
 }
 
 .section-area {
@@ -191,7 +192,7 @@ section {
 
 .section-items {
   width: 22%;
-  display: inline-block;
+  float: left;
   padding: 40px;
   background-color: pink;
   margin-left: 2%;
@@ -222,7 +223,7 @@ section {
 .big-items {
   margin-top: 30px;
   width: 45%;
-  display: inline-block;
+  float: left;
   padding: 30px;
   background-color: white;
   margin-left: 3%;
