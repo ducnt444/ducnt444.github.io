@@ -1,0 +1,49 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  transition: all 0.7s;
+  border: 1px solid black;
+}
+
+div:hover img {
+  transform: scale(1.1);
+}
+
+:root {
+  --red: #ea2c62
+}
+
+body {
+  color: var(--red)
+}

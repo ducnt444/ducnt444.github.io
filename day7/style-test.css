@@ -1,0 +1,73 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+input {
+  display: none;
+}
+
+#label1 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+
+#label1::before {
+  content: url("tick.png");
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 6px;
+  left: 6px;
+  transition: 0.1s;
+  z-index: 1;
+}
+
+#check:checked + #label1::before {
+  display: block;
+}
+
+#label2 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+
+#label2::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 6px;
+  left: 6px;
+  transition: 0.1s;
+  border-left: 4px solid red;
+  border-bottom: 4px solid red;
+  transition: height 1s, width 1s;
+  transform: rotate(45deg);
+}
+

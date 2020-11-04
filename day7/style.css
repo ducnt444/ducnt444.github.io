@@ -1,0 +1,71 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+.container {
+  margin-top: 10px;
+}
+
+input{
+  display: none;
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  background-color: rgb(64, 174, 224);
+  border-radius: 10px;
+}
+
+label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid red;
+  top: 5px;
+  left: 0;
+  transition: 0.1s;
+  z-index: 1;
+}
+
+label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  bottom: 0;
+  width: 29px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: green;
+  z-index: 0;
+}
+
+input:checked + label::before {
+  left: 21px;
+  background-color: red;
+}
