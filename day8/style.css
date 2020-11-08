@@ -329,6 +329,10 @@ header {
   padding: 20px;
 }
 
+.popular-items:hover {
+  box-shadow: 0 5px 20px #f0f0f0;
+}
+
 .popular-items * {
   max-width: 100%;
   text-align: center;
@@ -639,7 +643,6 @@ header {
   color: #888;
   font-size: 14px;
   font-weight: 400;
-
 }
 
 .contact-icon {
@@ -657,7 +660,7 @@ header {
 
 .contact-form {
   width: 65%;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -667,6 +670,7 @@ header {
   height: 50px;
   padding-left: 15px;
   font-size: 14px;
+  border: 1px solid rgb(226, 226, 226);
 }
 
 .contact-form input:last-of-type {
@@ -684,7 +688,7 @@ header {
   font-weight: 500;
   line-height: 0.8;
   text-transform: uppercase;
-  padding: 20px 15px;
+  padding: 10px 15px;
   border: none;
   transition: color 0.5s;
   margin: 20px 0px 20px 0px
