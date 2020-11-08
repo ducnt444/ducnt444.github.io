@@ -55,13 +55,13 @@ header {
 
 .header-container a {
   color: black;
-  font-weight: 400;
+  font-weight: 500;
   transition: color 0.4s;
 }
 
 .header-container a:hover {
   color: #ff817e;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
 }
 
