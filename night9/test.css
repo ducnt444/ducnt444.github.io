@@ -1,0 +1,120 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box !important;;
+  margin: 0 !important;;
+  
+}
+
+a {
+  text-decoration: none !important;;
+  color: black !important;;
+}
+
+ul {
+  list-style: none !important;;
+}
+
+table {
+	border-collapse: collapse !important;;
+  border-spacing: 0 !important;;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+.container {
+  width: 850px !important;
+  display: grid;
+  grid-template: repeat(4, auto) / repeat(4, auto);
+  gap: 10px;
+  padding: 0px !important;
+}
+
+.item1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+}
+
+.container2 {
+  width: 850px !important;
+  display: grid;
+  grid-template: repeat(3, auto) / repeat(3, auto);
+  gap: 10px;
+  
+}
+  
+
+label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+input {
+  display: none;
+}
+
+.container3 {
+  overflow: hidden;
+}
+
+.slider {
+width: 300%;
+transition: margin-left .5s;
+}
+
+[class*="item"] {
+  width: calc(100% / 3);
+  float: left;
+}
+
+#c1:checked ~ .container3 > .slider {
+  margin-left: 0;
+}
+
+#c2:checked ~ .container3 > .slider {
+  margin-left: -100%;
+}
+
+#c3:checked ~ .container3 > .slider {
+  margin-left: -200%;
+}
+
+#c1:checked ~ .container3 > .clicker > #l1 {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+#c2:checked ~ .container3 > .clicker > #l2 {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+#c3:checked ~ .container3 > .clicker > #l3 {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+
+/* 
+.container {
+  display: grid;
+  grid-template-areas: 
+  ". . header header header"
+  "aside aside main main main"
+  "footer footer footer footer footer";
+  grid-template-columns: 100px 100px 1fr 1fr 1fr;
+  grid-template-rows: 100px minmax(calc(100vh - 100px), auto) auto;
+  gap: 10px;
+  justify-items: center;
+*/
+  /*
+  grid-template: 
+  ". . header header header" 100px
+  "aside aside main main main" minmax(calc(100vh - 100px), auto)
+  "footer footer footer footer footer" auto / 100px 100px 1fr 1fr 1fr;
+
+  */
