@@ -1,0 +1,73 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+.page-container {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.items {
+  background-color: crimson; 
+  width: 30%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.items:first-of-type {
+  background-color: blue; 
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    width: 700px;
+  }
+
+  .items, .items:first-of-type {
+     width: 49%;
+  }
+
+  .items4, .items5, .items6 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .page-container {
+    width: 200px;
+    flex-flow: column nowrap;
+  }
+
+  .items, .items:first-of-type {
+     width: 100%;
+  }
+
+  .items4, .items5, .items6, .items7  {
+    display: none;
+  }
+}

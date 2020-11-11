@@ -1,0 +1,22 @@
+/* ---------- reset css ----------*/
+* {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+table {
+	border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+/* ---------- kết thúc reset css ----------*/
