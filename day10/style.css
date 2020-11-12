@@ -106,12 +106,15 @@ ul {
 }
 
 header li a {
+  position: relative;
   padding: 10px;
-  transition: color 0.4s;
+  transition: color 0.4s, bottom 0.4s;
+  bottom: 0;
 }
 
 header li a:hover {
   color: rgb(211, 145, 106) !important;
+  bottom: 7px;
 }
 
 .box-container {
@@ -472,15 +475,32 @@ main {
 }
 
 .footer-menu a{
-  transition: color 0.4s;
+  position: relative;
+  bottom: 0px;
+  transition: color 0.4s, bottom 0.4s;
 }
 
 .footer-menu a:hover{
   color: rgb(236, 19, 19) !important;
+  bottom: 7px;
 }
 
 .copy {
   text-align: center;
   font-size: 14px;
   font-style: italic;
+}
+
+.scroll-btn {
+  width: 30px;
+  background-color: transparent;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
 }
