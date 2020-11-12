@@ -8,7 +8,7 @@
 
 a {
   text-decoration: none !important;
-  color: black !important;
+  color: black;
 }
 
 a:hover {
@@ -49,7 +49,438 @@ img {
 
 /* ---------- kết thúc reset css ----------*/
 
-.trans-btn {
+body {
+  font-family: Amiko,'Microsoft JhengHei',sans-serif;
+}
+
+/* --- header ---*/
+
+.header-container {
+  background-image: url("banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-position: center;
+}
+
+#statement {
+  width: 100%;
+  background-color: #b9ac94;
+  color: white !important;
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0px 5px 0px;
+}
+
+#statement a {
+  color: white !important;
+  text-decoration: underline !important;;
+} 
+
+header nav {
+  width: 100%;
+  background-color:transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px 20px 0px;
+}
+
+p, h1 {
+  margin: 0 !important;
+}
+
+ul {
+  width: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 800px;
+  margin: 0px 0px 0px 40px !important;
+}
+
+header li a {
+  padding: 10px;
+  transition: color 0.4s;
+}
+
+header li a:hover {
+  color: rgb(211, 145, 106) !important;
+}
+
+.box-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.booking-box {
+  width: 380px;
+  background-color: #b9ac94;
+  padding: 25px 20px 25px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  color: white !important;
+  margin: 0px 40px 0px 0px;
+}
+
+.booking-box p {
+  width: 100%;
+  font-size: 15px;
+  font-family: Amiko,'Microsoft JhengHei',sans-serif;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.booking-box h1 {
+  width: 100%;
+  margin-bottom: 20px !important;
+  font-family: Amiko,'Microsoft JhengHei',sans-serif;
+  font-weight: 800;
+}
+
+.booking-box form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.booking-box label {
+  width: 46%;
+  font-size: 15px;
+  font-family: Amiko,'Microsoft JhengHei',sans-serif;
+  font-weight: 600;
+}
+
+.booking-box input {
+  width: 46%;
   background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 15px;
+  font-family: Amiko,'Microsoft JhengHei',sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.trans-btn {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  
   border: 2px solid white;
+}
+
+.booking-box a {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.logo-container {
+  position: relative;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 60px;
+}
+
+.logo-container img {
+  width: 175px;
+  background-color: transparent;
+}
+
+.slogan-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+
+}
+
+.slogan-container h2 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.slogan-container p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 20px !important;
+}
+
+.slogan {
+  margin: 100px 0px 0px 70px;
+}
+
+.slogan-btn {
+  margin-bottom: 35px;
+  color: white !important;
+  padding: 10px 15px 10px 10px;
+  width: 160px;
+  display: block;
+}
+
+main {
+  background-color: #b9ac94;
+}
+
+.welcome, .rooms, .facilities {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  width: 1280px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px auto;
+  color: white;
+}
+
+.welcome-img {
+  width: 60%;
+}
+
+.welcome-text {
+  width: 35%;
+}
+
+.rooms-text, .facilities-text {
+  width: 80%;
+  text-align: center;
+}
+
+.welcome-text h1, .rooms-text h1, .facilities-text h1 {
+  font-size: 50px;
+  margin-bottom: 40px !important;
+}
+
+.welcome-text p, .rooms-text p, .facilities-text p {
+  font-size: 20px;
+  margin-bottom: 30px !important;
+}
+
+.rooms-text p:last-of-type {
+  margin-bottom: 0px !important;
+}
+
+.rooms-text {
+  margin-bottom: 30px;
+}
+
+.quotes {
+  border: 2px solid white;
+  margin-bottom: 50px;
+  padding: 15px;
+  border-radius: 15px ;
+}
+
+.welcome-btn {
+  padding: 15px 20px 15px 20px;
+  margin-top: 10px;
+  display: block;
+  width: 200px;
+}
+
+.rooms-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.rooms-types {
+  width: 32%;
+  text-align: center;
+}
+
+.room-details {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  bottom: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s, bottom 0.5s;
+}
+
+.room-details h2{
+  font-size: 25px;
+}
+
+.room-details a{
+  display: block;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.rooms-types:hover > div {
+  visibility: visible;
+  bottom: 72px;
+  opacity: 1;
+}
+
+.label-area {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.facilities label {
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid white;
+  margin-top: 30px;
+}
+
+.facilities input {
+  display: none;
+}
+
+.facilities-links {
+  position: relative;
+  right: -128px;
+}
+
+.facilities-container {
+  overflow: hidden;
+}
+
+.facilities-list {
+  width: 300%;
+  transition: margin-left .5s;
+}
+
+.facilities-types {
+  width: calc(100% / 3);
+  float: left;
+}
+
+#c1:checked ~ .facilities-container > .facilities-list {
+  margin-left: 0;
+}
+
+#c2:checked ~ .facilities-container > .facilities-list {
+  margin-left: -100%;
+}
+
+#c3:checked ~ .facilities-container > .facilities-list {
+  margin-left: -200%;
+}
+
+.upper-footer {
+  background-color: rgb(155, 130, 95);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.upper-footer h2 {
+  font-size: 25px;
+  padding: 25px 0;
+}
+
+.upper-footer p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.upper-footer a {
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+  width: 200px;
+  margin: 25px auto;
+  border: 3px solid white;
+}
+
+.footer-logo {
+  margin: 30px auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 120px;
+}
+
+.outsites {
+  width: 100%;
+}
+
+.connected {
+  display: flex;
+  width: 200px;
+  margin: 0px auto;
+  padding: 15px 25px 15px 25px;
+  font-size: 20px;
+  border: 2px solid black;
+  justify-content: center;
+}
+
+.icon-container {
+  margin: 20px auto 50px auto;
+  width: 7%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.icon-container a {
+  transition: transform 0.5s;
+}
+
+.icon-container a:hover {
+  transform: scale(1.2);
+}
+
+.footer-menu {
+  width: 100%;
+  display: flex;
+  margin: 30px auto 50px auto;
+  justify-content: center;
+}
+
+.footer-menu ul {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 !important;
+}
+
+.footer-menu a{
+  transition: color 0.4s;
+}
+
+.footer-menu a:hover{
+  color: rgb(236, 19, 19) !important;
+}
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
 }
