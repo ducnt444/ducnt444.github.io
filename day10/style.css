@@ -573,8 +573,32 @@ main {
   font-size: 35px;
 }
 
-.rooms-list-2 img {
+.rooms-list-2 .image {
   width: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.image1 {
+  background-image: url("gd.jpg");
+}
+
+.image2 {
+  background-image: url("gd.jpg");
+}
+
+.image3 {
+  background-image: url("gd.jpg");
+}
+
+.image img {
+  opacity 1;
+  transition: opacity 0.5s;
+}
+
+.image img:hover {
+  opacity: 0;
 }
 
 .room-text {
@@ -609,3 +633,6 @@ main {
   margin-top: 40px;
 }
 
+#anh1:hover {
+  src: url("gd.jpg");
+}
