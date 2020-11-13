@@ -506,10 +506,21 @@ main {
   bottom: 7%;
   font-size: 30px;
   background-color: black;
+  opacity: 0.5;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
 }
 
 #topup {
-  color: white
+  color: white;
+  padding: 0px 10px 0px 10px;
+}
+
+.scroll-btn:hover > #topup {
+  color: rgb(218, 92, 92) !important;
+  cursor: pointer;
 }
 
 #topup:hover {
