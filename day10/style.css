@@ -95,7 +95,7 @@ p, h1 {
   margin: 0 !important;
 }
 
-ul {
+header ul {
   width: 50%;
   display: flex;
   flex-flow: row nowrap;
@@ -244,7 +244,7 @@ main {
   background-color: #b9ac94;
 }
 
-.welcome, .rooms, .facilities {
+.welcome, .rooms, .facilities, .latest {
   padding-top: 120px;
   padding-bottom: 50px;
   width: 1280px;
@@ -269,7 +269,7 @@ main {
   text-align: center;
 }
 
-.welcome-text h1, .rooms-text h1, .facilities-text h1 {
+.welcome-text h1, .rooms-text h1, .facilities-text h1, .latest h1 {
   font-size: 50px;
   margin-bottom: 40px !important;
 }
@@ -475,6 +475,7 @@ main {
 }
 
 .footer-menu a{
+  font-size: 25px;
   position: relative;
   bottom: 0px;
   transition: color 0.4s, bottom 0.4s;
@@ -492,15 +493,107 @@ main {
 }
 
 .scroll-btn {
-  width: 30px;
+  width: 60px;
   background-color: transparent;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50%;
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 7%;
+  bottom: 7%;
+  font-size: 30px;
+  background-color: black;
 }
+
+#topup {
+  color: white
+}
+
+#topup:hover {
+  color: rgb(218, 92, 92) !important;
+}
+
+.latest h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.latest-items {
+  width: 45%;
+}
+
+.latest-items p {
+  font-size: 17px;
+  padding-bottom: 20px;
+}
+
+.latest-items h3 {
+  font-size: 15px;
+  padding: 15px 0px 10px 0px;
+}
+
+.latest-items h2 {
+  font-size: 30px;
+  padding: 15px 0px 10px 0px;
+}
+
+.latest-items a {
+  font-size: 20px;
+}
+
+.rooms-list-2 {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+  left: 5%;
+}
+
+.rooms-list-2 li {
+  font-size: 15px;
+}
+
+.rooms-list-2 h2 {
+  font-size: 35px;
+}
+
+.rooms-list-2 img {
+  width: 65%;
+}
+
+.room-text {
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.room-text ul {
+  padding-top: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.room-text li {
+  width: 100%;
+  padding: 5px 0px;
+  font-size: 20px;
+}
+
+.rooms-types-2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.room-text .trans-btn {
+  margin-top: 40px;
+}
+
