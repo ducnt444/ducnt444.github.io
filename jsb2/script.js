@@ -213,10 +213,121 @@ if (isNaN(a)) {
 //Viết chương trình cho phép nhập 1 ký tự, kiểm tra ký tự đó có thuộc bảng alphabet hay không (a-zA-Z)
 
 /* let a = prompt("Nhập một ký tự", "");
-let regexAlphabet = /[a-z]/gi;
+let regexAlphabet = /[a-z]/i;
 if (a.search(regexAlphabet) != -1) {
   alert(`${a} thuộc bảng alphabet`)
 } else {
   alert(`${a} không thuộc bảng alphabet`); 
 } */
+
+//Viết chương trình cho phép nhập 1 ký tự, kiểm tra ký tự đó là nguyên âm hay phụ âm
+
+/* let a = prompt("Nhập một ký tự", "");
+let regexVowel = /[aiueo]/i;
+let regexConsonant = /[a-z]/i
+if (a.search(regexVowel) != -1) {
+  alert(`${a} là nguyên âm`)
+} else if (a.search(regexConsonant) != -1) {
+  alert(`${a} là phụ âm`); 
+} else {
+  alert(`${a} không phải là nguyên âm hoặc phụ âm`); 
+} */
+
+//Viết chương trình cho phép nhập 1 ký tự, kiểm tra ký tự đó là chữ thường hay chữ hoa
+
+/* let a = prompt("Nhập một ký tự", "");
+let regexLower = /[a-z]/;
+let regexUpper = /[A-Z]/;
+
+if (a.search(regexLower) != -1) {
+  alert(`${a} là chữ thường`)
+} else if (a.search(regexUpper) != -1) {
+  alert(`${a} là chữ hoa`); 
+} else {
+  alert(`${a} không phải là chữ cái`); 
+} */
+
+//Viết chương trình cho phép nhập 1 số là ngày trong tuần, in ra thứ tương ứng
+
+/* let a = +prompt("Nhập một số tương ứng thứ trong tuần (2-8)", "");
+
+switch (a) {
+  case 2:
+    alert(`Chắc chắn là thứ high`);
+    break;
+  case 3:
+    alert(`Thứ ba`);
+    break;
+  case 4:
+    alert(`Thứ tư`);
+    break;
+  case 5:
+    alert(`Thứ năm`);
+    break;
+  case 6:
+    alert(`TGIF!`);
+    break;
+  case 7:
+    alert(`Thứ bảy máu chảy về đâu?`);
+    break;
+  case 8:
+    alert(`Tin buồn: mai là thứ hai`);
+    break;
+  default:
+    alert(`Dữ liệu nhập vào không hợp lệ (phải là số từ 2-8)`);
+} */
+
+//Viết chương trình cho phép nhập 1 tháng, in ra số ngày trong tháng
+
+/* let a = +prompt("Chọn một tháng (1-12)", "");
+
+switch (a) {
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+    alert(`Tháng ${a} có 31 ngày`);
+    break;
+  case 2:
+    alert(`Tháng ${a} có 28 ngày hoặc 29 ngày nếu là năm nhuận`);
+    break;
+  case 4:
+  case 6:
+  case 9:
+  case 11:
+    alert(`Tháng ${a} có 30 ngày`);
+    break;  
+  default:
+    alert(`Dữ liệu nhập vào không hợp lệ (phải là số từ 1-12)`);
+} */
+
+//Viết chương trình cho phép nhập 3 số a b c, in ra nghiệm phương trình bậc 2 tương ứng
+
+/* let a = +prompt("Nhập số a", "")
+let b = +prompt("Nhập số b", "");
+let c = +prompt("Nhập số c", "");
+let z = Math.pow(b, 2) - 4 * a * c;
+
+if (z > 0) {
+  alert(`
+  Vì biệt số (b^2 - 4ac) lớn hơn 0
+  => nghiệm phương trình bậc 2 ax^2 + bx + c = 0 là:
+  x1 = ( -b + √(b^2 - 4ac) ) / 2a 
+  = ${ ( -b + Math.sqrt(z) ) / (2 * a) } 
+  x2 = ( -b - √(b^2 - 4ac) ) / 2a 
+  = ${ ( -b - Math.sqrt(z) ) / (2 * a) } 
+  `)
+} else if (z == 0) {
+  alert(`
+  Vì biệt số (b^2 - 4ac) = 0 
+  => nghiệm phương trình bậc 2 ax^2 + bx + c = 0 là:
+  x1 = x2 = (-b) / 2a ) = ${(-b) / (2 * a)}
+  `)
+}
+ */
+
+//Viết chương trình đổi điểm từ hệ số 10 sang hệ chữ cho sinh viên, điểm nhập từ bàn phím
 
