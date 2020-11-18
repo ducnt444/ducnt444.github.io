@@ -249,32 +249,32 @@ if (a.search(regexLower) != -1) {
 
 //Viết chương trình cho phép nhập 1 số là ngày trong tuần, in ra thứ tương ứng
 
-/* let a = +prompt("Nhập một số tương ứng thứ trong tuần (2-8)", "");
+/* let a = +prompt("Nhập một số tương ứng các thứ trong tuần (1-7)", "");
 
 switch (a) {
-  case 2:
+  case 1:
     alert(`Chắc chắn là thứ high`);
     break;
-  case 3:
+  case 2:
     alert(`Thứ ba`);
     break;
-  case 4:
+  case 3:
     alert(`Thứ tư`);
     break;
-  case 5:
+  case 4:
     alert(`Thứ năm`);
     break;
-  case 6:
+  case 5:
     alert(`TGIF!`);
     break;
-  case 7:
+  case 6:
     alert(`Thứ bảy máu chảy về đâu?`);
     break;
-  case 8:
+  case 7:
     alert(`Tin buồn: mai là thứ hai`);
     break;
   default:
-    alert(`Dữ liệu nhập vào không hợp lệ (phải là số từ 2-8)`);
+    alert(`Dữ liệu nhập vào không hợp lệ (phải là số từ 1-7)`);
 } */
 
 //Viết chương trình cho phép nhập 1 tháng, in ra số ngày trong tháng
