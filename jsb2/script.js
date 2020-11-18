@@ -331,3 +331,43 @@ if (z > 0) {
 
 //Viết chương trình đổi điểm từ hệ số 10 sang hệ chữ cho sinh viên, điểm nhập từ bàn phím
 
+/* let a = prompt("Nhập điểm số (hệ số 10)", "");
+
+if ((isNaN(a)) || a.search(/\s/g) != -1) {
+  alert(`Dữ liệu nhập vào không hợp lệ (phải là số từ 0-10)`);
+} else if (0 <= a && a < 4) {
+  alert(`Điểm: F`)
+} else if (4 <= a && a < 5.5) {
+  alert(`Điểm: D`)
+} else if (5.5 <= a && a < 7) {
+  alert(`Điểm: C`)
+} else if (7 <= a && a < 8.5) {
+  alert(`Điểm: B`)
+} else if (8.5 <= a && a <= 10) {
+  alert(`Điểm: A`)
+} else {
+  alert(`Dữ liệu nhập vào không hợp lệ (phải là số từ 0-10)`);
+}
+ */
+
+//Viết chương trình cho phép nhập lương cơ bản, tính tổng lương của nhân viên theo công thức: Lương = Lương cơ bản + HRA + DA
+
+let a = +prompt("Nhập lương cơ bản (phải là số, lớn hơn hoặc bằng 0)", "");
+var hra;
+var da;
+
+if ((isNaN(a)) || a < 0) {
+  alert(`Dữ liệu nhập vào không hợp lệ (phải là số, lớn hơn hoặc bằng 0)`);
+} else if (0 <= a && a < 2000000) {
+  hra = a * 0.2;
+  da = a * 0.8;
+  alert(`Tổng lương = Lương cơ bản + HRA(20% lương cơ bản) + DA(80% lương cơ bản) = ${a} + ${hra} + ${da} = ${a + hra + da}`)
+} else if (2000000 <= a && a < 5000000) {
+  hra = a * 0.25;
+  da = a * 0.9;
+  alert(`Tổng lương = Lương cơ bản + HRA(25% lương cơ bản) + DA(90% lương cơ bản) = ${a} + ${hra} + ${da} = ${a + hra + da}`)
+} else {
+  hra = a * 0.3;
+  da = a;
+  alert(`Tổng lương = Lương cơ bản + HRA(30% lương cơ bản) + DA(100% lương cơ bản) = ${a} + ${hra} + ${da} = ${a + hra + da}`);
+}
