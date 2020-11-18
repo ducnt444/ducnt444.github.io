@@ -352,7 +352,7 @@ if ((isNaN(a)) || a.search(/\s/g) != -1) {
 
 //Viết chương trình cho phép nhập lương cơ bản, tính tổng lương của nhân viên theo công thức: Lương = Lương cơ bản + HRA + DA
 
-let a = +prompt("Nhập lương cơ bản (phải là số, lớn hơn hoặc bằng 0)", "");
+/* let a = +prompt("Nhập lương cơ bản (phải là số, lớn hơn hoặc bằng 0)", "");
 var hra;
 var da;
 
@@ -371,3 +371,4 @@ if ((isNaN(a)) || a < 0) {
   da = a;
   alert(`Tổng lương = Lương cơ bản + HRA(30% lương cơ bản) + DA(100% lương cơ bản) = ${a} + ${hra} + ${da} = ${a + hra + da}`);
 }
+ */
