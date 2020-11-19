@@ -58,4 +58,50 @@ console.log(result); */
   
 //Viết chương trình cho phép nhập vào một số, in ra số đầu tiên và cuối cùng của số đó (VD: 12345 => 15)
 
+/* let a = +prompt(`Nhập một số tối thiểu có 3 chữ số`, "");
+
+if (isNaN(a) || a < 100) {
+  console.log(`Sai dữ kiện`);
+} else {
+  let original = a;
+  let last = a % 10;
+  let first;
+  while (a >= 10) {
+    a /= 10;
+  }
+  if (1 < a && a < 2) {
+    first = 1;
+  } else if (2 < a && a < 3) {
+    first = 2;
+  } else if (2 < a && a < 3) {
+    first = 2;
+  } else if (3 < a && a < 4) {
+    first = 3;
+  } else if (4 < a && a < 5) {
+    first = 4;
+  } else if (5 < a && a < 6) {
+    first = 5;
+  } else if (6 < a && a < 7) {
+    first = 6;
+  } else if (7 < a && a < 8) {
+    first = 7;
+  } else if (8 < a && a < 9) {
+    first = 8;
+  } else if (9 < a) {
+    first = 9;
+  }
+  console.log(`Số đầu tiên và cuối cùng của ${original} là ${first} và ${last}`)
+}  */
+
+// Viết chương trình cho phép nhập một số, kiểm tra xem số đó có phải là số Palindrome hay không (Số Palindrome là số đối xứng) (VD: 141 => true, 123 => false)
+
+//Viết chương trình cho phép nhập một số, tính giai thừa của số đó
+
 let a = +prompt(`Nhập một số`, "");
+let x = a
+let y = a
+if (a === 0)
+while (y <= a && y > 0) {
+  x *= (y-1);
+}
+console.log(x);
