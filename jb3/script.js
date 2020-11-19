@@ -99,9 +99,9 @@ test3(3, 4); */
 } 
 test1(13); */
 
-function test2(n) {
+/* function test2(n) {
   for (let i = 1; i < n; i+=2) {
     console.log(i)
   }
 }
-test2(1000);
+test2(1000); */
