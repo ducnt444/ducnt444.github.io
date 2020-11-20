@@ -96,12 +96,126 @@ if (isNaN(a) || a < 100) {
 // Viết chương trình cho phép nhập một số, kiểm tra xem số đó có phải là số Palindrome hay không (Số Palindrome là số đối xứng) (VD: 141 => true, 123 => false)
 
 //Viết chương trình cho phép nhập một số, tính giai thừa của số đó
-
+/* 
 let a = +prompt(`Nhập một số`, "");
 let x = a
 let y = a
-if (a === 0)
-while (y <= a && y > 0) {
-  x *= (y-1);
+if (a === 0 || a === 1) {
+  console.log(`${a}! = 1`)
+} else if (isNaN(a)) {
+  console.log(`${a} không phải là số`)
+} else {
+  while (y > 1) {
+    y--;
+    x *= y;
+  }
+  console.log(`${a}! = ${x}`);
 }
-console.log(x);
+ */
+
+//Viết chương trình cho phép nhập một số, kiểm tra số đó có phải số Armstrong hay không (Số Armstrong là số bằng tổng lập phương của tất cả các chữ số của nó) (VD: 371 = 3*3 + 7*3 + 1*3 => true, 123 != 1*3 + 2*3 + 3*3 => false)
+
+//Viết chương trình cho phép nhập một số, kiểm tra số đó có phải số Perfect hay không (Số n là số Perfect nếu n bằng tổng tất cả các số từ 1 đến n / 2) (VD: 6 = 1 + 2 + 3 => true)
+
+//Viết chương trình cho phép nhập một số, kiểm tra số đó có phải số Strong hay không (Số Strong là số bằng tổng giai thừa các chữ số của nó) (VD: 145 = 1! + 4! + 5! => true)
+
+//Viết chương trình cho phép nhập một số n, in ra dãy số Fibonacci trong khoảng từ 0 đến n (Dãy Fibonacci có số bắt đầu là 0, 1 hoặc 1, 1 và các số sau có tổng bằng 2 số trước đó cộng lại)
+
+/* let nStart = +prompt(`Chọn số khởi đầu chuỗi Fibonacci (0 hoặc 1)`, "0");
+let nLength = +prompt(`Chọn độ dài chuỗi Fibonacci`, "");
+
+if (isNaN(nStart) || isNaN(nLength)) {
+  console.log(`Nhập sai dữ kiện`);
+} else if (nStart == 0) {
+  let a = 0;
+  let b = 1;
+  let c;
+  for (let i = 1; i <= nLength; i++) {
+    console.log(a);
+    c = a + b;
+    a = b;
+    b = c;
+  }
+} else if (nStart == 1) {
+  let a = 1;
+  let b = 1;
+  let c;
+  for (let i = 1; i <= nLength; i++) {
+    console.log(a);
+    c = a + b;
+    a = b;
+    b = c;
+  }
+} */
+
+//Viết chương trình cho phép nhập 2 số, tìm bội chung nhỏ nhất của 2 số đó
+
+/* let a = +prompt(`Chọn số đầu tiên`, "0");
+let b = +prompt(`Chọn độ thứ hai`, "");
+
+if (isNaN(a) || isNaN(b)) {
+  console.log(`Nhập sai dữ kiện`);
+} else {
+  loop1: for (let i = 1; i <= a * b; i++) {
+    if (i % a === 0 && i % b === 0) {
+      console.log(`Bội chung nhỏ nhát của ${a} và ${b} là ${i}`);
+      break loop1;
+    }
+  }
+} */
+
+//Viết chương trình cho phép nhập một số n, in ra theo mẫu sau (số hàng và cột = n)
+
+/* let n = prompt(`Nhập một số`, "");
+
+for (let i = 1; i <= n; i++) {
+  var a = String(n);
+  for (let j = 1; j < n; j++) {
+    a += " " + String(n);
+  }
+  console.log(a);
+} */
+
+//Viết chương trình cho phép nhập một số n, in ra theo mẫu sau (số hàng và cột = n)
+
+
+//Hàm
+
+// Viết hàm tính lập phương của một số
+
+/* let a = +prompt(`Nhập một số`, "");
+
+function pow3(a) {
+  return console.log(`Lập phương của ${a} = ${a * a * a});
+}
+pow3(a);
+ */
+
+//Viết hàm tìm chu vi, diện tích hình tròn
+
+function circle(radius) {
+  return console.log(`Chu vi hình tròn là ${radius * 2 * 3.1416}`) 
+}
+circle(5);
+
+function circleArea(radius) {
+  return console.log(`Diện tích hình tròn là ${radius * radius * 3.1416}`) 
+}
+circleArea(5);
+
+
+//Viết hàm tìm số lớn nhất giữa 2 số
+
+//Viết hàm kiểm tra số Prime
+
+//Viết hàm kiểm tra số Armstrong
+
+//Viết hàm kiểm tra số Perfect
+
+//Viết hàm kiểm tra số Strong
+
+//Viết hàm kiểm tra số Palindrome
+
+//Viết hàm tính số Fibonacci
+
+//Viết hàm tính giai thừa
