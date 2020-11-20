@@ -95,6 +95,25 @@ if (isNaN(a) || a < 100) {
 
 // Viết chương trình cho phép nhập một số, kiểm tra xem số đó có phải là số Palindrome hay không (Số Palindrome là số đối xứng) (VD: 141 => true, 123 => false)
 
+/* let n = 12321;
+let copy = n;
+var reverse = 0;
+var remainder;
+
+while (n > 0) {
+  remainder = n % 10;
+  n = Math.floor(n/10);
+  reverse = reverse * 10 + remainder;
+}
+console.log(reverse == copy);
+ */
+
+
+
+
+
+
+
 //Viết chương trình cho phép nhập một số, tính giai thừa của số đó
 /* 
 let a = +prompt(`Nhập một số`, "");
@@ -193,7 +212,7 @@ pow3(a);
 
 //Viết hàm tìm chu vi, diện tích hình tròn
 
-function circle(radius) {
+/* function circle(radius) {
   return console.log(`Chu vi hình tròn là ${radius * 2 * 3.1416}`) 
 }
 circle(5);
@@ -202,7 +221,7 @@ function circleArea(radius) {
   return console.log(`Diện tích hình tròn là ${radius * radius * 3.1416}`) 
 }
 circleArea(5);
-
+ */
 
 //Viết hàm tìm số lớn nhất giữa 2 số
 
