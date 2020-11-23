@@ -51,10 +51,11 @@ let keyChecker = function(obj, key) {
     if (obj[key] != undefined) {
         return obj[key];
     } else {
-        return `Không có ${key}`;
+        return false;
     }
 }
 
+let keyShowcase = function
 console.log( keyChecker(mee, "firstName") );
 console.log( keyChecker(mee, "gái") );
  */
@@ -70,12 +71,15 @@ let meee = {
 
 let keyDeleter = function(obj, delkey) {
     if (obj[delkey] != undefined) {
+        var save = obj[delkey];
+        console.log(`Giá trị key bị xóa = ${save}`);
         delete obj[delkey];
         return obj;
     } else {
+        console.log(`Không có key ${delkey}`);
         return false;
     }
 }
-console.log(meee);
+
 console.log( keyDeleter(meee, "firstName") );
 console.log( keyDeleter(meee, "gái") );
