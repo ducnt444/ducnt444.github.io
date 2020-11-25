@@ -31,6 +31,7 @@ console.log(rand(13, 15)); */
 
 //Viết hàm tạo mã màu HEX ngẫu nhiên. VD hex() => "fea34f"
 
+console.log((Math.random() * 16581375).toString(16));
 
 //Viết hàm chuyển đổi một chuỗi thành dạng capitalize. VD: "hello world" => "Hello World"
 
@@ -142,7 +143,8 @@ console.log(cutWord("My name is Ba", 2)); */
   return result;
 }
 
-console.log(GUID32Generator()) */
+console.log(GUID32Generator())
+ */
 
 //Viết hàm thay thế các ký tự trong chuỗi thành ký tự liền sau trong bảng mã Unicode. VD: "ad" => "be"
 
