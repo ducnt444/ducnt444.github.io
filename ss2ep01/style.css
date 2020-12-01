@@ -1,0 +1,98 @@
+/* ---------- reset css ----------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* ---------- kết thúc reset css ----------*/
+
+
+/* ---------- Responsive bai 1 ---------- */
+
+/* .page-container {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  padding: 15px;
+  background-color: brown;
+  justify-content: center;
+}
+
+.items {
+  background-color: blue;
+  width: calc((100% - 90px)/3);
+  height: 150px;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-container {
+    flex-flow: column wrap;
+    padding: 0px;
+  }
+  .items {
+    width: calc(100% - 30px);
+  }
+} */
+
+/* ---------- Responsive bai 2 ---------- */
+
+/* .page-container {
+  display: grid;
+  width: 100%;
+  padding: 30px 20% 0px 20%;
+  background-color: brown;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+.items {
+  background-color: blue;
+  height: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-container {
+    padding: 30px 15px 0px 15px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr;
+  }
+} */

@@ -71,23 +71,16 @@ console.log(longestString(testArray5)); */
 
 //Bài 4: Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, dùng để kiểm tra chuỗi string có kết thúc bởi chuỗi target hay không. Kết quả trả về là true hoặc false.
 
-function stringCheck(string, target) {
-  let temp = 0;
-  let strArray = string.split("");
-  let targetArray = target.split("");
-  for (let i = strArray.length - 1; i >= targetArray.length; i--) {
-    for (let j = targetArray.length - 1; j >= 0; j--) {
-      if (strArray[i] == targetArray[j]) {
-        temp += 1000;
-      } else {
-        temp -= 1000;
-      }
-    }
+/* function stringCheck(string, target) {
+  if (string.substr(- target.length) == target) {
+    return true;
+  } else {
+    return false;
   }
-  return temp;
 }
 
 let testString1 = "abcdef";
+
 let testTarget1 = "def";
 let testTarget2 = "ef";
 let testTarget3 = "f";
@@ -95,6 +88,11 @@ let testTarget4 = "ab";
 let testTarget5 = "b";
 
 console.log(stringCheck(testString1, testTarget1))
+console.log(stringCheck(testString1, testTarget2))
+console.log(stringCheck(testString1, testTarget3))
+console.log(stringCheck(testString1, testTarget4))
+console.log(stringCheck(testString1, testTarget5))
+ */
 
 //Bài 5: Cho 1 mảng chỉ chứa các phần tử có kiểu dữ liệu number, string và boolean. Hãy kiểm tra xem trong mảng đó có phần tử nào bị lặp lại hay không (xuất hiện 2 lần trở lên). Kết quả trả về true (nếu lặp) hoặc false (nếu không lặp).
 
