@@ -47,7 +47,7 @@ img {
 
 /* ---------- Responsive bai 1 ---------- */
 
-/* .page-container {
+.page-container {
   display: flex;
   width: 100%;
   flex-flow: row wrap;
@@ -71,7 +71,7 @@ img {
   .items {
     width: calc(100% - 30px);
   }
-} */
+} 
 
 /* ---------- Responsive bai 2 ---------- */
 
