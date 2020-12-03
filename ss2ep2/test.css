@@ -110,13 +110,13 @@
     display: inline-block;
     width: 90px;
     height: 30px;
-    margin: 0px;
+    margin: 7.5px;
   }
 
   .items2:last-of-type {
-/*     position: absolute;
+    position: absolute;
     right: 7.5px;
-    top: 7.5px; */
+    top: 7.5px;
   }
 
   .main2 {
