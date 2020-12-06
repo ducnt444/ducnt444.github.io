@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- hết reset css -------- */
+
+.header6 {
+  position: relative;
+}
+
+input {
+  display: none;
+}
+
+label {
+  position: relative;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 2;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.logo-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: orange;
+}
+
+.logo {
+  width: 100px;
+  height: 30px;
+  background-color: pink;
+  font-size: 15px;
+}
+
+.menu-container {
+  width: 100%;
+  background-color: orange;
+  padding: 80px 15px 15px 15px;
+  position: absolute;
+  top: -300%;
+  transition: top 0.5s;
+}
+
+li {
+  background-color: rgb(48, 123, 236);
+  border: 1px solid black;
+  height: 30px;
+}
+
+li a {
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+li:hover {
+  background-color: rgb(48, 72, 212);
+}
+
+.main6 {
+  padding: 15px;
+}
+
+.content {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(48, 123, 236);
+}
+
+input:checked + div {
+  top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  label, li:first-of-type {
+    display: none !important;
+  }
+  .logo-button-container {
+    width: 100px;
+    padding: 0px;
+    background-color: green;
+  }
+  .menu-container {
+    position: static;
+    width: auto;
+    background-color: green;
+    padding: 0px;
+  }
+  .header6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    height: 60px;
+    padding: 15px;
+  }
+  ul {
+    display: flex;
+  }
+  li a{
+    padding: 10px;
+  }
+
+}
