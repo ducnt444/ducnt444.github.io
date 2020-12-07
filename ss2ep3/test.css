@@ -1,0 +1,17 @@
+.grid-container {
+  width: 1000px;
+  height: 300px;
+  background-color: rgb(223, 74, 74);
+  display: grid;
+  grid-template-columns: 130px 20% auto 1fr 2fr;
+  gap: 10px;
+}
+
+.items {
+  display: flex;
+  background-color: rgb(88, 205, 226);
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-align: center;
+}
