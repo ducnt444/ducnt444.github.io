@@ -1,0 +1,159 @@
+/* ---------- reset css ----------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+  height: calc(100vh - 30px);
+  font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* ---------- kết thúc reset css ----------*/
+
+/* ---------- style class chung, container, content area ----------*/
+.green {
+  color: green;
+}
+
+.phone {  /* ---------- container ----------*/
+  background-color: black;
+  color:black;
+  width: 300px;
+  height: 550px;
+  margin: 30px auto 0px auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* ---------- content ----------*/
+
+.screen { 
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  position: relative;
+  height: 100%;
+}
+
+.camera {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0px auto;
+  position: absolute;
+  left: calc(50% - 9px);
+}
+
+/* ---------- display areas ----------*/
+
+#display {
+  height: 25%;
+  width: 100%;
+  margin: auto;
+  padding: 10px 10px 0px 10px;
+  font-size: 30px;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+#minor {
+  height: 10%;
+  width: 100%;
+  font-style: italic;
+  border-bottom: 1px solid rgb(158, 158, 158);;
+  font-size: 20px;
+  color: rgb(90, 90, 90);
+}
+
+/* ---------- buttons area ----------*/
+/* grid, 5 x 4*/
+.buttonArea {
+  width: 100%;
+  margin: 7% auto 0px auto;
+  height: 60%;
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  gap: 7px;
+}
+
+.buttonArea button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  border-radius: 25px;
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ---------- coloring buttons ----------*/
+.buttonArea button:hover {
+  background-color: rgb(185, 185, 185);
+}
+
+#clear-btn {
+  color: rgb(224, 20, 20);
+}
+
+#equal-btn {
+  background-color: rgb(13, 200, 13);
+  color: white;
+}
+
+#equal-btn:hover {
+  background-color: green;
+}
+
+
