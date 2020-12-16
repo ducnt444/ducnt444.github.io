@@ -1,7 +1,7 @@
 /* ---------- reset css ----------*/
 
 * {
-  box-sizing: border-box !important;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,7 @@ a {
 }
 
 ul {
-  list-style: none !important;
+  list-style: none;
 }
 
 table {
@@ -21,7 +21,7 @@ table {
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -54,7 +54,84 @@ img {
   src: url("/Minimo/Minimo/FONTS/Playfair_Display/PlayfairDisplay-Regular.ttf");
 }
 
-p {
-  font-size: 2rem;
-  font-family: PlayfairDisplay;
+.page-container {
+  max-width: 1060px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 70px 0px 36px 0px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 55%;
+}
+
+header ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0px !important;
+}
+
+main {
+  width: 100%;
+  margin: 0px auto;
+}
+
+main img {
+  display: block;
+  margin: 100px auto 0px auto;
+}
+
+.photodiary, .blogs {
+  max-width: 900px;
+  margin: auto;
+}
+
+.blogs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts {
+  max-width: 420px;
+}
+
+.sign-up {
+  height: 285px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  border-bottom: 1px solid black;
+}
+
+input {
+  width: 90%;
+  border: none;
+}
+
+button {
+  width: 10%;
+}
+
+footer {
+  width: 100%;
 }
