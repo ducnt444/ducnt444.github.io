@@ -54,8 +54,36 @@ img {
   src: url("/Minimo/Minimo/FONTS/Playfair_Display/PlayfairDisplay-Regular.ttf");
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
+h3 {
+  font-family: Ubuntu;
+  font-weight: lighter;
+  font-size: 14px;
+  color: #b4ad9e;
+  text-transform: uppercase;
+}
+
+h2, nav {
+  font-family: PlayfairDisplay;
+  font-weight: normal;
+  font-size: 30px;
+  color: #626262;
+}
+
+p {
+  font-family: PlayfairDisplay;
+  font-weight: normal;
+  font-size: 14px;
+  color: #626262;
+  line-height: 24px;
+}
+
 .page-container {
-  max-width: 1060px;
+  max-width: 1066px;
+  margin: auto;
 }
 
 header {
@@ -63,13 +91,21 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 70px 0px 36px 0px;
+  padding: 70px 0px 36px 0px;
+}
+
+.brand {
+  font-family: Inconsolata;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
 }
 
 nav {
   display: flex;
   align-items: center;
   width: 55%;
+  font-size: 14px;
 }
 
 header ul {
@@ -78,17 +114,15 @@ header ul {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 0px !important;
+  margin: 0px;
 }
 
 main {
   width: 100%;
-  margin: 0px auto;
 }
 
 main img {
   display: block;
-  margin: 100px auto 0px auto;
 }
 
 .photodiary, .blogs {
@@ -96,7 +130,24 @@ main img {
   margin: auto;
 }
 
+.photodiary {
+  padding-top: 100px
+}
+
+.photodiary h2 {
+  padding-top: 30px
+}
+
+.photodiary p {
+  padding-top: 40px
+}
+
+.photodiary h3 {
+  padding-top: 55px
+}
+
 .blogs {
+  padding-top: 135px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
