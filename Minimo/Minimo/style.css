@@ -58,7 +58,7 @@ a:hover {
   text-decoration: none !important;
 }
 
-h3 {
+h3, .photodiary a {
   font-family: Ubuntu;
   font-weight: lighter;
   font-size: 14px;
@@ -82,8 +82,9 @@ p {
 }
 
 .page-container {
-  max-width: 1066px;
+  max-width: 1061px;
   margin: auto;
+  background-color: #ffffff;
 }
 
 header {
@@ -91,14 +92,14 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 70px 0px 36px 0px;
+  padding: 62px 20px 30px 20px;
 }
 
 .brand {
   font-family: Inconsolata;
   font-size: 30px;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 7px;
 }
 
 nav {
@@ -106,6 +107,7 @@ nav {
   align-items: center;
   width: 55%;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 header ul {
@@ -115,6 +117,10 @@ header ul {
   justify-content: space-between;
   width: 100%;
   margin: 0px;
+}
+
+header button {
+  display: none;
 }
 
 main {
@@ -135,15 +141,18 @@ main img {
 }
 
 .photodiary h2 {
-  padding-top: 30px
+  padding-top: 20px
 }
 
 .photodiary p {
-  padding-top: 40px
+  padding-top: 30px
 }
 
-.photodiary h3 {
-  padding-top: 55px
+.photodiary a {
+  display: block;
+  margin-top: 55px;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .blogs {
@@ -156,33 +165,538 @@ main img {
 
 .posts {
   max-width: 420px;
+  padding-bottom: 130px;
+}
+
+.posts h3 {
+  padding-top: 28px;
+}
+
+.posts h2 {
+  padding-top: 18px;
+}
+
+.posts p {
+  padding-top: 28px;
+  display: block;
+  height: 95px;
+  overflow: hidden;
 }
 
 .sign-up {
-  height: 285px;
+  padding: 65px 0px 75px 0px;
+  height: 287px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgb(240, 240, 240);
+}
+
+.sign-up h2 {
+  color: #333333;
+  display: block;
 }
 
 .form-container {
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35%;
   border-bottom: 1px solid black;
+  color: #626262;
+  padding: 0px 0px 5px 0px;
 }
 
 input {
   width: 90%;
   border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: PlayfairDisplay;
+}
+
+input:focus {
+  border: none;
+  outline: none;
 }
 
 button {
   width: 10%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #626262;
+  cursor: pointer;
+}
+
+.blogs:last-of-type {
+  padding-top: 105px;
+}
+
+.loadmore {
+  display: block;
+  padding: 15px 32px;
+  color: #626262 !important;
+  font-size: 20px;
+  font-family: PlayfairDisplay;
+  margin: 35px auto 142px auto;
+  border: 1px solid rgb(24, 24, 24);
+  width: 164px;
+  height: 60px;
 }
 
 footer {
   width: 100%;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 99px;
+}
+
+.terms, .social {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.terms a {
+  display: block;
+  margin-right: 15px;
+  font-family: PlayfairDisplay;
+  font-size: 14px;
+}
+
+.social a {
+  font-size: 20px;
+  color: #626262 !important;
+  margin-left: 15px;
+}
+
+footer p, footer a {
+  color: black !important;
+}
+
+@media only screen and (max-width: 320px) {
+
+  .page-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header button {
+    display: block;
+    background-color: white !important;
+    width: auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .brand {
+    position: absolute;
+    font-size: 18px;
+    right: calc(50% - 48px);
+    top: calc(50% - 9px);
+    z-index: 1;
+  }
+
+  .logo-button {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    width: 100%;
+    font-size: 10px;
+    padding: 0px 15px 15px 15px; 
+    position: absolute;
+    bottom: -115px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    z-index: 0;
+    background-color: white;
+  }
+  
+  header ul {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgb(105, 105, 105);
+  }
+
+  header li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  header li a:hover {
+    background-color: #b4ad9e;
+  }
+
+  header li:nth-child(2),
+  header li:nth-child(3),
+  header li:nth-child(4) {
+    border-top: none;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .photodiary {
+    padding: 5px 15px 0px 15px;
+    height: 145px;
+    overflow: hidden;
+  }
+
+  .photodiary h2,
+  .photodiary p
+   {
+    padding-top: 10px
+  }
+  
+  .photodiary a {
+    margin-top: 25px;
+  }
+  
+  .blogs {
+    padding: 65px 15px 0px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .posts {
+    max-width: 100%;
+    padding-bottom: 45px;
+  }
+  
+  .posts h3 {
+    padding-top: 5px;
+  }
+  
+  .posts h2 {
+    padding-top: 5px;
+  }
+  
+  .posts p {
+    padding-top: 5px;
+    height: 70px;
+    overflow: hidden;
+  }
+  
+  .sign-up {
+    padding: 0px 20px 0px 20px;
+    height: 100px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .form-container {
+    width: 100%;
+    padding: 0px;
+  }
+  
+  input {
+    font-size: 10px;
+  }
+  
+  button {
+    font-size: 18px;
+  }
+  
+  .blogs:last-of-type {
+    padding-top: 60px;
+  }
+  
+  .loadmore {
+    padding: 5px 5px;
+    font-size: 14px;
+    font-family: PlayfairDisplay;
+    margin: 0px auto 45px auto;
+    border: 1px solid rgb(24, 24, 24);
+    width: fit-content;
+    height: auto;
+  }
+
+  footer {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+  }
+  
+  .terms {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+  }
+  
+  .terms a {
+    display: block;
+    margin-right: 15px;
+    font-family: PlayfairDisplay;
+    font-size: 10px;
+  }
+
+  .social {
+    padding-right: 15px;
+  }
+
+  .social a {
+    font-size: 10px;
+    color: #626262 !important;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 839px) {
+  
+  .page-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header button {
+    display: block;
+    background-color: white !important;
+    width: auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .brand {
+    position: absolute;
+    font-size: 18px;
+    right: calc(50% - 48px);
+    top: calc(50% - 9px);
+    z-index: 1;
+  }
+
+  .logo-button {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    width: 100%;
+    font-size: 10px;
+    padding: 0px 15px 15px 15px; 
+    position: absolute;
+    bottom: -115px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    z-index: 0;
+    background-color: white;
+  }
+  
+  header ul {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgb(105, 105, 105);
+  }
+
+  header li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  header li a:hover {
+    background-color: #b4ad9e;
+  }
+
+  header li:nth-child(2),
+  header li:nth-child(3),
+  header li:nth-child(4) {
+    border-top: none;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .photodiary {
+    padding: 5px 15px 0px 15px;
+    height: 145px;
+    overflow: hidden;
+  }
+
+  .photodiary h2,
+  .photodiary p
+   {
+    padding-top: 10px
+  }
+  
+  .photodiary a {
+    margin-top: 25px;
+  }
+  
+  .blogs {
+    padding: 65px 15px 0px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .posts {
+    max-width: 100%;
+    padding-bottom: 45px;
+  }
+  
+  .posts h3 {
+    padding-top: 5px;
+  }
+  
+  .posts h2 {
+    padding-top: 5px;
+  }
+  
+  .posts p {
+    padding-top: 5px;
+    height: 70px;
+    overflow: hidden;
+  }
+  
+  .sign-up {
+    padding: 0px 20px 0px 20px;
+    height: 100px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .form-container {
+    width: 100%;
+    padding: 0px;
+  }
+  
+  input {
+    font-size: 10px;
+  }
+  
+  button {
+    font-size: 18px;
+  }
+  
+  .blogs:last-of-type {
+    padding-top: 60px;
+  }
+  
+  .loadmore {
+    padding: 5px 5px;
+    font-size: 14px;
+    font-family: PlayfairDisplay;
+    margin: 0px auto 45px auto;
+    border: 1px solid rgb(24, 24, 24);
+    width: fit-content;
+    height: auto;
+  }
+
+  footer {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+  }
+  
+  .terms {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .terms {
+    padding-left: 15px;
+  }
+  
+  .terms a {
+    display: block;
+    margin-right: 15px;
+    font-family: PlayfairDisplay;
+    font-size: 10px;
+  }
+
+  .social {
+    padding-right: 15px;
+  }
+
+  .social a {
+    font-size: 10px;
+    color: #626262 !important;
+    margin-left: 10px;
+  }
+  
+  footer p, footer a {
+    color: black !important;
+  }
 }

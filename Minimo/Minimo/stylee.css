@@ -1,0 +1,550 @@
+/* ---------- reset css ----------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* ---------- kết thúc reset css ----------*/
+
+@font-face {
+  font-family: Inconsolata;
+  src: url("/Minimo/Minimo/FONTS/Inconsolata/Inconsolata-Regular.ttf");
+}
+
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url("/Minimo/Minimo/FONTS/Playfair_Display/PlayfairDisplay-Regular.ttf");
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+h3, .photodiary a {
+  font-family: Ubuntu;
+  font-weight: lighter;
+  font-size: 12px;
+  color: #b4ad9e;
+  text-transform: uppercase;
+}
+
+h2, nav {
+  font-family: PlayfairDisplay;
+  font-weight: normal;
+  font-size: 18px;
+  color: #626262;
+}
+
+p {
+  font-family: PlayfairDisplay;
+  font-weight: normal;
+  font-size: 12px;
+  color: #626262;
+  line-height: 16px;
+}
+
+.page-container {
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  font-family: Inconsolata;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  position: absolute;
+  font-size: 18px;
+  right: calc(50% - 48px);
+  top: calc(50% - 9px);
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 10px;
+  padding: 0px 15px 15px 15px; 
+  position: absolute;
+  bottom: -115px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+  z-index: 0;
+  background-color: white;
+  
+}
+
+header ul {
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  border: 1px solid rgb(105, 105, 105);
+}
+
+header li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+}
+
+header li a:hover {
+  background-color: #b4ad9e;
+}
+
+header li:nth-child(2),
+header li:nth-child(3),
+header li:nth-child(4) {
+  border-top: none;
+}
+
+header button {
+  display: block;
+  background-color: white !important;
+  width: auto;
+  z-index: 1;
+  position: relative;
+}
+
+main {
+  width: 100%;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.photodiary {
+  padding: 5px 15px 0px 15px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.photodiary h2,
+.photodiary p
+ {
+  padding-top: 10px
+}
+
+.photodiary a {
+  display: block;
+  margin-top: 25px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.blogs {
+  padding: 65px 15px 0px 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts {
+  max-width: 100%;
+  padding-bottom: 45px;
+}
+
+.posts h3, .posts h2, .posts p {
+  padding-top: 5px;
+}
+
+.posts p {
+  display: block;
+  height: 70px;
+  overflow: hidden;
+}
+
+.sign-up {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  padding: 0px 20px 0px 20px;
+  height: 100px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.sign-up h2 {
+  color: #333333;
+  display: block;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: #626262;
+  width: 100%;
+  padding: 0px;
+}
+
+input {
+  width: 90%;
+  border: none;
+  background-color: transparent;
+  font-size: 10px;
+  font-family: PlayfairDisplay;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+button {
+  width: 10%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #626262;
+  cursor: pointer;
+}
+
+.loadmore {
+  display: block;
+  color: #626262 !important;
+  padding: 5px 5px;
+  font-size: 14px;
+  font-family: PlayfairDisplay;
+  margin: 0px auto 45px auto;
+  border: 1px solid rgb(24, 24, 24);
+  width: fit-content;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-right: 15px;
+}
+
+.terms {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.terms a {
+  display: block;
+  margin-right: 15px;
+  font-family: PlayfairDisplay;
+  font-size: 10px;
+}
+
+.social a {
+  font-size: 10px;
+  color: #626262 !important;
+  margin-left: 10px;
+}
+
+footer p, footer a {
+  color: black !important;
+}
+
+@media only screen and (min-width: 870px) {
+  h3, .photodiary a {
+    font-size: 14px;
+  }
+  
+  h2, nav {
+    font-size: 30px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .page-container {
+    max-width: 1061px;
+    margin: auto;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 62px 0px 30px 0px;
+  }
+  
+  .brand {
+    font-family: Inconsolata;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    position: static;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    font-size: 14px;
+    text-transform: uppercase;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 0px; 
+    position: static;
+  }
+  
+  header ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 25px;
+    border: none;
+  }
+
+  header button {
+    display: none;
+  }
+  
+  main {
+    width: 100%;
+  }
+  
+  main img {
+    display: block;
+  }
+  
+  .photodiary, .blogs {
+    max-width: 900px;
+    margin: auto;
+    height: auto;
+  }
+  
+  .photodiary {
+    padding: 100px 0px 0px 0px;
+  }
+  
+  .photodiary h2 {
+    padding-top: 20px
+  }
+  
+  .photodiary p {
+    padding-top: 30px
+  }
+  
+  .photodiary a {
+    display: block;
+    margin-top: 50px;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  .blogs {
+    padding: 135px 0px 0px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .posts {
+    max-width: 420px;
+    padding-bottom: 130px;
+  }
+  
+  .posts h3 {
+    padding-top: 28px;
+  }
+  
+  .posts h2 {
+    padding-top: 18px;
+  }
+  
+  .posts p {
+    padding-top: 28px;
+    display: block;
+    height: 95px;
+    overflow: hidden;
+  }
+  
+  .sign-up {
+    padding: 65px 0px 75px 0px;
+    height: 287px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+  }
+  
+  .sign-up h2 {
+    color: #333333;
+    display: block;
+  }
+  
+  .form-container {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    color: #626262;
+    padding: 0px 0px 5px 0px;
+  }
+  
+  input {
+    width: 90%;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: PlayfairDisplay;
+  }
+  
+  input:focus {
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    width: 10%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #626262;
+    cursor: pointer;
+  }
+  
+  #blog2 {
+    padding-top: 105px;
+  }
+  
+  .loadmore {
+    display: block;
+    padding: 15px 32px;
+    color: #626262 !important;
+    font-size: 20px;
+    font-family: PlayfairDisplay;
+    margin: 35px auto 142px auto;
+    border: 1px solid rgb(24, 24, 24);
+    width: 164px;
+    height: 60px;
+  }
+  
+  footer {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 99px;
+  }
+  
+  .terms, .social {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  
+  .terms a {
+    display: block;
+    margin-right: 15px;
+    font-family: PlayfairDisplay;
+    font-size: 14px;
+  }
+  
+  .social a {
+    font-size: 20px;
+    color: #626262 !important;
+    margin-left: 15px;
+  }
+  
+  footer p, footer a {
+    color: black !important;
+  }
+}
