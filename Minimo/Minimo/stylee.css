@@ -81,7 +81,7 @@ p {
   line-height: 16px;
 }
 
-.page-container {
+.container {
   background-color: #ffffff;
   width: 100%;
   margin: 0 auto;
@@ -108,8 +108,8 @@ header {
   z-index: 1;
 }
 
-.brand:hover {
-  color:rgba(226, 26, 26, 0.986)
+.brand:hover, footer a:hover {
+  color:rgba(226, 26, 26, 0.986) !important;
 }
 
 nav {
@@ -276,6 +276,7 @@ button {
 .loadmore {
   display: block;
   color: #626262 !important;
+  transition: color 0.4s;
   padding: 5px 5px;
   font-size: 14px;
   font-family: PlayfairDisplay;
@@ -283,6 +284,10 @@ button {
   border: 1px solid rgb(24, 24, 24);
   width: fit-content;
   height: auto;
+}
+
+.loadmore:hover {
+  color: rgba(238, 11, 11, 0.986) !important;
 }
 
 footer {
@@ -324,6 +329,7 @@ footer {
 
 footer p, footer a {
   color: black !important;
+  transition: color 0.4s;
 }
 
 #topup {
@@ -369,8 +375,8 @@ footer p, footer a {
     line-height: 24px;
   }
 
-  .page-container {
-    max-width: 1061px;
+  .container {
+    max-width: 900px;
     margin: auto;
   }
   
@@ -378,8 +384,9 @@ footer p, footer a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 62px 0px 30px 0px;
+    max-width: 1061px;
+    padding: 70px 0px 30px 0px;
+    margin: auto;
   }
   
   .brand {
@@ -430,10 +437,7 @@ footer p, footer a {
   
   main {
     width: 100%;
-  }
-  
-  main img {
-    display: block;
+    margin: auto;
   }
   
   .photodiary, .blogs {
@@ -559,8 +563,14 @@ footer p, footer a {
     justify-content: space-between;
     align-items: center;
     height: 99px;
+    padding-left: calc((100% - 900px)/2);
+    padding-right: calc((100% - 1061px)/2);
   }
   
+  .terms, .social {
+    padding: 0px;
+  }
+
   .terms a {
     display: block;
     margin-right: 15px;
