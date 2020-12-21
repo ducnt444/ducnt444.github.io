@@ -58,7 +58,7 @@ a:hover {
   text-decoration: none !important;
 }
 
-h3, .photodiary a {
+h3, .photodiary a, .full-photodiary a {
   font-family: Ubuntu;
   font-weight: lighter;
   font-size: 12px;
@@ -183,19 +183,30 @@ img {
   margin: auto;
 }
 
-.photodiary {
+.photodiary, .full-photodiary {
   padding: 5px 15px 0px 15px;
+}
+
+.photodiary {
   height: 140px;
   overflow: hidden;
 }
 
+.full-photodiary {
+  padding: 5px 15px 35px 15px;
+}
+
 .photodiary h2,
-.photodiary p
+.photodiary p,
+.full-photodiary h2,
+.full-photodiary p
  {
   padding-top: 10px
 }
 
-.photodiary a {
+.photodiary a,
+.full-photodiary a
+ {
   display: block;
   margin-top: 25px;
   cursor: pointer;
@@ -224,6 +235,38 @@ img {
   height: 70px;
   overflow: hidden;
 }
+
+.full-blogs img {
+  padding-bottom: 30px;
+}
+
+#italic {
+  padding: 0px 30px 30px 30px;
+  font-style: italic;
+}
+
+.full-blogs p:nth-of-type(2){
+  padding: 0px 15px 30px 15px;
+}
+
+#share {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 15px 30px 15px;
+  align-items: baseline;
+}
+
+#share * {
+  margin-left: 5px;
+  color: #b4ad9e;
+}
+
+#share-text {
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 300;
+}
+
 
 .sign-up {
   display: flex;
@@ -264,7 +307,7 @@ input:focus {
   outline: none;
 }
 
-button {
+.sign-up button {
   width: 10%;
   border: none;
   outline: none;
@@ -362,7 +405,7 @@ footer p, footer a {
 }
 
 @media only screen and (min-width: 870px) {
-  h3, .photodiary a {
+  h3, .photodiary a, .full-photodiary a {
     font-size: 14px;
   }
   
@@ -440,25 +483,25 @@ footer p, footer a {
     margin: auto;
   }
   
-  .photodiary, .blogs {
+  .photodiary, .full-photodiary, .blogs {
     max-width: 900px;
     margin: auto;
     height: auto;
   }
   
-  .photodiary {
+  .photodiary, .full-photodiary {
     padding: 100px 0px 0px 0px;
   }
   
-  .photodiary h2 {
+  .photodiary h2, .full-photodiary h2 {
     padding-top: 20px
   }
   
-  .photodiary p {
+  .photodiary p, .full-photodiary p {
     padding-top: 30px
   }
   
-  .photodiary a {
+  .photodiary a, .full-photodiary a {
     display: block;
     margin-top: 50px;
     cursor: pointer;
@@ -531,7 +574,7 @@ footer p, footer a {
     outline: none;
   }
   
-  button {
+  .sign-up button {
     width: 10%;
     border: none;
     outline: none;
@@ -539,7 +582,7 @@ footer p, footer a {
     color: #626262;
     cursor: pointer;
   }
-  
+
   #blog2 {
     padding-top: 105px;
   }
