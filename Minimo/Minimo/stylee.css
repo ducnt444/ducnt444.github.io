@@ -172,6 +172,8 @@ header button {
   position: relative;
   top: 2px;
   font-size: 22px;
+  border: none;
+  outline: none;
 }
 
 main {
@@ -234,6 +236,11 @@ img {
   display: block;
   height: 70px;
   overflow: hidden;
+}
+
+.full-blogs {
+  max-width: 900px;
+  padding: 0px 15px;
 }
 
 .full-blogs img {
@@ -403,6 +410,42 @@ footer p, footer a {
     align-items: baseline;
   }
 }
+
+.also {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.also-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px 0px 0px 0px;
+  font-size: 16px;
+}
+
+.also-container p {
+  font-size: 14px;
+  font-family: Ubuntu;
+  color: #b4ad9e;
+}
+
+.also-posts {
+  padding: 0px 0px 30px 0px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.also-posts a {
+  font-family: PlayfairDisplay;
+  font-size: 14px;
+  padding: 5px 0px 0px 0px;
+  color: #626262;
+}
+
+
 
 @media only screen and (min-width: 870px) {
   h3, .photodiary a, .full-photodiary a {
@@ -635,6 +678,10 @@ footer p, footer a {
     width: 50px;
     height: 50px;
     font-size: 30px;
+  }
+
+  .full-blogs {
+    padding: 0px;
   }
 }
 
