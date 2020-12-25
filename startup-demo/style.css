@@ -11,7 +11,9 @@ a {
   color: black;
 }
 
-ul {
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0; 
   list-style: none;
 }
 
@@ -457,6 +459,9 @@ footer {
   background-color: #EB5B49;
   margin-top: 109px;
   text-align: center;
+  height: 157px;
+  padding: 0px 15px;
+  
 }
 
 footer, footer a {
@@ -466,18 +471,36 @@ footer, footer a {
 .footer-container {
   margin: auto;
   display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 100%;
 }
 
 .footer-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 50px;
+  margin: 15px 0px;
+  width: 100%;
 }
 
 .footer-menu li {
   width: calc(33% - 5px);
 }
 
-.language-menu {
-  po
+.footer-menu a {
+  height: 100%;
+}
+
+.legal, .privacy, .language-container {
+  display: none;
+}
+
+.social {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
 }
