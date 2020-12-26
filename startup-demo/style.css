@@ -220,6 +220,7 @@ header {
 
 .header-apply {
   display: none !important;
+  background-color: #EB5B49;
 }
 
 .logo-button-container {
@@ -680,6 +681,7 @@ footer, footer a {
   }
 
   header {
+    padding-top: 30px !important;
     background-image: url("./Background.png");
     background-repeat:no-repeat;
     background-size:contain;
@@ -733,7 +735,7 @@ footer, footer a {
   }
 
   #menu li a{
-    height: 25px;
+    height: 100%;
   }
 
   .section-about {
@@ -857,6 +859,10 @@ footer, footer a {
   section {
     padding: 0px;
   }
+  
+  header {
+    padding-top: 0px !important;
+  }
 
   #menu {
     padding: 24px 0px;
@@ -887,14 +893,8 @@ footer, footer a {
     border: none !important;
   }
 
-  .header-apply {
-    display: block !important;
-    width: 70px;
-    margin: 0px;
-  }
-
   #menu li a{
-    height: 25px;
+    height: 100%;
   }
 
   .header-apply {
@@ -1111,7 +1111,6 @@ footer, footer a {
 
 @media only screen and (min-width: 1260px) {
   .section-apply {
-    padding-top: 268px;
     background-image: url("./apply-bg.png");
   }
 }
