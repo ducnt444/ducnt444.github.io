@@ -258,7 +258,7 @@ header {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding-bottom: 85px;
+  padding-bottom: 45px;
   max-width: 1440px;
   width: 100%;
   margin: auto;
@@ -273,11 +273,13 @@ header {
   align-items: center;
 }
 
-
-
 .wel-description {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.scroll-down {
+  margin: 5px 0px 5px 0px;
 }
 
 .about {
@@ -355,7 +357,6 @@ header {
 }
 
 .stats {
-  margin-top: 85px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -382,10 +383,6 @@ header {
 
 .brands *{
   margin-top: 15px;
-}
-
-.news {
-  padding-top: 100px;
 }
 
 .news-area {
@@ -669,7 +666,7 @@ footer, footer a {
   }
 
   section {
-    padding: 0px 30px;
+    padding: 50px 30px;
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
@@ -755,10 +752,6 @@ footer, footer a {
     background-position: top;
   }
 
-  .section-apply {
-    padding-top: 268px;
-  }
-
   .brands {
     width: 100%;
   }
@@ -786,7 +779,7 @@ footer, footer a {
   }
 
   .form-col {
-    width: 50%;
+    width: 49%;
   }
 }
 
@@ -795,6 +788,10 @@ footer, footer a {
 
 @media only screen and (min-width: 992px) {
   
+  .team {
+    padding-top: 227px;
+  }
+
   .news-area {
     flex-flow: row wrap;
     justify-content: center;
@@ -911,6 +908,10 @@ footer, footer a {
     margin-bottom: 0px !important;
   }
 
+  .welcome {
+    padding-bottom: 85px;
+  }
+
   .wel-description {
     margin: 0px;
   }
@@ -921,10 +922,6 @@ footer, footer a {
 
   .about img {
     margin-bottom: 72px;
-  }
-
-  .team {
-    padding-top: 227px;
   }
 
   .team .description {
@@ -963,8 +960,8 @@ footer, footer a {
     margin-left: 192px;
   }
 
-  .process {
-    margin-top: 208px;
+  .section-process {
+    padding-top: 208px;
   }
 
   .process .description {
@@ -987,8 +984,8 @@ footer, footer a {
     margin-bottom: 110px;
   }
 
-  .stats {
-    margin-top: 124px;
+  .section-stats {
+    padding-top: 124px;
   }
 
   .stats-row {
@@ -1011,7 +1008,7 @@ footer, footer a {
     margin-top: 18px;
   }
 
-  .news {
+  .section-news {
     padding-top: 261px;
   }
   .news-area .news-items-wrapper:nth-child(odd) {
@@ -1030,8 +1027,12 @@ footer, footer a {
     width: 316px;
   }
 
+  .section-apply {
+    padding-top: 268px;
+  }
+
   .apply {
-    margin: 268px auto 0px auto;
+    margin: 0px auto;
     padding: 0px 95px;
   }
 
