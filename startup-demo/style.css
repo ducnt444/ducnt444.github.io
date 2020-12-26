@@ -507,12 +507,13 @@ label, .full-area p {
 }
 
 footer {
+  max-width: 1440px;
   width: 100%;
   background-color: #EB5B49;
   margin-top: 109px;
   text-align: center;
   padding: 10px;
-  
+  margin: 100px auto 0px auto;
 }
 
 footer, footer a {
