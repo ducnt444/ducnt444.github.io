@@ -28,6 +28,7 @@ html {
 }
 
 body {
+  font-family: lato;
   font-family:
   -apple-system,
   BlinkMacSystemFont,
@@ -35,8 +36,6 @@ body {
   "Roboto",
   "Helvetica Neue", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-family: lato;
-  
 }
 
 img {
@@ -50,7 +49,11 @@ img {
 
 /*---fonts styles---*/
 
-menu a, 
+footer, .header-logo {
+  font-family: SF Pro Display;
+}
+
+#menu a, 
 .header-apply,
 .member-text,
 .apply p:first-of-type,
@@ -123,17 +126,12 @@ h2 {
   line-height: 32px;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 10px !important;
+  height: auto;
 }
 
 .author {
   font-size: 12px;
   color:#848484;
-}
-
-.page-container {
-  max-width: 100%;
-  padding: 15px 15px 0px 15px;
 }
 
 button {
@@ -143,9 +141,10 @@ button {
   font-size: 20px;
 }
 
-.page-container {
+.container1440 {
   max-width: 1440px;
   margin: auto;
+  padding: 15px 15px 0px 15px;
 }
 
 .big-container {
@@ -198,13 +197,18 @@ header {
   margin-left: calc(50% - )
 }
 
+.small {
+  margin-left: calc(50% - 17.5px - 35px);
+  width: 80px;
+}
+
 #sm-hidden {
   display: none;
   border: none !important;
 }
 
 .header-apply {
-  display: none;
+  display: none !important;
 }
 
 .logo-button-container {
@@ -212,15 +216,10 @@ header {
   align-items: center;
 }
 
-.small {
-  margin-left: calc(50% - 17.5px - 35px);
-  width: 70px;
-}
-
 #menu {
-  width: 100%;
+  width: calc(100% - 30px);
   position: absolute;
-  top: 35px;
+  top: 45px;
   transition: visibility 0.5s, opacity 0.5s;
   visibility: hidden;
   opacity: 0;
@@ -234,9 +233,13 @@ header {
 }
 
 #menu ul a {
-  text-align: center;
   width: 100%;
   border-bottom: 1px solid black;
+  height: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 
 .welcome {
@@ -282,6 +285,14 @@ header {
   text-align: center;
 }
 
+.member-name {
+  margin: 10px 0px;
+}
+
+.member-text {
+  margin-bottom: 15px;
+}
+
 .members:last-child {
   margin-top: 50px;
 }
@@ -310,6 +321,10 @@ header {
   margin-bottom: 30px;
 }
 
+.process-title {
+  font-weight: 900;
+}
+
 .stats {
   margin-top: 85px;
   display: flex;
@@ -324,9 +339,10 @@ header {
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px;
+  color: white;
 }
 
-.stats-items p {
+.stats-text {
   margin-bottom: 0;
   line-height: 25px;
 }
@@ -459,7 +475,7 @@ footer {
   background-color: #EB5B49;
   margin-top: 109px;
   text-align: center;
-  height: 157px;
+  height: 160px;
   padding: 0px 15px;
   
 }
@@ -495,7 +511,7 @@ footer, footer a {
   height: 100%;
 }
 
-.legal, .privacy, .language-container {
+.pri-legal, .language-container {
   display: none;
 }
 
@@ -503,4 +519,85 @@ footer, footer a {
   display: flex;
   width: 150px;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 576px) {
+  #menu a, 
+  .header-apply,
+  .member-text,
+  .apply p:first-of-type,
+  .process-text,
+  .apply-sm-text, 
+  footer {
+    font-size: 14px;
+  }
+
+  .description, 
+  .vivamus, 
+  .drag, 
+  .header-logo, 
+  .footer-logo {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .wel-description, 
+  .process-title, 
+  .stats-text, 
+  .full-area p:first-of-type, 
+  label {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  h1 {
+    font-size: 82px;
+    line-height: 80px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .stats-num {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .stats-items {
+    padding: 50px 26px 47px 26px ;
+    margin-top: 20px;
+    max-width: 360px;
+  }
+
+  .footer-container {
+    justify-content: space-evenly;
+
+  }
+
+  .footer-menu {
+    margin: 0px;
+  }
+
+  .pri-legal {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container1440 {
+    padding: 30px 30px 0px 30px;
+  }
+
+  #menu {
+    width: calc(100% - 60px);
+    position: absolute;
+    top: 65px;
+  }
+
+  #menu ul a {
+    height: 35px;
+  }
 }
