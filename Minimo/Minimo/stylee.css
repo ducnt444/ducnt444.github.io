@@ -109,7 +109,7 @@ header {
 }
 
 .brand:hover, footer a:hover {
-  color:rgba(226, 26, 26, 0.986) !important;
+  color:rgb(180, 133, 72) !important;
 }
 
 nav {
@@ -185,17 +185,14 @@ img {
   margin: auto;
 }
 
-.photodiary, .full-photodiary {
-  padding: 5px 15px 0px 15px;
-}
-
 .photodiary {
+  padding: 5px 15px 0px 15px;
   height: 140px;
   overflow: hidden;
 }
 
 .full-photodiary {
-  padding: 5px 15px 35px 15px;
+  padding: 75px 15px 35px 15px;
 }
 
 .photodiary h2,
@@ -248,12 +245,12 @@ img {
 }
 
 #italic {
-  padding: 0px 30px 30px 30px;
+  padding: 0px 20px 30px 20px;
   font-style: italic;
 }
 
 .full-blogs p:nth-of-type(2){
-  padding: 0px 15px 30px 15px;
+  padding-bottom: 30px;
 }
 
 #share {
@@ -264,8 +261,12 @@ img {
 }
 
 #share * {
-  margin-left: 5px;
   color: #b4ad9e;
+}
+
+#share a {
+  margin-left: 15px;
+  font-size: 16px;
 }
 
 #share-text {
@@ -273,7 +274,6 @@ img {
   font-size: 13px;
   font-weight: 300;
 }
-
 
 .sign-up {
   display: flex;
@@ -337,7 +337,7 @@ input:focus {
 }
 
 .loadmore:hover {
-  color: rgba(238, 11, 11, 0.986) !important;
+  color: rgb(180, 133, 72) !important;
 }
 
 footer {
@@ -398,6 +398,92 @@ footer p, footer a {
   cursor: pointer;
   color: white;
 }
+
+/* ------------------ full width styles ------------------ */
+
+.comments-container {
+  padding: 0px 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.comment-title {
+  margin-top: 30px;
+}
+
+.comments img {
+  margin: 0px;
+}
+
+.comments-area {
+  margin-left: 15px;
+  width: 100%;
+}
+
+.comments-area p:nth-child(2) {
+  padding: 10px 0px;
+}
+
+.empty {
+  height: 69px;
+  width: 100%;
+}
+
+.comments input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 7px;
+  padding-left: 15px;
+}
+
+.comments input:focus {
+  border: 1px solid rgb(207, 207, 207);
+}
+
+::-webkit-input-placeholder { /* Edge */
+  opacity: 0.6 !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  opacity: 0.6 !important;
+}
+
+::placeholder {
+  opacity: 0.6 !important;
+}
+
+.comments-social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 0px 35px 0px;
+}
+
+.comments-social p {
+  margin-right: 10px;
+  font-family: Ubuntu;
+  opacity: 0.6;
+}
+
+.comments-social a {
+  margin-left: 10px;
+}
+
+.comments-social a:first-of-type {
+  opacity: 0.35;
+}
+
+/* ---------------------- media 430 ---------------------- */
+
 @media only screen and (min-width: 430px) {
   .form-container {
     width: 400px;
@@ -413,6 +499,7 @@ footer p, footer a {
 
 .also {
   width: 100%;
+  padding: 15px;
   background-color: rgb(245, 245, 245);
 }
 
@@ -421,33 +508,35 @@ footer p, footer a {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 20px 0px 0px 0px;
   font-size: 16px;
+  margin: auto;
 }
 
 .also-container p {
   font-size: 14px;
   font-family: Ubuntu;
   color: #b4ad9e;
+  width: 100%;
+  margin: 35px 0px 20px 0px;
 }
 
 .also-posts {
-  padding: 0px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .also-posts a {
   font-family: PlayfairDisplay;
   font-size: 14px;
-  padding: 5px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   color: #626262;
 }
 
+/* ---------------------- media 870 ---------------------- */
 
-
-@media only screen and (min-width: 870px) {
+@media only screen and (min-width: 886px) {
   h3, .photodiary a, .full-photodiary a {
     font-size: 14px;
   }
@@ -471,7 +560,7 @@ footer p, footer a {
     align-items: center;
     justify-content: space-between;
     max-width: 1061px;
-    padding: 70px 0px 30px 0px;
+    padding: 70px 30px 30px 30px;
     margin: auto;
   }
   
@@ -514,7 +603,7 @@ footer p, footer a {
   }
 
   header a:hover {
-    color: rgba(238, 11, 11, 0.986);
+    color:rgb(180, 133, 72) !important;
   }
 
   header button {
@@ -533,7 +622,7 @@ footer p, footer a {
   }
   
   .photodiary, .full-photodiary {
-    padding: 100px 0px 0px 0px;
+    padding: 100px 30px 0px 30px;
   }
   
   .photodiary h2, .full-photodiary h2 {
@@ -665,7 +754,7 @@ footer p, footer a {
   }
   
   .social a {
-    font-size: 20px;
+    font-size: 14px;
     color: #626262 !important;
     margin-left: 15px;
   }
@@ -680,8 +769,90 @@ footer p, footer a {
     font-size: 30px;
   }
 
-  .full-blogs {
+  /*----------------ful-width---------------*/
+  .also {
+    padding: 0px 30px;
+  }
+
+  .also-container {
+    max-width: 900px;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .comments-social p {
+    margin-right: 20px;
+  }
+  
+  .comments-social a {
+    margin-left: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  header {
+    padding: 70px 0px 30px 0px;
+  }
+
+  .comments-container, .full-blogs, .full-photodiary {
     padding: 0px;
   }
+
+  .full-photodiary {
+    margin-top: 100px;
+  }
+
+  .full-blogs {
+    margin-top: 60px;
+  }
+
+  .full-blogs img {
+    padding-bottom: 60px;
+  }
+
+  .full-blogs p:nth-of-type(2){
+    padding-bottom: 60px;
+  }
+
+  #share {
+    padding: 0px 0px 75px 0px;
+  }
+
+  .also-container p {
+    font-size: 14px;
+    font-family: Ubuntu;
+    color: #b4ad9e;
+    width: 100%;
+    margin: 65px 0px 35px 0px;
+  }
+
+  .also-posts {
+    margin: 0px 0px 85px 0px;
+  }
+
+  .also-posts a {
+    font-size: 20px;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .comment-title {
+    margin: 65px 0px 40px 0px;
+  }
+
+  .comments {
+    margin-bottom: 55px;
+  }
+
+  .last-comment {
+    margin-bottom: 35px;
+  }
+
+  .comments-social {
+    margin: 0px 0px 90px 0px;
+  }
 }
+
 
