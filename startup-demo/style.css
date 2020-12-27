@@ -49,7 +49,28 @@ img {
   max-width: 100%;
 }
 
+#topup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+  position: fixed;
+  border-radius: 50%;
+  right: 7%;
+  bottom: 5%;
+  font-size: 20px;
+  background-color: black;
+  opacity: 0.4;
+  cursor: pointer;
+  color: white;
+}
 
+#topup * {
+  height: 20px;
+  width: 35px;
+}
 /* ---------- kết thúc reset css ----------*/
 
 /*---fonts styles---*/
@@ -118,7 +139,8 @@ h1 {
   line-height: 50px;
   text-align: center;
   font-weight: bold;
-  margin: 30px 0px;
+  padding: 30px 0px;
+  margin: 0px;
 }
 
 h2 {
@@ -126,8 +148,32 @@ h2 {
   line-height: 32px;
   color: #020202;
   text-align: center;
-  margin-top: 85px !important;
-  margin-bottom: 25px !important;
+  margin-top: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+.container1440 {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.mins {
+  color: #848484;
+  font-size: 14px;
+  text-align: left;
+}
+
+.container-1140 {
+  max-width: 1140px;
+  margin: auto;
+}
+
+section {
+  padding: 35px 15px;
+}
+
+header {
+  padding: 15px 15px 35px 15px;
 }
 
 .stats-num {
@@ -149,17 +195,6 @@ button {
   outline: none !important;
   background-color: transparent;
   font-size: 20px;
-}
-
-.container1440 {
-  max-width: 1440px;
-  margin: auto;
-  padding: 15px 15px 0px 15px;
-}
-
-.container-1140 {
-  max-width: 1140px;
-  margin: auto;
 }
 
 a {
@@ -258,7 +293,6 @@ header {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding-bottom: 45px;
   max-width: 1440px;
   width: 100%;
   margin: auto;
@@ -279,7 +313,7 @@ header {
 }
 
 .scroll-down {
-  margin: 5px 0px 5px 0px;
+  margin: 0px;
 }
 
 .about {
@@ -289,7 +323,7 @@ header {
 }
 
 .about * {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .team, .members {
@@ -375,6 +409,7 @@ header {
 .stats-text {
   margin-bottom: 0;
   line-height: 25px;
+  opacity: 0.8;
 }
 
 .vivamus:last-of-type {
@@ -407,7 +442,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .author-area, .time-area {
@@ -601,7 +636,6 @@ footer, footer a {
   #menu a, 
   .header-apply,
   .member-text,
-  .apply p:first-of-type,
   .process-text,
   .apply-sm-text, 
   footer {
@@ -611,7 +645,8 @@ footer, footer a {
   .description, 
   .vivamus, 
   .drag, 
-  .header-logo, 
+  .header-logo,
+  .apply p:first-of-type, 
   .footer-logo {
     font-size: 20px;
     line-height: 35px;
@@ -635,6 +670,11 @@ footer, footer a {
     font-size: 48px;
   }
 
+  section {
+    padding: 50px 15px;
+  }
+  
+
   #menu li a{
     height: 25px;
   }
@@ -645,7 +685,7 @@ footer, footer a {
   }
 
   .stats-items {
-    padding: 50px 26px 47px 26px ;
+    padding: 54px 26px 44px 26px ;
     max-width: 360px;
   }
 
@@ -666,7 +706,7 @@ footer, footer a {
   }
 
   section {
-    padding: 50px 30px;
+    padding: 65px 15px;
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
@@ -787,9 +827,9 @@ footer, footer a {
 /*------------------------ media 992 ------------------------*/
 
 @media only screen and (min-width: 992px) {
-  
-  .team {
-    padding-top: 227px;
+
+  section {
+    padding: 85px 15px;
   }
 
   .news-area {
@@ -847,6 +887,9 @@ footer, footer a {
 /*------------------------ media 1200 ------------------------*/
 
 @media only screen and (min-width: 1200px) {
+  .full-area p:first-of-type {
+    font-size: 18px;
+  }
   .container1440 {
     max-width: 1440px;
     margin: auto;
@@ -862,7 +905,7 @@ footer, footer a {
   }
 
   #menu {
-    padding: 24px 0px;
+    padding: 15px 0px;
     max-width: 1200px;
     margin: auto;
   }
@@ -900,7 +943,7 @@ footer, footer a {
   }
 
   h1 {
-    margin: 152px 0px 60px 0px;
+    padding: 152px 0px 60px 0px;
   }
 
   h2 {
@@ -908,8 +951,12 @@ footer, footer a {
     margin-bottom: 0px !important;
   }
 
-  .welcome {
-    padding-bottom: 85px;
+  .apply p:first-of-type {
+    font-size: 14px;
+  }
+
+  main {
+    padding-top: 85px !important;
   }
 
   .wel-description {
@@ -917,11 +964,20 @@ footer, footer a {
   }
 
   .scroll-down {
-    margin: 60px 0px 20px 0px;
+    padding: 60px 0px 20px 0px;
   }
 
-  .about img {
-    margin-bottom: 72px;
+  .about * {
+    margin: 0px !important;
+  }
+
+  .section-team {
+    padding: 227px 0px 0px 0px;
+  }
+
+  .about-text {
+    margin: 72px 0px 34px 0px !important;
+    height: fit-content;
   }
 
   .team .description {
@@ -981,7 +1037,7 @@ footer, footer a {
   }
 
   .process-row:first-of-type {
-    margin-bottom: 110px;
+    margin-bottom: 105px;
   }
 
   .section-stats {
@@ -1037,7 +1093,7 @@ footer, footer a {
   }
 
   .apply .description {
-    margin: 30px 0px 43px 0px;
+    margin: 30px 0px 43px 0px !important;
   }
 
   .drag p:first-of-type {
@@ -1046,7 +1102,7 @@ footer, footer a {
   }
 
   .full-area p {
-    margin: 5px 0px 10px 0px;
+    margin: 0px;
   }
 
   .apply-sm-text {
@@ -1054,6 +1110,7 @@ footer, footer a {
   }
 
   footer {
+    margin: 218px auto 0px auto;
     display: flex;
     padding: 0px 7% 0px 8.8%;
     height: 157px;
@@ -1108,6 +1165,7 @@ footer, footer a {
     width: 11%;
     margin: 0px;
   }
+
 }
 
 @media only screen and (min-width: 1260px) {
