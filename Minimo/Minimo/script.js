@@ -18,6 +18,9 @@ let dropdown = function() {
 
 document.getElementById("menu-button").onclick = dropdown;
 
+
+
+
 let checkSidebar = 0; //khi check == 0 thì menu sẽ ẩn, check == 1 thì menu sẽ trượt. check thay đổi qua mỗi lần click
 
 let slideLeft = function() {
