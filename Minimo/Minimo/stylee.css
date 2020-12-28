@@ -192,7 +192,7 @@ img {
 }
 
 .full-photodiary {
-  padding: 75px 15px 35px 15px;
+  padding: 55px 15px 35px 15px;
 }
 
 .photodiary h2,
@@ -386,7 +386,7 @@ footer p, footer a {
   transition: color 0.4s;
 }
 
-#topup {
+#topup, #sidebar-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,13 +394,23 @@ footer p, footer a {
   height: 35px;
   border-radius: 50%;
   position: fixed;
-  right: 7%;
-  bottom: 5%;
   font-size: 20px;
   background-color: black;
-  opacity: 0.4;
+  opacity: 0.2;
   cursor: pointer;
   color: white;
+  border: none;
+  outline: none !important;
+}
+
+#topup {
+  right: 7%;
+  bottom: 5%;
+}
+
+#sidebar-button {
+  left: 7%;
+  bottom: 5%;
 }
 
 /* ------------------ full width styles ------------------ */
@@ -486,6 +496,69 @@ footer p, footer a {
   opacity: 0.35;
 }
 
+/* ---------------------- posts sidebar ---------------------- */
+
+#sidebar {
+  max-width: 272px;
+  font-size: 18px;
+  padding: 15px 15px 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #c8c3b8;
+  position: fixed;
+  left: -272px;
+  top: calc(50% - 235px);
+  transition: left 0.5s;
+  z-index: 2;
+  background-color: white;
+}
+
+#sidebar h2 {
+  margin: 10px 0px 5px 0px;
+  font-size: 14px;
+}
+
+.sidebar-social {
+  margin: 5px 0px 10px 0px;
+  font-size: 12px;
+  color: #797979;
+}
+
+.sidebar-social a {
+  margin-right: 10px;
+}
+
+#sidebar ul {
+  list-style: disc;
+  margin-top: 10px;
+}
+
+#sidebar li {
+  position: relative;
+  left: 18px;
+}
+
+#sidebar ul a {
+  font-family: PlayfairDisplay;
+  font-size: 10px;
+  position: relative;
+  bottom: 3px;
+}
+
+#sidebar ul li p {
+  font-family: Ubuntu;
+  font-size: 10px;
+  color: #b4ad9e;
+  position: relative;
+  bottom: 3px;
+}
+
+#sidebar li::marker {
+  color: #b4ad9e;
+}
+
+.sidebar-banner {
+  display: none;
+}
 /* ---------------------- media 430 ---------------------- */
 
 @media only screen and (min-width: 430px) {
@@ -537,7 +610,7 @@ footer p, footer a {
   color: #626262;
 }
 
-/* ---------------------- media 870 ---------------------- */
+/* ---------------------- media 900 ---------------------- */
 
 @media only screen and (min-width: 900px) {
   h3, .photodiary a, .full-photodiary a {
@@ -557,7 +630,7 @@ footer p, footer a {
     max-width: 900px;
     margin: auto;
   }
-  
+
   header {
     display: flex;
     align-items: center;
@@ -766,13 +839,11 @@ footer p, footer a {
     color: black !important;
   }
 
-  #topup {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+  #sidebar-button {
+    display: none;
   }
 
-  /*----------------ful-width---------------*/
+  /*-------------------- ful-width -------------------*/
   .also {
     padding: 0px 30px;
   }
@@ -790,6 +861,99 @@ footer p, footer a {
   
   .comments-social a {
     margin-left: 15px;
+  }
+
+  /*-------------------- sidebar -------------------*/
+
+  .sidebar-main {
+    max-width: 1061px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 81px;
+  }
+
+  .sidebar-mainland {
+    max-width: calc(100% - 50px - 272px);
+    margin-right: 50px;
+  }
+
+  #sidebar {
+    position: static;
+    border: none;
+    padding: 0px;
+    margin-top: 100px;
+    font-size: 18px;
+  }
+
+  #sidebar h2 {
+    margin: 20px 0px 10px 0px;
+    font-size: 24px;
+  }
+  
+  #sidebar p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .sidebar-social {
+    margin: 20px 0px 65px 0px;
+    font-size: 18px;
+    color: #797979;
+  }
+  
+  .sidebar-social a {
+    color: #a5a5a5;
+    margin-right: 15px;
+  }
+  
+  #sidebar ul {
+    margin-top: 30px;
+  }
+  
+  #sidebar li {
+    position: relative;
+    left: 19px;
+    margin-bottom: 20px;
+  }
+  
+  #sidebar ul a {
+    font-family: PlayfairDisplay;
+    font-size: 16px;
+    position: static;
+  }
+  
+  #sidebar ul li p {
+    font-family: Ubuntu;
+    font-size: 12px;
+    position: static;
+  }
+
+  .sidebar-banner {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin-top: 55px;
+    background-image: url("./sidebar/banner2.jpg");
+  }
+
+  .sidebar-banner p {
+    color:white;
+    margin-top: 15px;
+  }
+
+  .sidebar-banner p:first-child {
+    font-size: 48px !important;
+    font-family: Ubuntu;
+    font-weight: 300;
+  }
+
+  .sidebar-banner p:last-child {
+    font-size: 14px !important;
+    font-family: Ubuntu;
+    font-weight: 300;
   }
 
 }
