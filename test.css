@@ -1,0 +1,82 @@
+/* ---------- reset css ----------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+	margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* ---------- kết thúc reset css ----------*/
+
+.item-content button {
+	width: 80px;
+}
+
+.container {
+	background-color: rgb(10, 10, 10);
+	color: white;
+}
+
+.items {
+
+}
+
+.price {
+	font-size: 1.5rem;
+}
+
+.vat {
+	font-size: 1rem;
+}
+
+.item-content {
+	position: relative;
+}
+
+h3 {
+	position: absolute;
+	top: 40%;
+	font-size: 3rem;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.2);
+}
