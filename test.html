@@ -69,15 +69,17 @@
   
   .carousel-caption {
   height: calc(100% - 30px);
+  max-height: 200px;
   padding: 0px;
   top: 15px;
   width: calc(60% - 15px);
+  max-width: 260px;
   left: 15px;
   bottom: 0px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  align-items: center;
+  
   }
 
   #myCarousel, .carousel-item, .carousel-inner {
@@ -88,22 +90,26 @@
   z-index: 100;
   }
 
-  h1 {
+  .carousel-caption h1 {
     font-size: 35px;
     margin-bottom: 0px;
     line-height: 35px;
+    text-align: left;
+    padding-left: 20%;
   }
 
   h2 {
     font-size: 13px;
     margin-bottom: 0px;
-
+    text-align: right;
+    padding-right: 20%;
   }
 
   p {
     font-size: 11px !important;
     margin-bottom: 0px;
-
+    text-align: left;
+    padding-left: 20%;
   }
   a {
     font-size: 10px !important;
@@ -111,6 +117,7 @@
     width: 50%;
     max-width: 120px;
     padding: 5px 10px !important;
+    align-self: center;
   }
   .carousel-item {
     padding: 15px;
@@ -153,8 +160,11 @@
 
       <div class="carousel-item">
         <div class="carousel-caption">
-          <h2>#Slide Title</h2>
-          <p class="lead">This text is super engaging and makes you</p>
+          <h1>SIGMA</h1>
+          <h2>17-50mm f/2.8 
+            <br>EX DC OS HSM
+          </h2>
+          <p>Vũ khí duy nhất bạn cần để "cân" mùa Tết</p>
           <a href="#" class="btn btn-lg btn-primary">Learn More</a>
         </div>
         <img src="/Project-HALO/lens-img/banner.jpg" width="1100" height="500">
@@ -162,13 +172,15 @@
       
       <div class="carousel-item">
         <div class="carousel-caption">
-          <h2>#Slide Title</h2>
-          <p class="lead">This text is super engaging and makes you</p>
+          <h1>SIGMA</h1>
+          <h2>17-50mm f/2.8 
+            <br>EX DC OS HSM
+          </h2>
+          <p>Vũ khí duy nhất bạn cần để "cân" mùa Tết</p>
           <a href="#" class="btn btn-lg btn-primary">Learn More</a>
         </div>
         <img src="/Project-HALO/lens-img/banner.jpg" width="1100" height="500">
       </div>
-    </div>
 
     <!-- Left and right controls -->
     <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
