@@ -1,10 +1,32 @@
 header
-  .container
-    ul
-      li
-        a(href='#') ABC
-      li
-        a(href='#') ABC
-      li
-        a(href='#') ABC
+  nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+    .container
+      .hamburger-wrapper
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+          span.navbar-toggler-icon
 
+      a.navbar-brand(href='index.html')
+        img(src="img/misc-img/logo-white.png", alt="")
+      
+      .cart-search
+        a(href='review-hub.html') 
+          <i class="fas fa-search"></i>
+        a(href='cart.html') 
+          <i class="fas fa-shopping-cart"></i>
+
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link.px-md-3(href='camera-hub.html') Máy ảnh
+          li.nav-item
+            a.nav-link.px-md-3(href='camera-hub.html') Ống kính
+          li.nav-item
+            a.nav-link.px-md-3(href='camera-hub.html') Phụ kiện
+          li.nav-item
+            a.nav-link.px-md-3(href='review-hub.html') Đánh giá
+          li.nav-item.mx-md-4.log-reg
+            a.nav-link(href='review-hub.html') Đăng nhập/Đăng ký
+          li.nav-item.hidden-till-md
+            a.nav-link(href='review-hub.html') <i class="fas fa-search"></i>
+          li.nav-item.hidden-till-md
+            a.nav-link(href='review-hub.html') <i class="fas fa-shopping-cart"></i>          
