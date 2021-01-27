@@ -1,0 +1,49 @@
+
+.main-carousel {
+  height: 500px;
+  background-image: url(../img/misc-img/banner-bg-1-copycat.jpg);
+  background-size: cover;
+}
+
+.slick {
+  height: 100%;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  width: 150px;
+  margin: auto;
+}
+
+.eos-r, .size-14, .big-title {
+  color: white !important;
+  text-align: center;
+}
+
+.canon-logo {
+  font-family: Canon;
+  color: #CC0000;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.white-btn {
+  border-radius: 8px !important;
+}
+
+.main-carousel .white-btn {
+  width: 70px;
+  display: block;
+}
+
+/* .slick-next:before{
+  content: url("../img/misc-img/next-arrow-xs.png") ;
+  color: #CC0000;
+  font-size: 30px;
+ */
+.slick-next:before { 
+  content: url("../img/misc-img/next-arrow-xs.png"); 
+  color: red; 
+  font-size: 30px; }

@@ -1,7 +1,16 @@
+
 extends parts/layout.pug
 
-block content 
-
+block css
+  link(rel="stylesheet", href="css/index.css")
 
 block title
   title Trang chủ
+
+block content 
+  include parts/main-carousel.pug
+  h1 Body
+
+block title
+  title Trang chủ
+

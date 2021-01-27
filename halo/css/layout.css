@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+p {
+  margin-bottom: 0px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -54,6 +58,11 @@ img {
 /* ---------- kết thúc reset css ----------*/
 
 /* ---------- font styles ----------*/
+
+@font-face {
+  font-family: Canon;
+  src: url(../fonts/CANON.ttf);
+}
 
 /* ----- Roboto -----*/
 * {
