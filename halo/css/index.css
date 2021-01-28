@@ -1,49 +1,131 @@
 
-.main-carousel {
-  height: 500px;
-  background-image: url(../img/misc-img/banner-bg-1-copycat.jpg);
+body {
+  background-color:rgb(29, 117, 231);
+}
+
+/* ---------- carousel styles ----------*/
+
+#main-carousel, 
+.carousel-inner, 
+.carousel-item, 
+.carousel-item img:first-child, 
+.carousel-caption  {  /* -- kéo dài --*/ 
+  min-height: 450px; 
+}
+
+.banner-1 {
+  background-image: url('../img/carousel-img/banner-bg-1.jpg');
   background-size: cover;
 }
 
-.slick {
-  height: 100%;
+.banner-2 {
+  background-color: rgb(105,105,105);
+  background-image: url('../img/carousel-img/alpha-logo-big-v2.png'), linear-gradient(180deg, rgba(105,105,105,1) 0%, rgba(48,48,48,1) 66%, rgba(0,0,0,1) 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center, center;
 }
 
-.logo-wrapper {
+.banner-3 {
+  background-image: url('../img/carousel-img/outer-ring.png'), url('../img/carousel-img/banner-bg-3.png');
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, top;
+}
+
+.carousel-caption {
+  width: 100%;
+  position: static;
+  padding: 20px 0px 0px 0px;   /* -- lề trên -- */
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.logo-wrapper-1 {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
-  width: 150px;
-  margin: auto;
+  width: 110px;
+  margin: 15px auto;
 }
 
-.eos-r, .size-14, .big-title {
+.logo-wrapper-2 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 160px;
+  margin: 15px auto;
+}
+
+.logo-only, 
+.logo-wrapper-3 {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+
+}
+
+.eos-r, .carousel-header4, .big-title {
   color: white !important;
   text-align: center;
 }
 
-.canon-logo {
-  font-family: Canon;
-  color: #CC0000;
-  font-size: 3rem;
-  line-height: 3rem;
-}
-
-.white-btn {
+.see-more-btn {
   border-radius: 8px !important;
+  margin: 15px auto 40px auto;
 }
 
-.main-carousel .white-btn {
+#main-carousel .white-btn {
   width: 70px;
   display: block;
 }
 
-/* .slick-next:before{
-  content: url("../img/misc-img/next-arrow-xs.png") ;
-  color: #CC0000;
-  font-size: 30px;
- */
-.slick-next:before { 
-  content: url("../img/misc-img/next-arrow-xs.png"); 
-  color: red; 
-  font-size: 30px; }
+.carousel-caption-extra {
+  display: none;
+}
+
+.progress {
+  background-color: transparent;
+}
+
+.progress-bar {
+  background-color: #CC0000;
+  opacity: 0.95;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+
+.a9-logo {
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.banner-2 .progress-bar {
+  background-color: #E94E09;
+}
+
+.lotr-logo {
+  height: 50px;
+}
+
+.collab {
+  margin: 0px 15px;
+  font-size: 20px;
+}
+
+.carousel-header .sony-logo {
+  font-size: 13px !important;
+}
+
+.banner-3 .carousel-caption-banner-xs {
+  width: 100%;
+  max-width: 400px;
+  margin: 0px auto;
+}

@@ -57,30 +57,116 @@ img {
 
 /* ---------- kết thúc reset css ----------*/
 
-/* ---------- font styles ----------*/
+/* ---------- font ----------*/
 
 @font-face {
   font-family: Canon;
   src: url(../fonts/CANON.ttf);
 }
 
-/* ----- Roboto -----*/
+@font-face {
+  font-family: Sony;
+  src: url(/fonts/clarendon_exp._urw_bold.ttf);
+}
+
+.canon-logo {
+  font-family: Canon !important;
+}
+
+.sony-logo {
+  font-family: Sony !important;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
 }
 
-/* ----- 16px -----*/
-#collapsibleNavbar li:nth-child(-n+4) a
 
-{
-  font-size: 16px;
-  font-style: normal;
+/* ----- sizes -----*/
+
+.font-11 { 
+  font-size: 11px !important; 
 }
 
-/* ----- 15px -----*/
-#collapsibleNavbar li:nth-child(5) a {
-  font-size: 15px;
+.font-14, 
+.carousel-header,
+.nav-item:nth-child(5) { 
+  font-size: 14px !important; 
 }
+
+.font-15 { 
+  font-size: 15px !important; 
+}
+
+.font-16,
+.eos-r,
+.nav-item:nth-child(-n+4) { 
+  font-size: 16px !important; 
+}
+
+h2,
+.font-17 { 
+  font-size: 17px !important; 
+}
+
+.font-18 { 
+  font-size: 18px !important; 
+}
+ 
+h1 { 
+  font-size: 20px !important; 
+}
+
+.font-24,
+.sony-logo { 
+  font-size: 24px !important; 
+}
+
+.font-28,
+.canon-logo { 
+  font-size: 28px !important; 
+}
+
+.size-36 { 
+  font-size: 36px !important; 
+}
+
+
+/* ----- colors -----*/
+.white-text { 
+  color: white !important; 
+}
+
+.canon-logo {
+  color: #CC0000;
+}
+
+
+/* ----- glow effect -----*/
+.glow-big,
+.see-more-btn
+ {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* -----  weight -----*/
+
+
+
+
+/* -----  line height -----*/
+.canon-logo,
+.sony-logo {
+  line-height: 3rem;
+}
+
+
+
+
+
+
+
+
 
 /* ----- white font -----*/
 #collapsibleNavbar li a {
@@ -211,6 +297,5 @@ img {
   .nav-item:nth-child(-n+4) {   /* giãn cách lại các menu item */
     margin: 0px 20px !important;
   }
-
 
 }

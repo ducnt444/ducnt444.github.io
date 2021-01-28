@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/layout.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <title>Trang chủ</title>
@@ -15,7 +13,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="container">
+        <div class="container px-4">
           <div class="hamburger-wrapper">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
           </div><a class="navbar-brand" href="index.html"><img src="img/misc-img/logo-white.png" alt=""/></a>
@@ -37,33 +35,109 @@
       </nav>
     </header>
     <main>
-      <div class="main-carousel single-item">
-        <div class="slide-1">
-          <div class="flex-column justify-content-between p-0">
-            <h1 class="big-title">Tiêu điểm tháng 1</h1>
-            <div class="logo-wrapper">
-              <p class="canon-logo">Canon</p>
-              <p class="eos-r">EOS R</p>
+      <div class="carousel slide" id="main-carousel" data-ride="carousel" data-interval="false" data-touch="true">
+        <!--indicators: 3 nút định vị trang-->
+        <ul class="carousel-indicators">
+          <li class="active" data-target="#main-carousel" data-slide-to="0"></li>
+          <li data-target="#main-carousel" data-slide-to="1"></li>
+          <li data-target="#main-carousel" data-slide-to="2"></li>
+        </ul>
+        <!--nội dung carousel-->
+        <div class="carousel-inner">
+          <div class="carousel-item banner-1 active">
+            <div class="carousel-caption">
+              <div class="carousel-caption-text">
+                <h1 class="big-title font-weight-bold">Tiêu điểm tháng 1</h1>
+                <div class="logo-wrapper-1">
+                  <p class="canon-logo">Canon</p>
+                  <p class="eos-r">EOS R</p>
+                  <div class="progress" style="width:90px; height: 5px">
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%; height: 5px"></div>
+                  </div>
+                </div>
+                <p class="carousel-header font-italic">ĐỊNH NGHĨA LẠI <br/> CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI</p>
+                <button class="white-btn btn btn-outline-light text-light see-more-btn" type="button">Xem chi tiết</button>
+              </div><img class="carousel-caption-banner-xs" src="img/carousel-img/eos-r-main-banner-xs.png" alt=""/>
+              <div class="carousel-caption-extra">
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-1.png" alt=""/>
+                  <p class="extra-text">LẤY NÉT TỰ ĐỘNG DUAL PIXEL CMOS </p>
+                </div>
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-2.png" alt=""/>
+                  <p class="extra-text">TỐI ƯU HÓA ĐIỀU KHIỂN </p>
+                </div>
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-3.png" alt=""/>
+                  <p class="extra-text">QUAY VIDEO ĐA CHẾ ĐỘ ĐỘ PHÂN GIẢI 4K</p>
+                </div>
+              </div>
             </div>
-            <p class="size-14">ĐỊNH NGHĨA LẠI CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI</p><button type="button" class="white-btn btn btn-outline-light text-light mx-auto">Xem chi tiết</button><img class="banner-xs" src="img/body-img/eos-r-main-banner-xs.png" alt=""/>
           </div>
-        </div>
-        <div class="slide-2">
-          <h1 class="big-title">Tiêu điểm tháng 1</h1>
-          <p>DEF</p>
-        </div>
-        <div class="slide-3">
-          <h1 class="big-title">Tiêu điểm tháng 1</h1>
-          <p>XYZ</p>
-        </div>
+          <div class="carousel-item banner-2">
+            <div class="carousel-caption">
+              <div class="carousel-caption-text">
+                <h1 class="big-title font-weight-bold">Tiêu điểm tháng 1</h1>
+                <div class="logo-wrapper-2">
+                  <div class="logo-only">
+                    <p class="sony-logo">SONY</p><img class="a9-logo" src="img/carousel-img/alpha-logos.png" alt=""/>
+                  </div>
+                  <div class="progress" style="width: 90px; height: 5px">
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%; height: 5px"></div>
+                  </div>
+                </div>
+                <p class="carousel-header font-italic">SỰ HOÀN HẢO<br/> CHƯA BAO GIỜ GẦN ĐẾN VẬY</p>
+                <button class="white-btn btn btn-outline-light text-light see-more-btn" type="button">Xem chi tiết</button>
+              </div><img class="carousel-caption-banner-xs" src="img/carousel-img/a9-main-banner-xs-v3.png" alt=""/>
+              <div class="carousel-caption-extra">
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-1.png" alt=""/></div>
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-2.png" alt=""/></div>
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-3.png" alt=""/></div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item banner-3">
+            <div class="carousel-caption">
+              <div class="carousel-caption-text">
+                <h1 class="big-title font-weight-bold">Tiêu điểm tháng 1</h1>
+                <div class="logo-wrapper-3">
+                  <p class="sony-logo">SONY</p><span class="collab"><i class="fas fa-times"></i></span><img class="lotr-logo" src="img/carousel-img/lotr-logo.png" alt=""/>
+                </div>
+                <p class="carousel-header font-italic">MỘT NGÀM CHO TẤT CẢ<br/> Kết nối mọi thứ với ngàm E-mount của <span class="sony-logo">SONY</span></p>
+                <button class="white-btn btn btn-outline-light text-light see-more-btn" type="button">Xem chi tiết</button>
+              </div><img class="carousel-caption-banner-xs" src="img/carousel-img/e-mount-banner-xs-v3.png" alt=""/>
+              <div class="carousel-caption-extra">
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-1.png" alt=""/></div>
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-2.png" alt=""/></div>
+                <div class="extra"><img class="extra-img" src="img/misc-img/carousel-1-extra-3.png" alt=""/></div>
+              </div>
+            </div>
+          </div>
+        </div><a class="carousel-control-prev" href="#main-carousel" data-slide="prev"><img src="img/misc-img/prev-arrow-xs.png"/></a><a class="carousel-control-next" href="#main-carousel" data-slide="next"><img src="img/misc-img/next-arrow-xs.png"/></a>
       </div>
+      <!--.main-carousel
+      .slide-1
+        h1.big-title Tiêu điểm tháng 1
+      
+        .logo-wrapper
+          p.canon-logo Canon
+          p.eos-r EOS R
+      
+        p.size-14 ĐỊNH NGHĨA LẠI CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
+      
+        <button type="button" class="white-btn btn btn-outline-light text-light mx-auto">Xem chi tiết</button>
+      
+        img.banner-xs(src="img/body-img/eos-r-main-banner-xs.png" alt="")
+      
+      .slide-2
+        h1.big-title Tiêu điểm tháng 1
+        p DEF
+      .slide-3
+        h1.big-title Tiêu điểm tháng 1
+        p XYZ
+      -->
       <h1>Body</h1>
     </main>
     <script src="https://kit.fontawesome.com/d8c5e3f38e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
