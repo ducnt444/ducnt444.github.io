@@ -136,6 +136,10 @@ body {
   margin: 0px auto;
 }
 
+.carousel-control-next, .carousel-control-prev {
+  width: 10%;
+}
+
 .carousel-indicators {
   margin-bottom: 0px;
 }

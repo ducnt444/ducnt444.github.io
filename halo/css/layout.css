@@ -60,28 +60,34 @@ img {
 /* ---------- font ----------*/
 
 @font-face {
-  font-family: Canon;
-  src: url(../fonts/CANON.ttf);
+    font-family: 'canon';
+    src: url('/fonts/canon-webfont.woff2') format('woff2'),
+         url('/fonts/canon-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-  font-family: Sony;
-  src: url(/fonts/clarendon_exp._urw_bold.ttf);
+    font-family: 'sony';
+    src: url('/fonts/clarendon_regular-webfont.woff2') format('woff2'),
+         url('/fonts/clarendon_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .canon-logo {
-  font-family: Canon !important;
+  font-family: canon !important;
 }
 
 .sony-logo, 
 .sony-logo-inline {
-  font-family: Sony !important;
+  font-family: sony !important;
 }
 
 * {
   font-family: 'Roboto', sans-serif;
 }
-
 
 /* ----- sizes -----*/
 
@@ -132,7 +138,6 @@ h1 {
   font-size: 36px !important; 
 }
 
-
 /* ----- colors -----*/
 .white-text { 
   color: white !important; 
@@ -141,7 +146,6 @@ h1 {
 .canon-logo {
   color: #CC0000;
 }
-
 
 /* ----- glow effect -----*/
 .glow-big,
@@ -153,20 +157,11 @@ h1 {
 /* -----  weight -----*/
 
 
-
-
 /* -----  line height -----*/
 .canon-logo,
 .sony-logo {
   line-height: 3rem;
 }
-
-
-
-
-
-
-
 
 
 /* ----- white font -----*/
@@ -184,11 +179,19 @@ h1 {
   font-style: italic;
 }
 
-
 /* ---------- kết thúc font styles ----------*/
 
-/* ---------- nav styles ----------*/
 
+/* ---------- settings chung ----------*/
+.container {
+  max-width: 1140px;
+}
+
+
+/* ---------- kết thúc settings chung ----------*/
+
+
+/* ---------- nav styles ----------*/
 .navbar {
   background-color: #222222;
   z-index: 1000;
@@ -248,45 +251,28 @@ h1 {
   left: 0;
   background-color: #222222;
   width: 100%;
+  padding-left: 15px;
 }
-
-/*--- slide in nav ---*/
-/* 
-}
-
-.navbar-collapse.collapsing {
-  top: -167px;
-  transition: height 0s ease;
-}
-
-.navbar-collapse.show {
-  top: 45px;
-  transition: top 500ms ease-in-out;
-}
-
-.navbar-toggler.collapsed ~ .navbar-collapse {
-  transition: top 500ms ease-in-out;
-}
-
-#collapsibleNavbar {
-  z-index: 100;
-  background-color: #222222;
-} */
-
 
 /* ---------- kết thúc nav styles ----------*/
 
+
+/* ---------- media querries ----------*/
+
 @media only screen and (min-width: 576px) {
-  .navbar .container {
-    padding: 0px !important;
+
+  .container {
+    max-width: 100%;
+    padding: 0px calc((10%-23)/2) !important;
   }
-  /* .navbar-collapse {
-    padding-left: calc((50% - 270px));
-  } */
+
+  .navbar-collapse {
+    padding-left: calc((10%-23)/2) !important;
+  }
 }
 
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   .cart-search {  /* ẩn cart search sm */
     display: none;
   }
@@ -298,8 +284,14 @@ h1 {
   .navbar-collapse {   /* collapse đang full màn, giảm về bình thường */
     width: auto;
   }
-}
 
+  .navbar-collapse {
+  position: static;
+  width: auto;
+  padding-left: 0px;
+  justify-content: flex-end;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .log-reg {   /* giãn cách menu thông qua log-reg */
