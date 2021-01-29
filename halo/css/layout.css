@@ -73,7 +73,8 @@ img {
   font-family: Canon !important;
 }
 
-.sony-logo {
+.sony-logo, 
+.sony-logo-inline {
   font-family: Sony !important;
 }
 
@@ -188,21 +189,23 @@ h1 {
 
 /* ---------- nav styles ----------*/
 
-.hamburger-wrapper {
-  width: 62.5px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.navbar {
+  background-color: #222222;
+  z-index: 1000;
 }
+
+.navbar .container {
+  position: relative;
+}
+
 .navbar-brand img {
-  height: 30px;
+  height: 25px;
   filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.65));
 }
 
 .navbar-brand {
   padding: 10px 0px;
   margin-left: 0px;
-  
 }
 
 .navbar-toggler:focus {
@@ -211,6 +214,7 @@ h1 {
 
 .navbar-toggler {
   border-color: rgba(255,255,255, 0.3) !important;
+  margin-right: 37.5px;
 }
 
 .navbar-toggler-icon {
@@ -238,12 +242,52 @@ h1 {
   display: none;
 }
 
+.navbar-collapse {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: #222222;
+  width: 100%;
+}
+
+/*--- slide in nav ---*/
+/* 
+}
+
+.navbar-collapse.collapsing {
+  top: -167px;
+  transition: height 0s ease;
+}
+
+.navbar-collapse.show {
+  top: 45px;
+  transition: top 500ms ease-in-out;
+}
+
+.navbar-toggler.collapsed ~ .navbar-collapse {
+  transition: top 500ms ease-in-out;
+}
+
+#collapsibleNavbar {
+  z-index: 100;
+  background-color: #222222;
+} */
+
+
 /* ---------- kết thúc nav styles ----------*/
+
+@media only screen and (min-width: 576px) {
+  .navbar .container {
+    padding: 0px !important;
+  }
+  /* .navbar-collapse {
+    padding-left: calc((50% - 270px));
+  } */
+}
 
 
 @media only screen and (min-width: 769px) {
-  .cart-search, 
-  .hamburger-wrapper {  /* ẩn hamburger và cart search sm */
+  .cart-search {  /* ẩn cart search sm */
     display: none;
   }
 

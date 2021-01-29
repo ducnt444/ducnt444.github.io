@@ -65,8 +65,10 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5px;
+}
 
+.logo-only {
+  padding: 10px 0px 14px 0px;
 }
 
 .eos-r, .carousel-header4, .big-title {
@@ -112,7 +114,7 @@ body {
 }
 
 .lotr-logo {
-  height: 50px;
+  height: 59px;
 }
 
 .collab {
@@ -120,12 +122,28 @@ body {
   font-size: 20px;
 }
 
-.carousel-header .sony-logo {
+.sony-logo-inline {
   font-size: 13px !important;
+  font-style: normal;
+}
+
+.logo-wrapper-3 {
+  margin: 15px auto;
 }
 
 .banner-3 .carousel-caption-banner-xs {
   width: 100%;
-  max-width: 400px;
   margin: 0px auto;
+}
+
+.carousel-indicators {
+  margin-bottom: 0px;
+}
+
+/*---- ----*/
+
+@media only screen and (min-width: 768px) {
+  .banner-3 .carousel-caption-banner-xs {
+    max-width: 280px;
+  }
 }
