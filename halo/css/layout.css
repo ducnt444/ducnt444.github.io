@@ -62,14 +62,32 @@ img {
 
 /* --------------- kết thúc reset css --------------- */
 
+/* Table of contents
+
+1. settings chung
+2. font styles (faces, sizes, colors, weight, line)
+3. effects
+4. buttons
+5. header (navbar) styles
+6. footer styles
+7. @media queries (responsive)
+
+*/
+
 
 /* --------------- settings chung --------------- */
 .container {  
 /* set các .container sẽ là fluid, sẽ giới hạn sau ở @media */
   max-width: 100%;  
-  padding: 0px 15px !important;
+  padding: 0px 15px !important; /*sẽ đổi ở @media */
 }
-/* --------------- kết thúc settings chung --------------- */
+
+.hidden-till-md {
+/* ẩn khi màn <= 768px, sẽ đổi ở @media */  
+  display: none !important;
+}
+
+/* --------------- kết thúc settings --------------- */
 
 
 /* --------------- font styles --------------- */
@@ -225,6 +243,10 @@ h1 {
 
 
 /* --------------- navbar styles --------------- */
+
+/* chung -> toggler -> brand -> l-c-s -> menu */
+
+/* ------- settings chung nav ------- */
 .navbar {
   background-color: #222222;
   z-index: 100;
@@ -236,18 +258,9 @@ h1 {
   z-index: 101;
 }
 
-.navbar-brand img {
-  height: 25px;
-  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.65));
-}
-
-.navbar-brand {
-  padding: 9px 0px;
-  margin-left: 0px;
-}
-
+/* ------- toggler styles ------- */
 .navbar-toggler:focus {
-  box-shadow: none;
+  box-shadow: none; 
 }
 
 .navbar-toggler {
@@ -256,6 +269,17 @@ h1 {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ------- brand styles ------- */
+.navbar-brand img {
+  height: 25px;
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.65));
+}
+
+.navbar-brand {
+  padding: 9px 0px;
+  margin-left: 0px;
 }
 
 .log-cart-search {
@@ -276,10 +300,6 @@ h1 {
 .fa-times {
   font-size: 18px;
   color: #FFFFFF;
-}
-
-.hidden-till-md {
-  display: none !important;
 }
 
 .navbar-collapse {
@@ -381,8 +401,6 @@ h1 {
   .display-till-md {   
     display: none;
   }
-
-
 
   .search-bar-till-md {
     display: none;
