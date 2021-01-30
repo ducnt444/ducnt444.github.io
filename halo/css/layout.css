@@ -250,7 +250,7 @@ h1 {
 .navbar {
   background-color: #222222;
   z-index: 100;
-  border: 1px solid #222222;
+  border-bottom: 1px solid #222222;
 }
 
 .navbar .container {
@@ -282,6 +282,16 @@ h1 {
   margin-left: 0px;
 }
 
+/* ------- tổ hợp log-cart-search ------- */
+/* 
+Bao gồm: login/signup, cart, search min, search max
+1. login/signup sẽ có 2 bản: hidden và display till md
+2. cart sẽ là 1 link
+3. search sẽ có 2 bản: search min và search max 
+(.search-bar-till-md và .search-bar)
+Map: chung -> cart -> search bar -> search min -> search btn
+*/
+
 .log-cart-search {
   display: flex;
   align-items: center;
@@ -302,39 +312,29 @@ h1 {
   color: #FFFFFF;
 }
 
-.navbar-collapse {
-  position: absolute;
-  top: 43px;
-  left: 0;
-  background-color: #222222;
+.search-bar {  /*search box + search btn + cancel btn*/
   width: 100%;
-  padding: 0px 15px;
-  flex-grow: unset;
-}
-
-.search-bar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
   height: 50px;
   padding: 10px 30px;
-  z-index: 1000;
+  background-color: #222222;
   position: absolute;
+  z-index: 1000;
   left: 0px;
   top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.4s, visibility 0.4s;
-  background-color: #222222;
 }
 
 .search-bar-till-md {
-  display: flex;
   width: 100%;
-  align-items: center;
   height: 34px;
   padding: 5px 0px;
+  display: flex;
+  align-items: center;
 }
 
 .search-area {
@@ -347,6 +347,17 @@ h1 {
 
 .search-area:focus {
   outline: none;
+}
+
+.search-btn {
+  padding: 2px 0px 0px 0px;
+  margin-left: 10px;
+  border: none;
+}
+
+.search-cancel {
+  padding-right: 0px !important;
+  margin-left: 15px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -362,17 +373,16 @@ h1 {
   font-size: 13px;
 }
 
-.search-btn {
-  padding: 2px 0px 0px 0px;
-  margin-left: 10px;
-  border: none;
+/* ------- collapsible menu ------- */
+.navbar-collapse {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  background-color: #222222;
+  width: 100%;
+  padding: 0px 15px;
+  flex-grow: unset;
 }
-
-.search-cancel {
-  padding-right: 0px !important;
-  margin-left: 15px;
-}
-
 
 /* --------------- kết thúc nav styles --------------- */
 
@@ -380,7 +390,6 @@ h1 {
 /* --------------- media queries --------------- */
 
 @media only screen and (min-width: 576px) {
-
   .container,
   .navbar-collapse {
     padding: 0px 30px !important;
