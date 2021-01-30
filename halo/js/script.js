@@ -10,3 +10,16 @@ let counter = setInterval(function(){
   }  
 }, 100); */
 
+let searchBarStatus = 0;
+
+function searchBarToggler() {
+  if (searchBarStatus == 0) {
+    document.getElementsByClassName("search-bar")[0].style.visibility = "visible";
+    document.getElementsByClassName("search-bar")[0].style.opacity = 1;    
+    searchBarStatus = 1;
+  } else {
+    document.getElementsByClassName("search-bar")[0].style.visibility = "hidden";
+    document.getElementsByClassName("search-bar")[0].style.opacity = 0;    
+    searchBarStatus = 0;
+  }
+}

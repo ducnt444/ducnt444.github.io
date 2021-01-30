@@ -1,20 +1,18 @@
 
 body {
-  background-color:rgb(29, 117, 231);
+  
 }
 
 /* ---------- carousel styles ----------*/
 
 #main-carousel, 
 .carousel-inner, 
-.carousel-item, 
-.carousel-item img:first-child, 
-.carousel-caption  {  /* -- kéo dài --*/ 
+.carousel-item {  /* -- kéo dài --*/ 
   min-height: 450px; 
 }
 
 .banner-1 {
-  background-image: url('../img/carousel-img/banner-bg-1.jpg');
+  background-image: url('../img/carousel-img/banner-bg-1-min.jpg');
   background-size: cover;
 }
 
@@ -76,17 +74,16 @@ body {
   text-align: center;
 }
 
-.see-more-btn {
-  border-radius: 8px !important;
+#main-carousel .seemore-btn {
   margin: 15px auto 40px auto;
 }
 
-#main-carousel .white-btn {
+#main-carousel .btn {
   width: 70px;
   display: block;
 }
 
-.carousel-caption-extra {
+.carousel-caption__extra {
   display: none;
 }
 
@@ -102,6 +99,15 @@ body {
 .carousel-control-prev,
 .carousel-control-next {
   opacity: 1;
+  width: 23px;
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
 }
 
 .a9-logo {
@@ -131,23 +137,63 @@ body {
   margin: 15px auto;
 }
 
-.banner-3 .carousel-caption-banner-xs {
-  width: 100%;
-  margin: 0px auto;
+.carousel-caption__img {
+  height: calc(100vw / 1.6725);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.carousel-control-next, .carousel-control-prev {
-  width: 10%;
+.banner-1 .carousel-caption__img {
+  background-image: url("../img/carousel-img/eos-r-banner-min.png");
+}
+
+.banner-2 .carousel-caption__img {
+  background-image: url("../img/carousel-img/a9-banner-min.png");
+}
+
+.banner-3 .carousel-caption__img {
+  background-image: url("../img/carousel-img/e-mount-banner-min.png");
 }
 
 .carousel-indicators {
   margin-bottom: 0px;
 }
 
-/*---- ----*/
+/*--------*/
 
 @media only screen and (min-width: 768px) {
-  .banner-3 .carousel-caption-banner-xs {
-    max-width: 280px;
+
+  /*---------- carousel full version ----------*/
+  #main-carousel, 
+  .carousel-inner, 
+  .carousel-item {  /* -- kéo dài --*/ 
+  min-height: 650px; 
   }
+
+  .carousel-caption {
+    flex-flow: row wrap;
+  }
+
+  .carousel-caption h1 {
+    width: 100%;
+  }
+
+  .carousel-caption__img {
+    width: 410px;
+    height: calc(410px / 1.6725);
+  }
+  
+  .banner-1 .carousel-caption__img {
+    background-image: url("../img/carousel-img/eos-r-banner-max.png");
+  }
+  
+  .banner-2 .carousel-caption__img {
+    background-image: url("../img/carousel-img/a9-banner-max.png");
+  }
+  
+  .banner-3 .carousel-caption__img {
+    background-image: url("../img/carousel-img/e-mount-banner-min.png");
+  }
+
 }

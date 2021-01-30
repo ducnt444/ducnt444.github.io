@@ -1,20 +1,19 @@
 header
   nav.navbar.navbar-expand-md.navbar-dark
-    .container.px-4
+    .container
 
       button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar' aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation")
         span.navbar-toggler-icon
 
       a.navbar-brand(href='index.html')
         img(src="img/misc-img/logo-white.png", alt="")
-      
-      .cart-search
-        a(href='review-hub.html') 
-          <i class="fas fa-search"></i>
-        a(href='cart.html') 
-          <i class="fas fa-shopping-cart"></i>
 
       #collapsibleNavbar.collapse.navbar-collapse
+        .search-bar-till-md
+          input.search-area(type="text" placeholder="Tìm kiếm...")
+          button.btn.search-btn
+            <i class="fas fa-search"></i>
+
         ul.navbar-nav
           li.nav-item
             a.nav-link.px-md-3(href='camera-hub.html') Máy ảnh
@@ -24,9 +23,21 @@ header
             a.nav-link.px-md-3(href='camera-hub.html') Phụ kiện
           li.nav-item
             a.nav-link.px-md-3(href='review-hub.html') Đánh giá
-          li.nav-item.mx-md-4.log-reg
+          li.nav-item.display-till-md
             a.nav-link(href='review-hub.html') Đăng nhập/Đăng ký
-          li.nav-item.hidden-till-md
-            a.nav-link(href='review-hub.html') <i class="fas fa-search"></i>
-          li.nav-item.hidden-till-md
-            a.nav-link(href='review-hub.html') <i class="fas fa-shopping-cart"></i>          
+
+      .log-cart-search
+        a.hidden-till-md.log(href='review-hub.html') Đăng nhập/Đăng ký
+        a.cart-icon(href="cart.html")
+          <i class="fas fa-shopping-cart"></i>
+        button.btn.search-btn.hidden-till-md(onclick="searchBarToggler()")
+          <i class="fas fa-search"></i>
+
+
+      .search-bar
+        input.search-area(type="text" placeholder="Tìm kiếm...")
+        button.btn.search-btn
+          <i class="fas fa-search"></i>
+        button.btn.search-cancel(onclick="searchBarToggler()")
+          <i class="fas fa-times"></i>
+

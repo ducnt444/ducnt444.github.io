@@ -13,8 +13,10 @@
     .carousel-item.banner-1.active
 
       .carousel-caption
-        .carousel-caption-text
-          h1.big-title.font-weight-bold Tiêu điểm tháng 1
+
+        h1.big-title.font-weight-bold Tiêu điểm tháng 1
+
+        .carousel-caption__text
 
           .logo-wrapper-1
             p.canon-logo Canon
@@ -23,17 +25,15 @@
               .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
 
 
-          p.carousel-header.font-italic
-            | ĐỊNH NGHĨA LẠI 
-            br
-            |  CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
+          p.carousel-header.font-italic ĐỊNH NGHĨA LẠI 
+          p.carousel-header.font-italic CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
 
 
-          button.white-btn.btn.btn-outline-light.text-light.see-more-btn(type='button') Xem chi tiết
+          button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
 
-        img.carousel-caption-banner-xs(src="img/carousel-img/eos-r-main-banner-xs.png" alt="")
+        .carousel-caption__img
 
-        .carousel-caption-extra
+        .carousel-caption__extra
           .extra
             img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="")
             p.extra-text LẤY NÉT TỰ ĐỘNG DUAL PIXEL CMOS 
@@ -46,9 +46,11 @@
 
     .carousel-item.banner-2
       .carousel-caption
-        .carousel-caption-text
-          h1.big-title.font-weight-bold Tiêu điểm tháng 1
 
+        h1.big-title.font-weight-bold Tiêu điểm tháng 1
+
+        .carousel-caption__text
+        
           .logo-wrapper-2
             .logo-only
               p.sony-logo SONY
@@ -59,17 +61,14 @@
               .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
 
 
-          p.carousel-header.font-italic
-            | SỰ HOÀN HẢO
-            br
-            |  CHƯA BAO GIỜ GẦN ĐẾN VẬY
+          p.carousel-header.font-italic SỰ HOÀN HẢO
+          p.carousel-header.font-italic CHƯA BAO GIỜ GẦN ĐẾN VẬY
 
+          button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
 
-          button.white-btn.btn.btn-outline-light.text-light.see-more-btn(type='button') Xem chi tiết
+        .carousel-caption__img
 
-        img.carousel-caption-banner-xs(src="img/carousel-img/a9-main-banner-xs-v3.png" alt="")
-
-        .carousel-caption-extra
+        .carousel-caption__extra
           .extra
             img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="") 
           .extra
@@ -78,39 +77,40 @@
             img.extra-img(src="img/misc-img/carousel-1-extra-3.png", alt="")
 
     .carousel-item.banner-3
-      .carousel-caption
-        .carousel-caption-text
-          h1.big-title.font-weight-bold Tiêu điểm tháng 1
 
+      .carousel-caption
+
+        h1.big-title.font-weight-bold Tiêu điểm tháng 1
+        
+        .carousel-caption__text
+          
           .logo-wrapper-3
             p.sony-logo SONY
             span.collab
               i.fas.fa-times
             img.lotr-logo(src="img/carousel-img/lotr-logo.png", alt="")
 
-          p.carousel-header.font-italic
-            | MỘT NGÀM CHO TẤT CẢ
-            br
-            |  Kết nối mọi thứ với ngàm E-mount của 
+          p.carousel-header.font-italic MỘT NGÀM CHO TẤT CẢ
+          p.carousel-header.font-italic Kết nối mọi thứ với ngàm E-mount của 
             span.sony-logo-inline SONY
 
 
-          button.white-btn.btn.btn-outline-light.text-light.see-more-btn(type='button') Xem chi tiết
+          button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
 
-        img.carousel-caption-banner-xs(src="img/carousel-img/e-mount-banner-xs-v3.png" alt="")
+        .carousel-caption__img
 
-        .carousel-caption-extra
+        .carousel-caption__extra
           .extra
             img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="") 
           .extra
             img.extra-img(src="img/misc-img/carousel-1-extra-2.png", alt="")
           .extra
             img.extra-img(src="img/misc-img/carousel-1-extra-3.png", alt="")
-
-  a.carousel-control-prev(href='#main-carousel' data-slide='prev')
-    img(src='img/misc-img/prev-arrow-xs-v2.png')
-  a.carousel-control-next(href='#main-carousel' data-slide='next')
-    img(src='img/misc-img/next-arrow-xs-v2.png')
+  .container
+    a.carousel-control-prev(href='#main-carousel' data-slide='prev')
+      img(src='img/misc-img/prev-arrow-xs-v2.png')
+    a.carousel-control-next(href='#main-carousel' data-slide='next')
+      img(src='img/misc-img/next-arrow-xs-v2.png')
   
 
 
@@ -142,7 +142,7 @@
 
     p.size-14 ĐỊNH NGHĨA LẠI CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
 
-    <button type="button" class="white-btn btn btn-outline-light text-light mx-auto">Xem chi tiết</button>
+    <button type="button" class="btn--light btn btn-outline-light text-light mx-auto">Xem chi tiết</button>
 
     img.banner-xs(src="img/body-img/eos-r-main-banner-xs.png" alt="")
 
