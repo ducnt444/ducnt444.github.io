@@ -11,145 +11,106 @@
   .carousel-inner
 
     .carousel-item.banner-1.active
+      .container.container-md
+        .carousel-caption
 
-      .carousel-caption
+          h1.carousel-title.font-weight-bold Tiêu điểm tháng 1
 
-        h1.big-title.font-weight-bold Tiêu điểm tháng 1
+          .carousel-caption__text
 
-        .carousel-caption__text
-
-          .logo-wrapper-1
-            p.canon-logo Canon
-            p.eos-r EOS R
-            .progress(style='width:90px; height: 5px')
-              .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
-
-
-          p.carousel-header.font-italic ĐỊNH NGHĨA LẠI 
-          p.carousel-header.font-italic CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
+            .logo-wrapper-1
+              p.logo-canon Canon
+              p.eos-r EOS R
+              .progress(style="height: 5px")
+                .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
 
 
-          button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
+            p.carousel-header ĐỊNH NGHĨA LẠI 
+            p.carousel-header CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
 
-        .carousel-caption__img
 
-        .carousel-caption__extra
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="")
-            p.extra-text LẤY NÉT TỰ ĐỘNG DUAL PIXEL CMOS 
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-2.png", alt="")
-            p.extra-text TỐI ƯU HÓA ĐIỀU KHIỂN 
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-3.png", alt="")
-            p.extra-text QUAY VIDEO ĐA CHẾ ĐỘ ĐỘ PHÂN GIẢI 4K
+            button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
+
+          .carousel-caption__img
+
+          .carousel-caption__extra.hidden-till-md
+            .extra
+              img.extra-img(src="img/carousel-img/carousel-1-extra-1.png", alt="")
+              p.extra-text LẤY NÉT TỰ ĐỘNG DUAL PIXEL CMOS 
+            .extra
+              img.extra-img(src="img/carousel-img/carousel-1-extra-2.png", alt="")
+              p.extra-text TỐI ƯU HÓA ĐIỀU KHIỂN 
+            .extra
+              img.extra-img(src="img/carousel-img/carousel-1-extra-3.png", alt="")
+              p.extra-text QUAY VIDEO ĐA CHẾ ĐỘ ĐỘ PHÂN GIẢI 4K
 
     .carousel-item.banner-2
-      .carousel-caption
+      .container.container-md
+        .carousel-caption
 
-        h1.big-title.font-weight-bold Tiêu điểm tháng 1
+          h1.carousel-title.font-weight-bold Tiêu điểm tháng 1
 
-        .carousel-caption__text
-        
-          .logo-wrapper-2
-            .logo-only
-              p.sony-logo SONY
+          .carousel-caption__text
+          
+            .logo-wrapper-2
+              .progress.hidden-till-md(style='width: 150px; height: 5px')
+                .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
 
-              img.a9-logo(src="img/carousel-img/alpha-logos.png", alt="")
+              .logo-sony-a9-wrapper
+                p.logo-sony SONY
+                img.a9-logo(src="img/carousel-img/a9-logo.png", alt="")
 
-            .progress(style='width: 90px; height: 5px')
-              .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
+              .progress.display-till-md(style='height: 5px')
+                .progress-bar(role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: 100%; height: 5px')
 
+            .carousel-caption__extra.hidden-till-md
+              .extra
+                img.extra-img(src="img/carousel-img/carousel-2-extra-1.png", alt="") 
+              .extra
+                img.extra-img(src="img/carousel-img/carousel-2-extra-2.png", alt="")
+              .extra
+                img.extra-img(src="img/carousel-img/carousel-2-extra-3.png", alt="")
 
-          p.carousel-header.font-italic SỰ HOÀN HẢO
-          p.carousel-header.font-italic CHƯA BAO GIỜ GẦN ĐẾN VẬY
+            p.carousel-header SỰ HOÀN HẢO
+            p.carousel-header CHƯA BAO GIỜ GẦN ĐẾN VẬY
 
-          button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
+            button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
 
-        .carousel-caption__img
-
-        .carousel-caption__extra
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="") 
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-2.png", alt="")
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-3.png", alt="")
+          .carousel-caption__img
 
     .carousel-item.banner-3
+      .container.container-md
+        .carousel-caption
 
-      .carousel-caption
-
-        h1.big-title.font-weight-bold Tiêu điểm tháng 1
-        
-        .carousel-caption__text
+          h1.carousel-title.font-weight-bold Tiêu điểm tháng 1
           
-          .logo-wrapper-3
-            p.sony-logo SONY
-            span.collab
-              i.fas.fa-times
-            img.lotr-logo(src="img/carousel-img/lotr-logo.png", alt="")
+          .carousel-caption__text
+            
+            .logo-wrapper-3
+              p.logo-sony SONY
+              span.collab
+                i.fas.fa-times
+              img.lotr-logo(src="img/carousel-img/lotr-logo.png", alt="")
 
-          p.carousel-header.font-italic MỘT NGÀM CHO TẤT CẢ
-          p.carousel-header.font-italic Kết nối mọi thứ với ngàm E-mount của 
-            span.sony-logo-inline SONY
+            p.carousel-header MỘT NGÀM CHO TẤT CẢ
+            p.carousel-header Kết nối mọi thứ với ngàm E-mount của 
+              span.logo-sony-inline SONY
 
 
-          button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
+            button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
 
-        .carousel-caption__img
+          .carousel-caption__img
 
-        .carousel-caption__extra
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="") 
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-2.png", alt="")
-          .extra
-            img.extra-img(src="img/misc-img/carousel-1-extra-3.png", alt="")
-  .container
+          .carousel-caption__extra.hidden-till-md
+            .extra
+              img.extra-img(src="img/misc-img/carousel-1-extra-1.png", alt="") 
+            .extra
+              img.extra-img(src="img/misc-img/carousel-1-extra-2.png", alt="")
+            .extra
+              img.extra-img(src="img/misc-img/carousel-1-extra-3.png", alt="")
+
     a.carousel-control-prev(href='#main-carousel' data-slide='prev')
       img(src='img/misc-img/prev-arrow-xs-v2.png')
     a.carousel-control-next(href='#main-carousel' data-slide='next')
       img(src='img/misc-img/next-arrow-xs-v2.png')
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//.main-carousel
-  .slide-1
-    h1.big-title Tiêu điểm tháng 1
-
-    .logo-wrapper
-      p.canon-logo Canon
-      p.eos-r EOS R
-
-    p.size-14 ĐỊNH NGHĨA LẠI CHUẨN MỰC HÌNH ẢNH HIỆN ĐẠI
-
-    <button type="button" class="btn--light btn btn-outline-light text-light mx-auto">Xem chi tiết</button>
-
-    img.banner-xs(src="img/body-img/eos-r-main-banner-xs.png" alt="")
-
-  .slide-2
-    h1.big-title Tiêu điểm tháng 1
-    p DEF
-  .slide-3
-    h1.big-title Tiêu điểm tháng 1
-    p XYZ
-

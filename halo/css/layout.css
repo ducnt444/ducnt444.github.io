@@ -24,6 +24,10 @@ ul {
   list-style: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0px;
+}
+
 table {
 	border-collapse: collapse;
   border-spacing: 0;
@@ -77,9 +81,14 @@ img {
 
 /* --------------- settings chung --------------- */
 .container {  
-/* set các .container sẽ là fluid, sẽ giới hạn sau ở @media */
+/* set các .container là fluid, sẽ giới hạn sau ở @media */
   max-width: 100%;  
-  padding: 0px 15px !important; /*sẽ đổi ở @media */
+  padding: 0px 15px !important; /*sẽ đổi ở các breakpoints */
+}
+
+.container-md {
+/* set các .container là fluid, sẽ giới hạn sau ở @media */  
+  padding: 0px !important; /*sẽ về như container từ màn md */
 }
 
 .hidden-till-md {
@@ -109,12 +118,12 @@ img {
     font-style: normal;
 }
 
-.canon-logo {
+.logo-canon {
   font-family: canon !important;
 }
 
-.sony-logo, 
-.sony-logo-inline {
+.logo-sony, 
+.logo-sony-inline {
   font-family: sony !important;
 }
 
@@ -125,59 +134,61 @@ img {
 /* ------- font sizes ------- */
 
 .font-11 { 
-  font-size: 11px !important; 
+  font-size: 11px; 
 }
 
 .font-14, 
-.carousel-header,
-.nav-item:nth-child(5),
-.log { 
-  font-size: 14px !important; 
+.log-min,
+.carousel-header:last-of-type,
+.extra-text { 
+  font-size: 14px; 
 }
 
 .font-15{ 
-  font-size: 15px !important; 
+  font-size: 15px; 
 }
 
 .font-16,
 .eos-r,
-.nav-item:nth-child(-n+4), h2 { 
-  font-size: 16px !important; 
+.nav-item:nth-child(-n+4), 
+.carousel-header:first-of-type,
+h2 { 
+  font-size: 16px; 
 }
 
 .font-17 { 
-  font-size: 17px !important; 
+  font-size: 17px; 
 }
 
 .font-18 { 
-  font-size: 18px !important; 
+  font-size: 18px; 
 }
  
 h1 { 
-  font-size: 20px !important; 
+  font-size: 20px; 
 }
 
 .font-24,
-.sony-logo { 
-  font-size: 24px !important; 
+.logo-sony { 
+  font-size: 24px; 
 }
 
 .font-28,
-.canon-logo { 
-  font-size: 28px !important; 
+.logo-canon { 
+  font-size: 28px; 
 }
 
 .size-36 { 
-  font-size: 36px !important; 
+  font-size: 36px; 
 }
 
 /* ------- font colors ------- */
 #collapsibleNavbar li a,
-.log {
+.log-max {
   color: #FFFFFF;
 }
 
-.canon-logo {
+.logo-canon {
   color: #CC0000;
 }
 
@@ -185,8 +196,8 @@ h1 {
 
 
 /* -------  line height ------- */
-.canon-logo,
-.sony-logo {
+.logo-canon,
+.logo-sony {
   line-height: 3rem;
 }
 
@@ -195,12 +206,15 @@ h1 {
 
 
 /* ------- bold font ------- */
-#collapsibleNavbar li:nth-child(-n+4) a {
+#collapsibleNavbar li:nth-child(-n+4) a,
+.carousel-header:first-of-type,
+.extra-text {
   font-weight: bold;
 }
 
 /* ------- italic font ------- */
-#collapsibleNavbar li:nth-child(5) a {
+#collapsibleNavbar li:nth-child(5) a,
+.carousel-header:last-of-type {
   font-style: italic;
 }
 /* --------------- kết thúc font styles --------------- */
@@ -211,6 +225,10 @@ h1 {
 .seemore-btn {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
+
+/* .navbar-brand img {
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.65));
+} */
 /* --------------- kết thúc effect --------------- */
 
 
@@ -390,9 +408,31 @@ Map: chung -> cart -> search bar -> search min -> search btn
 /* --------------- media queries --------------- */
 
 @media only screen and (min-width: 576px) {
+
   .container,
   .navbar-collapse {
     padding: 0px 30px !important;
+  }
+
+  .container-md {
+    padding: 0px !important;
+  }
+
+  h1,
+  .eos-r {
+    font-size: 28px;
+  }
+
+  .carousel-header:first-of-type {
+    font-size: 24px;
+  }
+
+  .carousel-header:last-of-type, .seemore-btn {
+    font-size: 16px;
+  }  
+
+  .logo-canon, .logo-sony {
+    font-size: 50px;
   }
 
 }
@@ -431,7 +471,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
   margin-left: 20px;
   }
 
-  .log {   /* giãn cách menu thông qua log-reg */
+  .log-max {   /* giãn cách menu thông qua log-reg */
     margin: 0px 20px 0px 38px !important;
   }
 
@@ -488,6 +528,11 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
   .nav-item:nth-child(-n+4) {   /* giãn cách lại các menu item */
     margin: 0px 20px !important;
+  }
+
+  .logo-canon {
+    font-size: 70px;
+    line-height: 60px;
   }
 
 }
