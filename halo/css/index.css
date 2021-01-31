@@ -17,7 +17,27 @@ Carousel map:
   min-height: 450px; 
 }
 
+.carousel-indicators {
+  top: 55px;
+  margin-bottom: 0px;
+  height: 14px;
+}
 
+.carousel-indicators li {
+  border: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../img/misc-img/halo-logo-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-indicators .active {
+  background-image: url("../img/misc-img/halo-logo-white--active.png");
+}
 
 .banner-1 {
   background-image: url('../img/carousel-img/banner-bg-1-min.jpg');
@@ -26,7 +46,7 @@ Carousel map:
 
 .banner-2 {
   background-color: rgb(105,105,105);
-  background-image: url('../img/carousel-img/alpha-logo-big-v3.png'), linear-gradient(180deg, rgba(105,105,105,1) 0%, rgba(48,48,48,1) 66%, rgba(0,0,0,1) 100%);
+  background-image: url('../img/carousel-img/banner-bg-2-2.png'), linear-gradient(180deg, rgba(105,105,105,1) 0%, rgba(48,48,48,1) 66%, rgba(0,0,0,1) 100%);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top 15% right 50%, center;
@@ -54,22 +74,21 @@ Carousel map:
 .logo-wrapper-3 {
   display: flex;
   width: fit-content;
+  margin: 30px auto 20px auto;
+}
+
+.eos-r {
+  padding-bottom: 1px;
 }
 
 .logo-wrapper-1 {
   flex-flow: column nowrap;
   align-items: flex-end;
-  margin: 15px auto;
+  
 }
-
 .logo-wrapper-2 {
   flex-flow: column nowrap;
   align-items: center;
-  margin: 15px auto 14px auto;
-}
-
-.logo-wrapper-3 {
-  margin: 15px auto;
 }
 
 .logo-sony-a9-wrapper, 
@@ -123,7 +142,7 @@ Carousel map:
 }
 
 .lotr-logo {
-  height: 77px;
+  height: 60px;
 }
 
 .collab {
@@ -153,27 +172,6 @@ Carousel map:
 
 .banner-3 .carousel-caption__img {
   background-image: url("../img/carousel-img/e-mount-banner-min.png");
-}
-
-.carousel-indicators {
-  margin-bottom: 0px;
-  height: 16px;
-}
-
-.carousel-indicators li {
-  border: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: transparent;
-  background-image: url("../img/misc-img/halo-logo-white.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.carousel-indicators .active {
-  background-image: url("../img/misc-img/halo-logo-white--active.png");
 }
 
 /*--------*/
@@ -323,7 +321,8 @@ Carousel map:
   }
 
   .logo-wrapper-2 {
-    margin: 35px auto 200px auto;
+    width: 100%;
+    margin: 35px auto 210px auto;
   }
 
   .logo-sony-a9-wrapper {
@@ -336,6 +335,7 @@ Carousel map:
   .logo-sony-a9-wrapper .logo-sony {
     font-size: 80px;
     line-height: 60px;
+    opacity: 0.5;
   }
 
   .a9-logo {
@@ -349,9 +349,9 @@ Carousel map:
   }
 
   .banner-2 .carousel-caption__extra {
-    width: 250px;
+    width: 280px;
     margin: auto;
-    height: 30px;
+    height: 40px;
   }
 
   .banner-2 .carousel-header {
@@ -380,7 +380,7 @@ Carousel map:
     align-items: stretch;
   } 
 
-  .carousel-caption__img {
+  .banner-1 .carousel-caption__img {
     margin: 10px 0px 0px 240px;
   }
 }
