@@ -157,6 +157,23 @@ Carousel map:
 
 .carousel-indicators {
   margin-bottom: 0px;
+  height: 16px;
+}
+
+.carousel-indicators li {
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../img/misc-img/halo-logo-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-indicators .active {
+  background-image: url("../img/misc-img/halo-logo-white--active.png");
 }
 
 /*--------*/
@@ -167,9 +184,13 @@ Carousel map:
     margin-top: 30px;
   }
 
-  .a9-logo {
-    height: 35px;
+  .logo-sony {
     margin-bottom: 8px;
+  }
+
+  .a9-logo {
+    height: 30px;
+    margin-bottom: 5px;
   }
 
   .seemore-btn {
@@ -252,7 +273,7 @@ Carousel map:
   }
 
   .carousel-indicators {
-    margin-bottom: 25px;
+    top: 60px;
   }
 
   /* ----- thay banner MAX ----- */
@@ -261,7 +282,7 @@ Carousel map:
   }
   
   .banner-2 .carousel-caption__img {
-    display: none;
+
     background-image: url("../img/carousel-img/a9-banner-max.png");
   }
   
@@ -288,7 +309,7 @@ Carousel map:
 
   .banner-2 .carousel-caption__img { /*căn giữa ảnh A9*/
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -302,12 +323,14 @@ Carousel map:
   }
 
   .logo-wrapper-2 {
-    margin: 0px auto;
+    margin: 35px auto 200px auto;
   }
 
   .logo-sony-a9-wrapper {
     display: flex;
     align-items: flex-end;
+    width: 550px;
+    justify-content: space-between;
   }
 
   .logo-sony-a9-wrapper .logo-sony {
@@ -316,9 +339,38 @@ Carousel map:
   }
 
   .a9-logo {
-    height: 120px;
+    height: 100px;
     margin: 0px;
   }
+
+  .banner-2 .carousel-caption__text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .banner-2 .carousel-caption__extra {
+    width: 250px;
+    margin: auto;
+    height: 30px;
+  }
+
+  .banner-2 .carousel-header {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+    margin: 20px 0px 10px 0px;
+  }
+
+  .banner-2 .seemore-btn {
+    margin: 0px auto;
+  }
+
+  .banner-2 .carousel-caption__img {
+    width: 340px;
+    height: calc(340px / 1.3877);
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
