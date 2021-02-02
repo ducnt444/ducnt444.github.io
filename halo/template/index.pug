@@ -11,34 +11,51 @@ block content
   include parts/main-carousel.pug
 
   section.intro
-    .camera-intro__text
+    .intro-camera__text
       h1 Máy ảnh DSLR/Mirrorless
 
       h2 
-        | Phá bỏ giới hạn hình ảnh từ chiếc máy ảnh du lịch giá rẻ
+        | Phá bỏ giới hạn từ chiếc máy ảnh du lịch giá rẻ
         br
         | và cả smartphone đắt tiền của bạn
 
       button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
 
-    .camera-intro__img
-      img(src="img/body-img/camera-intro-img.png", alt="")
+    .intro-camera__img
+      img(src="img/body-img/camera-intro-imgv2.png", alt="")
+
+  section.intro.dark-side
+    .intro-lens__text
+      h1 Ống kính máy ảnh
+      
+      h2 
+        | Góc nhìn mới, cảm nhận mới và những thế giới mới
+
+      button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
+
+    .intro-lens__img
+      img(src="img/lens-img/lens-intro-imgv2.png", alt="")
 
   section.intro
-    .lens-intro__text
-      h1 Máy ảnh DSLR/Mirrorless
+    .intro-equip__text
+      h1 Phụ kiện máy ảnh
+      h2 Dù có “pro” đến mấy cũng cần các trợ thủ đắc lực
 
-      h2 
-        | Phá bỏ giới hạn hình ảnh từ chiếc máy ảnh du lịch giá rẻ
-        br
-        | và cả smartphone đắt tiền của bạn
+    .intro-equip__img.display-till-md
+      img(src="img/equip-img/equip-intro--min.png", alt="")
 
-      button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
+    .intro-equip__img.card-columns.hidden-till-md
+      .card
+        img.card-img(src="img/equip-img/equip-1.png", alt="")
+      .card
+        img.card-img(src="img/equip-img/equip-5.png", alt="")
+      .card
+        img.card-img(src="img/equip-img/equip-3.jpg", alt="")
+      .card
+        img.card-img(src="img/equip-img/equip-4.png", alt="")
 
-    .lens-intro__img
-      img(src="img/lens-img/lens-intro-img.png", alt="")
+    button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
 
-
-
+  section.intro.dark-side
 
 

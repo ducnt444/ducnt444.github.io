@@ -140,7 +140,8 @@ img {
 .font-14, 
 .log-min,
 .carousel-header:last-of-type,
-.extra-text { 
+.extra-text,
+h2 { 
   font-size: 14px; 
 }
 
@@ -151,8 +152,7 @@ img {
 .font-16,
 .eos-r,
 .nav-item:nth-child(-n+4), 
-.carousel-header:first-of-type,
-h2 { 
+.carousel-header:first-of-type { 
   font-size: 16px; 
 }
 
@@ -206,6 +206,7 @@ h1 {
 
 
 /* ------- bold font ------- */
+h1, 
 #collapsibleNavbar li:nth-child(-n+4) a,
 .carousel-header:first-of-type,
 .extra-text {
@@ -368,7 +369,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
 }
 
 .search-btn {
-  padding: 2px 0px 0px 0px;
+  padding: 0px;
   margin-left: 10px;
   border: none;
 }
@@ -419,7 +420,8 @@ Map: chung -> cart -> search bar -> search min -> search btn
   }
 
   h1,
-  .eos-r {
+  .eos-r,
+  .fa-times {
     font-size: 28px;
   }
 
@@ -431,8 +433,12 @@ Map: chung -> cart -> search bar -> search min -> search btn
     font-size: 16px;
   }  
 
-  .logo-canon, .logo-sony {
+  .logo-canon {
     font-size: 50px;
+  }
+
+  .logo-sony {
+    font-size: 40px;
   }
 
 }
@@ -453,6 +459,14 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
   .search-bar-till-md {
     display: none;
+  }
+
+  .logo-sony {
+    font-size: 28px;
+  }
+
+  .fa-times {
+    font-size: 28px;
   }
 
   .search-bar .search-area {
@@ -478,11 +492,6 @@ Map: chung -> cart -> search bar -> search min -> search btn
   .fa-search, 
   .fa-shopping-cart {
     font-size: 22px;
-  }
-
-  .fa-times {
-    font-size: 26px;
-    color: #FFFFFF;
   }
 
   .search-btn {

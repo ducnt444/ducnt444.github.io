@@ -18,7 +18,7 @@ Carousel map:
 }
 
 .carousel-indicators {
-  top: 55px;
+  top: 57px;
   margin-bottom: 0px;
   height: 14px;
 }
@@ -33,6 +33,7 @@ Carousel map:
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0px 3px;
 }
 
 .carousel-indicators .active {
@@ -178,11 +179,26 @@ Carousel map:
 
 @media only screen and (min-width: 576px) {
 
+  .carousel-title {
+    margin-bottom: 15px;
+  }
+
+  .carousel-indicators {
+    top: 67px;
+    height: 16px;
+  }
+  
+  .carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    margin: 0px 6px;
+  }
+
   .logo-wrapper-1, .logo-wrapper-2, .logo-wrapper-3{
     margin-top: 30px;
   }
 
-  .logo-sony {
+  .banner-2 .logo-sony {
     margin-bottom: 8px;
   }
 
@@ -216,6 +232,10 @@ Carousel map:
     background-position: cover;
   }
 
+  .lotr-logo {
+    height: 78px;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -240,7 +260,7 @@ Carousel map:
     justify-content: space-between;
   } 
 
-  .carousel-title {
+  .banner-1 .carousel-title {
     width: 100%;
     margin-bottom: 40px;
   }
@@ -271,7 +291,14 @@ Carousel map:
   }
 
   .carousel-indicators {
-    top: 60px;
+    top: 70px;
+    height: 20px;
+  }
+  
+  .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px;
   }
 
   /* ----- thay banner MAX ----- */
@@ -284,13 +311,45 @@ Carousel map:
     background-image: url("../img/carousel-img/a9-banner-max.png");
   }
   
-  .banner-3 .carousel-caption__img {
-    background-image: url("../img/carousel-img/e-mount-banner-min.png");
+  .banner-3 .carousel-caption__img:nth-child(1) {
+    background-image: url("../img/carousel-img/e-mount-banner-max-west-wing.png");
   }
 
-  .carousel-caption__img {    /*size mới cho các banner max*/
-    width: 370px;
+  .banner-3 .carousel-caption__img:nth-child(2) {
+    background-image: url("../img/carousel-img/e-mount-banner-max-center.png");
+  }
+
+  .banner-3 .carousel-caption__img:nth-child(3) {
+    background-image: url("../img/carousel-img/e-mount-banner-max-east-wing.png");
+  }
+
+  .banner-1 .carousel-caption__img,
+  .banner-2 .carousel-caption__img { 
+    width: 370px;         /*size mới cho banner 1/2 max*/
     height: calc(370px / 1.3877);
+  }
+
+  .carousel-caption__img-wrapper {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  .banner-3 .carousel-caption__img {
+    width: 280px;         /*size mới cho banner 3 max*/
+    height: 250px;
+  }
+
+  .banner-1 .carousel-caption__text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  .banner-1 .logo-wrapper-1, 
+  .banner-1 .seemore-btn {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   /* --------------- update banner 2 --------------- */
@@ -312,8 +371,11 @@ Carousel map:
     transform: translate(-50%, -50%);
   }
   
-  .banner-2 .carousel-caption__text {
+  .banner-2 .carousel-caption__text,
+  .banner-3 .carousel-caption__text {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .banner-2 {
@@ -322,7 +384,7 @@ Carousel map:
 
   .logo-wrapper-2 {
     width: 100%;
-    margin: 35px auto 210px auto;
+    margin: 50px auto 205px auto;
   }
 
   .logo-sony-a9-wrapper {
@@ -339,13 +401,8 @@ Carousel map:
   }
 
   .a9-logo {
-    height: 100px;
+    height: 90px;
     margin: 0px;
-  }
-
-  .banner-2 .carousel-caption__text {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .banner-2 .carousel-caption__extra {
@@ -369,6 +426,50 @@ Carousel map:
   .banner-2 .carousel-caption__img {
     width: 340px;
     height: calc(340px / 1.3877);
+  }
+
+  /* --------------- update banner 3 --------------- */
+
+  .banner-3 {
+    background-size: contain, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, top;
+  }
+
+  .banner-3 .carousel-caption {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  } 
+
+  .banner-3 .carousel-title {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .banner-3 .carousel-caption__text {
+    margin-top: ;
+  }
+
+  .lotr-logo {
+    height: 50px;
+  }
+
+  .logo-wrapper-3 {
+    width: 100%;
+    margin: 50px 0px 10px 0px;
+  }
+
+  .banner-3 .carousel-header {
+    width: 100%;
+  }
+
+  .banner-3 .carousel-header:first-of-type {
+    margin: 20px auto 0px auto;
+  }
+
+  .banner-3 .seemore-btn {
+    margin: 25px auto 0px auto;
   }
 
 }
