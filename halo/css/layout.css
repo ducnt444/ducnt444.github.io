@@ -139,11 +139,12 @@ Hệ thống .container:
 .log-min,
 .carousel-header:last-of-type,
 .extra-text,
-h2 { 
+h3 { 
   font-size: 14px; 
 }
 
-.font-15{ 
+.font-15, 
+h2 { 
   font-size: 15px; 
 }
 

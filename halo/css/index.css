@@ -171,7 +171,12 @@ Carousel map:
 .banner-3 .carousel-caption__img {
   background-image: url("../img/carousel-img/e-mount-banner-min.png");
 }
-
+/* ---------- body styles ----------*/
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* ---------- kết thúc body styles ----------*/
 
 /* ---------- intros styles ----------*/
 /* 
@@ -195,14 +200,21 @@ Carousel map:
 
 .intro__text {
   align-items: center;
-  margin: 20px 0px 30px 0px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.intro__text h3 {
+  margin: 10px 0px 15px 0px;
 }
 
 .intro .seemore-btn {
   margin: auto;
 }
 
-.
+.intro--equip .seemore-btn {
+  margin-top: 20px;
+}
 
 @media only screen and (min-width: 576px) {
 
