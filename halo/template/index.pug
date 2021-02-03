@@ -10,143 +10,151 @@ block title
 block content 
   include parts/main-carousel.pug
 
-  section.intro-camera
-    .intro-camera__text
-      h1 Máy ảnh DSLR/Mirrorless
+  
+  section.intro.intro--camera
+    .container.px-sm-5.px-xl-0
+      .intro__text.d-flex.flex-column
+        h1 Máy ảnh DSLR/Mirrorless
 
-      h3 
-        | Phá bỏ giới hạn từ chiếc máy ảnh du lịch giá rẻ
-        br
-        | và cả smartphone đắt tiền của bạn
+        h3 
+          | Phá bỏ giới hạn từ chiếc máy ảnh du lịch giá rẻ
+          br
+          | và cả smartphone đắt tiền của bạn
+
+        button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
+
+      .intro__img
+        img(src="img/body-img/camera-intro-imgv2.png", alt="")
+
+  section.intro.intro--lens.dark-side
+    .container.px-sm-5.px-xl-0
+      .intro__text.d-flex.flex-column
+        h1 Ống kính máy ảnh
+        
+        h3 Góc nhìn mới, cảm nhận mới, thế giới mới
+
+        button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
+
+      .intro__img
+        img(src="img/lens-img/lens-intro-imgv2.png", alt="")
+
+  section.intro.intro--equip
+    .container.px-sm-5.px-xl-0
+      .intro__text.d-flex.flex-column
+        h1 Phụ kiện máy ảnh
+        h3 Dù có “pro” đến mấy cũng cần các trợ thủ đắc lực
+
+      .intro__img.display-till-md
+        img(src="img/equip-img/equip-intro--min.png", alt="")
+
+      .intro__img.card-columns.hidden-till-md
+        .card
+          img.card-img(src="img/equip-img/equip-1.png", alt="")
+        .card
+          img.card-img(src="img/equip-img/equip-5.png", alt="")
+        .card
+          img.card-img(src="img/equip-img/equip-3.jpg", alt="")
+        .card
+          img.card-img(src="img/equip-img/equip-4.png", alt="")
 
       button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
 
-    .intro-camera__img
-      img(src="img/body-img/camera-intro-imgv2.png", alt="")
+  section.specials.dark-side
+    .container.px-sm-5.px-xl-0
+      h1 Đối tác chiến lược
+      .brands__img
+        img(src="img/misc-img/brands-sony.png", alt="")
+        img(src="img/misc-img/brands-nikon.png", alt="")
+        img(src="img/misc-img/brands-canon.png", alt="")
+        img(src="img/misc-img/brands-sigma.png", alt="")
+      .brands__text
+        h3 Là đối tác chiến lược của Sony, Canon, Nikon và Sigma, HALO sẽ miễn phí nâng thời hạn bảo hành sản phẩm chính hãng của các thương hiệu này: từ 12 tháng lên 24 tháng
 
-  section.intro-lens.dark-side
-    .intro-lens__text
-      h1 Ống kính máy ảnh
-      
-      h3 Góc nhìn mới, cảm nhận mới, thế giới mới
+      h1 Chính sách độc quyền
+      .policy
+        .policy__item
+          p.policy__text
+            span Miễn phí
+            | vận chuyển nội thành Hà Nội
+            br
+            | (riêng phụ kiện: chỉ áp dụng với đơn hàng tổng giá trị trên 200,000 đ)
 
-      button.btn.btn--light.seemore-btn(type='button') Xem chi tiết
+          .policy__icon
+            i.fas.fa-truck
+            p FREE
 
-    .intro-lens__img
-      img(src="img/lens-img/lens-intro-imgv2.png", alt="")
+        .policy__item
+          p.policy__text
+            | Đổi mới sản phẩm hoặc
+            span  hoàn tiền 100%
+            | giá trị sản phẩm trong 14 ngày nếu có lỗi từ nhà sản xuất
 
-  section.intro-equip
-    .intro-equip__text
-      h1 Phụ kiện máy ảnh
-      h3 Dù có “pro” đến mấy cũng cần các trợ thủ đắc lực
+          .policy__icon
+            i.fas.fa-history
+            p 100%
 
-    .intro-equip__img.display-till-md
-      img(src="img/equip-img/equip-intro--min.png", alt="")
+        .policy__item
+          p.policy__text
+            | Hỗ trợ trả góp mọi sản phẩm với 
+            span 0% lãi suất
+            br
+            | Hỗ trợ thanh toán trực tuyến, thẻ tín dụng, ví điện tử
 
-    .intro-equip__img.card-columns.hidden-till-md
-      .card
-        img.card-img(src="img/equip-img/equip-1.png", alt="")
-      .card
-        img.card-img(src="img/equip-img/equip-5.png", alt="")
-      .card
-        img.card-img(src="img/equip-img/equip-3.jpg", alt="")
-      .card
-        img.card-img(src="img/equip-img/equip-4.png", alt="")
+          .policy__icon
+            i.far.fa-credit-card
+            p 0%
 
-    button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
-
-  section.intro-specials.dark-side
-    h1 Đối tác chiến lược
-    .intro-specials__brands--img
-      img(src="img/misc-img/brands-sony.png", alt="")
-      img(src="img/misc-img/brands-nikon.png", alt="")
-      img(src="img/misc-img/brands-canon.png", alt="")
-      img(src="img/misc-img/brands-sigma.png", alt="")
-    .intro-specials__brands--text
-      h3 Là đối tác chiến lược của Sony, Canon, Nikon và Sigma, HALO sẽ miễn phí nâng thời hạn bảo hành sản phẩm chính hãng của các thương hiệu này: từ 12 tháng lên 24 tháng
-
-    h1 Chính sách độc quyền
-    .intro-specials__policy
-      .policy-item
-        p.policy-item__text
-          span Miễn phí
-          | vận chuyển nội thành Hà Nội
-          br
-          | (riêng phụ kiện: chỉ áp dụng với đơn hàng tổng giá trị trên 200,000 đ)
-
-        .policy-item__icon
-          i.fas.fa-truck
-          p FREE
-
-      .policy-item
-        p.policy-item__text
-          | Đổi mới sản phẩm hoặc
-          span  hoàn tiền 100%
-          | giá trị sản phẩm trong 14 ngày nếu có lỗi từ nhà sản xuất
-
-        .policy-item__icon
-          i.fas.fa-history
-          p 100%
-
-      .policy-item
-        p.policy-item__text
-          | Hỗ trợ trả góp mọi sản phẩm với 
-          span 0% lãi suất
-          br
-          | Hỗ trợ thanh toán trực tuyến, thẻ tín dụng, ví điện tử
-
-        .policy-item__icon
-          i.far.fa-credit-card
-          p 0%
-
-    button.btn.btn--light.seemore-btn(type='button') Xem chi tiết       
+      button.btn.btn--light.seemore-btn(type='button') Xem chi tiết       
         
   section.promo
-    h1 Tin khuyến mại
+    .container.px-sm-5.px-xl-0
+      h1 Tin khuyến mại
 
-    .promo__collection
-      img.promo-item(src="img/misc-img/promo-img-1.jpg", alt="")
-      img.promo-item(src="img/misc-img/promo-img-2.jpg", alt="") 
-      img.promo-item(src="img/misc-img/promo-img-1.jpg", alt="")
+      .promo__collection
+        img.promo-item(src="img/misc-img/promo-img-1.jpg", alt="")
+        img.promo-item(src="img/misc-img/promo-img-2.jpg", alt="") 
+        img.promo-item(src="img/misc-img/promo-img-1.jpg", alt="")
 
-    button.btn.btn--dark.seemore-btn(type='button') Xem chi tiết
+      button.btn.btn--dark.seemore-btn(type='button') Xem thêm
 
   section.review.dark-side
-    h1 HALO review
+    .container.px-sm-5.px-xl-0
+      h1 HALO review
 
-    .review-item
-      img.review-item__img(src="img/misc-img/review-img.png", alt="")
+      .review-item
+        img.review-item__img(src="img/misc-img/review-img.png", alt="")
+        
+        .review-item__content
+          h2 Top 5 DSLR đáng mua năm 2021
+          p.subtext Trung Đức
+          p.subtext 
+            i.far.fa-clock
+            | 01/01/2021
+          p.review-headlines Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,... lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản. 
       
-      .review-item__content
-        h2 Top 5 DSLR đáng mua năm 2021
-        p.subtext Trung Đức
-        p.subtext 
-          i.far.fa-clock
-          | 01/01/2021
-        p.review-headlines Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,... lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản. 
-    
-    .review-item
-      img.review-item__img(src="img/misc-img/review-img.png", alt="")
-      
-      .review-item__content
-        h2 Top 5 DSLR đáng mua năm 2021
-        p.subtext Trung Đức
-        p.subtext 
-          i.far.fa-clock
-          | 01/01/2021
-        p.review-headlines Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,... lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản. 
+      .review-item
+        img.review-item__img(src="img/misc-img/review-img.png", alt="")
+        
+        .review-item__content
+          h2 Top 5 DSLR đáng mua năm 2021
+          p.subtext Trung Đức
+          p.subtext 
+            i.far.fa-clock
+            | 01/01/2021
+          p.review-headlines Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,... lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản. 
 
-    button.btn.btn--light.seemore-btn(type='button') Xem chi tiết        
+      button.btn.btn--light.seemore-btn(type='button') Xem thêm        
 
   section.connection
-    h1.connection__header Đăng ký email để nhận tin tức mới nhất từ HALO
-    input.connection__input(type="text" placeholder="Email của bạn...")
-    button.btn.connection__submit-btn Gửi
-    p.connection__text Hoặc theo dõi chúng tôi tại
-    .connection__socials
-      a.socials__item(href="#")
-        img(src="img/misc-img/social-fb.png", alt="")
-      a.socials__item(href="#")
-        img(src="img/misc-img/social-insta.png", alt="")
-      a.socials__item(href="#")
-        img(src="img/misc-img/social-twitter.png", alt="")
+    .container.px-sm-5.px-xl-0
+      h1.connection__header Đăng ký email để nhận tin tức mới nhất từ HALO
+      input.connection__input(type="text" placeholder="Email của bạn...")
+      button.btn.connection__submit-btn Gửi
+      p.connection__text Hoặc theo dõi chúng tôi tại
+      .connection__socials
+        a.socials__item(href="#")
+          img(src="img/misc-img/social-fb.png", alt="")
+        a.socials__item(href="#")
+          img(src="img/misc-img/social-insta.png", alt="")
+        a.socials__item(href="#")
+          img(src="img/misc-img/social-twitter.png", alt="")

@@ -11,11 +11,6 @@ Carousel map:
   padding-top: 50px;
 }
 
-#main-carousel .container {
-  padding-top: 25px !important; /* -- lề trên -- */
-  height: 100%;
-}
-
 #main-carousel, 
 .carousel-inner, 
 .carousel-item {  /* -- kéo dài --*/ 
@@ -66,13 +61,12 @@ Carousel map:
 }
 
 .carousel-caption {
-  width: 100%;
   position: static;
-  padding: 0px;   /* -- lề trên -- */
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  padding: 25px 0px 0px 0px;
 }
 
 .logo-wrapper-1,
@@ -108,10 +102,8 @@ Carousel map:
   padding: 0px;
 }
 
-.seemore-btn {
-  display: block;
+#main-carousel .seemore-btn {
   margin: 15px auto 40px auto;
-  width: fit-content;
 }
 
 .progress {
@@ -180,7 +172,37 @@ Carousel map:
   background-image: url("../img/carousel-img/e-mount-banner-min.png");
 }
 
-/*--------*/
+
+/* ---------- intros styles ----------*/
+/* 
+.intro maps
+
+.intro--carema, i.intro--lens: 
+1 .intro (full width)
+2   .container (padding settings)
+3     .intro__text (flex column)
+4        h1 h3 .seemore-btn
+3     .intro__img (1 img)
+
+.intro--equip:  
+1 .intro (full width)
+2   .container (padding settings)
+3     .intro__text (flex column)
+4        h1 h3
+3     .intro__img (.card-columns)
+3     .seemore-btn
+*/
+
+.intro__text {
+  align-items: center;
+  margin: 20px 0px 30px 0px;
+}
+
+.intro .seemore-btn {
+  margin: auto;
+}
+
+.
 
 @media only screen and (min-width: 576px) {
 
@@ -212,10 +234,8 @@ Carousel map:
     margin-bottom: 5px;
   }
 
-  .seemore-btn {
-    display: block;
-    margin: 25px auto 50px auto;
-    width: fit-content;
+  #main-carousel .seemore-btn {
+    margin: 25px auto 40px auto;
   }
 
   .carousel-control-next,
@@ -248,56 +268,24 @@ Carousel map:
   /*--------------- carousel MAX version ---------------*/
 
   /* ---------- update height ---------- */
+
   #main-carousel {  
-    height: 630px;     /*fix width 580px (màn 625px) */
+    height: 630px;  /* fix height: màn 625px - 50px nav + p-top 50px) */
   }
 
   .carousel-inner, 
   .carousel-item {
-    height: 580px; 
+    height: 580px;  /* fix height: màn 625px - 50px nav */
   }
 
-  /* ---------- update lề trên/trái/phải ---------- */
-  #main-carousel .container {
-    padding: 25px 70px 0px 70px !important; /* -- lề trên -- */
-    height: 100%;
-  }
+  /* ---------- update chung 3 banner ---------- */
 
+  /* ----- update lề trái/phải ----- */
   .carousel-caption {
-    flex-flow: row wrap;
-    justify-content: space-between;
-  } 
-
-  .banner-1 .carousel-title {
-    width: 100%;
-    margin-bottom: 40px;
+    padding: 25px 75px 0px 75px !important;
   }
 
-  .carousel-caption__extra {
-    display: flex !important;
-    justify-content: space-between;
-  }
-
-  .banner-1 .carousel-caption__extra {
-    width: 100%;
-    max-width: 700px;
-    margin: 0px auto 40px auto;
-    height: 100px;
-  }
-
-  .extra {
-    height: 100%;
-  }
-
-  .extra-text {
-    max-width: 156px;
-    margin-top: 10px;
-  }
-
-  .extra img {
-    max-width: 70px;
-  }
-
+  /* ----- update indicators ----- */  
   .carousel-indicators {
     top: 120px;
     height: 20px;
@@ -309,13 +297,12 @@ Carousel map:
     margin: 0px 8px;
   }
 
-  /* ----- thay banner MAX ----- */
+  /* ----- update link ảnh MAX ----- */
   .banner-1 .carousel-caption__img {
     background-image: url("../img/carousel-img/eos-r-banner-max.png");
   }
   
   .banner-2 .carousel-caption__img {
-
     background-image: url("../img/carousel-img/a9-banner-max.png");
   }
   
@@ -331,23 +318,46 @@ Carousel map:
     background-image: url("../img/carousel-img/e-mount-banner-max-east-wing.png");
   }
 
+  /* ----- update size ảnh MAX ----- */
   .banner-1 .carousel-caption__img,
   .banner-2 .carousel-caption__img { 
-    width: 370px;         /*size mới cho banner 1/2 max*/
+    width: 370px;       /*size mới cho banner 1/2 max*/
     height: calc(370px / 1.3877);
   }
 
-  .carousel-caption__img-wrapper {
-    width: 100%;
+  .banner-3 .carousel-caption__img {
+    width: 280px;       /*size mới cho các banner 3 max*/
+    height: 250px;
+  }
+
+  .carousel-caption__img--triple {
+    width: 100%;        /*kích hoạt triple ảnh banner 3*/
+    max-width: 850px;
+    margin: auto;
     display: flex !important;
     justify-content: space-between;
   }
 
-  .banner-3 .carousel-caption__img {
-    width: 280px;         /*size mới cho banner 3 max*/
-    height: 250px;
+  /* ----- kích hoạt, update extra ----- */
+  .carousel-caption__extra {
+    display: flex !important;
+    justify-content: space-between;
   }
 
+  .extra {
+    height: 100%;
+  }
+
+  .extra-text {
+    max-width: 156px;
+    margin-top: 10px;
+  }
+
+  .extra img {
+    max-width: 70px;
+  }
+
+  /* --------------- update banner 1 --------------- */
   .banner-1 .carousel-caption__text {
     display: flex;
     flex-flow: column nowrap;
@@ -356,19 +366,34 @@ Carousel map:
 
   .banner-1 .logo-wrapper-1, 
   .banner-1 .seemore-btn {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+  }
+
+  .banner-1 .carousel-caption {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .banner-1 .carousel-title {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .banner-1 .carousel-caption__extra {
+    width: 100%;
+    max-width: 700px;
+    margin: 0px auto 40px auto;
+    height: 100px;
   }
 
   /* --------------- update banner 2 --------------- */
-
   .banner-2 .carousel-caption {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
   }
 
-  .banner-2 .carousel-caption h1 {
+  .banner-2 .carousel-title {
     margin: 0px;
   }
 
@@ -437,7 +462,6 @@ Carousel map:
   }
 
   /* --------------- update banner 3 --------------- */
-
   .banner-3 {
     background-size: contain, cover;
     background-repeat: no-repeat, no-repeat;
@@ -479,7 +503,6 @@ Carousel map:
   .banner-3 .seemore-btn {
     margin: 25px auto 0px auto;
   }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -489,8 +512,12 @@ Carousel map:
     align-items: stretch;
   } 
 
+  .banner-1 .carousel-caption__text {
+    margin-left: 80px;
+  }
+
   .banner-1 .carousel-caption__img {
-    margin: 10px 0px 0px 200px;
+    margin-right: 80px;
   }
 }
 

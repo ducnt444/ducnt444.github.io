@@ -88,16 +88,6 @@ Hệ thống .container:
 - màn xl (> 1199px): max-width: 1140px, padding: 0px
 
 */
-.container {  
-/* set các .container là fluid(có padding) với màn < 768px */
-  max-width: 100%;  
-  padding: 0px 15px !important; /*sẽ đổi ở các breakpoints */
-}
-
-.container-md {
-/* set các .container là fluid(có padding) với màn < 768px */
-  padding: 0px !important; /*sẽ về như container từ màn md */
-}
 
 .hidden-till-md {
 /* ẩn khi màn <= 768px, sẽ đổi ở @media */  
@@ -250,6 +240,7 @@ h1,
 .btn {
   border-radius: 8px !important;
   transition: all 300ms;
+  display: block;
 }
 
 .btn--light {
@@ -292,7 +283,7 @@ header {
 
 }
 
-.navbar .container {
+.navbar .container-xl {
   position: relative;
   z-index: 101;
 }
@@ -429,13 +420,8 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
 @media only screen and (min-width: 576px) {
 
-  .container,
   .navbar-collapse {
     padding: 0px 30px !important;
-  }
-
-  .container-md {
-    padding: 0px !important;
   }
 
   h1,
@@ -464,15 +450,11 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
 @media only screen and (min-width: 768px) {
 
-  .container {
-    padding: 0px 30px !important;
-  }
-
-  .hidden-till-md {   /* hiện cart search md */
+  .hidden-till-md {   /* hiện element từ md */
     display: block !important;
   }
 
-  .display-till-md {   
+  .display-till-md {  /* ẩn element từ md */
     display: none;
   }
 
@@ -538,10 +520,6 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
 
 @media only screen and (min-width: 1200px) {
-  .container {   /* xóa padding 2 bên nav để căn chuẩn */
-    padding: 0px !important;
-    max-width: 1140px;
-  }
 
   .nav-link {   /* xóa padding 2 bên các item để căn chuẩn */
     padding-left: 0px !important;
