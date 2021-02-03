@@ -6,6 +6,11 @@ Carousel map:
 
 
 */
+
+#main-carousel {
+  padding-top: 50px;
+}
+
 #main-carousel .container {
   padding-top: 25px !important; /* -- lề trên -- */
   height: 100%;
@@ -18,7 +23,7 @@ Carousel map:
 }
 
 .carousel-indicators {
-  top: 57px;
+  top: 107px;
   margin-bottom: 0px;
   height: 14px;
 }
@@ -184,7 +189,7 @@ Carousel map:
   }
 
   .carousel-indicators {
-    top: 67px;
+    top: 117px;
     height: 16px;
   }
   
@@ -243,10 +248,13 @@ Carousel map:
   /*--------------- carousel MAX version ---------------*/
 
   /* ---------- update height ---------- */
-  #main-carousel, 
+  #main-carousel {  
+    height: 630px;     /*fix width 580px (màn 625px) */
+  }
+
   .carousel-inner, 
-  .carousel-item {  
-  height: 580px;     /*fix width 580px (màn 625px) */
+  .carousel-item {
+    height: 580px; 
   }
 
   /* ---------- update lề trên/trái/phải ---------- */
@@ -273,7 +281,7 @@ Carousel map:
   .banner-1 .carousel-caption__extra {
     width: 100%;
     max-width: 700px;
-    margin-bottom: 20px;
+    margin: 0px auto 40px auto;
     height: 100px;
   }
 
@@ -291,7 +299,7 @@ Carousel map:
   }
 
   .carousel-indicators {
-    top: 70px;
+    top: 120px;
     height: 20px;
   }
   
@@ -482,7 +490,7 @@ Carousel map:
   } 
 
   .banner-1 .carousel-caption__img {
-    margin: 10px 0px 0px 240px;
+    margin: 10px 0px 0px 200px;
   }
 }
 
