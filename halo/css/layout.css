@@ -89,7 +89,8 @@ Hệ thống .container:
 
 */
 
-.hidden-till-md {
+.hidden-till-md,
+.hidden-till-sm {
 /* ẩn khi màn <= 768px, sẽ đổi ở @media */  
   display: none !important;
 }
@@ -430,6 +431,10 @@ Map: chung -> cart -> search bar -> search min -> search btn
 /* --------------- media queries --------------- */
 
 @media only screen and (min-width: 576px) {
+
+  .hidden-till-sm {   /* hiện element từ md */
+    display: block !important;
+  }
 
   .navbar-collapse {
     padding: 0px 30px !important;
