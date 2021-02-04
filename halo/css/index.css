@@ -216,6 +216,77 @@ section {
   margin-top: 20px;
 }
 
+.specials h1 {
+  margin-bottom: 25px;
+}
+
+.brands-item {
+  margin-bottom: 15px
+}
+
+.specials h3 {
+  margin: 10px 0px 50px 0px;
+}
+
+.policy {
+  width: 100%;
+  max-width: 300px;
+  justify-content: space-between;
+}
+
+.policy__item:nth-of-type(2) {
+  margin: 0px 15px;
+}
+
+.policy__item {
+  width: 90px;
+  min-height: 180px;
+  padding: 10px 5px;
+  border-radius: 8px;
+}
+
+.policy__icon p {
+  margin-left: 10px;
+}
+/* ---------- kết thúc intros styles ----------*/
+
+
+/* ---------- promo styles ----------*/
+.promo__collection {
+  padding-top: 25px;
+}
+
+.promo-item {
+  margin-bottom: 25px;
+}
+/* ---------- kết thúc promo styles ----------*/
+
+
+/* ---------- review styles ----------*/
+.review-item {
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.review-item__img {
+  max-width: 80px;
+  border-radius: 8px;
+}
+
+.review-item h2 {
+  font-size: 13px
+}
+
+.review-item .subtext {
+  font-size: 9px;
+  width: fit-content;
+}
+
+.review-headlines {
+  font-size: 11px;
+}
+
+
 @media only screen and (min-width: 576px) {
 
   .carousel-title {

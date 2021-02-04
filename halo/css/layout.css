@@ -135,11 +135,16 @@ Hệ thống .container:
   font-size: 11px; 
 }
 
+.policy__text {
+  font-size: 10px;
+}
+
 .font-14, 
 .log-min,
 .carousel-header:last-of-type,
 .extra-text,
-h3 { 
+h3, 
+.policy__icon { 
   font-size: 14px; 
 }
 
@@ -222,6 +227,11 @@ h1,
 .carousel-header:last-of-type {
   font-style: italic;
 }
+/* -------center align ------- */
+h1, h2 {
+  text-align: center;
+}
+
 /* --------------- kết thúc font styles --------------- */
 
 
