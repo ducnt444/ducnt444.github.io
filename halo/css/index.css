@@ -265,16 +265,24 @@ section {
 /* ---------- review styles ----------*/
 .review-item {
   border: 1px solid white;
-  border-radius: 8px;
+  border-radius: 4px;
+  color: white;
 }
 
 .review-item__img {
-  max-width: 80px;
-  border-radius: 8px;
+  width: 30%;
+  border-radius: 4px;
+}
+
+.review-item__content {
+  width: 70%;
+  padding: 5px;
 }
 
 .review-item h2 {
-  font-size: 13px
+  font-size: 13px;
+  width: 100%;
+  text-align: start;
 }
 
 .review-item .subtext {
