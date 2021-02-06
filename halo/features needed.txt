@@ -1,1 +1,2 @@
 Nút clear text trong input
+alt cho img

@@ -95,6 +95,10 @@ Hệ thống .container:
   display: none !important;
 }
 
+.mw-900 {
+  max-width: 900px;
+}
+
 /* --------------- kết thúc settings --------------- */
 
 
@@ -132,19 +136,32 @@ Hệ thống .container:
 
 /* ------- font sizes ------- */
 
-.font-11 { 
-  font-size: 11px; 
+.review-item .subtext {
+  font-size: 9px;
 }
 
 .policy__text {
   font-size: 10px;
 }
 
+.font-11 { 
+  font-size: 11px; 
+}
+
+.review-preview {
+  font-size: 12px; 
+}
+
+.review-item h2 {
+  font-size: 13px;
+}
+
 .font-14, 
 .log-min,
 .carousel-header:last-of-type,
 .extra-text,
-h3, 
+h3,
+.connection__text, 
 .policy__icon { 
   font-size: 14px; 
 }
@@ -153,6 +170,8 @@ h3,
 h2 { 
   font-size: 15px; 
 }
+
+
 
 .font-16,
 .eos-r,
@@ -237,8 +256,16 @@ h1, h2 {
 
 
 /* --------------- effect styles --------------- */
-.glow-big,
-.seemore-btn {
+/* ----- dark shadow ----- */
+.btn--dark,
+.connection__input,
+.connection__submit-btn {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+/* ----- white shadow ----- */
+.btn--light,
+.review-item,
+.policy__item {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 
@@ -253,6 +280,7 @@ h1, h2 {
   border-radius: 8px !important;
   transition: all 300ms;
   display: block;
+  padding: 5px 10px;
 }
 
 .btn--light {
@@ -373,7 +401,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
 .search-bar-till-md {
   width: 100%;
   height: 34px;
-  padding: 5px 0px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -440,6 +468,23 @@ Map: chung -> cart -> search bar -> search min -> search btn
     padding: 0px 30px !important;
   }
 
+  .review-item .subtext {
+    font-size: 12px;
+  }
+
+  .carousel-header:last-of-type, 
+  .btn,
+  .connection__text,
+  h3,
+  .review-item h2 {
+    font-size: 16px;
+  } 
+
+  .policy__text,
+  .policy__icon {
+    font-size: 17px;
+  } 
+
   h1,
   .eos-r,
   .fa-times {
@@ -449,10 +494,6 @@ Map: chung -> cart -> search bar -> search min -> search btn
   .carousel-header:first-of-type {
     font-size: 24px;
   }
-
-  .carousel-header:last-of-type, .seemore-btn {
-    font-size: 16px;
-  }  
 
   .logo-canon {
     font-size: 50px;
@@ -478,10 +519,21 @@ Map: chung -> cart -> search bar -> search min -> search btn
     display: none;
   }
 
-  .logo-sony {
-    font-size: 28px;
+  .review-preview {
+    font-size: 14px; 
   }
 
+  .search-btn {
+    margin-left: 20px;
+  }
+
+  .fa-search, 
+  .fa-shopping-cart,
+  .review-item h2 {
+    font-size: 22px;
+  }
+
+  .logo-sony,
   .fa-times {
     font-size: 28px;
   }
@@ -510,14 +562,6 @@ Map: chung -> cart -> search bar -> search min -> search btn
     margin: 0px 20px 0px 38px !important;
   }
 
-  .fa-search, 
-  .fa-shopping-cart {
-    font-size: 22px;
-  }
-
-  .search-btn {
-    margin-left: 20px;
-  }
 
 }
 
@@ -530,6 +574,10 @@ Map: chung -> cart -> search bar -> search min -> search btn
   .search-icon {   /* giãn cách search với cart */
     padding-right: 5px !important;
     padding-left: 5px !important;
+  }
+
+  .review-item h2 {
+    font-size: 28px;
   }
 
 }

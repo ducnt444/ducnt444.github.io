@@ -205,7 +205,7 @@ section {
 }
 
 .intro__text h3 {
-  margin: 10px 0px 15px 0px;
+  margin: 10px 0px 30px 0px;
 }
 
 .intro .seemore-btn {
@@ -214,6 +214,10 @@ section {
 
 .intro--equip .seemore-btn {
   margin-top: 20px;
+}
+
+.card {
+  border-radius: 16px;
 }
 
 .specials h1 {
@@ -263,37 +267,68 @@ section {
 
 
 /* ---------- review styles ----------*/
+
+
+
 .review-item {
   border: 1px solid white;
-  border-radius: 4px;
+  border-radius: 8px;
   color: white;
+  margin-bottom: 20px;
 }
 
 .review-item__img {
   width: 35%;
-  border-radius: 4px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .review-item__content {
   padding: 5px 10px;
 }
 
+.review h1 {
+  margin-bottom: 25px;
+}
+
 .review-item h2 {
-  font-size: 13px;
-  width: 100%;
   text-align: start;
 }
 
 .review-item .subtext {
-  font-size: 9px;
   width: fit-content;
-  margin: 10px 0px;
+  margin-top: 5px;
 }
 
-.review-headlines {
-  font-size: 11px;
+
+
+/* ---------- kết thúc review styles ----------*/
+
+
+/* ---------- connection styles ----------*/
+.connection__form {
+  margin: 10px 0px 30px 0px;
 }
 
+.connection__input {
+  width: 100%;
+  max-width: 280px;
+  margin-right: 20px;
+  border: none;
+}
+
+.connection__socials {
+  width: 160px;
+  margin-top: 10px;
+}
+.socials__item {
+  width: 40px;
+  height: 40px;
+}
+
+.socials__item img {
+  border-radius: 8px;
+}
+/* ---------- kết thúc connection styles ----------*/
 
 @media only screen and (min-width: 576px) {
 
@@ -352,6 +387,26 @@ section {
     height: 78px;
   }
 
+  .policy {
+    max-width: 530px;
+  }
+
+  .policy__item:nth-of-type(2) {
+    margin: 0px 25px;
+  }
+
+  .policy__item {
+    width: 160px;
+    min-height: 250px;
+    padding: 10px 5px;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .review-item__content {
+    padding: 20px 25px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -367,6 +422,10 @@ section {
   .carousel-inner, 
   .carousel-item {
     height: 580px;  /* fix height: màn 625px - 50px nav */
+  }
+
+  #main-carousel .seemore-btn {
+    margin: 15px auto 15px auto;
   }
 
   /* ---------- update chung 3 banner ---------- */
@@ -473,7 +532,7 @@ section {
   .banner-1 .carousel-caption__extra {
     width: 100%;
     max-width: 700px;
-    margin: 0px auto 40px auto;
+    margin: 0px auto;
     height: 100px;
   }
 
@@ -508,7 +567,7 @@ section {
 
   .logo-wrapper-2 {
     width: 100%;
-    margin: 50px auto 205px auto;
+    margin: 50px auto 200px auto;
   }
 
   .logo-sony-a9-wrapper {
@@ -540,7 +599,7 @@ section {
     font-style: normal;
     font-weight: normal;
     width: 100%;
-    margin: 20px 0px 10px 0px;
+    margin: 20px 0px 5px 0px;
   }
 
   .banner-2 .seemore-btn {
@@ -553,10 +612,12 @@ section {
   }
 
   /* --------------- update banner 3 --------------- */
+
   .banner-3 {
+    background-image: url('../img/carousel-img/outer-ring-md.png'), url('../img/carousel-img/banner-bg-3.png');
     background-size: contain, cover;
     background-repeat: no-repeat, no-repeat;
-    background-position: center, top;
+    background-position: center, center;
   }
 
   .banner-3 .carousel-caption {
@@ -594,6 +655,19 @@ section {
   .banner-3 .seemore-btn {
     margin: 25px auto 0px auto;
   }
+
+  .intro__text {
+    padding: 0px;
+  }
+
+  .intro .seemore-btn {
+    margin: 0px;
+  }
+
+  .intro--lens .intro__text {
+    order: 2;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
