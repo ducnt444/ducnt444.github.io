@@ -8,7 +8,7 @@
 }
 
 *:focus {
-  outline: none;
+  outline-color: transparent !important;
 }
 
 p {
@@ -18,6 +18,11 @@ p {
 a {
   text-decoration: none;
   color: black;
+}
+
+a:hover {
+  color: initial;
+  text-decoration: none;
 }
 
 ul {
@@ -79,7 +84,7 @@ img {
 */
 
 
-/* --------------- settings chung --------------- */
+/* -------------------- settings chung -------------------- */
 
 /*
 Hệ thống .container:
@@ -99,12 +104,26 @@ Hệ thống .container:
   max-width: 900px;
 }
 
-/* --------------- kết thúc settings --------------- */
+.mw-600 {
+  max-width: 600px;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* -------------------- kết thúc settings -------------------- */
 
 
-/* --------------- font styles --------------- */
+/* -------------------- font styles -------------------- */
 
 /* ------- font faces -------*/
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 @font-face {
     font-family: 'canon';
     src: url('/fonts/canon-webfont.woff2') format('woff2'),
@@ -130,9 +149,6 @@ Hệ thống .container:
   font-family: sony !important;
 }
 
-* {
-  font-family: 'Roboto', sans-serif;
-}
 
 /* ------- font sizes ------- */
 
@@ -148,7 +164,8 @@ Hệ thống .container:
   font-size: 11px; 
 }
 
-.review-preview {
+.review-preview, 
+.footer__info {
   font-size: 12px; 
 }
 
@@ -162,7 +179,10 @@ Hệ thống .container:
 .extra-text,
 h3,
 .connection__text, 
-.policy__icon { 
+.policy__icon,
+.log-max,
+.modal,
+.logreg--login-form input { 
   font-size: 14px; 
 }
 
@@ -209,8 +229,10 @@ h1 {
 /* ------- colors ------- */
 #collapsibleNavbar li a,
 .log-max,
-.dark-side {
-  color: #FFFFFF;
+.dark-side a,
+.dark-side,
+.log-max:hover {
+  color: #FFFFFF ;
 }
 
 .logo-canon {
@@ -252,10 +274,10 @@ h1, h2 {
   text-align: center;
 }
 
-/* --------------- kết thúc font styles --------------- */
+/* -------------------- kết thúc font styles -------------------- */
 
 
-/* --------------- effect styles --------------- */
+/* -------------------- effect styles -------------------- */
 /* ----- dark shadow ----- */
 .btn--dark,
 .connection__input,
@@ -268,14 +290,16 @@ h1, h2 {
 .policy__item {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
+/* ----- big white shadow ----- */
+.modal-content {
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
+}
 
-/* .navbar-brand img {
-  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.65));
-} */
-/* --------------- kết thúc effect --------------- */
+/* -------------------- kết thúc effect -------------------- */
 
 
-/* --------------- buttons styles --------------- */
+
+/* -------------------- buttons styles -------------------- */
 .btn {
   border-radius: 8px !important;
   transition: all 300ms;
@@ -302,10 +326,11 @@ h1, h2 {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
-/* --------------- kết thúc buttons  --------------- */
+/* -------------------- kết thúc buttons  -------------------- */
 
 
-/* --------------- navbar styles --------------- */
+
+/* -------------------- navbar styles -------------------- */
 
 /* chung -> toggler -> brand -> l-c-s -> menu */
 
@@ -313,19 +338,19 @@ h1, h2 {
 
 header {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
 }
 
 .navbar {
   background-color: #222222;
   z-index: 100;
-
+  border-bottom: 1px solid #222222;
 }
 
 .navbar .container-xl {
   position: relative;
-  z-index: 101;
+  z-index: 90;
 }
 
 /* ------- toggler styles ------- */
@@ -342,8 +367,9 @@ header {
 }
 
 /* ------- brand styles ------- */
-.navbar-brand img {
-  height: 25px;
+.header__logo,
+.footer__logo {
+  height: 25px;  /*25 + padding trên dưới 12.5 = 50px*/
   filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.65));
 }
 
@@ -387,7 +413,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
   padding: 10px 30px;
   background-color: #222222;
   position: absolute;
-  z-index: 1000;
+  z-index: 110;
   left: 0px;
   top: 0px;
   display: flex;
@@ -453,10 +479,146 @@ Map: chung -> cart -> search bar -> search min -> search btn
   flex-grow: unset;
 }
 
-/* --------------- kết thúc nav styles --------------- */
+/* -------------------- kết thúc nav styles -------------------- */
 
 
-/* --------------- media queries --------------- */
+
+/* --------------------  footer styles -------------------- */
+
+footer {
+  padding: 20px 0px;
+}
+
+.footer__logo {
+  margin: 0px auto;
+}
+
+.footer__menu {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0px;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+/* -------------------- kết thúc footer styles -------------------- */
+
+
+
+/* -------------------- logreg styles -------------------- */
+
+.modal-dialog {
+  max-width: 290px;
+  margin: 0px auto;
+  border-radius: 16px;
+}
+
+.modal-content {
+  border-radius: 16px;
+  margin: calc(50vh - 216px) 0px;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-header {
+  padding: 0px
+}
+
+.logreg__logo {
+  height: 30px;
+}
+
+.modal-header .close {
+  font-size: 30px;
+  padding: 0px;
+  margin: 5px 12px 0px auto;
+  height: 20px;
+}
+
+.logreg--login-form .input-group {
+  margin-bottom: 15px;
+}
+
+.logreg--login-form .input-group:last-child {
+  margin-bottom: 10px;
+}
+
+.logreg--login-form input {
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  border-left: none;
+  border-radius: 8px;
+  height: 40px;
+  padding: 5px;
+}
+
+.logreg--login-form input:focus{
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  border-left: none;
+}
+
+.input-group-text {
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+}
+
+.input-group:first-child .input-group-text {
+  padding: 0px 8px;
+}
+
+.input-group:nth-child(2) .input-group-text {
+  padding: 0px 7px 2px 10px;
+}
+
+.input-group:nth-child(n+3) .input-group-text {
+  padding: 0px 5px 2px 9px;
+}
+/* 
+.input-group:nth-child(4) .input-group-text {
+  padding: 0px 5px 2px 9px;
+} */
+
+.input-group-prepend {
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  border-radius: 8px 0px 0px 8px;
+  border-right: none;
+}
+
+.logreg__submit {
+  margin: 15px 0px 20px 0px;
+  font-size: 14px !important;
+}
+
+.logreg__platform {
+  display: flex;
+  height: 30px;
+  width: 130px;
+  margin: 10px 0px 10px 0px;
+}
+
+.platform__link {
+  width: 30px;
+}
+
+.modal-footer {
+  padding: 0px 0px 20px 0px;
+}
+
+.logreg-portal {
+  color: #D32020;
+  display: inline-block;
+}
+
+.reg {
+  display: none;
+}
+
+
+/* -------------------- media queries -------------------- */
 
 @media only screen and (min-width: 576px) {
 
@@ -476,7 +638,8 @@ Map: chung -> cart -> search bar -> search min -> search btn
   .btn,
   .connection__text,
   h3,
-  .review-item h2 {
+  .review-item h2,
+  .footer__link {
     font-size: 16px;
   } 
 
@@ -538,16 +701,21 @@ Map: chung -> cart -> search bar -> search min -> search btn
     font-size: 28px;
   }
 
+  .search-bar {
+    display: flex !important;
+  }
+
   .search-bar .search-area {
     height: 100%;
   }
 
-  .navbar-brand {
-    padding: 10px 0px;
+  .header__logo,
+  .footer__logo {
+    height: 30px;
   }
 
-  .navbar-brand img {
-    height: 30px;
+  .navbar-brand { /*30 + padding trên dưới 10 = 50px*/
+    padding: 10px 0px;
   }
 
   .navbar-collapse { /* collapse từ full màn giảm về auto */
@@ -560,6 +728,13 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
   .log-max {   /* giãn cách menu thông qua log-reg */
     margin: 0px 20px 0px 38px !important;
+    height: 40px;
+    padding: 5px 0px;
+    line-height: 30px;
+  }
+
+  .search-btn {
+    display: flex !important;
   }
 
 
@@ -584,6 +759,15 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
 
 @media only screen and (min-width: 1200px) {
+
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .search-bar {  /*search box + search btn + cancel btn*/
+    padding: 10px 0px; /*bỏ padding 2 bên khi MAX*/
+  }
 
   .nav-link {   /* xóa padding 2 bên các item để căn chuẩn */
     padding-left: 0px !important;

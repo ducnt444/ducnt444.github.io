@@ -6,7 +6,7 @@ header
         span.navbar-toggler-icon
 
       a.navbar-brand(href='index.html')
-        img(src="img/misc-img/logo-white.png", alt="")
+        img.header__logo(src="img/misc-img/logo-white.png", alt="")
 
       #collapsibleNavbar.collapse.navbar-collapse
         .search-bar-till-md
@@ -24,20 +24,20 @@ header
           li.nav-item
             a.nav-link.py-3.px-md-3(href='review-hub.html') Đánh giá
           li.nav-item.display-till-md.log-min
-            a.nav-link.py-3(href='review-hub.html') Đăng nhập/Đăng ký
+            a.nav-link.py-3(href='#' data-toggle='modal' data-target='#logreg') Đăng nhập/Đăng ký
 
       .log-cart-search
-        a.hidden-till-md.log-max(href='review-hub.html') Đăng nhập/Đăng ký
+        a#logregToggler.hidden-till-md.log-max(href='#' data-toggle='modal' data-target='#logreg') Đăng nhập/Đăng ký
         a.cart-icon(href="cart.html")
           <i class="fas fa-shopping-cart"></i>
-        button.btn.search-btn.hidden-till-md(onclick="searchBarToggler()")
+        button.btn.search-btn.hidden-till-md.d-flex.align-items-center(onclick="searchBarToggler()")
           <i class="fas fa-search"></i>
 
 
-      .search-bar
+      .search-bar.hidden-till-md
         input.search-area(type="text" placeholder="Tìm kiếm...")
         button.btn.search-btn
           <i class="fas fa-search"></i>
-        button.btn.search-cancel(onclick="searchBarToggler()")
+        button.btn.search-cancel.d-flex.align-items-center.justify-content-center(onclick="searchBarToggler()")
           <i class="fas fa-times"></i>
 
