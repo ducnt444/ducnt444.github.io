@@ -1,2 +1,3 @@
 Nút clear text trong input
 alt cho img
+gộp indicator styles vào layout.css

@@ -1,0 +1,190 @@
+/* 
+Map:
+*/
+
+/* -------------------- portal styles -------------------- */
+/* 
+Map: 
+1. Chung
+
+
+2. Carousel (till-md)
+
+
+3. Full (md)
+
+
+*/
+
+/* --------------- settings chung --------------- */
+.portal {
+  width: 100%;
+  position: relative;
+  padding-top: 50px !important;
+  padding-bottom: 0px !important;
+}
+
+.portal__header {
+  position: absolute;
+  top: 60px;
+  left: calc(50vw - 80px);
+  z-index: 1;
+}
+
+.banner__text {
+  text-align: center;
+}
+/* --------------- hết settings chung --------------- */
+
+/* --------------- carousel styles --------------- */
+
+.banner-carousel--dslr,
+.banner-carousel--mrl {
+  padding: 50px 0px 0px 0px;
+  height: 420px;
+}
+
+.banner-carousel--dslr {
+  background-color: #B4DDA5;
+}
+
+.banner-carousel--mrl {
+  background-color: #daa2da;
+}
+
+.banner-carousel__img {
+  max-width: 220px;
+  margin: 0px calc(50vw - 110px) 0px calc(50vw - 110px);
+}
+
+.banner-carousel__caption {
+  padding: 0px;
+  margin-bottom: 30px;
+}
+
+.banner-carousel--dslr .banner__text {
+  color: black;
+}
+
+.banner-carousel__btn {
+  margin: 10px auto 5px auto;
+  width: fit-content;
+}
+
+#camera-carousel .carousel-indicators {
+  margin-bottom: 25px;
+  height: 14px;
+}
+
+#camera-carousel .carousel-indicators li {
+  border: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../img/misc-img/halo-logo-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0px 3px;
+}
+
+#camera-carousel .carousel-indicators .active {
+  background-image: url("../img/misc-img/halo-logo-white--active.png");
+}
+
+/* --------------- hết carousel styles --------------- */
+
+/* --------------- full styles --------------- */
+.banner-full {
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 40px 0px 20px 0px;
+}
+
+
+/* --------------- hết full styles --------------- */
+
+
+/* -------------------- hết portal styles -------------------- */
+
+
+/* -------------------- item rows styles -------------------- */
+.item-row {
+  padding: 70px 0px; /* test */
+}
+
+.item-row .card {
+  width: 100%;
+  max-width: 260px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+  margin: 0px 10px;
+}
+
+.item-row .card-img-top {
+  width: 100%;
+  max-width: 180px;
+  margin: auto;
+}
+
+.item-row .card-body {
+  padding: 10px 0px 0px 0px;
+}
+
+.card-title {
+  line-height: 18px;
+}
+
+.price {
+  color: #CC2929;
+  line-height: 30px;
+}
+
+.sale-text {
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.sale-badge img {
+  height: 12px;
+  margin: 0px 5px;
+}
+
+.seemore-btn {
+  width: fit-content;
+  margin: auto;
+  line-height: 20px;
+  padding: 5px 15px;
+}
+/* -------------------- hết item rows styles -------------------- */
+
+@media only screen and (min-width: 576px) {
+  #camera-carousel .carousel-indicators {
+    height: 16px;
+  }
+  
+  #camera-carousel .carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    margin: 0px 6px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #camera-carousel .carousel-indicators {
+    height: 20px;
+  }
+  
+  #camera-carousel .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px;
+  }
+
+}

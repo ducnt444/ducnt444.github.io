@@ -1,12 +1,90 @@
 extends parts/layout.pug
 
 block css
+  link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
   link(rel="stylesheet", href="css/camera-hub.css")
 
 block title
+
   title Camera
 
-block content 
+block script
+  script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
 
-  section.portal
-    
+block content
+
+  //section.portal.camera-carousel
+
+    h1.portal__header
+      span Nhu cầu 
+      span của bạn?
+
+    #camera-carousel.carousel.slide(data-ride='carousel' data-touch='true' data-interval='false')
+
+      ul.carousel-indicators
+        li.active(data-target='#camera-carousel' data-slide-to='0')
+        li(data-target='#camera-carousel' data-slide-to='1')
+
+      .carousel-inner.camera-carousel-inner
+
+        .carousel-item.banner-carousel.banner-carousel--dslr.active
+          img.banner-carousel__img(src='img/camera-hub-img/portal-dslr-min.png' alt='')
+          .carousel-caption.banner-carousel__caption.font-weight-bold
+            p.banner__text CHUYÊN NGHIỆP
+            p.banner__text CHUẨN CHỈ
+            p.banner__text CỘNG ĐỒNG LỚN
+            a.btn.btn--dark.banner__btn.banner-carousel__btn(href="#") Xem tất cả DSLR
+
+        .carousel-item.banner-carousel.banner-carousel--mrl
+          img.banner-carousel__img(src='img/camera-hub-img/portal-mrl-min.png' alt='')
+          .carousel-caption.banner-carousel__caption.font-weight-bold
+            p.banner__text TIỆN LỢI
+            p.banner__text THỜI THƯỢNG
+            p.banner__text TRẺ TRUNG
+            a.btn.btn--dark.banner__btn.banner-carousel__btn(href="#") Xem tất cả Mirrorless
+
+      a.carousel-control-prev(href='#camera-carousel' data-slide='prev')
+        img(src='img/misc-img/prev-arrow-xs-v2.png')
+      a.carousel-control-next(href='#camera-carousel' data-slide='next')
+        img(src='img/misc-img/next-arrow-xs-v2.png')
+
+
+  //section.portal
+
+    h1.portal__header
+      span Nhu cầu 
+      span của bạn?
+
+    .portal__background.hidden-till-md
+
+    .portal__body.container-xl
+      .row 
+        .banner-full.banner-dslr--full.d-flex.col-md 
+          img.banner-full__img(src="img/camera-hub-img/portal-dslr-v1.png", alt="")
+          .banner__text-area
+            .banner__text-only
+              p.banner__text CHUYÊN NGHIỆP
+              p.banner__text CHUẨN CHỈ
+              p.banner__text CỘNG ĐỒNG LỚN
+            button.btn.btn--dark.banner__btn.banner-full__btn Xem tất cả DSLR
+
+        .banner-full.banner-mrl--full.d-flex.col-md 
+          img.banner-full__img(src="img/camera-hub-img/portal-mrl-v1.png", alt="")
+          .banner__text-area
+            .banner__text-only
+              p.banner__text.text-light TIỆN LỢI
+              p.banner__text.text-light THỜI THƯỢNG
+              p.banner__text.text-light TRẺ TRUNG
+            button.btn.btn--light.banner__btn.banner-full__btn Xem tất cả Mirrorless
+      
+    button.btn.btn--dark.portal-btn Xem tất cả máy ảnh
+
+  section.item-row
+    .container-xl.hot-row.slider
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+ 
+
+

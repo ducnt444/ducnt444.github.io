@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="css/camera-hub.css">
     <title>Camera</title>
   </head>
@@ -82,7 +83,104 @@
           </div>
         </div>
       </div>
-      <section class="portal"></section>
+      <!--section.portal.camera-carousel
+      h1.portal__header
+        span Nhu cầu 
+        span của bạn?
+      
+      #camera-carousel.carousel.slide(data-ride='carousel' data-touch='true' data-interval='false')
+      
+        ul.carousel-indicators
+          li.active(data-target='#camera-carousel' data-slide-to='0')
+          li(data-target='#camera-carousel' data-slide-to='1')
+      
+        .carousel-inner.camera-carousel-inner
+      
+          .carousel-item.banner-carousel.banner-carousel--dslr.active
+            img.banner-carousel__img(src='img/camera-hub-img/portal-dslr-min.png' alt='')
+            .carousel-caption.banner-carousel__caption.font-weight-bold
+              p.banner__text CHUYÊN NGHIỆP
+              p.banner__text CHUẨN CHỈ
+              p.banner__text CỘNG ĐỒNG LỚN
+              a.btn.btn--dark.banner__btn.banner-carousel__btn(href="#") Xem tất cả DSLR
+      
+          .carousel-item.banner-carousel.banner-carousel--mrl
+            img.banner-carousel__img(src='img/camera-hub-img/portal-mrl-min.png' alt='')
+            .carousel-caption.banner-carousel__caption.font-weight-bold
+              p.banner__text TIỆN LỢI
+              p.banner__text THỜI THƯỢNG
+              p.banner__text TRẺ TRUNG
+              a.btn.btn--dark.banner__btn.banner-carousel__btn(href="#") Xem tất cả Mirrorless
+      
+        a.carousel-control-prev(href='#camera-carousel' data-slide='prev')
+          img(src='img/misc-img/prev-arrow-xs-v2.png')
+        a.carousel-control-next(href='#camera-carousel' data-slide='next')
+          img(src='img/misc-img/next-arrow-xs-v2.png')
+      
+      
+      -->
+      <!--section.portal
+      h1.portal__header
+        span Nhu cầu 
+        span của bạn?
+      
+      .portal__background.hidden-till-md
+      
+      .portal__body.container-xl
+        .row 
+          .banner-full.banner-dslr--full.d-flex.col-md 
+            img.banner-full__img(src="img/camera-hub-img/portal-dslr-v1.png", alt="")
+            .banner__text-area
+              .banner__text-only
+                p.banner__text CHUYÊN NGHIỆP
+                p.banner__text CHUẨN CHỈ
+                p.banner__text CỘNG ĐỒNG LỚN
+              button.btn.btn--dark.banner__btn.banner-full__btn Xem tất cả DSLR
+      
+          .banner-full.banner-mrl--full.d-flex.col-md 
+            img.banner-full__img(src="img/camera-hub-img/portal-mrl-v1.png", alt="")
+            .banner__text-area
+              .banner__text-only
+                p.banner__text.text-light TIỆN LỢI
+                p.banner__text.text-light THỜI THƯỢNG
+                p.banner__text.text-light TRẺ TRUNG
+              button.btn.btn--light.banner__btn.banner-full__btn Xem tất cả Mirrorless
+        
+      button.btn.btn--dark.portal-btn Xem tất cả máy ảnh
+      
+      -->
+      <section class="item-row">
+        <div class="container-xl hot-row slider">
+          <div class="card"><img class="card-img-top" src="img/body-img/canon-eos-5d-mark-iv-card.jpg" alt="">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold font-18">Canon EOS 5D Mark IV<br><span class="font-italic font font-weight-light font-13">(Mới 100% fullbox)</span></p>
+              <p class="card-text price font-weight-bold font-24">50.090.000đ</p>
+              <p class="card-text sale-text font-weight-bold"><span class="old-price font-16">58.090.000đ</span><span class="sale-badge"><img src="img/misc-img/sale-badge.png" alt=""></span><span class="sale-amount font-italic font-12">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn font-18" href="#">Xem chi tiết </a>
+            </div>
+          </div>
+          <div class="card"><img class="card-img-top" src="img/body-img/canon-eos-5d-mark-iv-card.jpg" alt="">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold font-18">Canon EOS 5D Mark IV<br><span class="font-italic font font-weight-light font-13">(Mới 100% fullbox)</span></p>
+              <p class="card-text price font-weight-bold font-24">50.090.000đ</p>
+              <p class="card-text sale-text font-weight-bold"><span class="old-price font-16">58.090.000đ</span><span class="sale-badge"><img src="img/misc-img/sale-badge.png" alt=""></span><span class="sale-amount font-italic font-12">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn font-18" href="#">Xem chi tiết </a>
+            </div>
+          </div>
+          <div class="card"><img class="card-img-top" src="img/body-img/canon-eos-5d-mark-iv-card.jpg" alt="">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold font-18">Canon EOS 5D Mark IV<br><span class="font-italic font font-weight-light font-13">(Mới 100% fullbox)</span></p>
+              <p class="card-text price font-weight-bold font-24">50.090.000đ</p>
+              <p class="card-text sale-text font-weight-bold"><span class="old-price font-16">58.090.000đ</span><span class="sale-badge"><img src="img/misc-img/sale-badge.png" alt=""></span><span class="sale-amount font-italic font-12">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn font-18" href="#">Xem chi tiết </a>
+            </div>
+          </div>
+          <div class="card"><img class="card-img-top" src="img/body-img/canon-eos-5d-mark-iv-card.jpg" alt="">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold font-18">Canon EOS 5D Mark IV<br><span class="font-italic font font-weight-light font-13">(Mới 100% fullbox)</span></p>
+              <p class="card-text price font-weight-bold font-24">50.090.000đ</p>
+              <p class="card-text sale-text font-weight-bold"><span class="old-price font-16">58.090.000đ</span><span class="sale-badge"><img src="img/misc-img/sale-badge.png" alt=""></span><span class="sale-amount font-italic font-12">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn font-18" href="#">Xem chi tiết </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="dark-side"> 
       <div class="container px-sm-5 mw-600 d-flex flex-column justify-content-center align-items-center"><img class="footer__logo" src="img/misc-img/logo-white.png" alt="">
@@ -99,6 +197,7 @@
     <script src="https://kit.fontawesome.com/d8c5e3f38e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

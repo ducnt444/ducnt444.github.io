@@ -165,10 +165,12 @@ section {
 }
 
 .review-preview, 
-.footer__info {
+.footer__info,
+.banner__text {
   font-size: 12px; 
 }
 
+.font-13,
 .review-item h2 {
   font-size: 13px;
 }
@@ -191,8 +193,6 @@ h2 {
   font-size: 15px; 
 }
 
-
-
 .font-16,
 .eos-r,
 .nav-item:nth-child(-n+4), 
@@ -208,6 +208,7 @@ h2 {
   font-size: 18px; 
 }
  
+.font-20, 
 h1 { 
   font-size: 20px; 
 }
@@ -759,6 +760,12 @@ footer {
 
 
 @media only screen and (min-width: 1200px) {
+
+  .container, 
+  .container-xl {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
   section {
     padding-top: 100px;

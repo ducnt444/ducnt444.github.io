@@ -17,13 +17,13 @@ Carousel map:
   min-height: 450px; 
 }
 
-.carousel-indicators {
+#main-carousel .carousel-indicators {
   top: 107px;
   margin-bottom: 0px;
   height: 14px;
 }
 
-.carousel-indicators li {
+#main-carousel .carousel-indicators li {
   border: none;
   width: 14px;
   height: 14px;
@@ -36,7 +36,7 @@ Carousel map:
   margin: 0px 3px;
 }
 
-.carousel-indicators .active {
+#main-carousel .carousel-indicators .active {
   background-image: url("../img/misc-img/halo-logo-white--active.png");
 }
 
@@ -333,12 +333,12 @@ Carousel map:
     margin-bottom: 15px;
   }
 
-  .carousel-indicators {
+  #main-carousel .carousel-indicators {
     top: 117px;
     height: 16px;
   }
   
-  .carousel-indicators li {
+  #main-carousel .carousel-indicators li {
     width: 16px;
     height: 16px;
     margin: 0px 6px;
@@ -433,12 +433,12 @@ Carousel map:
   }
 
   /* ----- update indicators ----- */  
-  .carousel-indicators {
+  #main-carousel .carousel-indicators {
     top: 120px;
     height: 20px;
   }
   
-  .carousel-indicators li {
+  #main-carousel .carousel-indicators li {
     width: 20px;
     height: 20px;
     margin: 0px 8px;
