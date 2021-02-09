@@ -13,9 +13,9 @@ block script
 
 block content
 
-  //section.portal.camera-carousel
+  section.portal.camera-carousel.display-till-md
 
-    h1.portal__header
+    h1.section__header.portal__header
       span Nhu cầu 
       span của bạn?
 
@@ -41,7 +41,7 @@ block content
             p.banner__text TIỆN LỢI
             p.banner__text THỜI THƯỢNG
             p.banner__text TRẺ TRUNG
-            a.btn.btn--dark.banner__btn.banner-carousel__btn(href="#") Xem tất cả Mirrorless
+            a.btn.btn--light.banner__btn.banner-carousel__btn(href="#") Xem tất cả Mirrorless
 
       a.carousel-control-prev(href='#camera-carousel' data-slide='prev')
         img(src='img/misc-img/prev-arrow-xs-v2.png')
@@ -49,9 +49,9 @@ block content
         img(src='img/misc-img/next-arrow-xs-v2.png')
 
 
-  //section.portal
+  section.portal.hidden-till-md
 
-    h1.portal__header
+    h1.section__header.portal__header
       span Nhu cầu 
       span của bạn?
 
@@ -59,32 +59,55 @@ block content
 
     .portal__body.container-xl
       .row 
-        .banner-full.banner-dslr--full.d-flex.col-md 
+        .banner-full.banner-full--dslr.d-flex.col-md 
           img.banner-full__img(src="img/camera-hub-img/portal-dslr-v1.png", alt="")
-          .banner__text-area
-            .banner__text-only
+          .banner-full__text-area.align-self-center
+            .banner-full__text-only.font-weight-bold
               p.banner__text CHUYÊN NGHIỆP
               p.banner__text CHUẨN CHỈ
               p.banner__text CỘNG ĐỒNG LỚN
-            button.btn.btn--dark.banner__btn.banner-full__btn Xem tất cả DSLR
+            a.btn.btn--dark.banner__btn.banner-full__btn(href="#") Xem tất cả DSLR
 
-        .banner-full.banner-mrl--full.d-flex.col-md 
-          img.banner-full__img(src="img/camera-hub-img/portal-mrl-v1.png", alt="")
-          .banner__text-area
-            .banner__text-only
+        .banner-full.banner-full--mrl.d-flex.col-md 
+          .banner-full__text-area.align-self-center
+            .banner-full__text-only.font-weight-bold
               p.banner__text.text-light TIỆN LỢI
               p.banner__text.text-light THỜI THƯỢNG
               p.banner__text.text-light TRẺ TRUNG
-            button.btn.btn--light.banner__btn.banner-full__btn Xem tất cả Mirrorless
+            a.btn.btn--light.banner__btn.banner-full__btn(href="#") Xem tất cả Mirrorless
+          img.banner-full__img(src="img/camera-hub-img/portal-mrl-v1.png", alt="")
       
     button.btn.btn--dark.portal-btn Xem tất cả máy ảnh
 
-  section.item-row
-    .container-xl.hot-row.slider
+  section.item-row.sale-row
+    h1.section__header HOT SALE
+    .container-xl.slider-row.sale-row.slider
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
- 
+      include parts/card.pug
+    a.btn.btn--dark.item-row__btn(href="#") Xem toàn bộ 
+
+  section.item-row.hot-row
+    h1.section__header BÁN CHẠY
+    .container-xl.slider-row.hot-row.slider
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+    a.btn.btn--dark.item-row__btn(href="#") Xem toàn bộ 
+
+  section.item-row.love-row
+    h1.section__header ĐÁNH GIÁ TỐT
+    .container-xl.slider-row.love-row.slider
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+      include parts/card.pug
+    a.btn.btn--dark.item-row__btn(href="#") Xem toàn bộ 
+
 
 

@@ -17,11 +17,20 @@ Map:
 */
 
 /* --------------- settings chung --------------- */
+
+section {
+  padding: 40px 0px;
+}
+
 .portal {
   width: 100%;
   position: relative;
   padding-top: 50px !important;
   padding-bottom: 0px !important;
+}
+
+.section__header {
+  margin-bottom: 30px;
 }
 
 .portal__header {
@@ -34,6 +43,11 @@ Map:
 .banner__text {
   text-align: center;
 }
+
+.item-row__btn {
+  margin-top: 30px;
+}
+
 /* --------------- hết settings chung --------------- */
 
 /* --------------- carousel styles --------------- */
@@ -97,12 +111,35 @@ Map:
 
 /* --------------- full styles --------------- */
 .banner-full {
-  flex-flow: column nowrap;
-  align-items: center;
-  padding: 40px 0px 20px 0px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
+.banner-full__img {
+  max-width: 240px;
+}
 
+.banner-full--dslr {
+  background-color: #B4DDA5;
+}
+
+.banner-full--mrl {
+  background-color: #daa2da;
+}
+
+.portal__header span:last-child {
+  color: white;
+}
+
+.banner-full__btn {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.banner-full--mrl .banner-full__btn {
+  font-size: 10px;
+  padding: 5px;
+}
 /* --------------- hết full styles --------------- */
 
 
@@ -110,14 +147,12 @@ Map:
 
 
 /* -------------------- item rows styles -------------------- */
-.item-row {
-  padding: 70px 0px; /* test */
-}
+
 
 .item-row .card {
   width: 100%;
   max-width: 260px;
-  padding: 20px;
+  padding: 20px 10px;
   border-radius: 8px;
   border: 1px solid #bbbbbb;
   margin: 0px 10px;
@@ -140,11 +175,14 @@ Map:
 .price {
   color: #CC2929;
   line-height: 30px;
+  margin: 10px 0px;
 }
 
 .sale-text {
-  vertical-align: middle;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .old-price {
@@ -158,10 +196,11 @@ Map:
 
 .seemore-btn {
   width: fit-content;
-  margin: auto;
+  margin: 20px auto 0px auto;
   line-height: 20px;
   padding: 5px 15px;
 }
+
 /* -------------------- hết item rows styles -------------------- */
 
 @media only screen and (min-width: 576px) {
@@ -174,6 +213,14 @@ Map:
     height: 16px;
     margin: 0px 6px;
   }
+
+  .portal__header {
+    position: absolute;
+    top: 60px;
+    left: calc(50vw - 108px);
+    z-index: 1;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {

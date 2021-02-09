@@ -184,7 +184,8 @@ h3,
 .policy__icon,
 .log-max,
 .modal,
-.logreg--login-form input { 
+.logreg--login-form input,
+.footer__menu { 
   font-size: 14px; 
 }
 
@@ -300,12 +301,15 @@ h1, h2 {
 
 
 
-/* -------------------- buttons styles -------------------- */
+/* -------------------- button styles -------------------- */
 .btn {
   border-radius: 8px !important;
   transition: all 300ms;
   display: block;
   padding: 5px 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn--light {
@@ -487,7 +491,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
 /* --------------------  footer styles -------------------- */
 
 footer {
-  padding: 20px 0px;
+  padding: 30px 0px;
 }
 
 .footer__logo {
@@ -497,7 +501,7 @@ footer {
 .footer__menu {
   width: 100%;
   max-width: 400px;
-  margin: 20px 0px;
+  margin: 30px 0px;
 }
 
 .copyright {
