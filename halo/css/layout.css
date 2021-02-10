@@ -700,6 +700,10 @@ footer {
     margin-left: 20px;
   }
 
+  .banner__text {
+    font-size: 14px;
+  }
+
   .fa-search, 
   .fa-shopping-cart,
   .review-item h2 {
@@ -763,6 +767,10 @@ footer {
 
   .review-item h2 {
     font-size: 28px;
+  }
+
+  .banner__text {
+    font-size: 16px;
   }
 
 }
