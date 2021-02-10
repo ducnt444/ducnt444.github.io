@@ -69,6 +69,10 @@ Carousel map:
   padding: 25px 0px 0px 0px;
 }
 
+.main-carousel__text:last-of-type {
+  
+}
+
 .logo-wrapper-1,
 .logo-wrapper-2,
 .logo-wrapper-3 {
@@ -235,6 +239,10 @@ Carousel map:
   justify-content: space-between;
 }
 
+.policy__text {
+  font-size: 10px;
+}
+
 .policy__item:nth-of-type(2) {
   margin: 0px 15px;
 }
@@ -289,14 +297,18 @@ Carousel map:
 
 .review-item h2 {
   text-align: start;
+  font-size: 13px;
 }
 
 .review-item .subtext {
   width: fit-content;
   margin-top: 5px;
+  font-size: 9px;
 }
 
-
+.review-preview {
+  font-size: 12px; 
+}
 
 /* ---------- kết thúc review styles ----------*/
 
@@ -328,6 +340,11 @@ Carousel map:
 /* ---------- kết thúc connection styles ----------*/
 
 @media only screen and (min-width: 576px) {
+/* --------------- update fonts --------------- */
+  .btn,
+  h3 {
+    font-size: 16px;
+  } 
 
   .carousel-title {
     margin-bottom: 15px;
@@ -398,6 +415,10 @@ Carousel map:
     padding: 10px 5px;
     border-radius: 8px;
   }
+
+  .review-item h2 {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 700px) {
@@ -407,6 +428,11 @@ Carousel map:
 }
 
 @media only screen and (min-width: 768px) {
+  /*--------------- update fonts ---------------*/
+  .review-item h2 {
+    font-size: 22px;
+  }
+
 
   /*--------------- carousel MAX version ---------------*/
 
@@ -591,7 +617,7 @@ Carousel map:
     height: 40px;
   }
 
-  .banner-2 .carousel-header {
+  .banner-2 .main-carousel__text {
     font-size: 20px;
     font-style: normal;
     font-weight: normal;
@@ -641,11 +667,11 @@ Carousel map:
     margin: 50px 0px 10px 0px;
   }
 
-  .banner-3 .carousel-header {
+  .banner-3 .main-carousel__text {
     width: 100%;
   }
 
-  .banner-3 .carousel-header:first-of-type {
+  .banner-3 .main-carousel__text:first-of-type {
     margin: 20px auto 0px auto;
   }
 
@@ -668,7 +694,14 @@ Carousel map:
 }
 
 @media only screen and (min-width: 992px) {
-  
+  /*--------------- update fonts ---------------*/
+  .review-item h2 {
+    font-size: 28px;
+  }
+  /*--------------- hết update fonts ---------------*/
+
+
+
   .carousel-caption {
     justify-content: center;
     align-items: stretch;
@@ -681,6 +714,8 @@ Carousel map:
   .banner-1 .carousel-caption__img {
     margin-right: 80px;
   }
+
+  
 }
 
 @media only screen and (min-width: 1200px) {

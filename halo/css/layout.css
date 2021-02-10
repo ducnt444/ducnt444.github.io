@@ -152,32 +152,22 @@ section {
 
 /* ------- font sizes ------- */
 
-.review-item .subtext {
-  font-size: 9px;
-}
-
-.policy__text {
-  font-size: 10px;
-}
-
 .font-11 { 
   font-size: 11px; 
 }
-
-.review-preview, 
-.footer__info,
-.banner__text {
-  font-size: 12px; 
+ 
+.footer__info {
+  font-size: 12px;
+  line-height: 1.8;
 }
 
-.font-13,
-.review-item h2 {
+.font-13 {
   font-size: 13px;
 }
 
 .font-14, 
 .log-min,
-.carousel-header:last-of-type,
+.main-carousel__text:last-of-type,
 .extra-text,
 h3,
 .connection__text, 
@@ -197,7 +187,7 @@ h2 {
 .font-16,
 .eos-r,
 .nav-item:nth-child(-n+4), 
-.carousel-header:first-of-type { 
+.main-carousel__text:first-of-type { 
   font-size: 16px; 
 }
 
@@ -261,14 +251,14 @@ h1 {
 /* ------- bold font ------- */
 h1, 
 #collapsibleNavbar li:nth-child(-n+4) a,
-.carousel-header:first-of-type,
+.main-carousel__text:first-of-type,
 .extra-text {
   font-weight: bold;
 }
 
 /* ------- italic font ------- */
 #collapsibleNavbar li:nth-child(5) a,
-.carousel-header:last-of-type {
+.main-carousel__text:last-of-type {
   font-style: italic;
 }
 /* -------center align ------- */
@@ -644,11 +634,8 @@ footer {
     font-size: 12px;
   }
 
-  .carousel-header:last-of-type, 
-  .btn,
+  .main-carousel__text:last-of-type,
   .connection__text,
-  h3,
-  .review-item h2,
   .footer__link {
     font-size: 16px;
   } 
@@ -664,7 +651,7 @@ footer {
     font-size: 28px;
   }
 
-  .carousel-header:first-of-type {
+  .main-carousel__text:first-of-type {
     font-size: 24px;
   }
 
@@ -700,19 +687,26 @@ footer {
     margin-left: 20px;
   }
 
-  .banner__text {
-    font-size: 14px;
-  }
-
   .fa-search, 
-  .fa-shopping-cart,
-  .review-item h2 {
+  .fa-shopping-cart {
     font-size: 22px;
   }
 
   .logo-sony,
   .fa-times {
     font-size: 28px;
+  }
+
+  .footer__link {
+    font-size: 18px;
+  } 
+
+  .footer__info {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 12px;
   }
 
   .search-bar {
@@ -763,14 +757,6 @@ footer {
   .search-icon {   /* giãn cách search với cart */
     padding-right: 5px !important;
     padding-left: 5px !important;
-  }
-
-  .review-item h2 {
-    font-size: 28px;
-  }
-
-  .banner__text {
-    font-size: 16px;
   }
 
 }

@@ -16,7 +16,11 @@ Map:
 
 */
 
-/* --------------- settings chung --------------- */
+/* ---------- settings chung ---------- */
+
+main {
+  position: relative;
+}
 
 section {
   padding: 40px 0px;
@@ -36,20 +40,19 @@ section {
 .portal__header {
   position: absolute;
   top: 60px;
-  left: calc(50vw - 80px);
-  z-index: 1;
+  left: calc(50% - 80px);
+  z-index: 5;
 }
 
-.item-row__btn {
+.hub-row__btn {
   margin-top: 30px;
 }
 
-/* --------------- hết settings chung --------------- */
+/* ---------- hết settings chung ---------- */
 
-/* --------------- carousel styles --------------- */
+/* ---------- banner-carousel styles ---------- */
 
-.banner-carousel--dslr,
-.banner-carousel--mrl {
+.banner-carousel {
   padding: 50px 0px 0px 0px;
   height: 420px;
 }
@@ -64,7 +67,7 @@ section {
 
 .banner-carousel__img {
   max-width: 220px;
-  margin: 0px calc(50vw - 110px) 0px calc(50vw - 110px);
+  margin: 0px calc(50% - 110px) 0px calc(50% - 110px);
 }
 
 .banner-carousel__caption {
@@ -103,87 +106,15 @@ section {
   background-image: url("../img/misc-img/halo-logo-white--active.png");
 }
 
-/* --------------- hết carousel styles --------------- */
-
-/* --------------- full styles --------------- */
-
-.portal {
-  position: relative;
-}
-
-.banner-full {
-  position: relative;
-  margin-top: 15px;
-  z-index: 5;
-}
-
-.banner-full__img {
-  max-width: 220px;
-}
-
-.portal__bg {
-  height: 350px;
-  width: 100%;
-  display: flex !important;
-  position: absolute;
-}
-
-.portal__bg--green {
-  background-color: #B4DDA5;
-  width: 50%;
-  height: 100%;
-}
-
-.portal__bg--pink {
-  background-color: #daa2da;
-  width: 50%;
-  height: 100%;
-}
-
-.portal__header span:last-child {
-  color: white;
-}
-
-.banner-full--dslr, 
-.banner-full--mrl {
-  justify-content: space-evenly;
-}
-
-.banner-full__text {
-  font-size: 12px;
-}
-
-.banner-full__text--dslr {
-  text-align: end;
-}
-
-.banner-full__btn--dslr {
-  font-size: 10px;
-  width: 111px;
-}
-
-.banner-full__btn--mrl {
-  font-size: 10px;
-  padding: 5px 7px;
-}
-
-.portal-btn {
-  font-size: 12px;
-  line-height: 15px;
-  z-index: 5;
-  position: relative;
-}
-
-/* --------------- hết full styles --------------- */
-
+/* ---------- hết banner-carousel styles ---------- */
 
 /* -------------------- hết portal styles -------------------- */
 
 
-/* -------------------- item rows styles -------------------- */
+/* -------------------- hub-row styles -------------------- */
 
 
-.item-row .card {
+.hub-row .card {
   width: 100%;
   max-width: 260px;
   padding: 20px 10px;
@@ -192,13 +123,13 @@ section {
   margin: 0px 10px;
 }
 
-.item-row .card-img-top {
+.hub-row .card-img-top {
   width: 100%;
   max-width: 180px;
   margin: auto;
 }
 
-.item-row .card-body {
+.hub-row .card-body {
   padding: 10px 0px 0px 0px;
 }
 
@@ -235,9 +166,23 @@ section {
   padding: 5px 15px;
 }
 
-/* -------------------- hết item rows styles -------------------- */
+/* -------------------- hết hub-row styles -------------------- */
+
+
+/* -------------------- media queries -------------------- */
 
 @media only screen and (min-width: 576px) {
+  /* --------------- update banner-carousel --------------- */
+  .banner-carousel {
+    padding: 80px 0px 0px 0px;
+    height: 550px;
+  }
+
+  .banner-carousel__img {
+    max-width: 300px;
+    margin: 0px calc(50% - 150px) 0px calc(50% - 150px);
+  }
+
   #camera-carousel .carousel-indicators {
     height: 16px;
   }
@@ -249,39 +194,123 @@ section {
   }
 
   .portal__header {
-    position: absolute;
-    top: 60px;
-    left: calc(50vw - 108px);
-    z-index: 1;
+    top: 70px;
+    left: calc(50% - 107px);
   }
+
+  .banner-carousel__text {
+    font-size: 16px;
+  }
+
+  .banner-carousel__btn,
+  .hub-row__btn {
+    font-size: 12px;
+  }
+
+  /* --------------- hết update banner-carousel --------------- */
 
 }
 
 @media only screen and (min-width: 768px) {
-  #camera-carousel .carousel-indicators {
-    height: 20px;
-  }
-  
-  #camera-carousel .carousel-indicators li {
-    width: 20px;
-    height: 20px;
-    margin: 0px 8px;
+
+  /* --------------- banner-full --------------- */
+  .portal {
+    position: relative;
   }
 
   .banner-full {
-    margin-top: 30px;
+    position: relative;
+    z-index: 5;
+    margin: 50px 0px;
   }
 
-  .portal__header {
-    top: 70px;
-    left: calc(50vw - 107px);
+  .banner-full__img {
+    max-width: 220px;
   }
+
+  .portal__bg {
+    height: 360px; 
+    /* height 2 banner (height ảnh) = 260 + margin b-t 50px */
+    width: 100%;
+    display: flex !important;
+    position: absolute;
+  }
+
+  .portal__bg--green {
+    background-color: #B4DDA5;
+    width: 50%;
+    height: 100%;
+  }
+
+  .portal__bg--pink {
+    background-color: #daa2da;
+    width: 50%;
+    height: 100%;
+  }
+
+  .portal__header span:last-child {
+    color: white;
+  }
+
+  .banner-full {
+    justify-content: space-between;
+  }
+
+  .banner-full__text-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-full__text {
+    font-size: 14px;
+  }
+
+  .banner-full--dslr {
+    padding-right: 15px;
+  }
+
+  .banner-full--mrl {
+    padding-left: 15px;
+  }
+
+  .banner-full__text--dslr {
+    text-align: end;
+  }
+
+  .banner-full__btn {
+    margin: 10px 0px 0px 0px;
+    font-size: 10px;
+  }
+
+  .banner-full__btn--dslr {
+    width: 111px;
+    align-self: flex-end;
+  }
+
+  .banner-full__btn--mrl {
+    padding: 5px 7px;
+    align-self: flex-start;
+  }
+
+  .portal__btn {
+    font-size: 12px;
+    z-index: 5;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 64px);
+  }
+  /* --------------- hết banner-full --------------- */
 }
 
 @media only screen and (min-width: 992px) {
+  /* --------------- update banner-full --------------- */
+  .portal__header {
+    top: 75px;
+  }
 
   .portal__bg {
-    height: 450px;
+    height: 454px;
+    /* height 2 banner (height ảnh) = 354 + margin b-t 50px */
   }
 
   .banner-full {
@@ -292,34 +321,77 @@ section {
     max-width: 300px;
   }
 
+  .portal__btn {
+    bottom: 40px;
+  }
+  /* --------------- hết update banner-full --------------- */
 }
 
 @media only screen and (min-width: 1200px) {
+  /* --------------- update banner-full --------------- */
   .portal__bg {
-    height: 350px;
+    height: 514px;
+    /* height 2 banner (height ảnh) = 414 + margin b-t 50px */
   }
 
   .banner-full__img {
     max-width: 350px;
   }
 
-  .banner-full--dslr {
-    padding-top: 0px;
+  .banner-full {
+    justify-content: space-between;
   }
 
   .banner-full--dslr {
-    justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 25px;
   }
   
   .banner-full--mrl {
-    justify-content: flex-start;
-    padding-left: 20px;
+    padding-left: 25px;
   }
 
   .banner-full__text {
     font-size: 20px; 
   }
+
+  .banner-full__btn,
+  .portal__btn {
+    margin: 15px 0px 0px 0px;
+    font-size: 14px;
+  }
+  
+  .banner-full__btn--dslr {
+    width: 150px;
+    align-self: flex-end;
+  }
+  
+  .banner-full__btn--mrl {
+    padding: 5px 7px;
+    align-self: flex-start;
+  }
+
+  .portal__btn {
+    width: 150px;
+    left: calc(50% - 75px);
+    border-color: white !important;
+    background-color: rgba(225, 225, 225, 0.15);
+  }
+
+
+  /* ---------------hết update banner-full --------------- */
+
+  /* --------------- update hub-row --------------- */
+  .hub-row .card {
+    margin: 0px 16px;
+  }
+
+  .hub-row__btn {
+    font-size: 14px;
+    width: 130px;
+    line-height: 25px;
+  }
+
+  /* --------------- hết update hub-row --------------- */
 
 }
 
