@@ -331,7 +331,7 @@ h1, h2 {
 
 /* ------- settings chung nav ------- */
 
-header {
+.navbar {
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -511,7 +511,6 @@ footer {
 
 .modal-content {
   border-radius: 16px;
-  margin: calc(50vh - 216px) 0px;
 }
 
 .modal-header, .modal-footer {
@@ -586,6 +585,10 @@ footer {
 .logreg__submit {
   margin: 15px 0px 20px 0px;
   font-size: 14px !important;
+}
+
+.logreg__submit.reg {
+  margin: 15px 0px 15px 0px;
 }
 
 .logreg__platform {
@@ -764,6 +767,10 @@ footer {
 
 @media only screen and (min-width: 1200px) {
 
+  .modal-open .navbar {
+    padding-right: 17px;
+  }
+  
   .container, 
   .container-xl {
     padding-left: 0px;

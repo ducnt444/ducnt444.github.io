@@ -121,6 +121,7 @@ section {
   border-radius: 8px;
   border: 1px solid #bbbbbb;
   margin: 0px 10px;
+  height: 360px;
 }
 
 .hub-row .card-img-top {
@@ -311,10 +312,6 @@ section {
   .portal__bg {
     height: 454px;
     /* height 2 banner (height ảnh) = 354 + margin b-t 50px */
-  }
-
-  .banner-full {
-    
   }
 
   .banner-full__img {

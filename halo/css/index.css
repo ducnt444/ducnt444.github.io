@@ -69,10 +69,10 @@ Carousel map:
   padding: 25px 0px 0px 0px;
 }
 
-.main-carousel__text:last-of-type {
+/* .main-carousel__text:last-of-type {
   
 }
-
+ */
 .logo-wrapper-1,
 .logo-wrapper-2,
 .logo-wrapper-3 {
@@ -654,9 +654,9 @@ Carousel map:
     margin-bottom: 0px;
   }
 
-  .banner-3 .carousel-caption__text {
+/*   .banner-3 .carousel-caption__text {
     margin-top: ;
-  }
+  } */
 
   .lotr-logo {
     height: 50px;
