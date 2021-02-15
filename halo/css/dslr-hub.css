@@ -1,0 +1,194 @@
+/* -------------------- breadcrumb -------------------- */
+.breadcrumb-wrapper {
+  padding-top: 50px;
+}
+
+.breadcrumb {
+  height: 50px;
+  background-color: transparent;
+  align-items: center;
+  font-size: 12px;
+}
+/* -------------------- hết breadcrumb -------------------- */
+
+
+/* -------------------- display-area -------------------- */
+.dslr-hub__display-area {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* -------------------- hết display-area -------------------- */
+
+
+/* ---------- .technical-filter--min ---------- */
+.technical-filter--min {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.technical-filter--min .btn {
+  font-size: 11px;
+}
+
+.dropdown-toggle {
+  background-color: 
+}
+
+.main-area__sub-filter-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 290px;
+  margin: auto;
+}
+
+.sub-filter {
+  border: 1px solid #C4C4C4;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.sub-filter img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.main-area__items-area {
+  margin: 15px -5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* --------------- .item styles --------------- */
+
+.item {
+  /* width 250, height 360 */
+  width: calc(50vw - 20px); 
+  padding: 15px 10px;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+  margin: 10px 5px;
+}
+
+.item .card-img-top {
+  /*thumbnail 180*/
+  width: 100%; 
+  max-width: 180px;
+  margin: auto;
+}
+
+.item .card-body {
+  padding: 10px 0px 0px 0px;
+}
+
+.card-title {
+  line-height: 18px;
+}
+
+.price {
+  color: #CC2929;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 5px 0px;
+}
+
+.item .seemore-btn {
+  width: fit-content;
+  margin: 15px auto 0px auto;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px 10px;
+}
+
+/* ---------- sale items module ---------- */
+.sale-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.sale-badge img {
+  height: 12px;
+  margin: 0px 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  /*
+  thay đổi layout: 
+  main thành flex row, wrap
+  */
+  
+  main,
+  .dslr-hub__display-area {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dslr-hub__display-area {
+    justify-content: space-between;
+    padding: 40px 30px;
+  }
+
+  .dslr-hub__aside-area {
+    width: 150px;
+  }
+
+  .dslr-hub__main-area {
+    width: calc(100% - 200px)
+  }
+
+  /* ---------- update item styles ---------- */
+
+
+  /* ---------- update item styles ---------- */
+
+  .main-area__items-area {
+    margin: 40px -10px;
+  }
+
+  .item.card {
+    /* width 222 */
+    width: 222px;
+    padding: 20px 10px;
+    margin: 15px 10px;
+  }
+
+  .item .card-body {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .price {
+    line-height: 30px;
+    font-size: 24px;
+    margin: 15px 0px;
+  }
+
+  .item .seemore-btn {
+    margin: 15px auto 0px auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 15px;
+  }
+
+  /* ---------- sale items module ---------- */
+  .sale-text {
+    flex-wrap: nowrap;
+  }
+
+  /* ---------- hết update card (hub) styles ---------- */
+
+}

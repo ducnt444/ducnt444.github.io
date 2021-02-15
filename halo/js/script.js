@@ -3,7 +3,10 @@ $(document).ready(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     variableWidth: true,
-    arrows: false,
+    autoplay: false,
+    arrows: true,
+    prevArrow: "<button type='button' class='slick-prev pull-left'><img src ='img/img--misc/prev-arrow--black.png'></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><img src ='img/img--misc/next-arrow--black.png'></button>",
     responsive: [
       {
         breakpoint: 1024,
@@ -22,7 +25,7 @@ $(document).ready(function(){
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       }

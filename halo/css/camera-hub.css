@@ -95,7 +95,7 @@ section {
   height: 14px;
   border-radius: 50%;
   background-color: transparent;
-  background-image: url("../img/misc-img/halo-logo-white.png");
+  background-image: url("../img/img--misc/halo-logo-white.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -103,7 +103,7 @@ section {
 }
 
 #camera-carousel .carousel-indicators .active {
-  background-image: url("../img/misc-img/halo-logo-white--active.png");
+  background-image: url("../img/img--misc/halo-logo-white--active.png");
 }
 
 /* ---------- hết banner-carousel styles ---------- */
@@ -113,24 +113,35 @@ section {
 
 /* -------------------- hub-row styles -------------------- */
 
-
-.hub-row .card {
-  width: 100%;
-  max-width: 260px;
-  padding: 20px 10px;
-  border-radius: 8px;
-  border: 1px solid #bbbbbb;
-  margin: 0px 10px;
-  height: 360px;
+/* ---------- row styles ---------- */
+.hub-row {
+  position: relative;
 }
 
-.hub-row .card-img-top {
-  width: 100%;
+.slick-prev,
+.slick-next {
+  /*ẩn nút ở các màn nhỏ hơn xl*/
+  display: none !important; 
+}
+
+/* ---------- card (hub) styles ---------- */
+.item {
+  /* width 250, height 360 */
+  width: calc(50vw - 20px); 
+  padding: 15px 10px;
+  border-radius: 8px;
+  border: 1px solid #bbbbbb;
+  margin: 0px 5px;
+}
+
+.item .card-img-top {
+  /*thumbnail 180*/
+  width: 100%; 
   max-width: 180px;
   margin: auto;
 }
 
-.hub-row .card-body {
+.item .card-body {
   padding: 10px 0px 0px 0px;
 }
 
@@ -140,31 +151,35 @@ section {
 
 .price {
   color: #CC2929;
-  line-height: 30px;
-  margin: 10px 0px;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 5px 0px;
 }
 
+.item .seemore-btn {
+  width: fit-content;
+  margin: 15px auto 0px auto;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px 10px;
+}
+
+/* ---------- sale items module ---------- */
 .sale-text {
-  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .old-price {
+  font-size: 14px;
   text-decoration: line-through;
 }
 
 .sale-badge img {
   height: 12px;
   margin: 0px 5px;
-}
-
-.seemore-btn {
-  width: fit-content;
-  margin: 20px auto 0px auto;
-  line-height: 20px;
-  padding: 5px 15px;
 }
 
 /* -------------------- hết hub-row styles -------------------- */
@@ -213,6 +228,10 @@ section {
 }
 
 @media only screen and (min-width: 768px) {
+
+  .hub-row__btn {
+    margin-top: 40px;
+  }
 
   /* --------------- banner-full --------------- */
   .portal {
@@ -301,6 +320,39 @@ section {
     left: calc(50% - 64px);
   }
   /* --------------- hết banner-full --------------- */
+
+  /* ---------- update card (hub) styles ---------- */
+  .item.card {
+    /* width 222 */
+    width: 222px;
+    padding: 20px 10px;
+    margin: 0px 10px;
+  }
+
+  .item .card-body {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .price {
+    line-height: 30px;
+    font-size: 24px;
+    margin: 15px 0px;
+  }
+
+  .item .seemore-btn {
+    margin: 15px auto 0px auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 15px;
+  }
+
+  /* ---------- sale items module ---------- */
+  .sale-text {
+    flex-wrap: nowrap;
+  }
+
+  /* ---------- hết update card (hub) styles ---------- */
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -325,14 +377,23 @@ section {
 }
 
 @media only screen and (min-width: 1200px) {
+
+  .hub-row__btn {
+    margin-top: 50px;
+  }
+
   /* --------------- update banner-full --------------- */
   .portal__bg {
-    height: 514px;
-    /* height 2 banner (height ảnh) = 414 + margin b-t 50px */
+    height: 575px;
+    /* height 2 banner (height ảnh) = 425 + margin b-t 60px */
+  }
+
+  .banner-full {
+    margin: 75px 0px;
   }
 
   .banner-full__img {
-    max-width: 350px;
+    max-width: 360px;
   }
 
   .banner-full {
@@ -373,22 +434,72 @@ section {
     border-color: white !important;
     background-color: rgba(225, 225, 225, 0.15);
   }
-
-
   /* ---------------hết update banner-full --------------- */
 
+  
   /* --------------- update hub-row --------------- */
-  .hub-row .card {
-    margin: 0px 16px;
+  .hub-row {
+    padding: 50px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: block !important;
+    border: none;
+    width: 25px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 26.65px);
+  }
+
+  .slick-prev {
+    left: -50px;
+  }
+
+  .slick-next {
+    right: -50px;
   }
 
   .hub-row__btn {
-    font-size: 14px;
+    font-size: 16px;
     width: 130px;
     line-height: 25px;
   }
 
   /* --------------- hết update hub-row --------------- */
+
+  /* ---------- update card (hub) styles ---------- */
+  .hub-row .card {
+    /* width 222 */
+    width: 237.5px;
+    padding: 20px 10px;
+    margin: 0px 15px;
+  }
+
+  .hub-row .card-body {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .price {
+    line-height: 30px;
+    font-size: 24px;
+    margin: 15px 0px;
+  }
+
+  .hub-row .seemore-btn {
+    margin: 15px auto 0px auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 15px;
+  }
+
+  /* ---------- sale items module ---------- */
+  .sale-text {
+    flex-wrap: nowrap;
+  }
+
+  /* ---------- hết update card (hub) styles ---------- */
 
 }
 

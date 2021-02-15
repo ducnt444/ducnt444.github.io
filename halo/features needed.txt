@@ -1,4 +1,11 @@
-Nút clear text trong input
 alt cho img
 gộp indicator styles vào layout.css
-fix header bug khi bật modal
+fix header bug khi bật modal -> ok
+tách style trong layout
+set max length text
+nút clear text trong input
+nút ẩn hiện password
+
+
+
+

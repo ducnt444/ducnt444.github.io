@@ -1,0 +1,158 @@
+extends parts/layout.pug
+
+block css
+  link(rel="stylesheet", href="css/dslr-hub.css")
+
+block title
+  title Máy ảnh DSLR
+
+block content
+  .container-xl.breadcrumb-wrapper
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href='index.html') Trang chủ
+      li.breadcrumb-item
+        a(href='camera-hub.html') Máy ảnh
+      li.breadcrumb-item.active Máy ảnh DSLR
+
+  img.dslr-hub__banner.w-100(src="img/img--dslr-hub/dslr-banner-min.png", alt="")    
+
+  .dslr-hub__display-area.container-xl
+    aside.dslr-hub__aside-area
+
+      .technical-filter--min.display-till-md
+        .dropdown
+          button.btn.dropdown-toggle(type='button' data-toggle='dropdown') Sắp xếp theo
+          .dropdown-menu
+            a.dropdown-item(href='#') Giá từ cao đến thấp
+            a.dropdown-item(href='#') Giá từ thấp đến cao
+            a.dropdown-item(href='#') Mới nhất
+
+        .dropdown
+          button.btn.dropdown-toggle(type='button' data-toggle='dropdown') Thương hiệu
+          .dropdown-menu
+            a.dropdown-item(href='#') Canon
+            a.dropdown-item(href='#') Nikon
+
+        .dropdown
+          button.btn.dropdown-toggle(type='button' data-toggle='dropdown') ISO tối đa
+          .dropdown-menu
+            a.dropdown-item(href='#') Dưới 6.400
+            a.dropdown-item(href='#') 6.400 - 25.600
+            a.dropdown-item(href='#') Trên 25.600
+
+        .dropdown
+          button.btn.dropdown-toggle(type='button' data-toggle='dropdown') Kích cỡ cảm biến
+          .dropdown-menu
+            a.dropdown-item(href='#') Crop
+            a.dropdown-item(href='#') Full-frame
+            
+        .dropdown
+          button.btn.dropdown-toggle(type='button' data-toggle='dropdown') Độ phân giải
+          .dropdown-menu
+            a.dropdown-item(href='#') 10 - 18 MP
+            a.dropdown-item(href='#') 19 - 25 MP
+            a.dropdown-item(href='#') Trên 25 MP
+
+
+      .technical-filter--max.hidden-till-md
+        .technical-filter--max__filter-group
+          button(data-toggle='collapse' data-target='#filter--arrange') Sắp xếp theo
+          ul#filter--arrange.collapse.show
+            li 
+              a(href="#") Giá từ cao đến thấp 
+            li 
+              a(href="#") Giá từ thấp đến cao 
+            li 
+              a(href="#") Mới nhất
+
+        .technical-filter--max__filter-group
+          button(data-toggle='collapse' data-target='#filter--brand') Thương hiệu
+          ul#filter--brand.collapse.show
+            li 
+              a(href="#") Canon 
+            li 
+              a(href="#") Nikon
+
+        .technical-filter--max__filter-group
+          button(data-toggle='collapse' data-target='#filter--size') Kích cỡ cảm biến
+          ul#filter--size.collapse.show
+            li 
+              a(href="#") Crop  
+            li 
+              a(href="#") Full-frame
+
+        .technical-filter--max__filter-group
+          button(data-toggle='collapse' data-target='#filter--mp') Độ phân giải
+          ul#filter--mp.collapse.show
+            li 
+              a(href="#") 10 - 18 MP  
+            li 
+              a(href="#") 19 - 25 MP
+            li 
+              a(href="#") Trên 25 MP
+
+        .technical-filter--max__filter-group
+          button(data-toggle='collapse' data-target='#filter--iso') ISO đối đa
+          ul#filter--iso.collapse.show
+            li 
+              a(href="#") Dưới 6400 
+            li 
+              a(href="#") 6400 - 25600
+            li 
+              a(href="#") Trên 25600
+
+
+      .promo--aside.hidden-till-md
+        h1 Tin khuyến mại
+
+        .promo__collection.row
+          img.promo-item.col-md-4(src="img/img--misc/promo-img-1.jpg", alt="")
+          img.promo-item.col-md-4(src="img/img--misc/promo-img-2.jpg", alt="") 
+          img.promo-item.col-md-4(src="img/img--misc/promo-img-1.jpg", alt="")
+      
+    .dslr-hub__main-area
+      .main-area__sub-filter-area
+        span.hidden-till-md Bộ lọc
+        .sub-filter-wrapper
+          .sub-filter
+            img(src="img/img--misc/badge--hot.png", alt="")
+            span Bán chạy
+          .sub-filter
+            img(src="img/img--misc/badge--love.png", alt="")
+            span Bán chạy
+          .sub-filter
+            img(src="img/img--misc/badge--sale-v2.png", alt="")
+            span Bán chạy
+
+      .main-area__items-area
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+        include parts/card.pug
+
+      ul.pagination
+        li.page-item
+          a.page-link(href='#') Previous
+        li.page-item.active
+          a.page-link(href='#') 1
+        li.page-item
+          a.page-link(href='#') 2
+        li.page-item
+          a.page-link(href='#') 3
+        li.page-item
+          a.page-link(href='#') Next
+        
+
+
+
+
+
+
+      
+      

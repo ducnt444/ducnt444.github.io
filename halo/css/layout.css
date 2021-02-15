@@ -69,6 +69,15 @@ img {
   max-height: 100%;
 }
 
+.breadcrumb {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 /* --------------- kết thúc reset css --------------- */
 
 /* Table of contents
@@ -675,11 +684,11 @@ footer {
   }
 
   .display-till-md {  /* ẩn element từ md */
-    display: none;
+    display: none !important;
   }
 
   .search-bar-till-md {
-    display: none;
+    display: none !important;
   }
 
   .review-preview {

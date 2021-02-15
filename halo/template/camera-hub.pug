@@ -5,8 +5,7 @@ block css
   link(rel="stylesheet", href="css/camera-hub.css")
 
 block title
-
-  title Camera
+  title Máy Ảnh
 
 block script
   script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
@@ -28,25 +27,25 @@ block content
       .carousel-inner.camera-carousel-inner
 
         .carousel-item.banner-carousel.banner-carousel--dslr.active
-          img.banner-carousel__img(src='img/camera-hub-img/portal-dslr-min.png' alt='')
+          img.banner-carousel__img(src='img/img--camera-hub/portal-dslr-min.png' alt='')
           .carousel-caption.banner-carousel__caption.font-weight-bold
             p.banner-carousel__text.banner-carousel__text--dslr CHUYÊN NGHIỆP
             p.banner-carousel__text.banner-carousel__text--dslr CHUẨN CHỈ
             p.banner-carousel__text.banner-carousel__text--dslr CỘNG ĐỒNG LỚN
-            a.btn.btn--dark.banner-carousel__btn(href="#") Xem tất cả DSLR
+            a.btn.btn--dark.banner-carousel__btn(href="dslr-hub.html") Xem tất cả DSLR
 
         .carousel-item.banner-carousel.banner-carousel--mrl
-          img.banner-carousel__img(src='img/camera-hub-img/portal-mrl-min.png' alt='')
+          img.banner-carousel__img(src='img/img--camera-hub/portal-mrl-min.png' alt='')
           .carousel-caption.banner-carousel__caption.font-weight-bold
             p.banner-carousel__text.banner-carousel__text--mrl TRẺ TRUNG
             p.banner-carousel__text.banner-carousel__text--mrl TIỆN LỢI
             p.banner-carousel__text.banner-carousel__text--mrl THỜI THƯỢNG
-            a.btn.btn--light.banner-carousel__btn(href="#") Xem tất cả Mirrorless
+            a.btn.btn--light.banner-carousel__btn(href="dslr-hub.html") Xem tất cả Mirrorless
 
       a.carousel-control-prev(href='#camera-carousel' data-slide='prev')
-        img(src='img/misc-img/prev-arrow-xs-v2.png')
+        img(src='img/img--misc/prev-arrow-xs-v2.png')
       a.carousel-control-next(href='#camera-carousel' data-slide='next')
-        img(src='img/misc-img/next-arrow-xs-v2.png')
+        img(src='img/img--misc/next-arrow-xs-v2.png')
 
 
   section.portal.hidden-till-md
@@ -57,13 +56,13 @@ block content
 
     .portal__body.container-xl.d-flex
       .banner-full.banner-full--dslr.d-flex.w-50
-        img.banner-full__img(src="img/camera-hub-img/portal-dslr-v1.png", alt="")
+        img.banner-full__img(src="img/img--camera-hub/portal-dslr-v1.png", alt="")
         .banner-full__text-area.align-self-center
           .banner-full__text-only.font-weight-bold
             p.banner-full__text.banner-full__text--dslr CHUYÊN NGHIỆP
             p.banner-full__text.banner-full__text--dslr CHUẨN CHỈ
             p.banner-full__text.banner-full__text--dslr CỘNG ĐỒNG LỚN
-          a.btn.btn--dark.banner-full__btn.banner-full__btn--dslr(href="#") Xem tất cả DSLR
+          a.btn.btn--dark.banner-full__btn.banner-full__btn--dslr(href="dslr-hub.html") Xem tất cả DSLR
 
       .banner-full.banner-full--mrl.d-flex.w-50
         .banner-full__text-area.align-self-center
@@ -71,39 +70,45 @@ block content
             p.banner-full__text.banner-full__text--mrl.text-light TRẺ TRUNG
             p.banner-full__text.banner-full__text--mrl.text-light TIỆN LỢI
             p.banner-full__text.banner-full__text--mrl.text-light THỜI THƯỢNG
-          a.btn.btn--light.banner-full__btn.banner-full__btn--mrl(href="#") Xem tất cả Mirrorless
-        img.banner-full__img(src="img/camera-hub-img/portal-mrl-max-v6.png", alt="")
+          a.btn.btn--light.banner-full__btn.banner-full__btn--mrl(href="dslr-hub.html") Xem tất cả Mirrorless
+        img.banner-full__img(src="img/img--camera-hub/portal-mrl-max-v6.png", alt="")
       
-    a.btn.btn--dark.portal__btn(href="#") Xem tất cả máy ảnh
+    a.btn.btn--dark.portal__btn(href="dslr-hub.html") Xem tất cả máy ảnh
 
-  section.hub-row.hub-row--sale
+  section.hub-row.hub-row--sale.container-xl
     h1.section__header HOT SALE
-    .container-xl.slider-row.slider
+
+    .slider-row.slider
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
+
     a.btn.btn--dark.hub-row__btn(href="#") Xem toàn bộ 
 
-  section.hub-row.hub-row--hot
+  section.hub-row.hub-row--hot.container-xl
     h1.section__header BÁN CHẠY
-    .container-xl.slider-row.slider
+
+    .slider-row.slider
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
+
     a.btn.btn--dark.hub-row__btn(href="#") Xem toàn bộ 
 
-  section.hub-row.hub-row--love
+  section.hub-row.hub-row--love.container-xl
     h1.section__header ĐÁNH GIÁ TỐT
-    .container-xl.slider-row.slider
+
+    .slider-row.slider
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
       include parts/card.pug
+
     a.btn.btn--dark.hub-row__btn(href="#") Xem toàn bộ 
 
 

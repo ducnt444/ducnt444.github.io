@@ -29,7 +29,7 @@ Carousel map:
   height: 14px;
   border-radius: 50%;
   background-color: transparent;
-  background-image: url("../img/misc-img/halo-logo-white.png");
+  background-image: url("../img/img--misc/halo-logo-white.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,24 +37,24 @@ Carousel map:
 }
 
 #main-carousel .carousel-indicators .active {
-  background-image: url("../img/misc-img/halo-logo-white--active.png");
+  background-image: url("../img/img--misc/halo-logo-white--active.png");
 }
 
 .banner-1 {
-  background-image: url('../img/carousel-img/banner-bg-1-min.jpg');
+  background-image: url('../img/img--carousel/banner-bg-1-min.jpg');
   background-size: cover;
 }
 
 .banner-2 {
   background-color: rgb(105,105,105);
-  background-image: url('../img/carousel-img/banner-bg-2-2.png'), linear-gradient(180deg, rgba(105,105,105,1) 0%, rgba(48,48,48,1) 66%, rgba(0,0,0,1) 100%);
+  background-image: url('../img/img--carousel/banner-bg-2-2.png'), linear-gradient(180deg, rgba(105,105,105,1) 0%, rgba(48,48,48,1) 66%, rgba(0,0,0,1) 100%);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top 15% right 50%, center;
 }
 
 .banner-3 {
-  background-image: url('../img/carousel-img/outer-ring.png'), url('../img/carousel-img/banner-bg-3.png');
+  background-image: url('../img/img--carousel/outer-ring.png'), url('../img/img--carousel/banner-bg-3.png');
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center, top;
@@ -165,15 +165,15 @@ Carousel map:
 }
 
 .banner-1 .carousel-caption__img {
-  background-image: url("../img/carousel-img/eos-r-banner-min.png");
+  background-image: url("../img/img--carousel/eos-r-banner-min.png");
 }
 
 .banner-2 .carousel-caption__img {
-  background-image: url("../img/carousel-img/a9-banner-min.png");
+  background-image: url("../img/img--carousel/a9-banner-min.png");
 }
 
 .banner-3 .carousel-caption__img {
-  background-image: url("../img/carousel-img/e-mount-banner-min.png");
+  background-image: url("../img/img--carousel/e-mount-banner-min.png");
 }
 /* ---------- body styles ----------*/
 
@@ -472,23 +472,23 @@ Carousel map:
 
   /* ----- update link ảnh MAX ----- */
   .banner-1 .carousel-caption__img {
-    background-image: url("../img/carousel-img/eos-r-banner-max.png");
+    background-image: url("../img/img--carousel/eos-r-banner-max.png");
   }
   
   .banner-2 .carousel-caption__img {
-    background-image: url("../img/carousel-img/a9-banner-max.png");
+    background-image: url("../img/img--carousel/a9-banner-max.png");
   }
   
   .banner-3 .carousel-caption__img:nth-child(1) {
-    background-image: url("../img/carousel-img/e-mount-banner-max-west-wing.png");
+    background-image: url("../img/img--carousel/e-mount-banner-max-west-wing.png");
   }
 
   .banner-3 .carousel-caption__img:nth-child(2) {
-    background-image: url("../img/carousel-img/e-mount-banner-max-center.png");
+    background-image: url("../img/img--carousel/e-mount-banner-max-center.png");
   }
 
   .banner-3 .carousel-caption__img:nth-child(3) {
-    background-image: url("../img/carousel-img/e-mount-banner-max-east-wing.png");
+    background-image: url("../img/img--carousel/e-mount-banner-max-east-wing.png");
   }
 
   /* ----- update size ảnh MAX ----- */
@@ -637,7 +637,7 @@ Carousel map:
   /* --------------- update banner 3 --------------- */
 
   .banner-3 {
-    background-image: url('../img/carousel-img/outer-ring-md.png'), url('../img/carousel-img/banner-bg-3.png');
+    background-image: url('../img/img--carousel/outer-ring-md.png'), url('../img/img--carousel/banner-bg-3.png');
     background-size: contain, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
