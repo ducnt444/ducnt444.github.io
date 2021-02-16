@@ -137,6 +137,13 @@ section {
   padding-bottom: 50px;
 }
 
+.breadcrumb {
+  height: 50px;
+  background-color: transparent;
+  align-items: center;
+  font-size: 12px;
+}
+
 /* -------------------- kết thúc settings -------------------- */
 
 
@@ -471,7 +478,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
 .search-cancel {
   padding-right: 0px !important;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -710,8 +717,8 @@ footer {
     font-size: 14px; 
   }
 
-  .search-btn {
-    margin-left: 20px;
+  .cart-icon {
+    margin: 0px 10px 0px 20px;
   }
 
   .fa-search, 
@@ -742,6 +749,12 @@ footer {
 
   .search-bar .search-area {
     height: 100%;
+    margin-right: 15px;
+  }
+
+  .search-bar .search-btn {
+    display: flex !important;
+    margin-right: 15px;
   }
 
   .header__logo,
@@ -762,23 +775,38 @@ footer {
   }
 
   .log-max {   /* giãn cách menu thông qua log-reg */
-    margin: 0px 20px 0px 38px !important;
+    margin: 0px!important;
     height: 40px;
     padding: 5px 0px;
     line-height: 30px;
   }
 
-  .search-btn {
-    display: flex !important;
-  }
-
-
 }
 
 @media only screen and (min-width: 992px) {
 
+  .breadcrumb {
+    height: 60px;
+    font-size: 16px;
+  }
+
   .nav-item:nth-child(-n+4) {   /* giãn cách các menu item */
     margin: 0px 10px !important; 
+  }
+
+  .search-btn {
+    margin: 0px !important;
+  }
+
+  .cart-icon {
+    margin: 0px 30px !important;
+  }
+
+  .log-max {   /* giãn cách menu thông qua log-reg */
+    margin-right: 0px !important;
+    height: 40px;
+    padding: 5px 0px;
+    line-height: 30px;
   }
 
   .search-icon {   /* giãn cách search với cart */

@@ -61,6 +61,7 @@
   border-radius: 8px;
   padding: 5px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .sub-filter:hover {
@@ -89,6 +90,14 @@
   border-radius: 8px;
   border: 1px solid #bbbbbb;
   margin: 10px 5px;
+  transition: all 0.3s;
+}
+
+.item:hover,
+.sub-filter:hover {
+  border: 1px solid #555555;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .item .card-img-top {
@@ -297,8 +306,10 @@
   }
 
   .promo-item {
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
+    cursor: pointer;
   }
+
   /* ---------- hết update aside area ---------- */
 
   
@@ -381,6 +392,11 @@
 
 @media only screen and (min-width: 992px) {
 
+  .breadcrumb {
+    height: 60px;
+    font-size: 16px;
+  }
+
   .dslr-hub__display-area {
     justify-content: space-between;
   }
@@ -406,7 +422,7 @@
 
   .sub-filter {
     padding: 10px 15px;
-    margin-left: 40px;
+    margin-left: 30px;
     font-size: 16px;
     font-weight: 600;
   }
@@ -421,12 +437,12 @@
 
   .main-area__items-area {
     margin: 0px -15px;
-    width: 840px;
+    width: 732px;
   }
 
   .item.card {
     /* width 260 */
-    width: 260px;
+    width: 214px;
     margin: 15px;
   }
 
@@ -438,5 +454,17 @@
     padding: 50px 0px;
   }
 
+  .main-area__items-area {
+    margin: 0px -15px;
+    width: 870px;
+  }
+
+  .item.card {
+    /* width 260 */
+    width: 260px;
+    max-width: 260px;
+    margin: 15px;
+
+  }
 
 }
