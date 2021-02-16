@@ -18,9 +18,6 @@
   padding-bottom: 15px;
 }
 
-/* -------------------- hết display-area -------------------- */
-
-
 /* ---------- .technical-filter--min ---------- */
 .technical-filter--min {
   display: flex;
@@ -28,8 +25,17 @@
   margin-bottom: 10px;
 }
 
+.technical-filter--min .dropdown {
+  margin-bottom: 5px;
+}
+
 .technical-filter--min .btn {
+  font-size: 12px;
+}
+
+.technical-filter--min .dropdown-item {
   font-size: 11px;
+  line-height: 20px;
 }
 
 .dropdown-toggle {
@@ -39,14 +45,14 @@
 .main-area__sub-filter-area {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .sub-filter-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 290px;
+  max-width: 400px;
   margin: auto;
 }
 
@@ -54,11 +60,18 @@
   border: 1px solid #C4C4C4;
   border-radius: 8px;
   padding: 5px;
+  cursor: pointer;
+}
+
+.sub-filter:hover {
+  background-color: #222;
+  color: white;
 }
 
 .sub-filter img {
-  width: 30px;
+  width: 25px;
   margin-right: 5px;
+  border-radius: 4px;
 }
 
 .main-area__items-area {
@@ -126,38 +139,212 @@
   margin: 0px 5px;
 }
 
+/* ---------- .main-area__pagination ---------- */
+
+.main-area__pagination .page-link{
+  color: black;
+  border-color: #d4d4d4;
+}
+
+.main-area__pagination .page-link:hover{
+  color: white;
+  background-color: #222;
+}
+
+.page-item.active .page-link{
+  background-color: #222;
+  border-color: #d4d4d4;
+}
+
+.page-item:last-child .page-link {
+  padding: 5px 6px;
+}
+
+/* ---------- hết .main-area__pagination ---------- */
+
+/* -------------------- hết display-area -------------------- */
+
+@media only screen and (min-width: 370px) {
+
+  .technical-filter--min .btn,
+  .sub-filter {
+    font-size: 12px;
+  }
+
+  .sub-filter img {
+    width: 30px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+
+  .technical-filter--min .btn,
+  .sub-filter {
+    font-size: 13px;
+  }
+
+  .sub-filter {
+    padding: 7px;
+  }
+
+  .sub-filter img {
+    width: 35px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .technical-filter--min {
+    max-width: 544px;
+    margin: auto;
+  }
+
+  .main-area__sub-filter-area {
+    width: fit-content;
+    margin: 15px auto 0px auto;
+  }
+
+  .sub-filter-header {
+    font-size: 13px;
+  }
+
+  .sub-filter-wrapper {
+    width: fit-content;
+    font-size: 13px;
+    margin: 0px;
+    max-width: none;
+  }
+
+  .sub-filter {
+    margin-left: 15px;
+  }
+
+  .main-area__items-area {
+    justify-content: center;
+  }
+
+  .item {
+    /* width 250, height 360 */
+    width: calc(50vw - 45px);
+    max-width: 250px;
+    padding: 15px 10px;
+    margin: 15px 10px;
+  }  
+}
+
 @media only screen and (min-width: 768px) {
   /*
   thay đổi layout: 
   main thành flex row, wrap
   */
   
-  main,
-  .dslr-hub__display-area {
+  main {
     display: flex;
     flex-wrap: wrap;
   }
 
   .dslr-hub__display-area {
+    display: flex;
     justify-content: space-between;
     padding: 40px 30px;
   }
 
+
+  /* ---------- update aside area ---------- */
   .dslr-hub__aside-area {
-    width: 150px;
+    width: 190px;
   }
 
+  .technical-filter--max__filter-group {
+    background-color: #F2F2F2;
+    margin-bottom: 30px;
+    border: 1px solid #BFBFBF;
+    border-bottom: none;
+  }
+
+  .technical-filter--max__filter-group button {
+    border: none;
+    width: 100%;
+    font-size: 13px;
+    text-align: start;
+    padding: 5px 15px;
+    background-color: #C4C4C4;
+    font-weight: bold;
+  }
+
+  .technical-filter--max__filter-group li {
+    padding: 5px 30px;
+    font-size: 12px;
+    border-bottom: 1px solid #BFBFBF;
+  }
+
+  .promo--aside h1 {
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #C4C4C4;
+    padding: 5px 15px;
+    line-height: 1.5;
+    text-align: start;
+  }
+
+  .promo__collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #BFBFBF;
+    background-color: #F2F2F2;
+    padding: 20px 15px 0px 15px;
+  }
+
+  .promo-item {
+    padding-bottom: 20px;
+  }
+  /* ---------- hết update aside area ---------- */
+
+  
+  /* ---------- update main area ---------- */
   .dslr-hub__main-area {
-    width: calc(100% - 200px)
+    width: calc(100% - 244px);
   }
 
-  /* ---------- update item styles ---------- */
+  .main-area__sub-filter-area {
+    margin: 0px 0px 20px 0px;
+  }
 
+  .sub-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .sub-filter img {
+    width: 40px;
+    margin-right: 5px;
+  }
+
+  /* ---------- update .main-area__pagination ---------- */
+  .main-area__pagination {
+    margin-top: 30px;
+  }
+
+  .main-area__pagination .page-link{
+    font-size: 15px;
+    padding: 7px 12px;
+    font-weight: bold;
+  }
+
+  .page-item:last-child .page-link {
+    padding: 7px 9px;
+  }
+
+  /* ---------- hết update .main-area__pagination ---------- */
 
   /* ---------- update item styles ---------- */
 
   .main-area__items-area {
-    margin: 40px -10px;
+    margin: 0px -10px;
+    justify-content: flex-start;
   }
 
   .item.card {
@@ -174,7 +361,7 @@
   .price {
     line-height: 30px;
     font-size: 24px;
-    margin: 15px 0px;
+    margin: 10px 0px;
   }
 
   .item .seemore-btn {
@@ -184,11 +371,72 @@
     padding: 5px 15px;
   }
 
-  /* ---------- sale items module ---------- */
+  /* ----- sale items module ----- */
   .sale-text {
     flex-wrap: nowrap;
   }
 
-  /* ---------- hết update card (hub) styles ---------- */
+  /* ---------- hết update item styles ---------- */
+}
+
+@media only screen and (min-width: 992px) {
+
+  .dslr-hub__display-area {
+    justify-content: space-between;
+  }
+
+  .technical-filter--max__filter-group button {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+
+  .technical-filter--max__filter-group li {
+    padding: 7px 30px;
+    font-size: 14px;
+  }
+
+  .dslr-hub__main-area {
+    width: fit-content;
+  }
+
+  .sub-filter-header {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .sub-filter {
+    padding: 10px 15px;
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .sub-filter img {
+    width: 55px;
+    margin-right: 10px;
+  }
+
+  
+  /* ---------- update item styles ---------- */
+
+  .main-area__items-area {
+    margin: 0px -15px;
+    width: 840px;
+  }
+
+  .item.card {
+    /* width 260 */
+    width: 260px;
+    margin: 15px;
+  }
+
+  /* ---------- hết update item styles ---------- */
+}
+
+@media only screen and (min-width: 1200px) {
+  .dslr-hub__display-area {
+    padding: 50px 0px;
+  }
+
 
 }

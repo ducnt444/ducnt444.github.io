@@ -46,7 +46,7 @@ block content
           .dropdown-menu
             a.dropdown-item(href='#') Crop
             a.dropdown-item(href='#') Full-frame
-            
+
         .dropdown
           button.btn.dropdown-toggle(type='button' data-toggle='dropdown') Độ phân giải
           .dropdown-menu
@@ -106,24 +106,24 @@ block content
       .promo--aside.hidden-till-md
         h1 Tin khuyến mại
 
-        .promo__collection.row
-          img.promo-item.col-md-4(src="img/img--misc/promo-img-1.jpg", alt="")
-          img.promo-item.col-md-4(src="img/img--misc/promo-img-2.jpg", alt="") 
-          img.promo-item.col-md-4(src="img/img--misc/promo-img-1.jpg", alt="")
+        .promo__collection
+          img.promo-item(src="img/img--misc/promo-img-1.jpg", alt="")
+          img.promo-item(src="img/img--misc/promo-img-2.jpg", alt="") 
+          img.promo-item(src="img/img--misc/promo-img-1.jpg", alt="")
       
     .dslr-hub__main-area
       .main-area__sub-filter-area
-        span.hidden-till-md Bộ lọc
+        span.sub-filter-header.hidden-till-sm Bộ lọc:
         .sub-filter-wrapper
           .sub-filter
             img(src="img/img--misc/badge--hot.png", alt="")
             span Bán chạy
           .sub-filter
             img(src="img/img--misc/badge--love.png", alt="")
-            span Bán chạy
+            span Đánh giá tốt
           .sub-filter
             img(src="img/img--misc/badge--sale-v2.png", alt="")
-            span Bán chạy
+            span Khuyến mại
 
       .main-area__items-area
         include parts/card.pug
@@ -136,9 +136,7 @@ block content
         include parts/card.pug
         include parts/card.pug
 
-      ul.pagination
-        li.page-item
-          a.page-link(href='#') Previous
+      ul.main-area__pagination.pagination
         li.page-item.active
           a.page-link(href='#') 1
         li.page-item
@@ -146,7 +144,12 @@ block content
         li.page-item
           a.page-link(href='#') 3
         li.page-item
-          a.page-link(href='#') Next
+          a.page-link(href='#') 
+            i.fas.fa-angle-right
+        li.page-item
+          a.page-link(href='#') 
+            i.fas.fa-angle-double-right
+
         
 
 

@@ -78,6 +78,21 @@ img {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.page-link:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: none;
+}
+
+dl, ol, ul {
+  margin: 0px;
+}
+
 /* --------------- kết thúc reset css --------------- */
 
 /* Table of contents
