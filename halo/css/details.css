@@ -1,4 +1,156 @@
-
+/* --------------- settings chung --------------- */
 main {
   padding-top: 50px;
+  font-size: 13px;
 }
+
+.details__header {
+  font-size: 16px;
+}
+
+.details__sub-header {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logo-canon {
+  font-size: 20px;
+}
+
+/* --------------- hết settings chung --------------- */
+
+
+/* --------------- .details__img-area --------------- */
+section {
+  padding: 15px 0px;
+}
+
+.details__main-img {
+  width: 280px;
+  height: 300px;
+  background-image: url("../img/img--details/detail__main-img-1.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+.details__sub-img-area {
+  width: 290px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto 10px auto;
+} 
+
+.details__sub-img {
+  width: 75px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* .details__sub-img:nth-child(2) {
+  margin: 20px;
+}
+
+.details__sub-img:last-child {
+  margin: 0px 20px;
+} */
+
+/* --------------- hết.details__img-area --------------- */
+
+
+
+/* --------------- .details__summary --------------- */
+.summary__text:first-of-type {
+  margin: 15px 0px;
+}
+
+.summary__text a:hover {
+  text-decoration: underline;
+}
+
+.price {
+  color: #CC2929;
+  line-height: 40px;
+  font-size: 32px;
+  margin: 30px 0px 5px 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sale-text {
+  display: flex;
+  align-items: center;
+}
+
+.old-price {
+  font-size: 20px;
+  text-decoration: line-through;
+}
+
+.sale-badge img {
+  height: 20px;
+  margin: 0px 5px;
+}
+
+.sale-amount {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.summary__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary__btn {
+  width: 150px;
+  font-size: 14px;
+  height: 50px;
+  
+}
+
+.summary__btn:first-child {
+  background-color: #3c96eae8;
+  color: white;
+  margin: 30px 0px 20px 0px;
+}
+
+.summary__btn:first-child:hover {
+  background-color: #0d7ee9;
+}
+
+.summary__btn:last-child {
+  background-color: #99DE7F;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+}
+
+.summary__btn:last-child:hover {
+  background-color: #7edb5c;
+}
+
+.summary__box-content {
+  width: 100%;
+  max-width: 305px;
+  padding: 15px;
+  border: 2px solid #E0E0E0;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: auto;
+}
+
+.box-content__list {
+  padding-left: 10px;
+  line-height: 2;
+}
+
+/* --------------- hết.details__summary --------------- */

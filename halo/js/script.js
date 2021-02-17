@@ -97,35 +97,21 @@ function logregSwitch() {
     logregStatus = "login";
   }
 }
-    
 
+let mainImg = document.getElementsByClassName("details__main-img")[0];
 
-/*     logPart[0].style.visibility = 'hidden !important';
-   
-   for (let i = 1; i < 3; i++) {
-      regPart[i].style.display = "flex !important";
-    }
-    for (let i = 3; i < regPart.length; i++) {
-      regPart[i].style.display = "block !important";
-    }
-    
-    for (let i = 1; i < logPart.length; i++) {
-      logPart[i].style.display = "none !important";
-    } 
-    
-    console.log(logPart[0]);
-    console.log(getComputedStyle(logPart[0]).display);
+let subImgs = document.getElementsByClassName("details__sub-img");
 
-    logregStatus = "register";
-  } else {
-    for (let i = 1; i < 4; i++) {
-      logPart[i].style.display = "block !important";
-    }
-    logPart[4].style.display = "flex !important";   
-    logPart[5].style.display = "block !important";
+for (let i = 0; i < subImgs.length; i++) {
+  function changeMainImg() {
+    mainImg.style.backgroundImage = `url(img/img--details/detail__sub-img-${i}.jpg`
+  }
+  subImgs[i].addEventListener("click", changeMainImg);
+}
 
-    for (let i = 1; i < regPart.length; i++) {
-      regPart[i].style.display = "none !important";
-    }
-    regPart[0].style.display = "none !important";
-    logregStatus = "login"; */
+/* console.log(window.getComputedStyle(mainImg).backgroundImage); */
+
+/* for (let i = 0; i < subImgs.length; i++) {
+  subImgs[i].addEventListener("click", changeMainImg(i));
+  console.log(subImgs.length)
+} */
