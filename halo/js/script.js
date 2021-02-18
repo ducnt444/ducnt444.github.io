@@ -36,18 +36,7 @@ $(document).ready(function(){
   });
 });
 
-/* let i = 0;
-
-let counter = setInterval(function(){
-  i += 2;
-  if (i <= 100){
-    $('.progress-bar').css('width', i+'%');
-  } else {
-    $('.progress-bar').css('width', '0%');
-    i = -10;
-  }  
-}, 100); */
-
+/* --------------- search bar toggler --------------- */
 let searchBarStatus = 0;
 
 function searchBarToggler() {
@@ -62,6 +51,10 @@ function searchBarToggler() {
   }
 }
 
+/* --------------- hết search bar toggler --------------- */
+
+
+/* --------------- login/register toggler --------------- */
 let logregStatus = "login";
 let regPart = document.getElementsByClassName("reg");
 let logPart = document.getElementsByClassName("log");
@@ -98,6 +91,11 @@ function logregSwitch() {
   }
 }
 
+/* --------------- hết login/register toggler --------------- */
+
+
+/* --------------- swap detail image --------------- */
+
 let mainImg = document.getElementsByClassName("details__main-img")[0];
 
 let subImgs = document.getElementsByClassName("details__sub-img");
@@ -109,9 +107,63 @@ for (let i = 0; i < subImgs.length; i++) {
   subImgs[i].addEventListener("click", changeMainImg);
 }
 
-/* console.log(window.getComputedStyle(mainImg).backgroundImage); */
+/* --------------- hết swap detail image --------------- */
 
-/* for (let i = 0; i < subImgs.length; i++) {
-  subImgs[i].addEventListener("click", changeMainImg(i));
-  console.log(subImgs.length)
-} */
+
+/* --------------- .main-info__toggler-indicator --------------- */
+let mainInfoToggler = document.getElementsByClassName("main-info__toggler");
+
+function mainInfoIndicatorToggler1() {
+  if (this.childNodes[1].childNodes[0].className.match(/(?:^|\s)fa-chevron-up(?!\S)/)) {
+    this.childNodes[1].childNodes[0].className = "fas fa-chevron-down";
+  } else {
+    this.childNodes[1].childNodes[0].className = "fas fa-chevron-up";
+  }
+}
+
+mainInfoToggler[0].addEventListener("click", mainInfoIndicatorToggler1)
+
+function mainInfoIndicatorToggler2() {
+  if (this.childNodes[1].childNodes[1].className.match(/(?:^|\s)fa-chevron-up(?!\S)/)) {
+    this.childNodes[1].childNodes[1].className = "fas fa-chevron-down";
+  } else {
+    this.childNodes[1].childNodes[1].className = "fas fa-chevron-up";
+  }
+}
+
+for (let i = 1; i < mainInfoToggler.length; i++) {
+  mainInfoToggler[i].addEventListener("click", mainInfoIndicatorToggler2)
+}
+
+/* --------------- hết .main-info__toggler-indicator --------------- */
+
+
+/* --------------- sample image toggler --------------- */
+
+let sampleImgModal = document.querySelector("#sample--full-size img");
+let imgToggler = document.querySelectorAll("#sample img");
+
+/* console.log(imgToggler[2].src);
+sampleImgModal.src = "img/img--details/sample-2.png"; */
+
+function sampleToggler() {
+  sampleImgModal.src = this.src;
+}
+
+for (let i = 0; i < imgToggler.length; i++) {
+  imgToggler[i].addEventListener("click", sampleToggler)
+}
+
+/* --------------- hết sample image toggler --------------- */
+/* test timer banner
+let i = 0;
+
+let counter = setInterval(function(){
+  i += 2;
+  if (i <= 100){
+    $('.progress-bar').css('width', i+'%');
+  } else {
+    $('.progress-bar').css('width', '0%');
+    i = -10;
+  }  
+}, 100); */

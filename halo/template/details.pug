@@ -79,17 +79,17 @@ block content
       .offers__gift
         h2.details__sub-header Quà tặng (Tổng giá trị 900.000đ)
         .gift-wrapper 
-          img.gift-img(src="img/img--details/gift-img.png", alt="")
-          img.gift-img(src="img/img--details/gift-img.png", alt="")
-          img.gift-img(src="img/img--details/gift-img.png", alt="")
+          img.gift-img(src="img/img--details/gift-img-2.jpg", alt="")
+          img.gift-img(src="img/img--details/gift-img-2.jpg", alt="")
+          img.gift-img(src="img/img--details/gift-img-2.jpg", alt="")
       
       .offers__special
         h2.details__sub-header Ưu đãi đặc biệt
         ul.special__list
-          li.special__item Miễn phí giao hàng toàn quốc trong vòng 2 - 5 ngày
-          li.special__item Hỗ trợ dán màn hình miễn phí trọn đời sản phẩm.
-          li.special__item Miễn phí vệ sinh, khử mốc trong thời hạn bảo hành 
-          li.special__item Tặng voucher giá trị 1.000.000đ cho lần mua hàng kế tiếp
+          li.special__item - Miễn phí giao hàng toàn quốc trong vòng 2 - 5 ngày
+          li.special__item - Hỗ trợ dán màn hình miễn phí trọn đời sản phẩm.
+          li.special__item - Miễn phí vệ sinh, khử mốc trong thời hạn bảo hành 
+          li.special__item - Tặng voucher giá trị 1.000.000đ cho lần mua hàng kế tiếp
       
       button.offers__btn.btn Đăng ký mua trả góp lãi suất 0%
       
@@ -104,7 +104,7 @@ block content
 
       .main-info__toggler(data-toggle="collapse" data-target="#intro")
         span.details__sub-header Giới thiệu
-        span.main-info__toggler-indicator 
+        span.main-info__toggler-indicator
           i.fas.fa-chevron-up
 
       #intro.main-info__content.collapse.show
@@ -222,10 +222,10 @@ block content
       #review.main-info__content.collapse.show
         img.review__img.d-block(src="img/img--details/review-img.webp", alt="")
         .review__content
-          h1.review__header Canon 1DX Mark III: Vua của các vị vua
+          h1.review__header.text-left Canon 1DX Mark III: Vua của các vị vua
           .review__sub-header 
-            span.author Trung Đức
-            span.time 
+            span.author.font-italic Trung Đức
+            span.time.font-italic  
               i.far.fa-clock
               | 01/01/2021
 
@@ -240,20 +240,26 @@ block content
       #sample.main-info__content.collapse.show
         .card-columns 
           .card
-            img(src="img/img--details/sample-1.png", alt="")
+            img(src="img/img--details/sample-1.png", alt="" data-toggle="modal" data-target="#sample--full-size")
           .card
-            img(src="img/img--details/sample-2.png", alt="")
+            img(src="img/img--details/sample-2.png", alt="" data-toggle="modal" data-target="#sample--full-size")
           .card
-            img(src="img/img--details/sample-3.png", alt="")
+            img(src="img/img--details/sample-3.png", alt="" data-toggle="modal" data-target="#sample--full-size")
           .card
-            img(src="img/img--details/sample-1.png", alt="")
+            img(src="img/img--details/sample-1.png", alt="" data-toggle="modal" data-target="#sample--full-size")
           .card
-            img(src="img/img--details/sample-2.png", alt="")
+            img(src="img/img--details/sample-2.png", alt="" data-toggle="modal" data-target="#sample--full-size")
           .card
-            img(src="img/img--details/sample-3.png", alt="")
+            img(src="img/img--details/sample-3.png", alt="" data-toggle="modal" data-target="#sample--full-size")
           .card
-            img(src="img/img--details/sample-1.png", alt="") 
+            img(src="img/img--details/sample-1.png", alt="" 
+            data-toggle="modal" data-target="#sample--full-size") 
 
+        #sample--full-size.modal.fade
+          .modal-dialog.modal-dialog-centered
+            .modal-content
+              button.close(type='button' data-dismiss='modal') &times;
+              img(src="img/img--details/sample-1.png", alt="")
 
       .main-info__toggler(data-toggle="collapse" data-target="#comment")
         span.details__sub-header Bình luận

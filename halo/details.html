@@ -76,8 +76,8 @@
               <p class="log">Hoặc đăng nhập với </p>
               <div class="logreg__platform justify-content-between log"><a class="platform__link" href="#"><img class="platform__img" src="img/img--misc/logo-fb.png" alt=""></a><a class="platform__link" href="#"><img class="platform__img" src="img/img--misc/logo-gg.png" alt=""></a><a class="platform__link" href="#"><img class="platform__img" src="img/img--misc/logo-apple.png" alt=""></a></div>
             </div>
-            <div class="modal-footer"><a class="logreg-portal mx-auto reg" href="#" onclick="logregSwitch()">Quay lại đăng nhập</a>
-              <p class="mx-auto log">Chưa có tài khoản? <a class="logreg-portal" href="#" onclick="logregSwitch()">Đăng ký ngay </a></p>
+            <div class="modal-footer"><a class="logreg-portal mx-auto reg" onclick="logregSwitch()">Quay lại đăng nhập</a>
+              <p class="mx-auto log">Chưa có tài khoản? <a class="logreg-portal" onclick="logregSwitch()">Đăng ký ngay </a></p>
             </div>
           </div>
         </div>
@@ -126,22 +126,22 @@
         <section class="details__offers"> 
           <div class="offers__gift">
             <h2 class="details__sub-header">Quà tặng (Tổng giá trị 900.000đ)</h2>
-            <div class="gift-wrapper"> <img class="gift-img" src="img/img--details/gift-img.png" alt=""><img class="gift-img" src="img/img--details/gift-img.png" alt=""><img class="gift-img" src="img/img--details/gift-img.png" alt=""></div>
+            <div class="gift-wrapper"> <img class="gift-img" src="img/img--details/gift-img-2.jpg" alt=""><img class="gift-img" src="img/img--details/gift-img-2.jpg" alt=""><img class="gift-img" src="img/img--details/gift-img-2.jpg" alt=""></div>
           </div>
           <div class="offers__special">
             <h2 class="details__sub-header">Ưu đãi đặc biệt</h2>
             <ul class="special__list">
-              <li class="special__item">Miễn phí giao hàng toàn quốc trong vòng 2 - 5 ngày</li>
-              <li class="special__item">Hỗ trợ dán màn hình miễn phí trọn đời sản phẩm.</li>
-              <li class="special__item">Miễn phí vệ sinh, khử mốc trong thời hạn bảo hành </li>
-              <li class="special__item">Tặng voucher giá trị 1.000.000đ cho lần mua hàng kế tiếp</li>
+              <li class="special__item">- Miễn phí giao hàng toàn quốc trong vòng 2 - 5 ngày</li>
+              <li class="special__item">- Hỗ trợ dán màn hình miễn phí trọn đời sản phẩm.</li>
+              <li class="special__item">- Miễn phí vệ sinh, khử mốc trong thời hạn bảo hành </li>
+              <li class="special__item">- Tặng voucher giá trị 1.000.000đ cho lần mua hàng kế tiếp</li>
             </ul>
           </div>
           <button class="offers__btn btn">Đăng ký mua trả góp lãi suất 0%</button>
           <p class="offers__contact">Tư vấn miền Bắc: 0397496263 (Mr. Nguyễn) <br>Tư vấn miền Trung: 0397496263 (Mr. Trung)  <br>Tư vấn miền Nam: 0397496263 (Mr. Đức)  </p>
         </section>
         <section class="details__main-info">
-          <div class="main-info__toggler" data-toggle="collapse" data-target="#intro"><span class="details__sub-header">Giới thiệu</span><span class="main-info__toggler-indicator"> <i class="fas fa-chevron-up"></i></span></div>
+          <div class="main-info__toggler" data-toggle="collapse" data-target="#intro"><span class="details__sub-header">Giới thiệu</span><span class="main-info__toggler-indicator"><i class="fas fa-chevron-up"></i></span></div>
           <div class="main-info__content collapse show" id="intro">
             <h3 class="main-info__inner-header">Cảm biến mới, hệ thống hình ảnh mới</h3><img src="img/img--details/intro-img-1.jpg" alt="">
             <p>Canon EOS 1D X Mark III sử dụng cảm biến hoàn toàn mới 20.1MP kết hợp với bộ xử lý hình ảnh DIGIC X mang lại chất lượng hình ảnh sắc nét ấn tượng với độ chi tiết cao nhất, giảm thiểu xác suất sai màu và hiệu ứng mới. </p><img src="img/img--details/intro-img-2.png" alt="">
@@ -249,8 +249,8 @@
           <div class="main-info__toggler" data-toggle="collapse" data-target="#review"><span class="details__sub-header">Đánh giá của HALO</span><span class="main-info__toggler-indicator"> <i class="fas fa-chevron-up"></i></span></div>
           <div class="main-info__content collapse show" id="review"><img class="review__img d-block" src="img/img--details/review-img.webp" alt="">
             <div class="review__content">
-              <h1 class="review__header">Canon 1DX Mark III: Vua của các vị vua</h1>
-              <div class="review__sub-header"> <span class="author">Trung Đức</span><span class="time"> <i class="far fa-clock"></i>01/01/2021</span></div>
+              <h1 class="review__header text-left">Canon 1DX Mark III: Vua của các vị vua</h1>
+              <div class="review__sub-header"> <span class="author font-italic">Trung Đức</span><span class="time font-italic"> <i class="far fa-clock"></i>01/01/2021</span></div>
               <p class="review__sub-preview">Thị trường có rất nhiều máy ảnh DSLR từ các hãng lớn như Nikon, Canon, Sony, ...  lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản.</p>
               <button class="review__btn btn--dark btn">Xem chi tiết</button>
             </div>
@@ -258,13 +258,20 @@
           <div class="main-info__toggler" data-toggle="collapse" data-target="#sample"><span class="details__sub-header">Ảnh chụp mẫu </span><span class="main-info__toggler-indicator"> <i class="fas fa-chevron-up"></i></span></div>
           <div class="main-info__content collapse show" id="sample">
             <div class="card-columns"> 
-              <div class="card"><img src="img/img--details/sample-1.png" alt=""></div>
-              <div class="card"><img src="img/img--details/sample-2.png" alt=""></div>
-              <div class="card"><img src="img/img--details/sample-3.png" alt=""></div>
-              <div class="card"><img src="img/img--details/sample-1.png" alt=""></div>
-              <div class="card"><img src="img/img--details/sample-2.png" alt=""></div>
-              <div class="card"><img src="img/img--details/sample-3.png" alt=""></div>
-              <div class="card"><img src="img/img--details/sample-1.png" alt=""></div>
+              <div class="card"><img src="img/img--details/sample-1.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+              <div class="card"><img src="img/img--details/sample-2.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+              <div class="card"><img src="img/img--details/sample-3.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+              <div class="card"><img src="img/img--details/sample-1.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+              <div class="card"><img src="img/img--details/sample-2.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+              <div class="card"><img src="img/img--details/sample-3.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+              <div class="card"><img src="img/img--details/sample-1.png" alt="" data-toggle="modal" data-target="#sample--full-size"></div>
+            </div>
+            <div class="modal fade" id="sample--full-size">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <button class="close" type="button" data-dismiss="modal">&times;</button><img src="img/img--details/sample-1.png" alt="">
+                </div>
+              </div>
             </div>
           </div>
           <div class="main-info__toggler" data-toggle="collapse" data-target="#comment"><span class="details__sub-header">Bình luận</span><span class="main-info__toggler-indicator"> <i class="fas fa-chevron-up"></i></span></div>

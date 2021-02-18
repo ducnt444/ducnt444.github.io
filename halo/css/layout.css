@@ -204,7 +204,7 @@ h3,
 .connection__text, 
 .policy__icon,
 .log-max,
-.modal,
+#logreg .modal,
 .logreg--login-form input,
 .footer__menu { 
   font-size: 14px; 
@@ -314,7 +314,7 @@ h1, h2 {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 /* ----- big white shadow ----- */
-.modal-content {
+#logreg .modal-content {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
 }
 
@@ -534,21 +534,21 @@ footer {
 
 /* -------------------- logreg styles -------------------- */
 
-.modal-dialog {
+#logreg .modal-dialog {
   max-width: 290px;
   margin: 0px auto;
   border-radius: 16px;
 }
 
-.modal-content {
+#logreg .modal-content {
   border-radius: 16px;
 }
 
-.modal-header, .modal-footer {
+#logreg .modal-header, #logreg .modal-footer {
   border: none;
 }
 
-.modal-header {
+#logreg .modal-header {
   padding: 0px
 }
 
@@ -556,7 +556,7 @@ footer {
   height: 30px;
 }
 
-.modal-header .close {
+#logreg .modal-header .close {
   font-size: 30px;
   padding: 0px;
   margin: 5px 12px 0px auto;
@@ -633,13 +633,14 @@ footer {
   width: 30px;
 }
 
-.modal-footer {
+#logreg.modal-footer {
   padding: 0px 0px 20px 0px;
 }
 
 .logreg-portal {
   color: #D32020;
   display: inline-block;
+  cursor: pointer;
 }
 
 .reg {
@@ -819,9 +820,9 @@ footer {
 
 @media only screen and (min-width: 1200px) {
 
-  .modal-open .navbar {
+/*   .modal-open .navbar {
     padding-right: 17px;
-  }
+  } */
   
   .container, 
   .container-xl {
