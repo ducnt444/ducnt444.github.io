@@ -164,6 +164,9 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 console.log(mainImg.style.backgroundImage);
 
 /* --------------- hết sample image toggler --------------- */
+
+
+
 /* test timer banner
 let i = 0;
 
