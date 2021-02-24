@@ -102,7 +102,7 @@ let subImgs = document.getElementsByClassName("details__sub-img");
 
 for (let i = 0; i < subImgs.length; i++) {
   function changeMainImg() {
-    mainImg.style.backgroundImage = `url(img/img--details/detail__sub-img-${i}.jpg`
+    mainImg.src = `img/img--details/detail__sub-img-${i}.jpg`
   }
   subImgs[i].addEventListener("click", changeMainImg);
 }
@@ -143,6 +143,7 @@ for (let i = 1; i < mainInfoToggler.length; i++) {
 let sampleImgModal = document.querySelector("#sample--full-size img");
 let imgToggler = document.querySelectorAll("#sample img");
 
+
 /* console.log(imgToggler[2].src);
 sampleImgModal.src = "img/img--details/sample-2.png"; */
 
@@ -153,6 +154,14 @@ function sampleToggler() {
 for (let i = 0; i < imgToggler.length; i++) {
   imgToggler[i].addEventListener("click", sampleToggler)
 }
+
+let mainImgModal = document.querySelector("#main-img--full-size img");
+
+/* function mainImgToggler() {
+  mainImgModal.src = mainImg.style.backgroundImage
+} */
+
+console.log(mainImg.style.backgroundImage);
 
 /* --------------- hết sample image toggler --------------- */
 /* test timer banner

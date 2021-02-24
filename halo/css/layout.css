@@ -144,6 +144,11 @@ section {
   font-size: 12px;
 }
 
+main {
+  padding-top: 50px;
+  font-size: 11px;
+}
+
 /* -------------------- kết thúc settings -------------------- */
 
 
@@ -787,7 +792,7 @@ footer {
 @media only screen and (min-width: 992px) {
 
   .breadcrumb {
-    height: 60px;
+    height: 50px !important;
     font-size: 16px;
   }
 
@@ -858,7 +863,7 @@ footer {
     margin: 0px 20px !important;
   }
 
-  .logo-canon {
+  #main-carousel .logo-canon {
     font-size: 70px;
     line-height: 60px;
   }

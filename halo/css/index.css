@@ -4,12 +4,7 @@
 /*
 Carousel map: 
 
-
 */
-
-#main-carousel {
-  padding-top: 50px;
-}
 
 #main-carousel, 
 .carousel-inner, 
@@ -18,7 +13,7 @@ Carousel map:
 }
 
 #main-carousel .carousel-indicators {
-  top: 107px;
+  top: 57px;
   margin-bottom: 0px;
   height: 14px;
 }
@@ -325,6 +320,7 @@ Carousel map:
   margin-right: 20px;
   border: none;
   border-radius: 8px;
+  padding-left: 10px;
 }
 
 .connection__socials {
@@ -353,7 +349,7 @@ Carousel map:
   }
 
   #main-carousel .carousel-indicators {
-    top: 117px;
+    top: 67px;
     height: 16px;
   }
   
@@ -462,7 +458,7 @@ Carousel map:
 
   /* ----- update indicators ----- */  
   #main-carousel .carousel-indicators {
-    top: 120px;
+    top: 70px;
     height: 20px;
   }
   

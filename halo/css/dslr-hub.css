@@ -1,16 +1,3 @@
-/* -------------------- breadcrumb -------------------- */
-.breadcrumb-wrapper {
-  padding-top: 50px;
-}
-
-.breadcrumb {
-  height: 50px;
-  background-color: transparent;
-  align-items: center;
-  font-size: 12px;
-}
-/* -------------------- hết breadcrumb -------------------- */
-
 
 /* -------------------- display-area -------------------- */
 .dslr-hub__display-area {
@@ -36,10 +23,6 @@
 .technical-filter--min .dropdown-item {
   font-size: 11px;
   line-height: 20px;
-}
-
-.dropdown-toggle {
-  background-color: 
 }
 
 .main-area__sub-filter-area {
@@ -139,13 +122,17 @@
 }
 
 .old-price {
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: line-through;
 }
 
 .sale-badge img {
   height: 12px;
   margin: 0px 5px;
+}
+
+.sale-amount {
+  font-size: 13px;
 }
 
 /* ---------- .main-area__pagination ---------- */
@@ -361,7 +348,7 @@
   .item.card {
     /* width 222 */
     width: 222px;
-    padding: 20px 10px;
+    padding: 20px 10px 25px 10px;
     margin: 15px 10px;
   }
 
@@ -370,9 +357,9 @@
   }
 
   .price {
-    line-height: 30px;
-    font-size: 24px;
-    margin: 10px 0px;
+    line-height: 32px;
+    font-size: 28px;
+    margin: 15px 0px 5px 0px;
   }
 
   .item .seemore-btn {
@@ -441,7 +428,7 @@
   }
 
   .item.card {
-    /* width 260 */
+    /* */
     width: 214px;
     margin: 15px;
   }
@@ -450,19 +437,29 @@
 }
 
 @media only screen and (min-width: 1200px) {
+
+/*   .dslr-hub__banner {
+    max-height: 200px;
+  } */
+
   .dslr-hub__display-area {
     padding: 50px 0px;
   }
 
   .main-area__items-area {
     margin: 0px -15px;
-    width: 870px;
+    width: 930px;
+  }
+
+  .item .card-img-top {
+    /*thumbnail 180*/
+    max-width: 200px;
   }
 
   .item.card {
     /* width 260 */
-    width: 260px;
-    max-width: 260px;
+    width: 280px;
+    max-width: 280px;
     margin: 15px;
 
   }

@@ -5,7 +5,8 @@ tách style trong layout
 set max length text
 nút clear text trong input
 nút ẩn hiện password
-
+đếm số comment
+reply feature 
 
 
 
