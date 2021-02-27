@@ -181,7 +181,7 @@ function grandFinalCalc() {
   let allMultiple = document.getElementsByClassName("col--multiple-price");
   
   for (let i = 1; i < allMultiple.length; i++) {
-    let eachMultiple = +allMultiple[i].innerHTML.slice(12, allMultiple[i].innerHTML.length - 1).replace(/\./g, "");
+    let eachMultiple = parseInt(allMultiple[i].innerHTML.slice(12, allMultiple[i].innerHTML.length - 1).replace(/\./g, ""))
     grandTotalNum += eachMultiple;
   }
   
@@ -277,8 +277,6 @@ for (let i = 0; i < removeItemBtn.length; i++) {
 
 
 
-
-/* --------------- hết quantity calc --------------- */
 
 
 
