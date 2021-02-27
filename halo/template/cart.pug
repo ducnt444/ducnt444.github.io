@@ -20,45 +20,58 @@ block content
 
       .cart__label
         .col--order.hidden-till-md STT 
-        .col--img.hidden-till-md Hình ảnh 
+        .col--img-max.hidden-till-md Hình ảnh 
         .col--name.hidden-till-md Tên sản phẩm 
         .col--single-price.hidden-till-md Đơn giá 
         .col--quantity.hidden-till-md Số lượng
         .col--multiple-price.hidden-till-md Thành tiền
-        .col--remove.hidden-till-md X 
+        .col--remove.hidden-till-md  
 
       .cart__item
-
-        img.col--img-min.display-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+        a.col--img-min.display-till-md(href="details.html") 
+          img(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
 
         .col-group
           .col--order.hidden-till-md 1 
-          img.col--img-max.hidden-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
-          .col--name Canon EOS 1DX Mark III 
-          .col--single-price Đơn giá: 100.000.000đ
+          a.col--img-max.hidden-till-md(href="details.html")
+            img(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+          .col--name 
+            a(href="details.html") Canon EOS 1DX Mark III
+          .col--single-price 
+            span.display-till-md Đơn giá:&nbsp; 
+            | 100.000.000đ
           .col--quantity
             .quantity__minus -
             .quantity__number 1 
             .quantity__plus +
-          .col--multiple-price Thành tiền: 100.000.000đ
+          .col--multiple-price
+            span.display-till-md Thành tiền:&nbsp;
+            | 100.000.000đ
           .col--remove.display-till-md.text-danger.font-italic Xóa khỏi giỏ hàng 
           .col--remove.hidden-till-md
             i.far.fa-times-circle.col--remove__btn
 
       .cart__item
 
-        img.col--img-min.display-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+        a.col--img-min.display-till-md(href="details.html") 
+          img(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
 
         .col-group
-          .col--order.hidden-till-md 1 
-          img.col--img-max.hidden-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
-          .col--name Canon EOS 1DX Mark III 
-          .col--single-price Đơn giá: 100.000.000đ
+          .col--order.hidden-till-md 2 
+          a.col--img-max.hidden-till-md(href="details.html")
+            img(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+          .col--name 
+            a(href="details.html") Canon EOS 1DX Mark III
+          .col--single-price 
+            span.display-till-md Đơn giá:&nbsp; 
+            | 100.000.000đ          
           .col--quantity
             .quantity__minus -
             .quantity__number 2 
             .quantity__plus +
-          .col--multiple-price Thành tiền: 200.000.000đ
+          .col--multiple-price 
+            span.display-till-md Thành tiền:&nbsp; 
+            | 200.000.000đ
           .col--remove.display-till-md.text-danger.font-italic Xóa khỏi giỏ hàng 
           .col--remove.hidden-till-md
             i.far.fa-times-circle.col--remove__btn

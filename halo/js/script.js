@@ -174,15 +174,26 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 
 /* ---------- grand final calc ---------- */
 function grandFinalCalc() {
+  //xác định element grand total
   let grandTotal = document.getElementsByClassName("cart__grand-total")[0];
 
+  //xác định khởi điểm cho giá trị của element grand total
   let grandTotalNum = 0;
   
+  //xác định 1 array chứa các multiple
   let allMultiple = document.getElementsByClassName("col--multiple-price");
   
+  //loop trong array chứa các multiple (bỏ index 0 là label)
   for (let i = 1; i < allMultiple.length; i++) {
-    let eachMultiple = parseInt(allMultiple[i].innerHTML.slice(12, allMultiple[i].innerHTML.length - 1).replace(/\./g, ""))
-    grandTotalNum += eachMultiple;
+    //mỗi lần loop: 
+    let eachMultiple = 
+    parseInt( 
+      allMultiple[i].innerHTML //lấy value của từng multiple
+      .match(/\d/g) //lọc ra 1 array chứa số tiền
+      .join('')  //nối về thành 1 string, là số tiền của từng multiple
+    )
+
+    grandTotalNum += eachMultiple; //+= vào giá trị grand total mỗi loop
   }
   
   grandTotal.innerHTML = `Tổng giá trị giỏ hàng: ${grandTotalNum.toLocaleString()}đ`
@@ -196,17 +207,35 @@ let addQuantityBtn = document.getElementsByClassName("quantity__plus");
 
 for (let i = 0; i < addQuantityBtn.length; i++) {
   addQuantityBtn[i].addEventListener("click", function() {
-    let currentNum = +this.previousElementSibling.innerHTML;
-    
+    //Xác định giá trị số đếm hiện tại: element trước nút + (số hóa)
+    let currentNum = parseInt(this.previousElementSibling.innerHTML);
+
+    //khi click: tăng giá trị của element trước nút + (chính là số đếm hiện tại) thêm 1
     this.previousElementSibling.innerHTML = currentNum + 1;
 
-    let singlePrice = this.parentElement.previousElementSibling.innerHTML;
+    //xác định đơn giá
+    let singlePrice = 
+    //là element nằm trước (col--single-price) element cha của nút + (col--quantity)
+    this.parentElement.previousElementSibling.innerHTML
+    //rồi lọc ra 1 array chứa các số (chỉ lấy số giá tiền)
+    .match(/\d/g)
+    //rồi nối lại thành string số giá tiền
+    .join('');
 
-    let singlePriceNum = +singlePrice.slice(9, singlePrice.length - 1).replace(/\./g, "");
+    //xác định giá trị của thành tiền = 
+    let multiplePrice = 
+    //giá trị element trước nút + (số đếm hiện tại, số hóa)
+    parseInt(this.previousElementSibling.innerHTML) 
+    * 
+    //singlePrice (số hóa)
+    parseInt(singlePrice);
 
-    let multiplePriceValue = +this.previousElementSibling.innerHTML * singlePriceNum;
-
-    this.parentElement.nextElementSibling.innerHTML = `Thành tiền: ${multiplePriceValue.toLocaleString()}đ`
+    //update thành tiền
+    let multipleInner = this.parentElement.nextElementSibling.innerHTML;
+    this.parentElement.nextElementSibling.innerHTML = 
+    multipleInner
+    .replace(/\./g, "")
+    .replace(/\d+/, multiplePrice.toLocaleString())
   });
 
   addQuantityBtn[i].addEventListener("click", grandFinalCalc);
@@ -218,19 +247,38 @@ let minusQuantityBtn = document.getElementsByClassName("quantity__minus");
 
 for (let i = 0; i < minusQuantityBtn.length; i++) {
   minusQuantityBtn[i].addEventListener("click", function() {
-    let currentNum = +this.nextElementSibling.innerHTML;
+    //Xác định giá trị số đếm hiện tại: element sau nút - (số hóa)
+    let currentNum = parseInt(this.nextElementSibling.innerHTML);
 
+    //Tránh trường hợp số đếm <= 0
     if (currentNum > 1) {
+      //khi click: giảm giá trị của element sau nút - (chính là số đếm hiện tại) đi 1
       this.nextElementSibling.innerHTML = currentNum - 1;
     }
 
-    let singlePrice = this.parentElement.previousElementSibling.innerHTML;
+    //xác định đơn giá
+    let singlePrice = 
+    //là element nằm trước (col--single-price) element cha của nút + (col--quantity)
+    this.parentElement.previousElementSibling.innerHTML
+    //rồi lọc ra 1 array chứa các số (chỉ lấy số giá tiền)
+    .match(/\d/g)
+    //rồi nối lại thành string số giá tiền
+    .join('');
 
-    let singlePriceNum = +singlePrice.slice(9, singlePrice.length - 1).replace(/\./g, "");
+    //xác định giá trị của thành tiền = 
+    let multiplePrice = 
+    //giá trị element trước nút + (số đếm hiện tại, số hóa)
+    parseInt(this.nextElementSibling.innerHTML) 
+    * 
+    //singlePrice (số hóa)
+    parseInt(singlePrice);
 
-    let multiplePriceValue = +this.nextElementSibling.innerHTML * singlePriceNum;
-
-    this.parentElement.nextElementSibling.innerHTML = `Thành tiền: ${multiplePriceValue.toLocaleString()}đ`
+    //update thành tiền
+    let multipleInner = this.parentElement.nextElementSibling.innerHTML;
+    this.parentElement.nextElementSibling.innerHTML = 
+    multipleInner
+    .replace(/\./g, "")
+    .replace(/\d+/, multiplePrice.toLocaleString())
   });
 
   minusQuantityBtn[i].addEventListener("click", grandFinalCalc);
@@ -251,29 +299,18 @@ function checkEmptyCart() {
 }
 
 /* ---------- remove item ---------- */
-let removeItemBtn = document.querySelectorAll(".col--remove.display-till-md");
+let removeItemBtn = document.querySelectorAll(".col--remove");
 
 for (let i = 0; i < removeItemBtn.length; i++) {
   removeItemBtn[i].addEventListener("click", function() {
     this.parentElement.parentElement.remove();
-    let grandTotal = document.getElementsByClassName("cart__grand-total")[0];
-
-    let grandTotalNum = 0;
-
-    let allMultiple = document.getElementsByClassName("col--multiple-price");
-
-    for (let i = 1; i < allMultiple.length; i++) {
-      let eachMultiple = +allMultiple[i].innerHTML.slice(12, allMultiple[i].innerHTML.length - 1).replace(/\./g, "");
-      grandTotalNum += eachMultiple;
-    }
-
-    grandTotal.innerHTML = `Tổng giá trị giỏ hàng: ${grandTotalNum.toLocaleString()}đ`
   });
+
+  removeItemBtn[i].addEventListener("click", grandFinalCalc);
 
   removeItemBtn[i].addEventListener("click", checkEmptyCart);
 }
 
-/* --------------- hết remove cart item --------------- */
 
 
 
