@@ -8,7 +8,67 @@ block title
 
 block content
   .breadcrumb-wrapper.container-xl
-  ul.breadcrumb
-    li.breadcrumb-item
-      a(href='index.html') Trang chủ
-    li.breadcrumb-item.active Giỏ hàng
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href='index.html') Trang chủ
+      li.breadcrumb-item.active Giỏ hàng
+  .page-wrapper.container-xl
+
+    h1.text-left.w-100 Giỏ hàng của bạn 
+
+    .cart.w-100 
+
+      .cart__label
+        .col--order.hidden-till-md STT 
+        .col--img.hidden-till-md Hình ảnh 
+        .col--name.hidden-till-md Tên sản phẩm 
+        .col--single-price.hidden-till-md Đơn giá 
+        .col--quantity.hidden-till-md Số lượng
+        .col--multiple-price.hidden-till-md Thành tiền
+        .col--remove.hidden-till-md X 
+
+      .cart__item
+
+        img.col--img-min.display-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+
+        .col-group
+          .col--order.hidden-till-md 1 
+          img.col--img-max.hidden-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+          .col--name Canon EOS 1DX Mark III 
+          .col--single-price Đơn giá: 100.000.000đ
+          .col--quantity
+            .quantity__minus -
+            .quantity__number 1 
+            .quantity__plus +
+          .col--multiple-price Thành tiền: 100.000.000đ
+          .col--remove.display-till-md.text-danger.font-italic Xóa khỏi giỏ hàng 
+          .col--remove.hidden-till-md
+            i.far.fa-times-circle.col--remove__btn
+
+      .cart__item
+
+        img.col--img-min.display-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+
+        .col-group
+          .col--order.hidden-till-md 1 
+          img.col--img-max.hidden-till-md(src="img/img--cart/cart-img.jpg", alt="canon eos 1DX Mark 3")
+          .col--name Canon EOS 1DX Mark III 
+          .col--single-price Đơn giá: 100.000.000đ
+          .col--quantity
+            .quantity__minus -
+            .quantity__number 2 
+            .quantity__plus +
+          .col--multiple-price Thành tiền: 200.000.000đ
+          .col--remove.display-till-md.text-danger.font-italic Xóa khỏi giỏ hàng 
+          .col--remove.hidden-till-md
+            i.far.fa-times-circle.col--remove__btn
+
+      h1.cart__grand-total.w-100 Tổng giá trị giỏ hàng: 
+
+    .cart__btn-group
+      button.btn.cart__continue-buying Tiếp tục mua hàng 
+      button.btn.cart__payment Thanh toán ngay 
+
+
+
+
