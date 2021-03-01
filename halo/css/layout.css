@@ -9,6 +9,7 @@
 
 *:focus {
   outline-color: transparent !important;
+  box-shadow: none !important;
 }
 
 p {
@@ -148,6 +149,8 @@ main {
   padding-top: 50px;
   font-size: 12px;
 }
+
+
 
 /* -------------------- kết thúc settings -------------------- */
 

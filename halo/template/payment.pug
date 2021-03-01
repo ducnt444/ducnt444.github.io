@@ -1,0 +1,102 @@
+extends parts/layout.pug
+
+block css
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap' rel='stylesheet')
+  link(rel="stylesheet", href="css/payment.css")
+
+block title
+  title Cổng thanh toán
+
+block content
+  .breadcrumb-wrapper.container-xl
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href='index.html') Trang chủ
+      li.breadcrumb-item 
+        a(href='cart.html') Giỏ hàng
+      li.breadcrumb-item.active Cổng thanh toán
+
+  .page-wrapper.container-xl
+
+    h1.text-left.w-100 Cổng thanh toán
+    
+    //section.confirmation-wrapper
+
+      .main-header
+        span.toggler__header 1. Xác nhận đơn hàng
+        span.toggler__indicator
+          i.fas.fa-chevron-up
+
+      #confirmation
+
+        .summary.sub-section
+          h2.sub-header Tóm tắt đơn hàng
+
+          .summary__row--header
+            span.inner-header__label Giỏ hàng
+
+          p.summary__row--text
+            span Máy ảnh Canon 1DX Mark III 
+            span 1 x 130.090.000đ = 130.090.000đ
+
+          p.summary__row--text
+            span Máy ảnh Canon 1DX Mark III 
+            span 2 x 130.090.000đ = 260.180.000đ
+
+          p.summary__row--text
+            span Tổng giá trị giỏ hàng 
+            span 390.270.000đ
+
+          .summary__row--header
+            span.inner-header__label Phí vận chuyển:
+            span.inner-header__content Miễn phí vận chuyển
+
+          .summary__row--header
+            span.inner-header__label Mã giảm giá:
+            .inner-header__content.coupon
+              input.coupon__input(type="text" placeholder="Nhập mã")
+              button.btn.coupon__submit Xác nhận
+              .coupon__content
+                p.coupon__text Giảm 15% giá trị đơn hàng (tối đa 1.000.000đ)
+                p.coupon__text -1.000.000đ
+
+          p.summary__grand-total Tổng tiền hàng: 
+            span 389.270.000đ      
+        
+        .term.sub-section
+
+        a.btn.btn--confirmation.payment__toggler(href="#" data-toggle="collapse" data-target="#payment__info") Xác nhận
+
+    section.payment-wrapper
+
+      .main-header
+        span.toggler__header 2. Thanh toán
+        span.toggler__indicator
+          i.fas.fa-chevron-up
+
+      #payment
+        #payment__info.sub-section.collapse
+          h2.sub-header Thông tin khách hàng
+
+          form
+            input.form-control(type="text" placeholder="Họ tên")
+            input.form-control(type="text" placeholder="Số điện thoại")
+            input.form-control(type="text" placeholder="Địa chỉ nhận hàng")
+            textarea.form-control(name="" cols="20" rows="10")
+
+          a.btn.btn--confirmation.payment__toggler(href="#" data-toggle="collapse" data-target="#payment__method") Xác nhận 
+
+        #payment__method.sub-section.collapse.show
+          h2.sub-header Phương thức thanh toán
+
+          .method__toggler(data-toggle="collapse" data-target="#payment-card") 
+            input(type="radio", name="payment-method", id="domestic-card-radio")
+            label(for="domestic-card-radio") Thanh toán bằng thẻ ngân hàng nội địa 
+
+          include parts/payment-card.pug
+        
+
+
+
+

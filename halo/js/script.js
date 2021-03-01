@@ -177,26 +177,30 @@ function grandFinalCalc() {
   //xác định element grand total
   let grandTotal = document.getElementsByClassName("cart__grand-total")[0];
 
-  //xác định khởi điểm cho giá trị của element grand total
-  let grandTotalNum = 0;
-  
-  //xác định 1 array chứa các multiple
-  let allMultiple = document.getElementsByClassName("col--multiple-price");
-  
-  //loop trong array chứa các multiple (bỏ index 0 là label)
-  for (let i = 1; i < allMultiple.length; i++) {
-    //mỗi lần loop: 
-    let eachMultiple = 
-    parseInt( 
-      allMultiple[i].innerHTML //lấy value của từng multiple
-      .match(/\d/g) //lọc ra 1 array chứa số tiền
-      .join('')  //nối về thành 1 string, là số tiền của từng multiple
-    )
+  if(grandTotal != undefined) {
+    //xác định khởi điểm cho giá trị của element grand total
+    let grandTotalNum = 0;
+    
+    //xác định 1 array chứa các multiple
+    let allMultiple = document.getElementsByClassName("col--multiple-price");
+    
+    //loop trong array chứa các multiple (bỏ index 0 là label)
+    for (let i = 1; i < allMultiple.length; i++) {
+      //mỗi lần loop: 
+      let eachMultiple = 
+      parseInt( 
+        allMultiple[i].innerHTML //lấy value của từng multiple
+        .match(/\d/g) //lọc ra 1 array chứa số tiền
+        .join('')  //nối về thành 1 string, là số tiền của từng multiple
+      )
 
-    grandTotalNum += eachMultiple; //+= vào giá trị grand total mỗi loop
-  }
-  
-  grandTotal.innerHTML = `Tổng giá trị giỏ hàng: ${grandTotalNum.toLocaleString()}đ`
+      grandTotalNum += eachMultiple; //+= vào giá trị grand total mỗi loop
+    }
+    
+    grandTotal.innerHTML = `Tổng giá trị giỏ hàng: ${grandTotalNum.toLocaleString()}đ`  
+  } 
+
+
 }
 
 grandFinalCalc();
@@ -311,8 +315,33 @@ for (let i = 0; i < removeItemBtn.length; i++) {
   removeItemBtn[i].addEventListener("click", checkEmptyCart);
 }
 
+let frontInput = document.getElementsByClassName("front-input");
 
+for (let i = 0; i < frontInput.length; i++) {
+  frontInput[i].addEventListener("focus", function() {
+    if (document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)") {
+      document.querySelector(".payment-card__content").style.transform = "none"
+    }
+  })
+}
 
+let inputNum = document.getElementById("input__num");
+
+inputNum.addEventListener("input", function(){
+  let result = "" + inputNum.value;
+  
+  document.querySelector(".payment-card__num").innerHTML = result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+});
+
+let inputCVV = document.getElementById("input__cvv");
+
+inputCVV.addEventListener("focus", function(){
+  document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)";
+});
+
+inputCVV.addEventListener("input", function(){
+  document.querySelector(".cvv").innerHTML = "" + inputCVV.value;
+});
 
 
 
