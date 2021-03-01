@@ -8,7 +8,7 @@
       p.front__num.display-value 0000 0000 0000 0000
       p.front__valid-text VALID DATES
       p.front__valid-dates
-        span.frontt__month.display-value MM
+        span.front__month.display-value MM
         span &nbsp;/&nbsp;
         span.front__year.display-value YY
       p.front__name.display-value JAMES BOND
@@ -25,14 +25,14 @@
     .form-group
       label(for='input__num') Nhập số thẻ:&nbsp;
         i (Viết liền)
-      input#input__num.form-control.front-input(type="number" required)
+      input#input__num.form-control.front-input(type="text" required)
 
     .form-group.input__dates
       label(for='input__month') Ngày hết hạn:&nbsp; 
         i (chỉ nhập 2 số cuối của năm)
-      input#input__month.form-control.front-input(type="text" placeholder="Tháng" required)
+      input#input__month.form-control.front-input(type="number" placeholder="Tháng" min="1" max="12" required)
       span &nbsp;/&nbsp;
-      input#input__year.form-control.front-input(type="text" placeholder="Năm" required)
+      input#input__year.form-control.front-input(type="number" placeholder="Năm" min="21" max="99" required)
 
     .form-group
       label(for='input__name') Nhập tên chủ thẻ:&nbsp; 
@@ -43,4 +43,4 @@
       label(for='input__name') Mã số CVV:
       input#input__cvv.form-control.back-input(type="text" required)
 
-
+    input(type='submit') Xác nhận

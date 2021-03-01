@@ -146,8 +146,8 @@ section {
 #input__month,
 #input__year {
   width: 60px;
-  padding-top: 6.5px;
   padding-left: 10px;
+  font-size: 14px;
 }
 
 .input__dates span {

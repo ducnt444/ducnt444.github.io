@@ -385,30 +385,37 @@ for (let i = 0; i < frontInput.length; i++) {
 /* --------------- update input lên thẻ --------------- */
 
 //Xác định ô input
+let inputValue = document.querySelectorAll(".payment-card__input .form-control")
+
+let displayValue = document.querySelectorAll(".display-value")
+
+inputValue[0].addEventListener("input", function(){
+  let result = "" + inputValue[0].value;
+  document.querySelector(".front__num").innerText = 
+  result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+});
+
+for (let i = 1; i < inputValue.length; i++) {
+  inputValue[i].addEventListener("input", function() {
+    displayValue[i].innerHTML = "" + inputValue[i].value;
+    displayValue[3].innerHTML = "" + inputValue[3].value.toUpperCase();
+  })
+}
+
+/* test
 let inputNum = document.getElementById("input__num");
 
 inputNum.addEventListener("input", function(){
   let result = "" + inputNum.value;
-  
-  document.querySelector(".front__num").innerHTML = 
-  result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+  document.querySelector(".front__num").innerText = 
+  result.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 });
 
 inputCVV.addEventListener("input", function(){
   document.querySelector(".cvv").innerHTML = "" + inputCVV.value;
 });
+ */
 
-
-
-let inputValue = document.querySelectorAll(".payment-card__input .form-control")
-
-let displayValue = document.querySelectorAll(".display-value")
-
-for (let i = 0; i < inputValue.length; i++) {
-  inputValue[i].addEventListener("input", function() {
-    displayValue[i].innerHTML = "" + inputValue[i].value;
-  })
-}
 
 /* --------------- hết update input lên thẻ --------------- */
 
