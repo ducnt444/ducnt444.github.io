@@ -37,7 +37,9 @@ $(document).ready(function(){
 });
 
 
-/* --------------- search bar toggler --------------- */
+/* 
+------------------------- search bar toggler ------------------------- 
+*/
 let searchBarStatus = 0;
 
 function searchBarToggler() {
@@ -52,11 +54,16 @@ function searchBarToggler() {
   }
 }
 
-/* --------------- hết search bar toggler --------------- */
+/* 
+------------------------- hết search bar toggler ------------------------- 
+*/
 
 
 
-/* --------------- login/register toggler --------------- */
+/* 
+------------------------- login/register toggler ------------------------- 
+*/
+
 let logregStatus = "login";
 let regPart = document.getElementsByClassName("reg");
 let logPart = document.getElementsByClassName("log");
@@ -93,11 +100,15 @@ function logregSwitch() {
   }
 }
 
-/* --------------- hết login/register toggler --------------- */
+/* 
+------------------------- hết login/register toggler -------------------- 
+*/
 
 
 
-/* --------------- swap detail image --------------- */
+/* 
+-------------------- swap detail image -------------------- 
+*/
 
 let mainImg = document.getElementsByClassName("details__main-img")[0];
 
@@ -110,11 +121,15 @@ for (let i = 0; i < subImgs.length; i++) {
   subImgs[i].addEventListener("click", changeMainImg);
 }
 
-/* --------------- hết swap detail image --------------- */
+/* 
+-------------------- hết swap detail image -------------------- 
+*/
 
 
 
-/* --------------- .main-info__toggler-indicator --------------- */
+/* 
+-------------------- .main-info__toggler-indicator -------------------- 
+*/
 let mainInfoToggler = document.getElementsByClassName("main-info__toggler");
 
 function mainInfoIndicatorToggler1() {
@@ -138,11 +153,15 @@ function mainInfoIndicatorToggler2() {
 for (let i = 1; i < mainInfoToggler.length; i++) {
   mainInfoToggler[i].addEventListener("click", mainInfoIndicatorToggler2)
 }
-/* --------------- hết .main-info__toggler-indicator --------------- */
+/* 
+-------------------- hết .main-info__toggler-indicator -------------------- 
+*/
 
 
 
-/* --------------- sample image toggler --------------- */
+/* 
+-------------------- sample image toggler -------------------- 
+*/
 let sampleImgModal = document.querySelector("#sample--full-size img");
 let imgToggler = document.querySelectorAll("#sample img");
 
@@ -166,13 +185,17 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 
 /* console.log(mainImg.style.backgroundImage); */
 
-/* --------------- hết sample image toggler --------------- */
+/* 
+-------------------- hết sample image toggler -------------------- 
+*/
 
 
 
-/* --------------- quantity calc --------------- */
+/* 
+-------------------- quantity calc -------------------- 
+*/
 
-/* ---------- grand final calc ---------- */
+/* --------------- grand final calc --------------- */
 function grandFinalCalc() {
   //xác định element grand total
   let grandTotal = document.getElementsByClassName("cart__grand-total")[0];
@@ -206,7 +229,7 @@ function grandFinalCalc() {
 grandFinalCalc();
 
 
-/* ---------- add calc ---------- */
+/* --------------- add calc --------------- */
 let addQuantityBtn = document.getElementsByClassName("quantity__plus");
 
 for (let i = 0; i < addQuantityBtn.length; i++) {
@@ -246,7 +269,7 @@ for (let i = 0; i < addQuantityBtn.length; i++) {
 }
 
 
-/* ---------- minus calc ---------- */
+/* --------------- minus calc --------------- */
 let minusQuantityBtn = document.getElementsByClassName("quantity__minus");
 
 for (let i = 0; i < minusQuantityBtn.length; i++) {
@@ -288,13 +311,17 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
   minusQuantityBtn[i].addEventListener("click", grandFinalCalc);
 }
 
-/* --------------- hết quantity calc --------------- */
+/* 
+------------------------- hết quantity calc -------------------------
+ */
 
 
 
-/* --------------- remove cart item --------------- */
+/* 
+-------------------- remove cart item -------------------- 
+*/
 
-/* ---------- check empty cart ---------- */
+/* --------------- check empty cart --------------- */
 function checkEmptyCart() {
   let checkEmptyGrandTotal = document.getElementsByClassName("cart__grand-total")[0].innerHTML
   if (checkEmptyGrandTotal == "Tổng giá trị giỏ hàng: 0đ") {
@@ -302,7 +329,7 @@ function checkEmptyCart() {
   }
 }
 
-/* ---------- remove item ---------- */
+/* --------------- remove item --------------- */
 let removeItemBtn = document.querySelectorAll(".col--remove");
 
 for (let i = 0; i < removeItemBtn.length; i++) {
@@ -315,28 +342,56 @@ for (let i = 0; i < removeItemBtn.length; i++) {
   removeItemBtn[i].addEventListener("click", checkEmptyCart);
 }
 
+/* 
+-------------------- hết remove cart item -------------------- 
+*/
+
+
+/* 
+-------------------- card animation -------------------- 
+*/
+
+
+/* --------------- quay thẻ trước sau --------------- */
+
+/* ---------- quay thẻ ra sau ---------- */
+//xác định ô input CVV
+let inputCVV = document.getElementById("input__cvv");
+//event: khi focus ô input CVV (bấm vào, chưa cần type)
+inputCVV.addEventListener("focus", function(){
+  //quay thẻ ra sau
+  document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)";
+});
+
+/* ---------- quay thẻ ra trước ---------- */
+//Xác định các input sẽ khiến thẻ quay ra trước (mọi input trừ CVV)
 let frontInput = document.getElementsByClassName("front-input");
 
+//loop lên mọi ô input front 
 for (let i = 0; i < frontInput.length; i++) {
+  //để gán event: khi focus các ô front
   frontInput[i].addEventListener("focus", function() {
+    //thì check xem hiện tại card có đang được quay ra sau không
     if (document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)") {
+      //nếu có thì hủy giá trị quay, card sẽ về bình thường
       document.querySelector(".payment-card__content").style.transform = "none"
     }
   })
 }
 
+/* --------------- hết quay thẻ trước sau --------------- */
+
+
+/* --------------- update input lên thẻ --------------- */
+
+//Xác định ô input
 let inputNum = document.getElementById("input__num");
 
 inputNum.addEventListener("input", function(){
   let result = "" + inputNum.value;
   
-  document.querySelector(".payment-card__num").innerHTML = result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
-});
-
-let inputCVV = document.getElementById("input__cvv");
-
-inputCVV.addEventListener("focus", function(){
-  document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)";
+  document.querySelector(".front__num").innerHTML = 
+  result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
 });
 
 inputCVV.addEventListener("input", function(){
@@ -344,6 +399,18 @@ inputCVV.addEventListener("input", function(){
 });
 
 
+
+let inputValue = document.querySelectorAll(".payment-card__input .form-control")
+
+let displayValue = document.querySelectorAll(".display-value")
+
+for (let i = 0; i < inputValue.length; i++) {
+  inputValue[i].addEventListener("input", function() {
+    displayValue[i].innerHTML = "" + inputValue[i].value;
+  })
+}
+
+/* --------------- hết update input lên thẻ --------------- */
 
 
 

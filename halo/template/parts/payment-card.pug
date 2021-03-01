@@ -5,18 +5,18 @@
     .front 
       img.payment-card__chip(src="/halo/img/img--payment/chip.png", alt="")
       img.payment-card__brands(src="/halo/img/img--payment/visacard-2.png", alt="")
-      p.payment-card__num 0000 0000 0000 0000
-      p.payment-card__valid-text VALID DATES
-      p.payment-card__valid-dates
-        span.payment-card__month MM
+      p.front__num.display-value 0000 0000 0000 0000
+      p.front__valid-text VALID DATES
+      p.front__valid-dates
+        span.frontt__month.display-value MM
         span &nbsp;/&nbsp;
-        span.payment-card__year YY
-      p.payment-card__name JAMES BOND
+        span.front__year.display-value YY
+      p.front__name.display-value JAMES BOND
 
     .back
       .stripe
       .back__content
-        p.cvv CVV
+        p.cvv.display-value CVV
         .stamp
         p.back__text Tấm thẻ này là tài sản của ngân hàng phát hành. Nếu ai nhặt được, vui lòng gửi trả lại cho ngân hàng. Việc sử dụng tấm thẻ này phải tuân thủ các quy định về việc sử dụng thẻ của ngân hàng phát hành.
 
@@ -24,8 +24,8 @@
   form
     .form-group
       label(for='input__num') Nhập số thẻ:&nbsp;
-        i (Viết liền, không dấu cách)
-      input#input__num.form-control.front-input(type="text" required)
+        i (Viết liền)
+      input#input__num.form-control.front-input(type="number" required)
 
     .form-group.input__dates
       label(for='input__month') Ngày hết hạn:&nbsp; 
@@ -35,7 +35,8 @@
       input#input__year.form-control.front-input(type="text" placeholder="Năm" required)
 
     .form-group
-      label(for='input__name') Nhập tên chủ thẻ:
+      label(for='input__name') Nhập tên chủ thẻ:&nbsp; 
+        i (Viết cách, không dấu)
       input#input__name.form-control.front-input(type="text" required)
 
     .form-group

@@ -2,7 +2,7 @@ alt cho img
 gộp indicator styles vào layout.css
 fix header bug khi bật modal -> ok
 tách style trong layout
-set max length text
+set max length text, input
 nút clear text trong input
 nút ẩn hiện password
 đếm số comment

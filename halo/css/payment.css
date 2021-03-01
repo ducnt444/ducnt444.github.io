@@ -59,17 +59,17 @@ section {
   margin-left: auto;
 }
 
-.payment-card__num,
-.payment-card__name {
+.front__num,
+.front__name {
   width: 100%;
 }
 
-.payment-card__valid-text,
-.payment-card__valid-dates {
+.front__valid-text,
+.front__valid-dates {
   width: fit-content;
 }
 
-.payment-card__num {
+.front__num {
   font-family: 'Orbitron', sans-serif;
   font-size: 14px;
   margin-top: 3%;
@@ -77,13 +77,13 @@ section {
   letter-spacing: 2px;
 }
 
-.payment-card__valid-text {
+.front__valid-text {
   font-size: 7px;
   margin-right: 10px;
   margin-top: 3px;
 }
 
-.payment-card__name {
+.front__name {
   font-weight: 500;
 }
 
