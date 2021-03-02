@@ -25,9 +25,17 @@ section {
   font-weight: bold;
 }
 
+.btn--confirmation {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
 .summary__row--right,
 .summary__row--left {
   width: 47%;
+}
+.summary__row--right {
+  text-align: end;
 }
 
 .summary__row {
@@ -57,15 +65,27 @@ section {
   margin: 5px 0px 5px 0px;
 }
 
+.summary__grand-total {
+  margin: 15px 0px;
+}
+
+
 .guess__info * {
   margin-bottom: 10px;
   border-radius: 8px;
   resize: none;
 }
 
+#payment__method input {
+  border-radius: 8px;
+}
+
 .method__toggler {
   display: flex;
   align-items: center;
+}
+
+.method__toggler:first-child {
   margin-bottom: 5px;
 }
 
@@ -80,10 +100,6 @@ section {
 #payment__method .sub-header {
   margin-top: 50px;
 }
-
-
-
-
 
 .payment-card__content  {
   perspective: 1000px;
@@ -100,6 +116,7 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  margin: auto;
 }
 
 .front, .back {
@@ -108,15 +125,11 @@ section {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  background-image: url("../img/img--carousel/banner-bg-1-min.jpg");
   background-size: contain;
   background-position: center;
   backdrop-filter: blur(20px);
-}
-
-#payment-card:hover .payment-card__content {
-  transform: rotateY(180deg);
 }
 
 .front {
@@ -124,6 +137,27 @@ section {
   flex-wrap: wrap;
   align-items: flex-start;
   padding: 15px 20px;
+  background-image: url("../img/img--carousel/banner-bg-1-min.jpg");
+}
+
+
+
+
+
+#domestic-card .front {
+  background-image: url("../img/img--payment/vcb-card.png");
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.back {
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
+
+#payment-card:hover .payment-card__content {
+  transform: rotateY(180deg);
 }
 
 .payment-card__chip {
@@ -132,7 +166,7 @@ section {
 }
 
 #domestic-card .payment-card__brands {
-  width: 30%;
+  width: 35%;
 }
 
 .payment-card__brands {
@@ -194,14 +228,15 @@ section {
   text-align: end;
   padding: 2.5px 10px;
   letter-spacing: 1px;
-  margin-top: 5%;
-  margin-bottom: 7%;
+  margin-top: 10%;
+  margin-bottom: 15%;
 }
 
 .stamp {
   background-color: #e6e6e6;
   width: 20%;
   height: calc((100vw - 70px) / 8);
+  max-height: 40px;
   border-radius: 8px;
 }
 
@@ -246,11 +281,19 @@ section {
 
 @media only screen and (min-width: 768px) {
   .sub-section {
-    border: 1px solid #000000;
+    border: 1px solid #525252;
     border-radius: 16px;
-    padding: 5px 15px;
+    padding: 5px 15px 15px 15px;
     margin: 20px 0px;
-    width: 340px;
+    width: calc(50% - 15px);
+    max-width: none;
+  }
+
+  .btn--confirmation {
+    font-size: 14px;
+    padding: 7px 15px; 
+    width: 120px;
+    margin-top: 20px;
   }
 
   #confirmation, #payment {
@@ -258,6 +301,10 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+  }
+
+  .summary__grand-total {
+    margin-bottom: 0px;
   }
 
   .term-toggler__wrapper {
@@ -268,8 +315,19 @@ section {
   .payment__toggler {
     order: 4;
   }
+  
+  .guess__info *
+   {
+    margin-bottom: 20px;
+    min-height: 40px;
+    padding-left: 15px;
+  }
 
-  .confirmation__term p {
+  .form-control {
+    font-size: 14px;
+  }
+
+  .confirmation__term p:not(:last-child) {
     margin-bottom: 5px;
   }
 
@@ -277,5 +335,45 @@ section {
     margin-top: 10px;
   }
 
+  .method__content {
+    margin: 15px auto 30px auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sub-section {
+    padding: 10px 30px 20px 30px;
+    margin: 25px 0px;
+  }
+
+  main {
+    font-size: 14px;
+  }
+
+  .main-header {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  .sub-header {
+    font-size: 18px;
+  }
+
+  .summary__row {
+    margin-top: 15px;
+  }
+
+  .btn--confirmation {
+    font-size: 16px;
+    width: 140px;
+    margin-top: 25px;
+  }
 
 }
+
+@media only screen and (min-width: 1200px) {
+  .sub-section {
+    width: calc(50% - 25px);
+  }
+}
+

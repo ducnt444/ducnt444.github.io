@@ -58,7 +58,7 @@ block content
                 p.coupon__text Giảm 15% giá trị đơn hàng (tối đa 1.000.000đ)
                 p.coupon__text -1.000.000đ
 
-          p.summary__grand-total.inner-header.text-center.my-4 Tổng tiền hàng: 
+          p.summary__grand-total.inner-header.text-center Tổng tiền hàng: 
             span 390.270.000đ
         
         p.term-toggler__wrapper.text-center Khi bấm xác nhận, quý khách đã đồng ý với 
@@ -74,11 +74,11 @@ block content
 
           p 4. Trường hợp Quý khách hàng thay đổi quyết định mua hàng khi sản phẩm đã được giao, khách hàng sẽ phải chịu hoàn toàn chi phí vận chuyển.
 
-        a.btn.btn--confirmation.payment__toggler.mt-4(href="#" data-toggle="collapse" data-target="#payment__info") Xác nhận
+        a.btn.btn--confirmation.payment__toggler(href="#payment__header" data-toggle="collapse" data-target="#payment__info") Xác nhận
 
     section.payment-wrapper
 
-      .main-header
+      .main-header#payment__header
         span.main-header__text 2. Thanh toán
         span.main-header__indicator
 

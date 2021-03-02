@@ -427,11 +427,19 @@ let inputBank = document.getElementById("input__bank");
 
 let brandImg = document.querySelector(".payment-card__brands");
 
+let domesticFront = document.querySelector("#domestic-card .front");
+
 inputBank.addEventListener("input", function(){
   if (inputBank.value == "BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)") {
-    brandImg.src = "/halo/img/img--payment/bidv-logo-min.png"
+    brandImg.src = "/halo/img/img--payment/bidv-logo-min.png";
+    domesticFront.style.backgroundImage = 'url("/halo/img/img--payment/digital-data.jpg")';
+    domesticFront.style.color = "white";
+    domesticFront.style.backgroundSize = "cover";
   } else {
-    brandImg.src = "/halo/img/img--payment/vcb-logo.png"
+    brandImg.src = "/halo/img/img--payment/vcb-logo.png";
+    domesticFront.style.backgroundImage = 'url("/halo/img/img--payment/vcb-card.png")';
+    domesticFront.style.color = "black";
+    domesticFront.style.backgroundSize = "contain";
   }
 })
 
