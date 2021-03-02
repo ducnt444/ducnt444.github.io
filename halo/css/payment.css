@@ -5,7 +5,7 @@ section {
 
 .sub-section {
   max-width: 340px;
-  margin: auto;
+  margin: 15px auto;
 }
 
 .main-header {
@@ -63,12 +63,16 @@ section {
   font-size: 10px;
   font-style: italic;
   margin: 5px 0px 5px 0px;
+  text-align: start;
 }
 
 .summary__grand-total {
   margin: 15px 0px;
 }
 
+.confirmation__term p:not(:last-child) {
+  margin-bottom: 5px;
+}
 
 .guess__info * {
   margin-bottom: 10px;
@@ -228,8 +232,8 @@ section {
   text-align: end;
   padding: 2.5px 10px;
   letter-spacing: 1px;
-  margin-top: 7%;
-  margin-bottom: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .stamp {
@@ -277,6 +281,11 @@ section {
   .summary__row--right {
     width: 45%;
   }
+
+  .cvv{
+    margin-top: 7%;
+    margin-bottom: 10%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -315,7 +324,11 @@ section {
   .payment__toggler {
     order: 4;
   }
-  
+
+  .confirmation__term p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   .guess__info *
    {
     margin-bottom: 20px;
@@ -325,10 +338,6 @@ section {
 
   .form-control {
     font-size: 14px;
-  }
-
-  .confirmation__term p:not(:last-child) {
-    margin-bottom: 5px;
   }
 
   #payment__method .sub-header {
