@@ -93,111 +93,138 @@
       </div>
       <div class="page-wrapper container-xl">
         <h1 class="text-left w-100">Cổng thanh toán</h1>
-        <!--section.confirmation-wrapper
-        .main-header
-          span.toggler__header 1. Xác nhận đơn hàng
-          span.toggler__indicator
-            i.fas.fa-chevron-up
-        
-        #confirmation
-        
-          .summary.sub-section
-            h2.sub-header Tóm tắt đơn hàng
-        
-            .summary__row--header
-              span.inner-header__label Giỏ hàng
-        
-            p.summary__row--text
-              span Máy ảnh Canon 1DX Mark III 
-              span 1 x 130.090.000đ = 130.090.000đ
-        
-            p.summary__row--text
-              span Máy ảnh Canon 1DX Mark III 
-              span 2 x 130.090.000đ = 260.180.000đ
-        
-            p.summary__row--text
-              span Tổng giá trị giỏ hàng 
-              span 390.270.000đ
-        
-            .summary__row--header
-              span.inner-header__label Phí vận chuyển:
-              span.inner-header__content Miễn phí vận chuyển
-        
-            .summary__row--header
-              span.inner-header__label Mã giảm giá:
-              .inner-header__content.coupon
-                input.coupon__input(type="text" placeholder="Nhập mã")
-                button.btn.coupon__submit Xác nhận
-                .coupon__content
-                  p.coupon__text Giảm 15% giá trị đơn hàng (tối đa 1.000.000đ)
-                  p.coupon__text -1.000.000đ
-        
-            p.summary__grand-total Tổng tiền hàng: 
-              span 389.270.000đ      
-          
-          .term.sub-section
-        
-          a.btn.btn--confirmation.payment__toggler(href="#" data-toggle="collapse" data-target="#payment__info") Xác nhận
-        
-        -->
-        <section class="payment-wrapper">
-          <div class="main-header"><span class="toggler__header">2. Thanh toán</span><span class="toggler__indicator"><i class="fas fa-chevron-up"></i></span></div>
-          <div id="payment">
-            <div class="sub-section collapse" id="payment__info">
-              <h2 class="sub-header">Thông tin khách hàng</h2>
-              <form>
-                <input class="form-control" type="text" placeholder="Họ tên">
-                <input class="form-control" type="text" placeholder="Số điện thoại">
-                <input class="form-control" type="text" placeholder="Địa chỉ nhận hàng">
-                <textarea class="form-control" name="" cols="20" rows="10"></textarea>
-              </form><a class="btn btn--confirmation payment__toggler" href="#" data-toggle="collapse" data-target="#payment__method">Xác nhận </a>
-            </div>
-            <div class="sub-section collapse show" id="payment__method">
-              <h2 class="sub-header">Phương thức thanh toán</h2>
-              <div class="method__toggler" data-toggle="collapse" data-target="#payment-card"> 
-                <input type="radio" name="payment-method" id="domestic-card-radio">
-                <label for="domestic-card-radio">Thanh toán bằng thẻ ngân hàng nội địa </label>
-              </div>
-              <div class="collapse show" id="payment-card">
-                <div class="payment-card__content"> 
-                  <div class="front"> <img class="payment-card__chip" src="/halo/img/img--payment/chip.png" alt=""><img class="payment-card__brands" src="/halo/img/img--payment/visacard-2.png" alt="">
-                    <p class="front__num display-value">0000 0000 0000 0000</p>
-                    <p class="front__valid-text">VALID DATES</p>
-                    <p class="front__valid-dates"><span class="front__month display-value">MM</span><span>&nbsp;/&nbsp;</span><span class="front__year display-value">YY</span></p>
-                    <p class="front__name display-value">JAMES BOND</p>
-                  </div>
-                  <div class="back">
-                    <div class="stripe"></div>
-                    <div class="back__content">
-                      <p class="cvv display-value">CVV</p>
-                      <div class="stamp"></div>
-                      <p class="back__text">Tấm thẻ này là tài sản của ngân hàng phát hành. Nếu ai nhặt được, vui lòng gửi trả lại cho ngân hàng. Việc sử dụng tấm thẻ này phải tuân thủ các quy định về việc sử dụng thẻ của ngân hàng phát hành.</p>
-                    </div>
+        <section class="confirmation-wrapper">
+          <div class="main-header"><span class="main-header__text">1. Xác nhận đơn hàng</span><span class="main-header__indicator"></span></div>
+          <div id="confirmation">
+            <div class="confirmation__summary sub-section">
+              <h2 class="sub-header">Tóm tắt đơn hàng</h2>
+              <p class="summary__row summary__row--right inner-header">Giỏ hàng</p>
+              <p class="summary__row"><span class="summary__row--right">Máy ảnh Canon 1DX Mark III </span><span class="summary__row--left">1 x 130.090.000đ = 130.090.000đ</span></p>
+              <p class="summary__row"><span class="summary__row--right">Máy ảnh Canon 1DX Mark III </span><span class="summary__row--left">2 x 130.090.000đ = 260.180.000đ</span></p>
+              <p class="summary__row"><span class="summary__row--right inner-header">Tổng giá trị giỏ hàng </span><span class="summary__row--left">390.270.000đ</span></p>
+              <div class="summary__row"><span class="summary__row--right inner-header">Phí vận chuyển:</span><span class="summary__row--left">Miễn phí vận chuyển</span></div>
+              <div class="summary__row"><span class="summary__row--right inner-header">Mã giảm giá:</span>
+                <div class="summary__row--left coupon">
+                  <input class="coupon__input" type="text" placeholder="KM2021">
+                  <div class="coupon__content">
+                    <p class="coupon__text">Giảm 15% giá trị đơn hàng (tối đa 1.000.000đ)</p>
+                    <p class="coupon__text">-1.000.000đ</p>
                   </div>
                 </div>
               </div>
-              <div class="payment-card__input"> 
-                <form>
-                  <div class="form-group">
-                    <label for="input__num">Nhập số thẻ:&nbsp;<i>(Viết liền)</i></label>
-                    <input class="form-control front-input" id="input__num" type="text" required>
+              <p class="summary__grand-total inner-header text-center my-4">Tổng tiền hàng: <span>390.270.000đ</span></p>
+            </div>
+            <p>Khi bấm xác nhận, quý khách đã đồng ý với <span class="term-toggler text-primary font-italic" data-toggle="collapse" data-target="#term">các điều khoản đặt hàng và thanh toán của chúng tôi.</span></p>
+            <div class="confirmation__term sub-section collapse" id="term"> 
+              <h2 class="sub-header">Điều khoản đặt hàng và thanh toán</h2>
+              <p>1. Quý khách hàng vui lòng cung cấp địa chỉ giao hàng cũng như thông tin người nhận rõ ràng, chính xác để công tác giao hàng được nhanh nhất.</p>
+              <p>2. Quý khách hàng kiểm tra hàng hóa kỹ lưỡng, cẩn thận trước khi ký nhận và thanh toán.</p>
+              <p>3. Nếu quá thời gian quy định, Quý khách hàng vẫn chưa nhận được sản phẩm, hãy liên lạc ngay với chúng tôi để được hỗ trợ.</p>
+              <p>4. Trường hợp Quý khách hàng thay đổi quyết định mua hàng khi sản phẩm đã được giao, khách hàng sẽ phải chịu hoàn toàn chi phí vận chuyển.</p>
+            </div><a class="btn btn--confirmation payment__toggler mt-4" href="#" data-toggle="collapse" data-target="#payment__info">Xác nhận</a>
+          </div>
+        </section>
+        <section class="payment-wrapper">
+          <div class="main-header"><span class="main-header__text">2. Thanh toán</span><span class="main-header__indicator"></span></div>
+          <div id="payment">
+            <div class="sub-section collapse" id="payment__info">
+              <h2 class="sub-header">Thông tin khách hàng</h2>
+              <form class="guess__info">
+                <input class="guess__info--name form-control" type="text" placeholder="Họ tên">
+                <input class="guess__info--phone form-control" type="text" placeholder="Số điện thoại">
+                <input class="guess__info--address form-control" type="text" placeholder="Địa chỉ nhận hàng">
+                <textarea class="guess__info--note form-control" name="" cols="20" rows="10" placeholder="Ghi chú"></textarea>
+              </form><a class="btn btn--confirmation payment__toggler" href="#" data-toggle="collapse" data-target="#payment__method">Xác nhận </a>
+            </div>
+            <div class="sub-section collapse" id="payment__method">
+              <h2 class="sub-header">Phương thức thanh toán</h2>
+              <form id="methods-selection">
+                <div id="method-wrapper">
+                  <div class="method__toggler" data-toggle="collapse" data-target="#domestic-card"> 
+                    <input type="radio" name="payment-method" id="domestic-card-radio" form="methods-selection">
+                    <label for="domestic-card-radio">Thanh toán bằng thẻ ngân hàng nội địa </label>
                   </div>
-                  <div class="form-group input__dates">
-                    <label for="input__month">Ngày hết hạn:&nbsp; <i>(chỉ nhập 2 số cuối của năm)</i></label>
-                    <input class="form-control front-input" id="input__month" type="number" placeholder="Tháng" min="1" max="12" required><span>&nbsp;/&nbsp;</span>
-                    <input class="form-control front-input" id="input__year" type="number" placeholder="Năm" min="21" max="99" required>
+                  <div class="method__content collapse" id="domestic-card" data-parent="#methods-selection">
+                    <div class="payment-card__content"> 
+                      <div class="front"> <img class="payment-card__chip" src="/halo/img/img--payment/chip.png" alt=""><img class="payment-card__brands" src="/halo/img/img--payment/vcb-logo.png" alt="">
+                        <p class="front__num display-value">0000 0000 0000 0000</p>
+                        <p class="front__valid-text">VALID DATES</p>
+                        <p class="front__valid-dates"><span class="front__month display-value">MM</span><span>&nbsp;/&nbsp;</span><span class="front__year display-value">YY</span></p>
+                        <p class="front__name display-value">PHAM XUAN AN</p>
+                      </div>
+                    </div>
+                    <div class="payment-card__input"> 
+                      <form autocomplete="off">
+                        <div class="form-group">
+                          <label for="bank">Chọn ngân hàng:&nbsp;</label>
+                          <select class="form-control" id="input__bank">
+                            <option>VCB (Vietcombank)</option>
+                            <option>BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="input__num">Nhập số thẻ:&nbsp;<i>(Viết liền)</i></label>
+                          <input class="form-control front-input" id="input__num" type="text" required>
+                        </div>
+                        <div class="form-group input__dates">
+                          <label for="domestic-input__month">Ngày hết hạn:&nbsp; <i>(chỉ nhập 2 số cuối của năm)</i></label>
+                          <input class="input__month form-control front-input" id="domestic-input__month" type="number" placeholder="Tháng" min="1" max="12" required><span>&nbsp;/&nbsp;</span>
+                          <input class="input__year form-control front-input" id="domestic-input__year" type="number" placeholder="Năm" min="21" max="99" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="input__name">Nhập tên chủ thẻ:&nbsp; <i>(Viết cách, không dấu)</i></label>
+                          <input class="form-control front-input" id="input__name" type="text" required>
+                        </div>
+                        <input class="btn btn--confirmation" type="submit" value="Xác nhận">
+                      </form>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="input__name">Nhập tên chủ thẻ:&nbsp; <i>(Viết cách, không dấu)</i></label>
-                    <input class="form-control front-input" id="input__name" type="text" required>
+                  <div class="method__toggler" data-toggle="collapse" data-target="#visa-master-card"> 
+                    <input type="radio" name="payment-method" id="visa-master-card-radio" form="methods-selection">
+                    <label for="visa-master-card-radio">Thanh toán bằng thẻ Visa/Master</label>
                   </div>
-                  <div class="form-group">
-                    <label for="input__name">Mã số CVV:</label>
-                    <input class="form-control back-input" id="input__cvv" type="text" required>
+                  <div class="method__content collapse" id="visa-master-card" data-parent="#methods-selection">
+                    <div class="payment-card__content"> 
+                      <div class="front"> <img class="payment-card__chip" src="/halo/img/img--payment/chip.png" alt=""><img class="payment-card__brands" src="/halo/img/img--payment/visacard-2.png" alt="">
+                        <p class="front__num display-value">0000 0000 0000 0000</p>
+                        <p class="front__valid-text">VALID DATES</p>
+                        <p class="front__valid-dates"><span class="front__month display-value">MM</span><span>&nbsp;/&nbsp;</span><span class="front__year display-value">YY</span></p>
+                        <p class="front__name display-value">JAMES BOND</p>
+                      </div>
+                      <div class="back">
+                        <div class="stripe"></div>
+                        <div class="back__content">
+                          <p class="cvv display-value">CVV</p>
+                          <div class="stamp"></div>
+                          <p class="back__text">Tấm thẻ này là tài sản của ngân hàng phát hành. Nếu ai nhặt được, vui lòng gửi trả lại cho ngân hàng. Việc sử dụng tấm thẻ này phải tuân thủ các quy định về việc sử dụng thẻ của ngân hàng phát hành.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-card__input"> 
+                      <form autocomplete="off">
+                        <div class="form-group">
+                          <label for="visa-master-input__num">Nhập số thẻ:&nbsp;<i>(Viết liền)</i></label>
+                          <input class="form-control front-input" id="visa-master-input__num" type="number" required>
+                        </div>
+                        <div class="form-group input__dates">
+                          <label for="visa-master-input__month">Ngày hết hạn:&nbsp; <i>(chỉ nhập 2 số cuối của năm)</i></label>
+                          <input class="input__month form-control front-input" id="visa-master-input__month" type="number" placeholder="Tháng" min="1" max="12" required><span>&nbsp;/&nbsp;</span>
+                          <input class="input__year form-control front-input" id="visa-master-input__year" type="number" placeholder="Năm" min="21" max="99" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="visa-master-input__name">Nhập tên chủ thẻ:&nbsp; <i>(Viết cách, không dấu)</i></label>
+                          <input class="form-control front-input" id="visa-master-input__name" type="text" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="visa-master-input__name">Mã số CVV:</label>
+                          <input class="form-control back-input" id="visa-master-input__cvv" type="number" min="1" max="999" required>
+                        </div>
+                        <input class="btn btn--confirmation" type="submit" value="Xác nhận">
+                      </form>
+                    </div>
                   </div>
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </section>

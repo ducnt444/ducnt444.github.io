@@ -150,7 +150,13 @@ main {
   font-size: 12px;
 }
 
+.btn--confirmation {
+  background-color: #99DE7F;
+}
 
+label {
+  margin-bottom: 0px;
+}
 
 /* -------------------- kết thúc settings -------------------- */
 

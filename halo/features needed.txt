@@ -10,4 +10,25 @@ reply feature
 dóng hàng 
 
 
+//event: khi nhập input số thẻ, 
+for (let i = 1; i < inputValue.length; i+=4) {
+  inputValue[i].addEventListener("input", function(){
+    //sẽ update lên display 
+    let result = inputValue[i].value;
+    //dưới dạng: mỗi 4 số lại có dấu cách
+    
+    displayValue[i-1].innerText = 
+    result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+  });
+}
+
+/* 
+//loop: mọi ô input (trừ [0] a.k.a số thẻ)
+for (let i = 1; i < inputValue.length; i++) {
+  //event: khi nhập input
+  inputValue[i].addEventListener("input", function() {
+    //sẽ update lên display
+    displayValue[i].innerHTML = inputValue[i].value.toUpperCase();
+  })
+}
 

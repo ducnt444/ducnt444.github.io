@@ -101,13 +101,13 @@ function logregSwitch() {
 }
 
 /* 
-------------------------- hết login/register toggler -------------------- 
+------------------------- hết login/register toggler ------------------------- 
 */
 
 
 
 /* 
--------------------- swap detail image -------------------- 
+------------------------- swap detail image ------------------------- 
 */
 
 let mainImg = document.getElementsByClassName("details__main-img")[0];
@@ -122,13 +122,13 @@ for (let i = 0; i < subImgs.length; i++) {
 }
 
 /* 
--------------------- hết swap detail image -------------------- 
+------------------------- hết swap detail image ------------------------- 
 */
 
 
 
 /* 
--------------------- .main-info__toggler-indicator -------------------- 
+------------------------- .main-info__toggler-indicator ------------------------- 
 */
 let mainInfoToggler = document.getElementsByClassName("main-info__toggler");
 
@@ -154,13 +154,13 @@ for (let i = 1; i < mainInfoToggler.length; i++) {
   mainInfoToggler[i].addEventListener("click", mainInfoIndicatorToggler2)
 }
 /* 
--------------------- hết .main-info__toggler-indicator -------------------- 
+------------------------- hết .main-info__toggler-indicator ------------------------- 
 */
 
 
 
 /* 
--------------------- sample image toggler -------------------- 
+------------------------- sample full screen ------------------------- 
 */
 let sampleImgModal = document.querySelector("#sample--full-size img");
 let imgToggler = document.querySelectorAll("#sample img");
@@ -186,13 +186,13 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 /* console.log(mainImg.style.backgroundImage); */
 
 /* 
--------------------- hết sample image toggler -------------------- 
+------------------------- hết sample full screen ------------------------- 
 */
 
 
 
 /* 
--------------------- quantity calc -------------------- 
+------------------------- quantity calc ------------------------- 
 */
 
 /* --------------- grand final calc --------------- */
@@ -312,13 +312,13 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
 }
 
 /* 
-------------------------- hết quantity calc -------------------------
+-------------------- hết quantity calc --------------------
  */
 
 
 
 /* 
--------------------- remove cart item -------------------- 
+------------------------- remove cart item ------------------------- 
 */
 
 /* --------------- check empty cart --------------- */
@@ -343,64 +343,125 @@ for (let i = 0; i < removeItemBtn.length; i++) {
 }
 
 /* 
--------------------- hết remove cart item -------------------- 
+------------------------- hết remove cart item -------------------------
 */
+
+
+
 
 
 /* 
--------------------- card animation -------------------- 
+-------------------- summary invoice -------------------- 
 */
 
+/* ---------- live invoice ---------- */
+
+let inputCoupon = document.querySelector(".coupon__input");
+let displayCoupon = document.querySelector(".coupon__content");
+let summaryGrandTotal = document.querySelector(".summary__grand-total span");
+
+inputCoupon.addEventListener("input", function() {
+  if (inputCoupon.value.toUpperCase() == "KM2021") {
+    displayCoupon.style.display = "block";
+    summaryGrandTotal.innerText = "389.270.000đ"
+  } else {
+    displayCoupon.style.display = "none";
+    summaryGrandTotal.innerText = "390.270.000đ"
+  }
+
+})
+
+/* ---------- hết live invoice ---------- */
+
+
+/* 
+-------------------- hết summary invoice -------------------- 
+*/
+
+
+
+/* 
+------------------------- card animation ------------------------- 
+*/
 
 /* --------------- quay thẻ trước sau --------------- */
 
 /* ---------- quay thẻ ra sau ---------- */
 //xác định ô input CVV
-let inputCVV = document.getElementById("input__cvv");
+
+let inputCVV = document.getElementById("visa-master-input__cvv");
 //event: khi focus ô input CVV (bấm vào, chưa cần type)
 inputCVV.addEventListener("focus", function(){
   //quay thẻ ra sau
-  document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)";
+  document.querySelectorAll(".payment-card__content")[1].style.transform = "rotateY(180deg)";
 });
 
 /* ---------- quay thẻ ra trước ---------- */
 //Xác định các input sẽ khiến thẻ quay ra trước (mọi input trừ CVV)
-let frontInput = document.getElementsByClassName("front-input");
+let frontInput = document.querySelectorAll("#visa-master-card .front-input");
 
 //loop lên mọi ô input front 
 for (let i = 0; i < frontInput.length; i++) {
   //để gán event: khi focus các ô front
   frontInput[i].addEventListener("focus", function() {
     //thì check xem hiện tại card có đang được quay ra sau không
-    if (document.querySelector(".payment-card__content").style.transform = "rotateY(180deg)") {
+    if (document.querySelectorAll(".payment-card__content")[1].style.transform = "rotateY(180deg)") {
       //nếu có thì hủy giá trị quay, card sẽ về bình thường
-      document.querySelector(".payment-card__content").style.transform = "none"
+      document.querySelectorAll(".payment-card__content")[1].style.transform = "none"
     }
   })
 }
 
 /* --------------- hết quay thẻ trước sau --------------- */
 
-
 /* --------------- update input lên thẻ --------------- */
 
 //Xác định ô input
-let inputValue = document.querySelectorAll(".payment-card__input .form-control")
+let inputValue = document.querySelectorAll(".payment-card__input .form-control");
 
-let displayValue = document.querySelectorAll(".display-value")
+//Xác định ô display
+let displayValue = document.querySelectorAll(".display-value");
 
-inputValue[0].addEventListener("input", function(){
-  let result = "" + inputValue[0].value;
-  document.querySelector(".front__num").innerText = 
-  result.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
-});
+//Gán sự kiện cho input bank
+let inputBank = document.getElementById("input__bank");
 
-for (let i = 1; i < inputValue.length; i++) {
-  inputValue[i].addEventListener("input", function() {
-    displayValue[i].innerHTML = "" + inputValue[i].value;
-    displayValue[3].innerHTML = "" + inputValue[3].value.toUpperCase();
+let brandImg = document.querySelector(".payment-card__brands");
+
+inputBank.addEventListener("input", function(){
+  if (inputBank.value == "BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)") {
+    brandImg.src = "/halo/img/img--payment/bidv-logo-min.png"
+  } else {
+    brandImg.src = "/halo/img/img--payment/vcb-logo.png"
+  }
+})
+
+//Gán sự kiện cho input số thẻ
+//event: khi nhập input số thẻ (domestic = [1], visa = [5]), 
+for (let i = 1; i < inputValue.length; i+=4) {
+  inputValue[i].addEventListener("input", function(){
+    //sẽ update lên display (-1 tương ứng vì bank không có display)
+    displayValue[i-1].innerText =
+    //dưới dạng: mỗi 4 số lại có dấu cách
+    inputValue[i].value.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+  });
+}
+
+//Gán sự kiện cho các input khác
+//loop: mọi ô input (trừ bank =[0], domestic = [1], visa = [5])
+let notNumOrBank = [2, 3, 4, 6, 7, 8, 9]
+for (let i = 0; i < notNumOrBank.length; i++) {
+  //event: khi nhập input
+  inputValue[notNumOrBank[i]].addEventListener("input", function() {
+  //sẽ update lên display
+  displayValue[notNumOrBank[i]-1].innerHTML = inputValue[notNumOrBank[i]].value.toUpperCase();
   })
 }
+
+
+
+/* --------------- hết update input lên thẻ --------------- */
+
+
 
 /* test
 let inputNum = document.getElementById("input__num");
@@ -417,7 +478,9 @@ inputCVV.addEventListener("input", function(){
  */
 
 
-/* --------------- hết update input lên thẻ --------------- */
+/* 
+------------------------- hết card animation ------------------------- 
+*/
 
 
 
