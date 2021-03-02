@@ -61,10 +61,10 @@ block content
           p.summary__grand-total.inner-header.text-center.my-4 Tổng tiền hàng: 
             span 390.270.000đ
         
-        p.text-center Khi bấm xác nhận, quý khách đã đồng ý với 
+        p.term-toggler__wrapper.text-center Khi bấm xác nhận, quý khách đã đồng ý với 
           span.term-toggler.text-primary.font-italic(data-toggle="collapse" data-target="#term") các điều khoản đặt hàng và thanh toán của chúng tôi.
 
-        .confirmation__term#term.sub-section.collapse 
+        .confirmation__term#term.sub-section
           h2.sub-header Điều khoản đặt hàng và thanh toán
           p 1. Quý khách hàng vui lòng cung cấp địa chỉ giao hàng cũng như thông tin người nhận rõ ràng, chính xác để công tác giao hàng được nhanh nhất.
 
@@ -92,7 +92,7 @@ block content
             input.guess__info--address.form-control(type="text" placeholder="Địa chỉ nhận hàng")
             textarea.guess__info--note.form-control(name="" cols="20" rows="10" placeholder="Ghi chú")
 
-          a.btn.btn--confirmation.payment__toggler(href="#" data-toggle="collapse" data-target="#payment__method") Xác nhận 
+          a.btn.btn--confirmation.payment__toggler(href="#method-wrapper" data-toggle="collapse" data-target="#payment__method") Xác nhận 
 
         #payment__method.sub-section.collapse
           h2.sub-header Phương thức thanh toán
