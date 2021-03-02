@@ -131,6 +131,10 @@ section {
   margin-top: 12%;
 }
 
+#domestic-card .payment-card__brands {
+  width: 30%;
+}
+
 .payment-card__brands {
   width: 25%;
   margin-left: auto;
@@ -231,6 +235,15 @@ section {
   font-size: 18px;
 }
 
+@media only screen and (min-width: 375px) {
+  .summary__row--left {
+    width: 55%;
+  }
 
+  .summary__row--right {
+    width: 45%;
+  }
+
+}
 
 
