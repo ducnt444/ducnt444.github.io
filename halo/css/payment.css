@@ -63,8 +63,8 @@ section {
 .coupon__text:first-child {
   font-size: 10px;
   font-style: italic;
-  margin: 5px 0px 5px 0px;
-  text-align: start;
+  margin: 5px 0px;
+  text-align: end;
 }
 
 .summary__grand-total {
@@ -86,7 +86,7 @@ section {
 }
 
 .faq h3 {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .term-toggler {
@@ -269,7 +269,7 @@ section {
 }
 
 .payment-card__input {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .input__dates {
@@ -311,7 +311,7 @@ section {
   .sub-section {
     border: 1px solid #525252;
     border-radius: 16px;
-    padding: 5px 15px 15px 15px;
+    padding: 15px;
     margin: 20px 0px;
     width: calc(50% - 15px);
     max-width: none;
@@ -353,6 +353,10 @@ section {
     margin-bottom: 10px;
   }
 
+  .faq h3 {
+    margin-top: 20px;
+  }
+
   .guess__info *
    {
     margin-bottom: 20px;
@@ -364,10 +368,6 @@ section {
     font-size: 14px;
   }
 
-  #payment__method .sub-header {
-    margin-top: 10px;
-  }
-
   .method__content {
     margin: 15px auto 30px auto;
   }
@@ -375,7 +375,7 @@ section {
 
 @media only screen and (min-width: 992px) {
   .sub-section {
-    padding: 10px 30px 20px 30px;
+    padding: 20px 30px;
     margin: 25px 0px;
   }
 
@@ -402,11 +402,23 @@ section {
     margin-top: 25px;
   }
 
+  .method__content .btn--confirmation {
+    margin-top: 15px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .sub-section {
     width: calc(50% - 25px);
+  }
+
+  section {
+    padding: 50px 0px;
+  }
+
+  .coupon__text:first-child {
+    font-size: 12px;
+    margin: 10px 0px;
   }
 }
 

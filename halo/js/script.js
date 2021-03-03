@@ -422,13 +422,16 @@ let inputValue = document.querySelectorAll(".payment-card__input .form-control")
 //Xác định ô display
 let displayValue = document.querySelectorAll(".display-value");
 
-//Gán sự kiện cho input bank
+//Xác định ô input bank
 let inputBank = document.getElementById("input__bank");
 
+//Xác định ô display brand ngân hàng
 let brandImg = document.querySelector(".payment-card__brands");
 
+//Xác định mặt trước của domestic card
 let domesticFront = document.querySelector("#domestic-card .front");
 
+//Gán sự kiện cho input bank
 inputBank.addEventListener("input", function(){
   if (inputBank.value == "BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)") {
     brandImg.src = "/halo/img/img--payment/bidv-logo-min.png";
@@ -492,7 +495,44 @@ inputCVV.addEventListener("input", function(){
 
 
 
+/* 
+------------------------- faq toggler ------------------------- 
+*/
+let faqToggler = document.querySelectorAll(".faq__item--question");
 
+/* for(let i = 0; i < faqToggler.length; i++) {
+  faqToggler[i].addEventListener("click", function(){
+   this.querySelector("i").toggleClass("fa-plus").toggleClass("fa-minus")
+  })
+} */
+
+$(document).ready(function(){
+  $(faqToggler).click(function(){
+    $(this.querySelector("i")).toggleClass("fa-plus").toggleClass("fa-minus");
+  });
+});
+
+
+/* 
+------------------------- hết faq toggler ------------------------- 
+*/
+
+
+/* 
+------------------------- scroll to method ------------------------- 
+*/
+let test = document.querySelector(".payment__toggler");
+test.addEventListener("click", function(){
+  setTimeout(function(){
+    window.scrollTo({
+      top: 800,
+      behavior: 'smooth'
+    });
+  }, 150)
+})
+/* 
+------------------------- hết scroll to method ------------------------- 
+*/
 
 
 
