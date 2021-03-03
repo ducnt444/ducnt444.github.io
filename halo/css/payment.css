@@ -1,11 +1,12 @@
 
 section {
-  padding: 25px 0px;
+  padding: 30px 0px;
 }
 
 .sub-section {
   max-width: 340px;
-  margin: 15px auto;
+  padding: 20px 0px;
+  margin: auto;
 }
 
 .main-header {
@@ -17,7 +18,7 @@ section {
 
 .sub-header {
   font-size: 14px;
-  margin: 10px auto;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -67,7 +68,29 @@ section {
 }
 
 .summary__grand-total {
-  margin: 15px 0px;
+  margin-top: 15px;
+}
+
+.faq__item {
+  border-bottom: 1px solid black;
+  padding: 5px 0px;
+}
+
+.faq__item--question {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.faq__item--answer {
+  margin-top: 10px;
+}
+
+.faq h3 {
+  margin-top: 10px;
+}
+
+.term-toggler {
+  cursor: pointer;
 }
 
 .confirmation__term p:not(:last-child) {
@@ -98,11 +121,7 @@ section {
 }
 
 .method__content {
-  margin: 5px auto 20px auto;
-}
-
-#payment__method .sub-header {
-  margin-top: 50px;
+  margin: 10px auto 25px auto;
 }
 
 .payment-card__content  {
@@ -322,7 +341,12 @@ section {
   }
 
   .payment__toggler {
+    order: 5;
+  }
+
+  .confirmation__term {
     order: 4;
+    margin: 15px calc((50% + 15px)/2) !important;
   }
 
   .confirmation__term p:not(:last-child) {

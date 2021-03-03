@@ -157,7 +157,7 @@ section {
 }
 
 .item .seemore-btn {
-  width: fit-content;
+  width: 90px;
   margin: 15px auto 0px auto;
   font-size: 12px;
   line-height: 16px;
@@ -344,6 +344,7 @@ section {
     font-size: 16px;
     line-height: 20px;
     padding: 5px 15px;
+    width: 120px;
   }
 
   /* ---------- sale items module ---------- */

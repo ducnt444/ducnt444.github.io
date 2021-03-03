@@ -208,6 +208,10 @@ label {
 
 /* ------- font sizes ------- */
 
+.sale-amount {
+  font-size: 10px;
+}
+
 .font-11 { 
   font-size: 11px; 
 }
@@ -376,6 +380,13 @@ h1, h2 {
 .btn--dark:active, .btn--dark:hover {
   background-color: #000000 !important;
   color: #ffffff !important;
+}
+
+.seemore-btn {
+  width: 90px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px 10px;
 }
 /* -------------------- kết thúc buttons  -------------------- */
 
@@ -805,6 +816,11 @@ footer {
     height: 40px;
     padding: 5px 0px;
     line-height: 30px;
+  }
+
+  .seemore-btn {
+    width: 120px;
+    line-height: 25px;
   }
 
 }
