@@ -220,7 +220,9 @@ function grandFinalCalc() {
       grandTotalNum += eachMultiple; //+= vào giá trị grand total mỗi loop
     }
     
-    grandTotal.innerHTML = `Tổng giá trị giỏ hàng: ${grandTotalNum.toLocaleString()}đ`  
+    grandTotal.innerHTML = `Tổng giá trị giỏ hàng: ${grandTotalNum
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}đ`;  
   } 
 
 
@@ -236,7 +238,7 @@ for (let i = 0; i < addQuantityBtn.length; i++) {
   addQuantityBtn[i].addEventListener("click", function() {
     //Xác định giá trị số đếm hiện tại: element trước nút + (số hóa)
     let currentNum = parseInt(this.previousElementSibling.innerHTML);
-
+    
     //khi click: tăng giá trị của element trước nút + (chính là số đếm hiện tại) thêm 1
     this.previousElementSibling.innerHTML = currentNum + 1;
 
@@ -248,7 +250,7 @@ for (let i = 0; i < addQuantityBtn.length; i++) {
     .match(/\d/g)
     //rồi nối lại thành string số giá tiền
     .join('');
-
+    
     //xác định giá trị của thành tiền = 
     let multiplePrice = 
     //giá trị element trước nút + (số đếm hiện tại, số hóa)
@@ -256,13 +258,15 @@ for (let i = 0; i < addQuantityBtn.length; i++) {
     * 
     //singlePrice (số hóa)
     parseInt(singlePrice);
-
+    console.log(multiplePrice);
     //update thành tiền
     let multipleInner = this.parentElement.nextElementSibling.innerHTML;
-    this.parentElement.nextElementSibling.innerHTML = 
-    multipleInner
-    .replace(/\./g, "")
-    .replace(/\d+/, multiplePrice.toLocaleString())
+    this.parentElement.nextElementSibling.innerHTML = multipleInner
+      .replace(/\./g, "")
+      .replace(
+        /\d+/,
+        multiplePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      );
   });
 
   addQuantityBtn[i].addEventListener("click", grandFinalCalc);
@@ -276,7 +280,7 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
   minusQuantityBtn[i].addEventListener("click", function() {
     //Xác định giá trị số đếm hiện tại: element sau nút - (số hóa)
     let currentNum = parseInt(this.nextElementSibling.innerHTML);
-
+    console.log(currentNum);
     //Tránh trường hợp số đếm <= 0
     if (currentNum > 1) {
       //khi click: giảm giá trị của element sau nút - (chính là số đếm hiện tại) đi 1
@@ -302,10 +306,12 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
 
     //update thành tiền
     let multipleInner = this.parentElement.nextElementSibling.innerHTML;
-    this.parentElement.nextElementSibling.innerHTML = 
-    multipleInner
-    .replace(/\./g, "")
-    .replace(/\d+/, multiplePrice.toLocaleString())
+    this.parentElement.nextElementSibling.innerHTML = multipleInner
+      .replace(/\./g, "")
+      .replace(
+        /\d+/,
+        multiplePrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      );
   });
 
   minusQuantityBtn[i].addEventListener("click", grandFinalCalc);
