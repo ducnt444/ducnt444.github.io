@@ -1,3 +1,7 @@
+.search-btn.hidden-till-md {
+  position: relative;
+  top: 2px;
+}
 
 /* ---------- carousel styles ----------*/
 

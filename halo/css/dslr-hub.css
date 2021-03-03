@@ -1,4 +1,9 @@
 
+.nav-item:first-child a {
+  padding-bottom: 0px !important;
+  border-bottom: 2px solid white;
+}
+
 /* -------------------- display-area -------------------- */
 .dslr-hub__display-area {
   padding-top: 15px;
@@ -74,7 +79,6 @@
   border-radius: 8px;
   border: 1px solid #bbbbbb;
   margin: 10px 5px;
-  transition: all 0.3s;
 }
 
 .item:hover,

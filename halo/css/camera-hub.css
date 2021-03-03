@@ -48,6 +48,11 @@ section {
   margin-top: 30px;
 }
 
+.nav-item:first-child a {
+  padding-bottom: 0px !important;
+  border-bottom: 2px solid white;
+}
+
 /* ---------- hết settings chung ---------- */
 
 /* ---------- banner-carousel styles ---------- */

@@ -343,9 +343,22 @@ h1, h2 {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 /* ----- big white shadow ----- */
+
 #logreg .modal-content {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
 }
+
+/* ----- hover item ----- */
+.item {
+  transition: all 0.3s;
+}
+
+.item:hover {
+  border: 1px solid #555555;
+  box-shadow: 0px 0px 25px rgb(0 0 0 / 15%);
+  cursor: pointer;
+}
+
 
 /* -------------------- kết thúc effect -------------------- */
 
@@ -398,8 +411,14 @@ h1, h2 {
 
 /* ------- settings chung nav ------- */
 
-.navbar {
+header {
   position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar {
+  position: relative;
   z-index: 100;
   width: 100%;
 }
@@ -426,6 +445,15 @@ h1, h2 {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.nav-item a {
+  transition: border 0.3s;
+}
+
+.nav-item:hover a {
+  padding-bottom: 0px !important;
+  border-bottom: 2px solid white;
 }
 
 /* ------- brand styles ------- */
@@ -870,9 +898,9 @@ footer {
 
 @media only screen and (min-width: 1200px) {
 
-/*   .modal-open .navbar {
-    padding-right: 17px;
-  } */
+  .modal-open .navbar {
+    width: calc(100% - 17px);
+  }
   
   .container, 
   .container-xl {
