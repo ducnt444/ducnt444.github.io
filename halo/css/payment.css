@@ -112,7 +112,7 @@ section {
   align-items: center;
 }
 
-.method__toggler:first-child {
+.method__toggler:nth-child(2) {
   margin-bottom: 5px;
 }
 

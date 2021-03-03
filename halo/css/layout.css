@@ -654,6 +654,10 @@ footer {
   font-size: 14px !important;
 }
 
+.logreg__submit.log {
+  width: 115px;
+}
+
 .logreg__submit.reg {
   margin: 15px 0px 15px 0px;
 }
@@ -732,6 +736,11 @@ footer {
 
   .logo-sony {
     font-size: 40px;
+  }
+
+  .seemore-btn {
+    width: 130px;
+    line-height: 24px;
   }
 
 }

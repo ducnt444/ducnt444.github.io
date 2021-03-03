@@ -360,16 +360,19 @@ let inputCoupon = document.querySelector(".coupon__input");
 let displayCoupon = document.querySelector(".coupon__content");
 let summaryGrandTotal = document.querySelector(".summary__grand-total span");
 
-inputCoupon.addEventListener("input", function() {
-  if (inputCoupon.value.toUpperCase() == "KM2021") {
-    displayCoupon.style.display = "block";
-    summaryGrandTotal.innerText = "389.270.000đ"
-  } else {
-    displayCoupon.style.display = "none";
-    summaryGrandTotal.innerText = "390.270.000đ"
-  }
+if (inputCoupon != null) {
+  inputCoupon.addEventListener("input", function() {
+    if (inputCoupon.value.toUpperCase() == "KM2021") {
+      displayCoupon.style.display = "block";
+      summaryGrandTotal.innerText = "389.270.000đ"
+    } else {
+      displayCoupon.style.display = "none";
+      summaryGrandTotal.innerText = "390.270.000đ"
+    }
+  
+  })
+}
 
-})
 
 /* ---------- hết live invoice ---------- */
 
@@ -391,10 +394,13 @@ inputCoupon.addEventListener("input", function() {
 
 let inputCVV = document.getElementById("visa-master-input__cvv");
 //event: khi focus ô input CVV (bấm vào, chưa cần type)
-inputCVV.addEventListener("focus", function(){
-  //quay thẻ ra sau
-  document.querySelectorAll(".payment-card__content")[1].style.transform = "rotateY(180deg)";
-});
+if (inputCVV != null) {
+  inputCVV.addEventListener("focus", function(){
+    //quay thẻ ra sau
+    document.querySelectorAll(".payment-card__content")[1].style.transform = "rotateY(180deg)";
+  });
+  
+}
 
 /* ---------- quay thẻ ra trước ---------- */
 //Xác định các input sẽ khiến thẻ quay ra trước (mọi input trừ CVV)
@@ -432,40 +438,46 @@ let brandImg = document.querySelector(".payment-card__brands");
 let domesticFront = document.querySelector("#domestic-card .front");
 
 //Gán sự kiện cho input bank
-inputBank.addEventListener("input", function(){
-  if (inputBank.value == "BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)") {
-    brandImg.src = "/halo/img/img--payment/bidv-logo-min.png";
-    domesticFront.style.backgroundImage = 'url("/halo/img/img--payment/digital-data.jpg")';
-    domesticFront.style.color = "white";
-    domesticFront.style.backgroundSize = "cover";
-  } else {
-    brandImg.src = "/halo/img/img--payment/vcb-logo.png";
-    domesticFront.style.backgroundImage = 'url("/halo/img/img--payment/vcb-card.png")';
-    domesticFront.style.color = "black";
-    domesticFront.style.backgroundSize = "contain";
-  }
-})
+if (inputBank != null) {
+  inputBank.addEventListener("input", function(){
+    if (inputBank.value == "BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)") {
+      brandImg.src = "/halo/img/img--payment/bidv-logo-min.png";
+      domesticFront.style.backgroundImage = 'url("/halo/img/img--payment/digital-data.jpg")';
+      domesticFront.style.color = "white";
+      domesticFront.style.backgroundSize = "cover";
+    } else {
+      brandImg.src = "/halo/img/img--payment/vcb-logo.png";
+      domesticFront.style.backgroundImage = 'url("/halo/img/img--payment/vcb-card.png")';
+      domesticFront.style.color = "black";
+      domesticFront.style.backgroundSize = "contain";
+    }
+  })
+}
+
+
 
 //Gán sự kiện cho input số thẻ
 //event: khi nhập input số thẻ (domestic = [1], visa = [5]), 
-for (let i = 1; i < inputValue.length; i+=4) {
-  inputValue[i].addEventListener("input", function(){
-    //sẽ update lên display (-1 tương ứng vì bank không có display)
-    displayValue[i-1].innerText =
-    //dưới dạng: mỗi 4 số lại có dấu cách
-    inputValue[i].value.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
-  });
-}
+if (inputValue.length != 0 ) {
+  for (let i = 1; i < inputValue.length; i+=4) {
+    inputValue[i].addEventListener("input", function(){
+      //sẽ update lên display (-1 tương ứng vì bank không có display)
+      displayValue[i-1].innerText =
+      //dưới dạng: mỗi 4 số lại có dấu cách
+      inputValue[i].value.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+    });
+  }
 
-//Gán sự kiện cho các input khác
-//loop: mọi ô input (trừ bank =[0], domestic = [1], visa = [5])
-let notNumOrBank = [2, 3, 4, 6, 7, 8, 9]
-for (let i = 0; i < notNumOrBank.length; i++) {
-  //event: khi nhập input
-  inputValue[notNumOrBank[i]].addEventListener("input", function() {
-  //sẽ update lên display
-  displayValue[notNumOrBank[i]-1].innerHTML = inputValue[notNumOrBank[i]].value.toUpperCase();
-  })
+  //Gán sự kiện cho các input khác
+  //loop: mọi ô input (trừ bank =[0], domestic = [1], visa = [5])
+  let notNumOrBank = [2, 3, 4, 6, 7, 8, 9]
+  for (let i = 0; i < notNumOrBank.length; i++) {
+    //event: khi nhập input
+    inputValue[notNumOrBank[i]].addEventListener("input", function() {
+    //sẽ update lên display
+    displayValue[notNumOrBank[i]-1].innerHTML = inputValue[notNumOrBank[i]].value.toUpperCase();
+    })
+  }
 }
 
 
@@ -521,15 +533,19 @@ $(document).ready(function(){
 /* 
 ------------------------- scroll to method ------------------------- 
 */
-let test = document.querySelector(".payment__toggler");
-test.addEventListener("click", function(){
-  setTimeout(function(){
-    window.scrollTo({
-      top: 800,
-      behavior: 'smooth'
-    });
-  }, 150)
-})
+let methodToggler = document.querySelector(".payment__toggler");
+
+if (methodToggler != null) {
+  methodToggler.addEventListener("click", function(){
+    setTimeout(function(){
+      window.scrollTo({
+        top: 800,
+        behavior: 'smooth'
+      });
+    }, 150)
+  })
+}
+
 /* 
 ------------------------- hết scroll to method ------------------------- 
 */

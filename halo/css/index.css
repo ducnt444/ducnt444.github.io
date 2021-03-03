@@ -225,7 +225,9 @@ Carousel map:
 }
 
 .specials h3 {
-  margin: 10px 0px 50px 0px;
+  margin: 20px 0px 50px 0px;
+  line-height: 30px;
+  font-size: 18px;
 }
 
 .policy {
@@ -261,7 +263,8 @@ Carousel map:
 }
 
 .promo-item {
-  margin-bottom: 25px;
+  margin: 0px auto 25px auto;
+  max-width: 450px;
 }
 /* ---------- kết thúc promo styles ----------*/
 
@@ -310,7 +313,7 @@ Carousel map:
 
 /* ---------- connection styles ----------*/
 .connection__form {
-  margin: 10px auto 30px auto;
+  margin: 20px auto 40px auto;
   max-width: 400px;
 }
 
@@ -327,6 +330,7 @@ Carousel map:
   width: 160px;
   margin-top: 10px;
 }
+
 .socials__item {
   width: 40px;
   height: 40px;
@@ -335,7 +339,20 @@ Carousel map:
 .socials__item img {
   border-radius: 8px;
 }
+
+.connection__submit-btn {
+  width: 60px;
+  margin: 0px;
+}
+
 /* ---------- kết thúc connection styles ----------*/
+
+/* @media only screen and (min-width: 414px) {
+  .connection__input {
+    margin-right: 0px;
+  }
+  
+} */
 
 @media only screen and (min-width: 576px) {
 /* --------------- update fonts --------------- */
@@ -417,6 +434,10 @@ Carousel map:
   .review-item h2 {
     font-size: 16px;
   }
+
+  .policy__text {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 700px) {
@@ -437,7 +458,7 @@ Carousel map:
   /* ---------- update height ---------- */
 
   #main-carousel {  
-    height: 630px;  /* fix height: màn 625px - 50px nav + p-top 50px) */
+    height: 580px;  /* fix height: màn 625px - 50px nav + p-top 50px) */
   }
 
   .carousel-inner, 
@@ -689,8 +710,9 @@ Carousel map:
     order: 2;
   }
 
-  .policy__text {
-    font-size: 17px;
+  .promo-item {
+    margin: 0px auto 30px auto;
+    max-width: 33.33333%;
   }
 
   .connection__submit-btn {
@@ -731,6 +753,15 @@ Carousel map:
   
   .carousel-control-next {
     right: calc(50vw - 570px);
+  }
+
+  .connection__form {
+    margin: 25px auto 50px auto;
+  }
+
+  .brands__img {
+    justify-content: space-between;
+    max-width: 900px;
   }
 }
 

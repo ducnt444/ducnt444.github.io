@@ -160,6 +160,12 @@ block content
 
               #visa-master-card.method__content.collapse(data-parent="#methods-selection")
                 include parts/visa-master-card.pug
+
+              .method__toggler(data-toggle="collapse" data-target="#cod") 
+                input(type="radio" name="payment-method", id="cod-radio" form="methods-selection")
+                label(for="cod-radio") Thanh toán khi nhận hàng (COD)
+
+              a#cod.method__content.collapse.btn.btn--confirmation.payment__toggler(href="#" data-parent="#methods-selection") Xác nhận
          
 
 
