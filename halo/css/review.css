@@ -1,13 +1,63 @@
 
+
+section {
+  padding: 25px 0px;
+}
+
 .nav-item:nth-child(4) a {
   padding-bottom: 0px !important;
   border-bottom: 2px solid white;
 }
 
 .review__main-banner {
-  background-image: url(/halo/img/img--review/review-banner.png);
+  background-image: url(/halo/img/img--review/review-banner-2.png);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 200px;
+  height: 30vh;
+}
+
+.main-banner__logo {
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.75));
+  width: 60%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.main-banner__text {
+  width: 45%;
+  max-width: 350px;
+}
+
+#sub-banner-area--min 
+
+
+
+.review__sub-banner--big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  font-size: 18px;
+  width: 100%;
+  height: calc(100vw / 2.2);
+  background-image: url(/halo/img/img--review/review-sub-banner-big.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.review__sub-banner--small {
+  display: block;
+}
+
+.review__sub-banner--big,
+.review__sub-banner--small {
+  margin-bottom: 15px;
 }

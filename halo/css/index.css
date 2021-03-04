@@ -291,6 +291,7 @@ Carousel map:
 
 .review-item__content {
   padding: 5px 10px;
+  width: 65%;
 }
 
 .review h1 {
@@ -299,17 +300,15 @@ Carousel map:
 
 .review-item h2 {
   text-align: start;
-  font-size: 13px;
+  font-size: 14px;
 }
 
-.review-item .subtext {
-  width: fit-content;
-  margin-top: 5px;
+.subtext {
   font-size: 9px;
 }
 
 .review-preview {
-  font-size: 12px; 
+  display: none; 
 }
 
 /* ---------- kết thúc review styles ----------*/
@@ -338,6 +337,8 @@ Carousel map:
 .socials__item {
   width: 40px;
   height: 40px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.20);
+  border-radius: 8px;
 }
 
 .socials__item img {
@@ -351,12 +352,21 @@ Carousel map:
 
 /* ---------- kết thúc connection styles ----------*/
 
-/* @media only screen and (min-width: 414px) {
-  .connection__input {
-    margin-right: 0px;
+@media only screen and (min-width: 375px) {
+  .review-preview {
+    display: block; 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    margin-top: 10px;
+    height: 35px;
   }
-  
-} */
+}
+
+@media only screen and (min-width: 414px) {
+  .review-item__content {
+    padding: 3%;
+  }
+}
 
 @media only screen and (min-width: 576px) {
 /* --------------- update fonts --------------- */
@@ -437,18 +447,24 @@ Carousel map:
 
   .review-item h2 {
     font-size: 16px;
+    margin-bottom: 5px;
   }
 
   .policy__text {
     font-size: 17px;
   }
+
+  .review-preview {
+    font-size: 12px; 
+  }
 }
 
-@media only screen and (min-width: 700px) {
+/* @media only screen and (min-width: 700px) {
   .review-item__content {
     padding: 20px 25px;
   }
 }
+ */
 
 @media only screen and (min-width: 768px) {
   /*--------------- update fonts ---------------*/
@@ -723,6 +739,15 @@ Carousel map:
     margin: 0px;
   }
 
+  .subtext {
+    font-size: 12px;
+  }
+
+  .review-preview {
+    font-size: 14px; 
+    height: 40px;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -751,12 +776,26 @@ Carousel map:
 }
 
 @media only screen and (min-width: 1200px) {
+
+  .btn,
+  h3 {
+    font-size: 18px;
+  } 
+
   .carousel-control-prev {
     left: calc(50vw - 570px);
   }
   
   .carousel-control-next {
     right: calc(50vw - 570px);
+  }
+
+  .special h1, .promo h1, .review h1 {
+    margin-bottom: 35px !important;
+  }
+
+  .promo__collection {
+    padding: 0px 0px 20px 0px;
   }
 
   .connection__form {
@@ -766,6 +805,29 @@ Carousel map:
   .brands__img {
     justify-content: space-between;
     max-width: 900px;
+  }
+
+  .review-item {
+    border: 2px solid white;
+    border-radius: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .review-item__img {
+    border-radius: 16px 0px 0px 16px;
+  }
+
+  .subtext {
+    font-size: 13px;
+  }
+
+  .review-preview {
+    font-size: 15px; 
+    height: 45px;
+  }
+
+  .review .btn {
+    margin-top: 50px;
   }
 }
 

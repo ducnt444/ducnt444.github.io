@@ -9,6 +9,55 @@ block title
 
 block content
   .review__main-banner
+    img.main-banner__logo(src="img/img--misc/logo-white.png", alt="")
+    img.main-banner__text(src="img/img--review/banner-text.png", alt="")
 
-  section.review__sub-banner 
-    a
+  section
+    #sub-banner-area--min.carousel.slide.display-till-md(data-ride='carousel' data-touch='true')
+
+      ul.carousel-indicators
+        li.active(data-target='#sub-banner-area--min' data-slide-to='0')
+        li(data-target='#sub-banner-area--min' data-slide-to='1')
+        li(data-target='#sub-banner-area--min' data-slide-to='2')
+        
+      .carousel-inner
+        .carousel-item.active
+          img(src='/halo/img/img--review/sub-banner-big--min.jpg' alt='')
+          .carousel-caption
+            h3 Nikon Z7 Review: 
+            p Canh bạc cho tương lai của Nikon
+        .carousel-item
+          img(src='img/img--review/review-sub-banner-1.png' alt='')
+        .carousel-item
+          img(src='img/img--review/review-sub-banner-2.png' alt='')
+            
+      a.carousel-control-prev(href='#sub-banner-area--min' data-slide='prev')
+        span.carousel-control-prev-icon
+      a.carousel-control-next(href='#sub-banner-area--min' data-slide='next')
+        span.carousel-control-next-icon
+
+
+  section#sub-banner-area--max.hidden-till-md
+    a.review__sub-banner--big(href="#")
+      span Nikon Z7 Review: 
+      span Canh bạc cho tương lai của Nikon
+
+    a.review__sub-banner--small(href="")
+      img(src="img/img--review/review-sub-banner-1.png", alt="") 
+
+    a.review__sub-banner--small(href="")
+      img(src="img/img--review/review-sub-banner-2.png", alt="") 
+    
+  section.review__sub-banner-area.review.hidden-till-md
+
+    a.review__sub-banner--big(href="#")
+      span Nikon Z7 Review: 
+      span Canh bạc cho tương lai của Nikon
+
+    .review__sub-banner--small-area 
+      a.review__sub-banner--small(href="")
+        img(src="img/img--review/review-sub-banner-1.png", alt="") 
+
+      a.review__sub-banner--small(href="")
+        img(src="img/img--review/review-sub-banner-2.png", alt="") 
+    

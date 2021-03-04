@@ -733,10 +733,6 @@ footer {
     padding: 0px 30px !important;
   }
 
-  .review-item .subtext {
-    font-size: 12px;
-  }
-
   .main-carousel__text:last-of-type,
   .connection__text,
   .footer__link {
@@ -855,11 +851,6 @@ footer {
     line-height: 30px;
   }
 
-  .seemore-btn {
-    width: 120px;
-    line-height: 25px;
-  }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -913,6 +904,10 @@ footer {
     padding-bottom: 100px;
   }
 
+  .seemore-btn {
+    width: 140px;
+  }
+
   .search-bar {  /*search box + search btn + cancel btn*/
     padding: 10px 0px; /*bỏ padding 2 bên khi MAX*/
   }
@@ -941,4 +936,40 @@ footer {
     line-height: 60px;
   }
 
+  #logreg .modal-dialog {
+    max-width: 320px;
+  }
+
+  .logreg__logo {
+    height: 35px;
+  }
+
+  #logreg .modal-header .close {
+    font-size: 35px;
+    margin: 5px 13px 0px auto;
+    height: 35px;
+  }
+
+  #logreg .modal-body {
+    padding: 20px 25px !important;
+    font-size: 14px;
+  }
+
+  .logreg__platform {
+    display: flex;
+    height: 40px;
+    width: 150px;
+    margin: 10px 0px 10px 0px;
+    align-items: flex-end;
+  }
+
+  .platform__link {
+    width: 35px;
+  }
+
+  #logreg .modal-footer {
+    padding: 0px 0px 20px 0px;
+    font-size: 14px;
+  }
+  
 }

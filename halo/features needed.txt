@@ -8,6 +8,10 @@ nút ẩn hiện password
 đếm số comment
 reply feature
 dóng hàng 
+layout term
+layout slick mobile
+filter simulator
+
 
 
 //event: khi nhập input số thẻ, 
