@@ -353,9 +353,6 @@ for (let i = 0; i < removeItemBtn.length; i++) {
 */
 
 
-
-
-
 /* 
 -------------------- summary invoice -------------------- 
 */
@@ -382,11 +379,9 @@ if (inputCoupon != null) {
 
 /* ---------- hết live invoice ---------- */
 
-
 /* 
 -------------------- hết summary invoice -------------------- 
 */
-
 
 
 /* 
@@ -409,7 +404,7 @@ if (inputCVV != null) {
 }
 
 /* ---------- quay thẻ ra trước ---------- */
-//Xác định các input sẽ khiến thẻ quay ra trước (mọi input trừ CVV)
+//Xác định các input sẽ khiến thẻ quay ra trước (mọi input trừ CVV, dùng class .front-input để phân biệt)
 let frontInput = document.querySelectorAll("#visa-master-card .front-input");
 
 //loop lên mọi ô input front 
