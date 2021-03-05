@@ -391,11 +391,11 @@ if (inputCoupon != null) {
 /* --------------- quay thẻ trước sau --------------- */
 
 /* ---------- quay thẻ ra sau ---------- */
-//xác định ô input CVV
 
+//xác định ô input CVV (focus ô này sẽ quay thẻ ra sau)
 let inputCVV = document.getElementById("visa-master-input__cvv");
 //event: khi focus ô input CVV (bấm vào, chưa cần type)
-if (inputCVV != null) {
+if (inputCVV != null) { //chống lỗi
   inputCVV.addEventListener("focus", function(){
     //quay thẻ ra sau
     document.querySelectorAll(".payment-card__content")[1].style.transform = "rotateY(180deg)";
@@ -404,7 +404,8 @@ if (inputCVV != null) {
 }
 
 /* ---------- quay thẻ ra trước ---------- */
-//Xác định các input sẽ khiến thẻ quay ra trước (mọi input trừ CVV, dùng class .front-input để phân biệt)
+
+//Xác định các input khác CVV (focus các ô này sẽ khiến thẻ quay ra trước, dùng class .front-input để phân biệt)
 let frontInput = document.querySelectorAll("#visa-master-card .front-input");
 
 //loop lên mọi ô input front 

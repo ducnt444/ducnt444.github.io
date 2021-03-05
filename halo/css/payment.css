@@ -74,6 +74,7 @@ section {
 .faq__item {
   border-bottom: 1px solid black;
   padding: 5px 0px;
+  cursor: pointer;
 }
 
 .faq__item--question {

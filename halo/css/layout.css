@@ -521,6 +521,10 @@ Map: chung -> cart -> search bar -> search min -> search btn
   padding: 0px 10px;
 }
 
+.search-bar .search-btn {
+  padding: 0px 15px;
+}
+
 .search-area:focus {
   outline: none;
 }
@@ -916,6 +920,14 @@ footer {
   .nav-link {   /* xóa padding 2 bên các item để căn chuẩn */
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+
+  .nav-item:nth-child(-n+4) {
+    font-size: 20px;
+  }
+
+  .log-max {
+    font-size: 18px;
   }
 
   .nav-item:nth-child(6) {   /* giãn cách lại search với cart*/
