@@ -906,6 +906,7 @@ footer {
 
   .seemore-btn {
     width: 140px;
+    font-size: 16px;
   }
 
   .search-bar {  /*search box + search btn + cancel btn*/

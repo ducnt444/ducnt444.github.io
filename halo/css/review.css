@@ -1,7 +1,6 @@
 
-
 section {
-  padding: 25px 0px;
+  padding: 20px 0px;
 }
 
 .nav-item:nth-child(4) a {
@@ -25,39 +24,221 @@ section {
 .main-banner__logo {
   filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.75));
   width: 60%;
-  max-width: 350px;
+  max-width: 300px;
   margin-bottom: 20px;
 }
 
 .main-banner__text {
   width: 45%;
-  max-width: 350px;
+  max-width: 250px;
 }
 
-#sub-banner-area--min 
-
-
-
-.review__sub-banner--big {
+/* -------------------- .review__post -------------------- */
+.review__post {
+  margin-bottom: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
   flex-direction: column;
-  font-size: 18px;
-  width: 100%;
-  height: calc(100vw / 2.2);
-  background-image: url(/halo/img/img--review/review-sub-banner-big.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
 }
 
-.review__sub-banner--small {
+.review__post * {
   display: block;
 }
 
-.review__sub-banner--big,
-.review__sub-banner--small {
-  margin-bottom: 15px;
+.review__post--img {
+  margin-bottom: 5px ;
+}
+
+.post__subtext {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.post__preview {
+  font-size: 14px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  main {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 0px 0px 50px 0px;
+  }
+
+  .review__main-banner {
+    margin-bottom: 50px;
+  }
+
+  #sub-banner-area--max {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  #sub-banner-area--max a {
+    transition: all 0.3s;
+  }
+
+  #sub-banner-area--max a:hover {
+    transform: scale(1.015);
+  }
+
+  .review__sub-banner--big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    width: 70%;
+    height: calc((100vw - 60px)/3.65 + 15px);
+    margin-right: 20px;
+    border-radius: 8px;
+    background-image: url(/halo/img/img--review/review-sub-banner-big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+
+  .review__sub-banner--big:hover {
+    color: white;
+  }
+
+  .review__sub-banner--small-area {
+    width: 30%;
+  }
+  
+  .review__sub-banner--small {
+    display: block;
+  }
+
+  .review__sub-banner--small:first-child {
+    margin-bottom: 20px;
+  }
+
+  .review__sub-banner--small img {
+    border-radius: 8px;
+  }
+
+  .main-area {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .review__post-area {
+    width: 70%;
+    margin-right: 20px;
+  }
+
+  .post__subtext {
+    margin: 5px 0px 15px 0px;
+  }
+
+  .post__preview {
+    font-size: 16px;
+  }
+
+  .review__aside-area{
+    width: 30%;
+    background-color: #F2F2F2;
+  }
+
+  .aside__header {
+    background-color: #C4C4C4;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 15px;
+  }
+
+  .aside__post {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .aside__post--img {
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .review__post {
+    flex-direction: row;
+  }
+  
+  .review__post:hover .post__header,
+  .aside__post:hover .aside__post--header {
+    color:rgb(45, 156, 221);
+  }
+
+  .review__post--img {
+    height: 100px;
+    border-radius: 8px;
+  }
+
+  .review__post--content {
+    padding-left: 15px;
+  }
+
+  .post__preview {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    height: 24px;
+  }
+
+  .aside__post--img {
+    margin-bottom: 10px;
+  }
+
+  .review__post {
+    transition: all 0.3s;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .review__main-banner {
+    min-height: 250px;
+    max-height: 300px;
+  }
+
+  .review__sub-banner--big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 28px;
+    width: 75%;
+    height: calc(1140px/4.35 + 15px);
+    background-position: left;
+  }
+
+  .review__post--img {
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .review__post-area {
+    width: 75%;
+  }
+
+  .review__sub-banner--small-area,
+  .review__aside-area {
+    width: 25%;
+  }
+
+  .post__subtext {
+    margin: 5px 0px 25px 0px;
+  }
+
+  .post__preview {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    height: 48px;
+  }
+
+
+
 }
