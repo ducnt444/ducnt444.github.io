@@ -1,9 +1,4 @@
 
-.nav-item:first-child a {
-  padding-bottom: 0px !important;
-  border-bottom: 2px solid white;
-}
-
 /* -------------------- display-area -------------------- */
 .dslr-hub__display-area {
   padding-top: 15px;
@@ -242,6 +237,11 @@
   main {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .nav-item:first-child a {
+    padding-bottom: 0px !important;
+    border-bottom: 2px solid white;
   }
 
   .dslr-hub__display-area {

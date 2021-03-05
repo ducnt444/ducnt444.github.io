@@ -11,6 +11,8 @@ dóng hàng
 layout term
 layout slick mobile
 filter simulator
+nút chat
+nút cuộn
 
 
 

@@ -558,9 +558,26 @@ if (methodToggler != null) {
 
 
 
-
-
-
+/* 
+------------------------- infinite review ------------------------- 
+*/
+let reviewOriginal = document.querySelector(".review__post-collection");
+let seeMoreReviewBtn = document.querySelector(".review__post-area .btn");
+let reviewArea = document.querySelector(".review__post-area");
+if (reviewOriginal) {
+  seeMoreReviewBtn.addEventListener("click", function() {
+    let loadingIndicator = document.querySelector(".loading-indicator");
+    loadingIndicator.style.display = "flex";
+    setTimeout(() => {
+      loadingIndicator.style.display = "none";
+      let reviewClone = reviewOriginal.cloneNode(true);
+      reviewArea.insertBefore(reviewClone, loadingIndicator);
+    }, 1000);
+  })
+}
+/* 
+------------------------- hết infinite review ------------------------- 
+*/
 
 
 /* test timer banner

@@ -11,7 +11,7 @@ header
       #collapsibleNavbar.collapse.navbar-collapse
         .search-bar-till-md
           input.search-area(type="text" placeholder="Tìm kiếm...")
-          button.btn.search-btn
+          a.btn.search-btn(href="search-result.html")
             <i class="fas fa-search"></i>
 
         ul.navbar-nav
@@ -36,7 +36,7 @@ header
 
       .search-bar.hidden-till-md
         input.search-area(type="text" placeholder="Tìm kiếm...")
-        button.btn.search-btn
+        a.btn.search-btn(href="#search-result.html")
           <i class="fas fa-search"></i>
         button.btn.search-cancel.d-flex.align-items-center.justify-content-center(onclick="searchBarToggler()")
           <i class="fas fa-times"></i>

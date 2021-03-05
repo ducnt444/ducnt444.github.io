@@ -3,11 +3,6 @@ section {
   padding: 20px 0px;
 }
 
-.nav-item:nth-child(4) a {
-  padding-bottom: 0px !important;
-  border-bottom: 2px solid white;
-}
-
 .review__main-banner {
   background-image: url(/halo/img/img--review/review-banner-2.png);
   background-repeat: no-repeat;
@@ -24,13 +19,13 @@ section {
 .main-banner__logo {
   filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.75));
   width: 60%;
-  max-width: 300px;
+  max-width: 270px;
   margin-bottom: 20px;
 }
 
 .main-banner__text {
   width: 45%;
-  max-width: 250px;
+  max-width: 220px;
 }
 
 /* -------------------- .review__post -------------------- */
@@ -55,6 +50,13 @@ section {
 
 .post__preview {
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  height: 42px;
+}
+
+.loading-indicator {
+  display: none;
 }
 
 
@@ -65,6 +67,11 @@ section {
 
   section {
     padding: 0px 0px 50px 0px;
+  }
+
+  .nav-item:nth-child(4) a {
+    padding-bottom: 0px !important;
+    border-bottom: 2px solid white;
   }
 
   .review__main-banner {
@@ -132,9 +139,28 @@ section {
     margin-right: 20px;
   }
 
-  .post__subtext {
-    margin: 5px 0px 15px 0px;
+  
+  .review__post {
+    flex-direction: row;
   }
+  
+  .review__post--img {
+    height: 100px;
+    border-radius: 8px;
+  }
+
+  .review__post--content {
+    padding-left: 15px;
+  }
+
+  .post__header {
+    font-size: 20px;
+  }
+
+  .post__preview {
+    height: 24px;
+  }
+
 
   .post__preview {
     font-size: 16px;
@@ -164,36 +190,22 @@ section {
 }
 
 @media only screen and (min-width: 992px) {
-  .review__post {
-    flex-direction: row;
-  }
-  
   .review__post:hover .post__header,
   .aside__post:hover .aside__post--header {
     color:rgb(45, 156, 221);
   }
 
-  .review__post--img {
-    height: 100px;
-    border-radius: 8px;
+  .review__post {
+    transition: all 0.3s;
+    flex-direction: row;
   }
 
-  .review__post--content {
-    padding-left: 15px;
-  }
-
-  .post__preview {
-    text-overflow: ellipsis;
-    overflow: hidden; 
-    height: 24px;
+  .post__subtext {
+    margin: 5px 0px 15px 0px;
   }
 
   .aside__post--img {
     margin-bottom: 10px;
-  }
-
-  .review__post {
-    transition: all 0.3s;
   }
 
 }
@@ -234,8 +246,6 @@ section {
   }
 
   .post__preview {
-    text-overflow: ellipsis;
-    overflow: hidden; 
     height: 48px;
   }
 
