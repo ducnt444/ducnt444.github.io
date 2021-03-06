@@ -521,10 +521,6 @@ Map: chung -> cart -> search bar -> search min -> search btn
   padding: 0px 10px;
 }
 
-.search-bar .search-btn {
-  padding: 0px 15px;
-}
-
 .search-area:focus {
   outline: none;
 }
@@ -874,6 +870,10 @@ footer {
 
   .cart-icon {
     margin: 0px 30px !important;
+  }
+
+  .search-bar .search-btn {
+    padding: 0px 15px;
   }
 
   .log-max {   /* giãn cách menu thông qua log-reg */

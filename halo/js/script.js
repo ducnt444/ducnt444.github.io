@@ -112,7 +112,7 @@ function logregSwitch() {
 ------------------------- search result 
 ------------------------- 
 */
-let searchInput = document.querySelector(".search-area-full");
+/* let searchInput = document.querySelector(".search-area-full");
 let searchResult = document.querySelector(".search__result");
 let searchBtn = document.querySelectorAll(".search-btn");
 searchResult.innerText = searchInput.value;
@@ -123,7 +123,7 @@ if (searchResult) {
       searchResult.innerText = searchInput.value;
     })
   }
-}
+} */
 
 /* 
 ------------------------- hết search result 
