@@ -74,6 +74,7 @@
   border-radius: 8px;
   border: 1px solid #bbbbbb;
   margin: 10px 5px;
+  justify-content: flex-end;
 }
 
 .item:hover,
