@@ -1,3 +1,4 @@
+//slick
 $(document).ready(function(){
   $('.slider-row').slick({
     slidesToShow: 4,
@@ -37,9 +38,10 @@ $(document).ready(function(){
 });
 
 
-/* 
-------------------------- search bar toggler ------------------------- 
-*/
+
+/* ------------------------- 
+------------------------- search bar toggler ------------------------- */
+
 let searchBarStatus = 0;
 
 function searchBarToggler() {
@@ -105,6 +107,28 @@ function logregSwitch() {
 */
 
 
+/* 
+------------------------- 
+------------------------- search result 
+------------------------- 
+*/
+let searchInput = document.querySelector(".search-area-full");
+let searchResult = document.querySelector(".search__result");
+let searchBtn = document.querySelectorAll(".search-btn");
+searchResult.innerText = searchInput.value;
+
+if (searchResult) {
+  for (let i = 0; i < searchBtn.length; i+=2) {
+    searchBtn[i].addEventListener("click", function(){
+      searchResult.innerText = searchInput.value;
+    })
+  }
+}
+
+/* 
+------------------------- hết search result 
+------------------------- 
+*/
 
 /* 
 ------------------------- swap detail image ------------------------- 

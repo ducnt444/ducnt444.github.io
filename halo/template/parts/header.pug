@@ -9,6 +9,7 @@ header
         img.header__logo(src="img/img--misc/logo-white.png", alt="")
 
       #collapsibleNavbar.collapse.navbar-collapse
+
         .search-bar-till-md
           input.search-area(type="text" placeholder="Tìm kiếm...")
           a.btn.search-btn(href="search-result.html")
@@ -35,7 +36,7 @@ header
 
 
       .search-bar.hidden-till-md
-        input.search-area(type="text" placeholder="Tìm kiếm...")
+        input.search-area.search-area-full(type="text" placeholder="Tìm kiếm...")
         a.btn.search-btn(href="search-result.html")
           <i class="fas fa-search"></i>
         button.btn.search-cancel.d-flex.align-items-center.justify-content-center(onclick="searchBarToggler()")
