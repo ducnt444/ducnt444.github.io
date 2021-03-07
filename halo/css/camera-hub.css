@@ -238,6 +238,10 @@ section {
     border-bottom: 2px solid white;
   }
 
+  section:not(:last-child) {
+    padding-bottom: 0px;
+  }
+
   /* --------------- banner-full --------------- */
   .portal {
     position: relative;
@@ -358,6 +362,10 @@ section {
   }
 
   /* ---------- hết update card (hub) styles ---------- */
+
+  .hub-row__banner {
+    margin-top: 30px;
+  }
 
 }
 

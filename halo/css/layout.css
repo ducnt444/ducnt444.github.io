@@ -401,11 +401,15 @@ h1, h2 {
   line-height: 16px;
   padding: 5px 10px;
 }
-/* -------------------- kết thúc buttons  -------------------- */
+/* -------------------- 
+kết thúc buttons  
+-------------------- */
 
 
 
-/* -------------------- navbar styles -------------------- */
+/* -------------------- 
+navbar styles 
+-------------------- */
 
 /* chung -> toggler -> brand -> l-c-s -> menu */
 
@@ -560,11 +564,15 @@ Map: chung -> cart -> search bar -> search min -> search btn
   flex-grow: unset;
 }
 
-/* -------------------- kết thúc nav styles -------------------- */
+/* --------------------
+ kết thúc nav styles 
+ -------------------- */
 
 
 
-/* --------------------  footer styles -------------------- */
+/* --------------------
+ footer styles 
+ -------------------- */
 
 footer {
   padding: 30px 0px;
@@ -583,11 +591,15 @@ footer {
 .copyright {
   margin-top: 20px;
 }
-/* -------------------- kết thúc footer styles -------------------- */
+/* --------------------
+ kết thúc footer styles 
+ -------------------- */
 
 
 
-/* -------------------- logreg styles -------------------- */
+/* --------------------
+ logreg styles 
+ -------------------- */
 
 #logreg .modal-dialog {
   max-width: 290px;
@@ -706,8 +718,27 @@ footer {
   display: none;
 }
 
+/* --------------------
+ hết logreg styles 
+ -------------------- */
 
-/* -------------------- media queries -------------------- */
+
+/* --------------------
+ utilities buttons group
+ -------------------- */
+
+/* ---------- scroll up btn ---------- */
+
+/* ---------- hết scroll up btn ---------- */
+
+/* --------------------
+ hết utilities buttons group
+ -------------------- */
+
+
+/* --------------------
+ media queries 
+ -------------------- */
 
 @media only screen and (min-width: 576px) {
 

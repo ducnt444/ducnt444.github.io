@@ -14,6 +14,25 @@
     <title>Máy Ảnh</title>
   </head>
   <body>
+    <!-- Load Facebook SDK for JavaScript-->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+      FB.init({
+      xfbml            : true,
+      version          : 'v10.0'
+      });
+      };
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your Chat Plugin code-->
+    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
@@ -170,7 +189,7 @@
               <p class="card-text sale-text font-weight-bold"><span class="old-price">138.090.000đ</span><span class="sale-badge"><img src="img/img--misc/badge--sale.png" alt=""></span><span class="sale-amount font-italic">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn" href="details.html">Xem chi tiết </a>
             </div>
           </div>
-        </div><a class="btn btn--dark hub-row__btn" href="#">Xem toàn bộ </a>
+        </div><a class="btn btn--dark hub-row__btn" href="#">Xem toàn bộ </a><img class="hub-row__banner hidden-till-md" src="img/img--camera-hub/camera-hub-banner-1.jpg" alt="">
       </section>
       <section class="hub-row hub-row--hot container-xl">
         <h1 class="section__header">BÁN CHẠY</h1>
@@ -210,7 +229,7 @@
               <p class="card-text sale-text font-weight-bold"><span class="old-price">138.090.000đ</span><span class="sale-badge"><img src="img/img--misc/badge--sale.png" alt=""></span><span class="sale-amount font-italic">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn" href="details.html">Xem chi tiết </a>
             </div>
           </div>
-        </div><a class="btn btn--dark hub-row__btn" href="#">Xem toàn bộ </a>
+        </div><a class="btn btn--dark hub-row__btn" href="#">Xem toàn bộ </a><img class="hub-row__banner hidden-till-md" src="img/img--camera-hub/camera-hub-banner-2.jpg" alt="">
       </section>
       <section class="hub-row hub-row--love container-xl">
         <h1 class="section__header">ĐÁNH GIÁ TỐT</h1>
@@ -250,7 +269,7 @@
               <p class="card-text sale-text font-weight-bold"><span class="old-price">138.090.000đ</span><span class="sale-badge"><img src="img/img--misc/badge--sale.png" alt=""></span><span class="sale-amount font-italic">(Giảm 8.000.000đ)</span></p><a class="btn btn--dark seemore-btn" href="details.html">Xem chi tiết </a>
             </div>
           </div>
-        </div><a class="btn btn--dark hub-row__btn" href="#">Xem toàn bộ </a>
+        </div><a class="btn btn--dark hub-row__btn" href="#">Xem toàn bộ </a><img class="hub-row__banner hidden-till-md" src="img/img--camera-hub/camera-hub-banner-3.jpg" alt="">
       </section>
     </main>
     <footer class="dark-side" id="footer"> 
