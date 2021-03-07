@@ -730,8 +730,8 @@ footer {
 /* ---------- scroll up btn ---------- */
 .utilities-btn-group {
   position: fixed;
-  bottom: 120px;
-  right: 12px;
+  bottom: 100px;
+  right: 24px;
   width: 60px;
   z-index: 1000;
 }
