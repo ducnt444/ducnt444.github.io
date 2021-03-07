@@ -777,6 +777,11 @@ Carousel map:
 
 @media only screen and (min-width: 1200px) {
 
+  .banner-1 {
+    background-image: url('../img/img--carousel/banner-bg-1-max.jpg');
+    background-position: center;
+  }
+
   .btn,
   h3 {
     font-size: 18px;

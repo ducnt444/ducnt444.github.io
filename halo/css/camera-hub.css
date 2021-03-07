@@ -271,8 +271,12 @@ section {
     height: 100%;
   }
 
+  .portal__bg--green:hover {
+    background-color: #acda9b;
+  }
+
   .portal__bg--pink {
-    background-color: #daa2da;
+    background-color: #dba8db;
     width: 50%;
     height: 100%;
   }
@@ -403,7 +407,8 @@ section {
   }
 
   .banner-full {
-    margin: 75px 0px;
+    margin: 0px;
+    padding: 75px 0px;
   }
 
   .banner-full__img {

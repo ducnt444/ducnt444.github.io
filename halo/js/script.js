@@ -37,7 +37,7 @@ $(document).ready(function(){
   });
 });
 
-
+AOS.init();
 
 /* ------------------------- 
 ------------------------- search bar toggler ------------------------- */
@@ -109,7 +109,7 @@ function logregSwitch() {
 
 /* 
 ------------------------- 
-------------------------- scroll top
+ scroll top
 ------------------------- 
 */
 
@@ -135,6 +135,40 @@ scrollTopBtn.addEventListener("click", function(){
 
 /* 
 ------------------------- hết scroll top
+------------------------- 
+*/
+
+
+/* 
+------------------------- 
+ camera-hub hover
+------------------------- 
+*/
+
+let dslrHalf = document.querySelectorAll(".dslr-half")
+
+let mrlHalf = document.querySelectorAll(".mrl-half")
+
+for (let i = 0; i < dslrHalf.length; i++) {
+  dslrHalf[i].addEventListener("mouseover", function(){
+    document.querySelector(".portal__bg--green").style.backgroundColor = "#9ad684"
+  })
+  dslrHalf[i].addEventListener("mouseout", function(){
+    document.querySelector(".portal__bg--green").style.backgroundColor = "#acda9b"
+  })
+  mrlHalf[i].addEventListener("mouseover", function(){
+    document.querySelector(".portal__bg--pink").style.backgroundColor = "#d693d6"
+  })
+  mrlHalf[i].addEventListener("mouseout", function(){
+    document.querySelector(".portal__bg--pink").style.backgroundColor = "#dba8db"
+  })
+}
+
+
+
+/* 
+------------------------- 
+ hết camera-hub hover
 ------------------------- 
 */
 

@@ -1,4 +1,26 @@
 
+.dslr-hub__banner {
+  background-image: url("/halo/img/img--dslr-hub/dslr-banner-min-v2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  padding-left: 15px;
+}
+
+.dslr-hub__banner h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.dslr-hub__banner p {
+  font-size: 20px;
+}
 /* -------------------- display-area -------------------- */
 .dslr-hub__display-area {
   padding-top: 15px;
@@ -191,6 +213,10 @@
 }
 
 @media only screen and (min-width: 576px) {
+  .dslr-hub__banner {
+    padding-left: 30px;
+  }
+
   .technical-filter--min {
     max-width: 544px;
     margin: auto;
@@ -245,12 +271,24 @@
     border-bottom: 2px solid white;
   }
 
+  .dslr-hub__banner {
+    height: 20vh;
+  }
+
+  .dslr-hub__banner h1 {
+    font-size: 70px;
+    line-height: 1;
+  }
+  
+  .dslr-hub__banner p {
+    font-size: 30px;
+  }
+
   .dslr-hub__display-area {
     display: flex;
     justify-content: space-between;
     padding: 40px 30px;
   }
-
 
   /* ---------- update aside area ---------- */
   .dslr-hub__aside-area {
@@ -443,9 +481,18 @@
 
 @media only screen and (min-width: 1200px) {
 
-/*   .dslr-hub__banner {
-    max-height: 200px;
-  } */
+  .dslr-hub__banner {
+    height: 200px;
+    padding-left: calc(50vw - 587px);
+  }
+
+  .dslr-hub__banner h1 {
+    font-size: 85px;
+  }
+  
+  .dslr-hub__banner p {
+    font-size: 40px;
+  }
 
   .dslr-hub__display-area {
     padding: 50px 0px;
