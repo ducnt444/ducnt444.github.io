@@ -1,18 +1,20 @@
 alt cho img
 gộp indicator styles vào layout.css
+review details
 fix header bug khi bật modal -> ok
 tách style trong layout
-set max length text, input
+set max length text, input -> ok
 nút clear text trong input
 nút ẩn hiện password
 đếm số comment
 reply feature
-dóng hàng 
+dóng hàng -> ok
 layout term
 layout slick mobile
 filter simulator
-nút chat
-nút cuộn
+nút chat -> ok
+nút cuộn -> ok
+
 
 
 
