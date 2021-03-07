@@ -121,9 +121,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 575 || document.documentElement.scrollTop > 575) {
-    scrollTopBtn.style.display = "flex";
+    scrollTopBtn.style.transform = "scale(1)";
   } else {
-    scrollTopBtn.style.display = "none";
+    scrollTopBtn.style.transform = "scale(0)";
   }
 }
 
