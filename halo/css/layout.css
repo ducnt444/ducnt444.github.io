@@ -733,6 +733,7 @@ footer {
   bottom: 120px;
   right: 12px;
   width: 60px;
+  z-index: 1000;
 }
 
 .scroll-up-btn {
