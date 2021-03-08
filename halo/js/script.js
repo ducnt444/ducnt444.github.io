@@ -2,45 +2,6 @@
 AOS.init();
 window.addEventListener('load', AOS.refresh);
 
-//slick
-$(document).ready(function(){
-  $('.slider-row').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    variableWidth: true,
-    autoplay: false,
-    arrows: true,
-    prevArrow: "<button type='button' class='slick-prev pull-left'><img src ='img/img--misc/prev-arrow--black.png'></button>",
-    nextArrow: "<button type='button' class='slick-next pull-right'><img src ='img/img--misc/next-arrow--black.png'></button>",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
-});
-
 /* 
 -------------------------
  search bar toggler 
@@ -208,10 +169,10 @@ for (let i = 0; i < subImgs.length; i++) {
  add to cart animation 
 ------------------------- 
 */
-function addToCartAnimation() {
+/* function addToCartAnimation() {
   let mainImgClone = mainImg.cloneNode(true);
   let detailImgArea = document.querySelector(".details__img-area");
-  detailImgArea.insertBefore(mainImgClone, mainImg.nextSibling);
+  detailImgArea.insertBefore(mainImgClone, mainImg);
   mainImgClone.style.position = "absolute";
   mainImgClone.style.top = "0px";
   mainImgClone.style.right = "calc(50% - 570px)";
@@ -219,7 +180,19 @@ function addToCartAnimation() {
 
 let addToCartBtn = document.querySelector(".summary__btn-wrapper .summary__btn:last-child");
 
-addToCartBtn.addEventListener("click", addToCartAnimation);
+addToCartBtn.addEventListener("click", addToCartAnimation); */
+
+$(document).ready(function(){
+  $(".summary__btn-wrapper .summary__btn:last-child").click(function(){
+    let detailImgArea = $(".details__img-area");
+    var mainImgClone = $(".details__main-img").clone(true).appendTo(".details__img-area");
+    mainImgClone.appendTo(".details__img-area");
+    mainImgClone[0].style.position = "absolute";
+    mainImgClone[0].style.top = "0px";
+    /* mainImgClone.animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
+/*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
+  });
+});
 /* 
 -------------------------
  hết add to cart animation 
