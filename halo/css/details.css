@@ -57,6 +57,7 @@ section {
   border-radius: 8px;
   padding: 5px;
   margin: 10px;
+  cursor: pointer;
 }
 
 /* --------------- hết.details__img-area --------------- */
