@@ -39,9 +39,19 @@ Carousel map:
   background-image: url("../img/img--misc/halo-logo-white--active.png");
 }
 
+@keyframes animatedBanner1 {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: right center;
+  }
+}
+
 .banner-1 {
   background-image: url('../img/img--carousel/banner-bg-1-min.jpg');
   background-size: cover;
+  animation: animatedBanner1 30s linear 0s infinite alternate;
 }
 
 /* .banner-1-bg {
@@ -580,14 +590,6 @@ Carousel map:
   }
 
   /* --------------- update banner 1 --------------- */
-  @keyframes animatedBanner1 {
-    from {
-      background-position: left center;
-    }
-    to {
-      background-position: right center;
-    }
-  }
 
   .banner-1 {
     animation: animatedBanner1 10s linear 0s infinite alternate;
