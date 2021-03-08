@@ -119,6 +119,7 @@
 
 .card-title {
   line-height: 18px;
+  min-height: 56px;
 }
 
 .price {
@@ -213,6 +214,10 @@
 }
 
 @media only screen and (min-width: 576px) {
+  .card-title {
+    min-height: 30px;
+  }
+  
   .dslr-hub__banner {
     padding-left: 30px;
   }

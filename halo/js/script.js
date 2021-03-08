@@ -1,6 +1,4 @@
 
-AOS.init();
-window.addEventListener('load', AOS.refresh);
 
 //slick
 $(document).ready(function(){
@@ -208,7 +206,7 @@ for (let i = 0; i < subImgs.length; i++) {
  add to cart animation 
 ------------------------- 
 */
-function addToCartAnimation() {
+/* function addToCartAnimation() {
   let mainImgClone = mainImg.cloneNode(true);
   let detailImgArea = document.querySelector(".details__img-area");
   detailImgArea.insertBefore(mainImgClone, mainImg.nextSibling);
@@ -219,8 +217,7 @@ function addToCartAnimation() {
 
 let addToCartBtn = document.querySelector(".summary__btn-wrapper .summary__btn:last-child");
 
-<<<<<<< HEAD
-addToCartBtn.addEventListener("click", addToCartAnimation); */
+addToCartBtn.addEventListener("click", addToCartAnimation); 
 
 $(document).ready(function(){
   $(".summary__btn-wrapper .summary__btn:last-child").click(function(){
@@ -231,11 +228,8 @@ $(document).ready(function(){
     mainImgClone[0].style.top = "219px";
     mainImgClone.animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow");
 /*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
-  });
-});
-=======
-addToCartBtn.addEventListener("click", addToCartAnimation);
->>>>>>> parent of 7fc8f4c (o)
+/*   });
+}); */
 /* 
 -------------------------
  hết add to cart animation 

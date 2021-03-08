@@ -147,6 +147,7 @@ section {
 
 .card-title {
   line-height: 18px;
+  min-height: 56px;
 }
 
 .price {
@@ -188,6 +189,10 @@ section {
 /* -------------------- media queries -------------------- */
 
 @media only screen and (min-width: 576px) {
+  .card-title {
+    min-height: 30px;
+  }
+  
   /* --------------- update banner-carousel --------------- */
   .banner-carousel {
     padding: 80px 0px 0px 0px;
