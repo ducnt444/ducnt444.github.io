@@ -188,8 +188,8 @@ $(document).ready(function(){
     var mainImgClone = $(".details__main-img").clone(true).appendTo(".details__img-area");
     mainImgClone.appendTo(".details__img-area");
     mainImgClone[0].style.position = "absolute";
-    mainImgClone[0].style.top = "0px";
-    /* mainImgClone.animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
+    mainImgClone[0].style.top = "219px";
+    mainImgClone.animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow");
 /*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
   });
 });
