@@ -1,3 +1,7 @@
+
+AOS.init();
+window.addEventListener('load', AOS.refresh);
+
 //slick
 $(document).ready(function(){
   $('.slider-row').slick({
@@ -36,8 +40,6 @@ $(document).ready(function(){
     ]
   });
 });
-
-AOS.init();
 
 /* ------------------------- 
 ------------------------- search bar toggler ------------------------- */
