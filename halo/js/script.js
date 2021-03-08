@@ -2,6 +2,45 @@
 AOS.init();
 window.addEventListener('load', AOS.refresh);
 
+//slick
+$(document).ready(function(){
+  $('.slider-row').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    variableWidth: true,
+    autoplay: false,
+    arrows: true,
+    prevArrow: "<button type='button' class='slick-prev pull-left'><img src ='img/img--misc/prev-arrow--black.png'></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><img src ='img/img--misc/next-arrow--black.png'></button>",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+});
+
 /* 
 -------------------------
  search bar toggler 
@@ -169,10 +208,10 @@ for (let i = 0; i < subImgs.length; i++) {
  add to cart animation 
 ------------------------- 
 */
-/* function addToCartAnimation() {
+function addToCartAnimation() {
   let mainImgClone = mainImg.cloneNode(true);
   let detailImgArea = document.querySelector(".details__img-area");
-  detailImgArea.insertBefore(mainImgClone, mainImg);
+  detailImgArea.insertBefore(mainImgClone, mainImg.nextSibling);
   mainImgClone.style.position = "absolute";
   mainImgClone.style.top = "0px";
   mainImgClone.style.right = "calc(50% - 570px)";
@@ -180,6 +219,7 @@ for (let i = 0; i < subImgs.length; i++) {
 
 let addToCartBtn = document.querySelector(".summary__btn-wrapper .summary__btn:last-child");
 
+<<<<<<< HEAD
 addToCartBtn.addEventListener("click", addToCartAnimation); */
 
 $(document).ready(function(){
@@ -193,6 +233,9 @@ $(document).ready(function(){
 /*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
   });
 });
+=======
+addToCartBtn.addEventListener("click", addToCartAnimation);
+>>>>>>> parent of 7fc8f4c (o)
 /* 
 -------------------------
  hết add to cart animation 
