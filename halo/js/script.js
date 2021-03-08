@@ -1,5 +1,6 @@
 
 AOS.init();
+window.addEventListener('load', AOS.refresh);
 
 //slick
 $(document).ready(function(){

@@ -44,6 +44,15 @@ Carousel map:
   background-size: cover;
 }
 
+/* .banner-1-bg {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  z-index: 1;
+} */
+
 .banner-2 {
   background-color: rgb(105,105,105);
   background-image: url('../img/img--carousel/banner-bg-2-2.png'), linear-gradient(180deg, rgba(105,105,105,1) 0%, rgba(48,48,48,1) 66%, rgba(0,0,0,1) 100%);
@@ -53,10 +62,10 @@ Carousel map:
 }
 
 .banner-3 {
-  background-image: url('../img/img--carousel/outer-ring.png'), url('../img/img--carousel/banner-bg-3.png');
-  background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, top;
+  background-image: url('../img/img--carousel/banner-bg-3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .carousel-caption {
@@ -161,6 +170,7 @@ Carousel map:
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1000;
 }
 
 .banner-1 .carousel-caption__img {
@@ -523,7 +533,7 @@ Carousel map:
   }
 
   .banner-3 .carousel-caption__img:nth-child(2) {
-    background-image: url("../img/img--carousel/e-mount-banner-max-center.png");
+    background-image: url("../img/img--carousel/e-mount-banner-max-center-v5.png");
   }
 
   .banner-3 .carousel-caption__img:nth-child(3) {
@@ -533,8 +543,8 @@ Carousel map:
   /* ----- update size ảnh MAX ----- */
   .banner-1 .carousel-caption__img,
   .banner-2 .carousel-caption__img { 
-    width: 370px;       /*size mới cho banner 1/2 max*/
-    height: calc(370px / 1.3877);
+    width: 350px;       /*size mới cho banner 1/2 max*/
+    height: calc(350px / 1.3877);
   }
 
   .banner-3 .carousel-caption__img {
@@ -570,6 +580,19 @@ Carousel map:
   }
 
   /* --------------- update banner 1 --------------- */
+  @keyframes animatedBanner1 {
+    from {
+      background-position: left center;
+    }
+    to {
+      background-position: right center;
+    }
+  }
+
+  .banner-1 {
+    animation: animatedBanner1 10s linear 0s infinite alternate;
+  }
+
   .banner-1 .carousel-caption__text {
     display: flex;
     flex-flow: column nowrap;
@@ -676,10 +699,42 @@ Carousel map:
   /* --------------- update banner 3 --------------- */
 
   .banner-3 {
-    background-image: url('../img/img--carousel/outer-ring-md.png'), url('../img/img--carousel/banner-bg-3.png');
-    background-size: contain, cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
+    background-image: url('../img/img--carousel/banner-bg-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @keyframes spinningRing {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes flashingRing {
+    0% {opacity: 0.1;}
+    50% {opacity: 0.3;}
+    100% {opacity: 0.1;}
+  }
+
+  @keyframes flashingRingBright {
+    0% {opacity: 0.4;}
+    50% {opacity: 1;}
+    100% {opacity: 0.4;}
+  }
+
+  .outer-ring {
+    position: absolute;
+    top: 0px;
+    right: calc(50% - 284px);
+    animation: spinningRing 60s linear 0s infinite normal, flashingRing 5s linear 0s infinite normal;
+  }
+
+  .inner-ring {
+    position: absolute;
+    width: 260px;
+    top: calc(50% - 135px);
+    right: calc(50% - 128px);
+    animation: spinningRing 30s linear 0s infinite reverse, flashingRingBright 5s linear 0s infinite normal;
   }
 
   .banner-3 .carousel-caption {
@@ -779,7 +834,9 @@ Carousel map:
 
   .banner-1 {
     background-image: url('../img/img--carousel/banner-bg-1-max.jpg');
-    background-position: center;
+    animation: animatedBanner1 30s linear 0s infinite alternate;
+    background-size: 1777px 1000px;
+    background-repeat: no-repeat;
   }
 
   .btn,
@@ -836,3 +893,11 @@ Carousel map:
   }
 }
 
+@media only screen and (min-width: 1500px) {
+
+  .banner-1 {
+    background-image: url('../img/img--carousel/banner-bg-1-max.jpg');
+    animation: animatedBanner1 30s linear 0s infinite alternate;
+    background-size: 2133px 1200px;
+    background-repeat: no-repeat;
+  }
