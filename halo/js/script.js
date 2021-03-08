@@ -1,4 +1,5 @@
 
+AOS.init();
 
 //slick
 $(document).ready(function(){

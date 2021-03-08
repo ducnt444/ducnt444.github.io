@@ -130,6 +130,10 @@ Hệ thống .container:
 
 */
 
+body {
+  overflow-x: hidden;
+}
+
 .hidden-till-md,
 .hidden-till-sm {
 /* ẩn khi màn <= 768px, sẽ đổi ở @media */  
