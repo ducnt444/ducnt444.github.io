@@ -750,7 +750,8 @@ footer {
   background-color: black;
   opacity: 0.5;
   border-radius: 50%;
-  transition: all 0.4s;
+  transition: all 0.3s;
+  transform: scale(0);
 }
 
 .scroll-up-btn i {
@@ -760,6 +761,7 @@ footer {
 
 .scroll-up-btn:hover {
   opacity: 1;
+  border-radius: 50%;
 }
 /* ---------- hết scroll up btn ---------- */
 

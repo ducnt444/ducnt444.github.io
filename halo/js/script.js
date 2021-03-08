@@ -41,8 +41,11 @@ $(document).ready(function(){
   });
 });
 
-/* ------------------------- 
-------------------------- search bar toggler ------------------------- */
+/* 
+-------------------------
+ search bar toggler 
+------------------------- 
+*/
 
 let searchBarStatus = 0;
 
@@ -59,15 +62,19 @@ function searchBarToggler() {
 }
 
 /* 
-------------------------- hết search bar toggler ------------------------- 
+-------------------------
+ hết search bar toggler 
+------------------------- 
 */
+
 
 
 
 /* 
-------------------------- login/register toggler ------------------------- 
+-------------------------
+ login/register toggler 
+------------------------- 
 */
-
 let logregStatus = "login";
 let regPart = document.getElementsByClassName("reg");
 let logPart = document.getElementsByClassName("log");
@@ -105,7 +112,9 @@ function logregSwitch() {
 }
 
 /* 
-------------------------- hết login/register toggler ------------------------- 
+-------------------------
+ hết login/register toggler 
+------------------------- 
 */
 
 
@@ -114,11 +123,10 @@ function logregSwitch() {
  scroll top
 ------------------------- 
 */
-
-//Get the button:
+//Xác định nút scroll up
 scrollTopBtn = document.querySelector(".scroll-up-btn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+//Khi scroll cách top 575 thì hiện nút scroll up
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -129,14 +137,14 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+//Scroll top khi click
 scrollTopBtn.addEventListener("click", function(){
   document.body.scrollTop = 0; // Safari
   document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
 })
-
 /* 
-------------------------- hết scroll top
+------------------------- 
+ hết scroll top
 ------------------------- 
 */
 
@@ -146,7 +154,6 @@ scrollTopBtn.addEventListener("click", function(){
  camera-hub hover
 ------------------------- 
 */
-
 let dslrHalf = document.querySelectorAll(".dslr-half")
 
 let mrlHalf = document.querySelectorAll(".mrl-half")
@@ -165,17 +172,17 @@ for (let i = 0; i < dslrHalf.length; i++) {
     document.querySelector(".portal__bg--pink").style.backgroundColor = "#dba8db"
   })
 }
-
-
-
 /* 
 ------------------------- 
  hết camera-hub hover
 ------------------------- 
 */
 
+
 /* 
-------------------------- swap detail image ------------------------- 
+-------------------------
+ swap detail image 
+------------------------- 
 */
 
 let mainImg = document.getElementsByClassName("details__main-img")[0];
@@ -190,13 +197,40 @@ for (let i = 0; i < subImgs.length; i++) {
 }
 
 /* 
-------------------------- hết swap detail image ------------------------- 
+-------------------------
+ hết swap detail image 
+------------------------- 
 */
 
 
+/* 
+-------------------------
+ add to cart animation 
+------------------------- 
+*/
+function addToCartAnimation() {
+  let mainImgClone = mainImg.cloneNode(true);
+  let detailImgArea = document.querySelector(".details__img-area");
+  detailImgArea.insertBefore(mainImgClone, mainImg.nextSibling);
+  mainImgClone.style.position = "absolute";
+  mainImgClone.style.top = "0px";
+  mainImgClone.style.right = "calc(50% - 570px)";
+}
+
+let addToCartBtn = document.querySelector(".summary__btn-wrapper .summary__btn:last-child");
+
+addToCartBtn.addEventListener("click", addToCartAnimation);
+/* 
+-------------------------
+ hết add to cart animation 
+------------------------- 
+*/
+
 
 /* 
-------------------------- .main-info__toggler-indicator ------------------------- 
+------------------------- 
+.main-info__toggler-indicator 
+------------------------- 
 */
 let mainInfoToggler = document.getElementsByClassName("main-info__toggler");
 
@@ -222,13 +256,16 @@ for (let i = 1; i < mainInfoToggler.length; i++) {
   mainInfoToggler[i].addEventListener("click", mainInfoIndicatorToggler2)
 }
 /* 
-------------------------- hết .main-info__toggler-indicator ------------------------- 
+------------------------- 
+ hết .main-info__toggler-indicator 
+------------------------- 
 */
 
 
-
 /* 
-------------------------- sample full screen ------------------------- 
+-------------------------
+ sample full screen 
+-------------------------
 */
 let sampleImgModal = document.querySelector("#sample--full-size img");
 let imgToggler = document.querySelectorAll("#sample img");
@@ -254,13 +291,16 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 /* console.log(mainImg.style.backgroundImage); */
 
 /* 
-------------------------- hết sample full screen ------------------------- 
+-------------------------
+ hết sample full screen 
+-------------------------
 */
 
 
-
 /* 
-------------------------- quantity calc ------------------------- 
+-------------------------
+ all quantity calc 
+-------------------------
 */
 
 /* --------------- grand final calc --------------- */
@@ -386,13 +426,16 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
 }
 
 /* 
--------------------- hết quantity calc --------------------
- */
-
+-------------------------
+ hết all quantity calc 
+-------------------------
+*/
 
 
 /* 
-------------------------- remove cart item ------------------------- 
+-------------------------
+ remove cart item 
+------------------------- 
 */
 
 /* --------------- check empty cart --------------- */
@@ -417,12 +460,16 @@ for (let i = 0; i < removeItemBtn.length; i++) {
 }
 
 /* 
-------------------------- hết remove cart item -------------------------
+-------------------------
+ hết remove cart item 
+------------------------- 
 */
 
 
 /* 
--------------------- summary invoice -------------------- 
+--------------------
+ summary invoice 
+-------------------- 
 */
 
 /* ---------- live invoice ---------- */
@@ -444,16 +491,17 @@ if (inputCoupon != null) {
   })
 }
 
-
-/* ---------- hết live invoice ---------- */
-
 /* 
--------------------- hết summary invoice -------------------- 
+--------------------
+ hết summary invoice 
+-------------------- 
 */
 
 
 /* 
-------------------------- card animation ------------------------- 
+-------------------------
+ card animation 
+------------------------- 
 */
 
 /* --------------- quay thẻ trước sau --------------- */
@@ -524,8 +572,6 @@ if (inputBank != null) {
   })
 }
 
-
-
 //Gán sự kiện cho input số thẻ
 //event: khi nhập input số thẻ (domestic = [1], visa = [5]), 
 if (inputValue.length != 0 ) {
@@ -550,10 +596,7 @@ if (inputValue.length != 0 ) {
   }
 }
 
-
-
 /* --------------- hết update input lên thẻ --------------- */
-
 
 
 /* test
@@ -570,16 +613,19 @@ inputCVV.addEventListener("input", function(){
 });
  */
 
-
 /* 
-------------------------- hết card animation ------------------------- 
+-------------------------
+ hết card animation 
+------------------------- 
 */
 
 
-
 /* 
-------------------------- faq toggler ------------------------- 
+-------------------------
+ faq toggler 
+------------------------- 
 */
+
 let faqToggler = document.querySelectorAll(".faq__item--question");
 
 /* for(let i = 0; i < faqToggler.length; i++) {
@@ -594,15 +640,19 @@ $(document).ready(function(){
   });
 });
 
-
 /* 
-------------------------- hết faq toggler ------------------------- 
+-------------------------
+ hết faq toggler 
+------------------------- 
 */
 
 
 /* 
-------------------------- scroll to method ------------------------- 
+-------------------------
+ scroll to payment method 
+------------------------- 
 */
+
 let methodToggler = document.querySelector(".payment__toggler");
 
 if (methodToggler != null) {
@@ -617,14 +667,18 @@ if (methodToggler != null) {
 }
 
 /* 
-------------------------- hết scroll to method ------------------------- 
+-------------------------
+ hết scroll to payment method 
+------------------------- 
 */
-
 
 
 /* 
-------------------------- infinite review ------------------------- 
+-------------------------
+ infinite review 
+------------------------- 
 */
+
 let reviewOriginal = document.querySelector(".review__post-collection");
 let seeMoreReviewBtn = document.querySelector(".review__post-area .btn");
 let reviewArea = document.querySelector(".review__post-area");
@@ -639,9 +693,14 @@ if (reviewOriginal) {
     }, 1000);
   })
 }
+
 /* 
-------------------------- hết infinite review ------------------------- 
+------------------------- 
+hết infinite review 
+------------------------- 
 */
+
+
 
 
 /* test timer banner

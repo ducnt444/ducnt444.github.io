@@ -28,7 +28,9 @@ section {
 
 
 /* --------------- .details__img-area --------------- */
-
+/* .details__img-area {
+  position: relative;
+} */
 
 .details__main-img {
   display: block;
