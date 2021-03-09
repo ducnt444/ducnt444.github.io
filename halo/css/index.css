@@ -57,7 +57,7 @@ Carousel map:
 .banner-1 {
   background-image: url('../img/img--carousel/banner-bg-1-min.jpg');
   background-size: cover;
-  animation: animatedBanner1 60s linear 0s infinite alternate;
+  animation: animatedBanner1 30s linear 0s infinite alternate;
 }
 
 /* .banner-1-bg {
@@ -842,7 +842,7 @@ Carousel map:
 
   .banner-1 {
     background-image: url('../img/img--carousel/banner-bg-1-max.jpg');
-    animation: animatedBanner1 60s linear 0s infinite alternate;
+    animation: animatedBanner1 30s linear 0s infinite alternate;
     background-size: 1777px 1000px;
     background-repeat: no-repeat;
   }
