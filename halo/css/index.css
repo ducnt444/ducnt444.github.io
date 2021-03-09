@@ -740,7 +740,7 @@ Carousel map:
   .inner-ring {
     position: absolute;
     width: 260px;
-    top: calc(50% - 135px);
+    top: calc(50% - 133px);
     right: calc(50% - 128px);
     animation: spinningRing 30s linear 0s infinite reverse, flashingRingBright 3s linear 0s infinite normal;
   }
