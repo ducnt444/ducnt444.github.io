@@ -1054,11 +1054,11 @@ Carousel map:
   }
 
   .outer-ring {
-    width: 80vw;
-    height: 80vw;
+    width: 1536px;
+    height: 1536px;
     max-height: none;
-    top: -15vw;
-    right: calc(50% - 40vw);
+    top: -350px;
+    right: calc(50% - 768px);
   }
 
   .inner-ring {
