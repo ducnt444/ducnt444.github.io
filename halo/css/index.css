@@ -186,7 +186,8 @@ Carousel map:
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1000;
+  position: relative;
+  z-index: 400;
 }
 
 .banner-1 .carousel-caption__img {
@@ -503,13 +504,10 @@ Carousel map:
 
   /* ---------- update height ---------- */
 
-  #main-carousel {  
-    height: 580px;  /* fix height: màn 625px - 50px nav + p-top 50px) */
-  }
-
+  #main-carousel,
   .carousel-inner, 
-  .carousel-item {
-    height: 580px;  /* fix height: màn 625px - 50px nav */
+  .carousel-item {  
+    height: 580px;  /* fix height: màn 625px - 50px nav + p-top 50px) */
   }
 
   #main-carousel .seemore-btn {
@@ -644,7 +642,7 @@ Carousel map:
     position: absolute;
     top: 48%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -48%);
   }
   
   .banner-2 .carousel-caption__text,
@@ -901,7 +899,49 @@ Carousel map:
   }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1400px) {
+  /*--------------- carousel ULTRA MAX version ---------------*/
+
+  /* ---------- update chung ULTRA MAX ---------- */
+
+  #main-carousel,
+  .carousel-inner, 
+  .carousel-item {  
+    height: 890px;  /* fix height: màn 625px - 50px nav + p-top 50px) */
+  }
+
+  .carousel-caption {
+    padding-top: 50px !important;
+  }
+
+  .carousel-title {
+    font-size: 40px;
+  }
+
+  #main-carousel .carousel-indicators {
+    top: 120px;
+    height: 50px;
+  }
+
+  #main-carousel .carousel-indicators li {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+  }
+
+  #main-carousel .seemore-btn {
+    border-width: 2px;
+    font-size: 20px;
+    width: 160px;
+    height: 44px;
+  }
+
+  /* ---------- update banner 1 ULTRA MAX ---------- */
+  
+  .banner-1 .carousel-caption__img {
+    width: 450px;
+    height: calc(450px / 1.3877);
+  }
 
   .banner-1 {
     background-image: url('../img/img--carousel/banner-bg-1-max.jpg');
@@ -909,3 +949,136 @@ Carousel map:
     background-size: 2133px 1200px;
     background-repeat: no-repeat;
   }
+
+  .banner-1 .carousel-caption__text {
+    margin-left: 50px;
+  }
+
+  .banner-1 .carousel-caption__img {
+    margin-right: 50px;
+  }
+
+  .logo-wrapper-1 {
+  margin: 10px 0px 40px 0px;
+  }
+
+  .main-carousel__text:first-of-type {
+    font-size: 32px;
+  }
+
+  .main-carousel__text:last-of-type {
+    font-size: 24px;
+  }
+
+  .banner-1 .seemore-btn {
+    margin: 30px 0px 15px 0px !important;
+  }
+
+  .banner-1 .carousel-caption__extra {
+    height: 120px;
+  }
+
+  .extra img {
+    max-width: 100px;
+  }
+
+  .extra-text {
+    font-size: 16px;
+  }
+
+  /* ---------- update banner 2 ULTRA MAX ---------- */
+  .logo-wrapper-2 {
+    margin: 70px auto 330px auto;
+  }
+
+  .logo-sony-a9-wrapper {
+    width: 730px;
+  }
+
+  .logo-sony-a9-wrapper .logo-sony {
+    font-size: 120px;
+    line-height: 100px;
+    margin-bottom: 0px;
+  }
+
+  .a9-logo {
+    height: 120px;
+    margin: 0px;
+  }
+
+  .banner-2 .carousel-caption__img {
+    width: 500px;
+    height: calc(500px / 1.3877);
+  }
+
+  .banner-2 .carousel-caption__extra {
+    width: 400px;
+    margin: auto;
+    height: 65px;
+  }
+
+  .banner-2 .extra-img {
+    height: 100%;
+  }
+
+  .banner-2 .main-carousel__text {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+    margin: 30px 0px 10px 0px;
+  }
+
+  /* ---------- update banner 2 ULTRA MAX ---------- */
+
+  .logo-wrapper-3 {
+    margin: 80px 0px 50px 0px;
+  }
+
+  .logo-wrapper-3 .logo-sony {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .lotr-logo {
+    height: 80px;
+  }
+  
+  .carousel-caption__img--triple {
+    max-width: 960px;
+    margin-bottom: 40px;
+  }
+
+  .banner-3 .carousel-caption__img {
+    width: 320px;       /*size mới cho các banner 3 max*/
+    height: 280px;
+  }
+
+  .outer-ring {
+    width: 80vw;
+    height: 80vw;
+    max-height: none;
+    top: -15vw;
+    right: calc(50% - 40vw);
+  }
+
+  .inner-ring {
+    width: 320px;
+    top: calc(50% - 165px);
+    right: calc(50% - 157px);
+  }
+
+  .banner-3 .seemore-btn,
+  .banner-3  .main-carousel__text {
+    position: relative;
+    z-index: 100;
+  }
+
+  .banner-3 .main-carousel__text:first-of-type {
+    margin: 0px auto;
+  }
+
+  .banner-3 .main-carousel__text:last-of-type {
+    margin: 10px auto 20px auto;
+  }
+
+}

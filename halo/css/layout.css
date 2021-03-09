@@ -425,7 +425,7 @@ navbar styles
 
 header {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -437,7 +437,7 @@ header {
 
 .navbar {
   background-color: #222222;
-  z-index: 100;
+  z-index: 900;
   border-bottom: 1px solid #222222;
 }
 

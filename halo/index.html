@@ -14,25 +14,7 @@
     <title>HALO</title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript-->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat Plugin code-->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
+    <!--include fb-chat.pug-->
     <header id="header">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
@@ -162,8 +144,8 @@
                   <div class="extra"><img class="extra-img" src="img/img--carousel/carousel-2-extra-3.png" alt=""></div>
                 </div>
                 <p class="main-carousel__text display-till-md">SỰ HOÀN HẢO</p>
-                <p class="main-carousel__text hidden-till-md">Sự hoàn hảo chưa bao giờ ở gần đến vậy</p>
-                <p class="main-carousel__text display-till-md">CHƯA BAO GIỜ GẦN ĐẾN VẬY</p>
+                <p class="main-carousel__text hidden-till-md">Sự hoàn hảo chưa bao giờ đơn giản đến vậy</p>
+                <p class="main-carousel__text display-till-md">CHƯA BAO GIỜ ĐƠN GIẢN  ĐẾN VẬY</p>
                 <button class="btn btn--light seemore-btn" type="button">Xem chi tiết</button>
               </div>
               <div class="carousel-caption__img"></div>
