@@ -130,11 +130,6 @@ Hệ thống .container:
 
 */
 
-body,
-main {
-  overflow-x: hidden;
-}
-
 .hidden-till-md,
 .hidden-till-sm {
 /* ẩn khi màn <= 768px, sẽ đổi ở @media */  
@@ -163,7 +158,7 @@ section {
 
 main {
   padding-top: 50px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .btn--confirmation {
@@ -244,8 +239,7 @@ h3,
   font-size: 14px; 
 }
 
-.font-15, 
-h2 { 
+.font-15 { 
   font-size: 15px; 
 }
 
@@ -260,13 +254,17 @@ h2 {
   font-size: 17px; 
 }
 
-.font-18 { 
+.font-18,
+h2 { 
   font-size: 18px; 
 }
  
-.font-20, 
-h1 { 
+.font-20 { 
   font-size: 20px; 
+}
+
+h1 { 
+  font-size: 22px; 
 }
 
 .font-24,

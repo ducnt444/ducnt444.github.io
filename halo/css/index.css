@@ -1,3 +1,9 @@
+
+body,
+main {
+  overflow-x: hidden;
+}
+
 .search-btn.hidden-till-md {
   position: relative;
   top: 2px;
@@ -51,7 +57,7 @@ Carousel map:
 .banner-1 {
   background-image: url('../img/img--carousel/banner-bg-1-min.jpg');
   background-size: cover;
-  animation: animatedBanner1 30s linear 0s infinite alternate;
+  animation: animatedBanner1 60s linear 0s infinite alternate;
 }
 
 /* .banner-1-bg {
@@ -592,7 +598,7 @@ Carousel map:
   /* --------------- update banner 1 --------------- */
 
   .banner-1 {
-    animation: animatedBanner1 10s linear 0s infinite alternate;
+    animation: animatedBanner1 30s linear 0s infinite alternate;
   }
 
   .banner-1 .carousel-caption__text {
@@ -728,7 +734,7 @@ Carousel map:
     position: absolute;
     top: 0px;
     right: calc(50% - 284px);
-    animation: spinningRing 60s linear 0s infinite normal, flashingRing 5s linear 0s infinite normal;
+    animation: spinningRing 60s linear 0s infinite normal, flashingRing 3s linear 0s infinite normal;
   }
 
   .inner-ring {
@@ -736,7 +742,7 @@ Carousel map:
     width: 260px;
     top: calc(50% - 135px);
     right: calc(50% - 128px);
-    animation: spinningRing 30s linear 0s infinite reverse, flashingRingBright 5s linear 0s infinite normal;
+    animation: spinningRing 30s linear 0s infinite reverse, flashingRingBright 3s linear 0s infinite normal;
   }
 
   .banner-3 .carousel-caption {
@@ -836,7 +842,7 @@ Carousel map:
 
   .banner-1 {
     background-image: url('../img/img--carousel/banner-bg-1-max.jpg');
-    animation: animatedBanner1 30s linear 0s infinite alternate;
+    animation: animatedBanner1 60s linear 0s infinite alternate;
     background-size: 1777px 1000px;
     background-repeat: no-repeat;
   }

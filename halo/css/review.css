@@ -14,6 +14,7 @@ section {
   align-items: center;
   width: 100%;
   height: 30vh;
+
 }
 
 .main-banner__logo {
@@ -95,6 +96,8 @@ section {
   #sub-banner-area--max {
     display: flex !important;
     justify-content: space-between;
+    position: sticky;
+    top: 50px;
   }
 
   #sub-banner-area--max a {
@@ -183,6 +186,9 @@ section {
   .review__aside-area{
     width: 30%;
     background-color: #F2F2F2;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 10px;
   }
 
   .aside__header {
