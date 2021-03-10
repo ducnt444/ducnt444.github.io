@@ -145,6 +145,11 @@
   min-height: 56px;
 }
 
+.item__subtext {
+  font-size: 13px;
+  display: block;
+}
+
 .price {
   color: #CC2929;
   line-height: 24px;
@@ -441,10 +446,27 @@
     padding: 20px 0px 0px 0px;
   }
 
+  .item__subtext {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
   .price {
     line-height: 32px;
     font-size: 28px;
-    margin: 15px 0px 5px 0px;
+    margin: 15px 0px 10px 0px;
+  }
+
+  .sale-text {
+    min-height: 53px;
+  }
+
+  .old-price {
+    font-size: 18px;
+  }
+
+  .sale-amount {
+    font-size: 16px;
   }
 
   .item .seemore-btn {
@@ -559,13 +581,4 @@
   .item__badge {
     height: 30px;
   }
-
-  .old-price {
-    font-size: 16px;
-  }
-
-  .sale-amount {
-    font-size: 13px;
-  }
-
 }
