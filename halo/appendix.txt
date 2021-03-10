@@ -26,14 +26,14 @@ flow:
   b. continue shopping
 8. features: login/register
 8. features: review
+
+
+
   
-
-
-  
-
+banner 3 cho xs 
 alt cho img
 gộp indicator styles vào layout.css
-review details
+review details -> ok
 fix header bug khi bật modal -> ok
 tách style trong layout
 set max length text, input -> ok
