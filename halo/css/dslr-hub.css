@@ -140,9 +140,10 @@
   padding: 10px 0px 0px 0px;
 }
 
-.card-title {
-  line-height: 18px;
+.item__name {
+  line-height: 1;
   min-height: 56px;
+  font-size: 18px;
 }
 
 .item__subtext {
@@ -251,7 +252,7 @@
 }
 
 @media only screen and (min-width: 576px) {
-  .card-title {
+  .item__name {
     min-height: 30px;
   }
   
@@ -447,7 +448,7 @@
   }
 
   .item__subtext {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 16px;
   }
 
@@ -458,15 +459,15 @@
   }
 
   .sale-text {
-    min-height: 53px;
+    min-height: 59px;
   }
 
   .old-price {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .sale-amount {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .item .seemore-btn {
@@ -580,5 +581,13 @@
 
   .item__badge {
     height: 30px;
+  }
+
+  .item__name {
+    font-size: 24px;
+  }
+
+  .item__subtext {
+    font-size: 18px;
   }
 }
