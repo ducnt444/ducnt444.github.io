@@ -176,7 +176,6 @@ section {
     height: 24px;
   }
 
-
   .post__preview {
     font-size: 16px;
   }
@@ -186,7 +185,7 @@ section {
     background-color: #F2F2F2;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 10px;
+    top: 100px;
   }
 
   .aside__header {

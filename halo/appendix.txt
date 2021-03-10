@@ -2,7 +2,7 @@
 flow:
 
 1.index
-  a. banners
+  a. banners 
 2.camera-hub (primary category)
   a. banners
   b. collections (secondary category)
@@ -21,15 +21,17 @@ flow:
   b. faq
   c. info
   d. payment method
+  f. process to checkout
 7. checkout
   a. summary
   b. continue shopping
 8. features: login/register
-8. features: review
+8. features: review (SEO)
+9. responsive:
+  a. built with mobile-first
+  b. x-axis (mobile) VS y-axis (desktop) 
 
 
-
-  
 banner 3 cho xs 
 alt cho img
 gộp indicator styles vào layout.css

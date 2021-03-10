@@ -92,11 +92,12 @@
 .item {
   /* width 250, height 360 */
   width: calc(50vw - 20px); 
-  padding: 15px 10px;
+  padding: 20px 10px 15px 10px;
   border-radius: 8px;
   border: 1px solid #bbbbbb;
   margin: 10px 5px;
   justify-content: flex-end;
+  position: relative;
 }
 
 .item:hover,
@@ -111,6 +112,28 @@
   width: 100%; 
   max-width: 180px;
   margin: auto;
+}
+
+.item__badge {
+  position: absolute;
+  top: 5px;
+  height: 15px;
+  display: none;
+}
+
+.item--hot .item__badge--hot {
+  display: block;
+  left: 5px;
+}
+
+.item--love .item__badge--love {
+  display: block;
+  right: 5px;
+}
+
+.item--sale .item__badge--sale {
+  position: static;
+  margin-left: 5px;
 }
 
 .item .card-body {
@@ -138,25 +161,30 @@
 }
 
 /* ---------- sale items module ---------- */
+.sale-text * {
+  display: none;
+}
+
 .sale-text {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 37px;
+}
+
+.item--sale .sale-text * {
+  display: initial;
 }
 
 .old-price {
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: line-through;
 }
 
-.sale-badge img {
-  height: 12px;
-  margin: 0px 5px;
-}
-
 .sale-amount {
-  font-size: 10px;
+  font-size: 11px;
+  margin-top: 2px;
 }
 
 /* ---------- .main-area__pagination ---------- */
@@ -194,6 +222,10 @@
   .sub-filter img {
     width: 30px;
     margin-right: 5px;
+  }
+
+  .item__badge {
+    height: 20px;
   }
 }
 
@@ -397,8 +429,12 @@
   .item.card {
     /* width 222 */
     width: 222px;
-    padding: 20px 10px 25px 10px;
+    padding: 30px 10px;
     margin: 15px 10px;
+  }
+
+  .item__badge {
+    height: 25px;
   }
 
   .item .card-body {
@@ -420,7 +456,7 @@
 
   /* ----- sale items module ----- */
   .sale-text {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   /* ---------- hết update item styles ---------- */
@@ -518,6 +554,10 @@
     width: 280px;
     max-width: 280px;
     margin: 15px;
+  }
+
+  .item__badge {
+    height: 30px;
   }
 
   .old-price {
