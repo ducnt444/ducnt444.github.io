@@ -723,9 +723,9 @@ Carousel map:
   }
 
   @keyframes flashingRingBright {
-    0% {opacity: 0.4;}
+    0% {opacity: 0.3;}
     50% {opacity: 1;}
-    100% {opacity: 0.4;}
+    100% {opacity: 0.3;}
   }
 
   .outer-ring {
@@ -919,13 +919,13 @@ Carousel map:
   }
 
   #main-carousel .carousel-indicators {
-    top: 120px;
-    height: 50px;
+    top: 110px;
+    height: 40px;
   }
 
   #main-carousel .carousel-indicators li {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin: 0px 10px;
   }
 
@@ -1054,17 +1054,17 @@ Carousel map:
   }
 
   .outer-ring {
-    width: 1536px;
-    height: 1536px;
+    width: 1400px;
+    height: 1400px;
     max-height: none;
-    top: -350px;
-    right: calc(50% - 768px);
+    top: -231px;
+    right: calc(50% - 700px);
   }
 
   .inner-ring {
     width: 320px;
-    top: calc(50% - 165px);
-    right: calc(50% - 157px);
+    top: calc(50% - 160px);
+    right: calc(50% - 160px);
   }
 
   .banner-3 .seemore-btn,
@@ -1079,6 +1079,10 @@ Carousel map:
 
   .banner-3 .main-carousel__text:last-of-type {
     margin: 10px auto 20px auto;
+  }
+
+  .logo-sony-inline {
+    font-size: 22px !important;
   }
 
 }
