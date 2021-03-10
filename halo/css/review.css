@@ -96,8 +96,6 @@ section {
   #sub-banner-area--max {
     display: flex !important;
     justify-content: space-between;
-    position: sticky;
-    top: 50px;
   }
 
   #sub-banner-area--max a {

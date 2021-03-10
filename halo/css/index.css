@@ -718,13 +718,13 @@ Carousel map:
 
   @keyframes flashingRing {
     0% {opacity: 0.1;}
-    50% {opacity: 0.3;}
+    50% {opacity: 0.35;}
     100% {opacity: 0.1;}
   }
 
   @keyframes flashingRingBright {
     0% {opacity: 0.3;}
-    50% {opacity: 1;}
+    50% {opacity: 0.95;}
     100% {opacity: 0.3;}
   }
 
@@ -739,8 +739,8 @@ Carousel map:
     position: absolute;
     width: 260px;
     top: calc(50% - 133px);
-    right: calc(50% - 128px);
-    animation: spinningRing 30s linear 0s infinite reverse, flashingRingBright 3s linear 0s infinite normal;
+    right: calc(50% - 130px);
+    animation: spinningRing 20s linear 0s infinite reverse, flashingRingBright 3s linear 0s infinite normal;
   }
 
   .banner-3 .carousel-caption {
@@ -764,7 +764,7 @@ Carousel map:
 
   .logo-wrapper-3 {
     width: 100%;
-    margin: 50px 0px 10px 0px;
+    margin: 45px 0px 10px 0px;
   }
 
   .banner-3 .main-carousel__text {

@@ -1,6 +1,9 @@
 
 main {
-  background-image: url("/halo/img/img--checkout/checkout-bg.png");
+  background-image: url("/halo/img/img--checkout/checkout-bg-v8.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .page-wrapper {
@@ -74,6 +77,15 @@ main {
   text-align: center;
 }
 
+.btn--continue-buying {
+  font-size: 14px;
+  background-color: #99DE7F;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
   .page-wrapper {
   padding-top: 50px;
@@ -92,5 +104,34 @@ main {
   max-width: 600px;
   padding: 30px;
   margin-top: 30px;
+  }
+
+  .btn--continue-buying {
+    font-size: 16px;
+    width: 165px;
+    height: 40px;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .success-alert {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .success-alert img {
+    width: 60px;
+    margin-right: 15px;
+  }
+  
+  .success-thank {
+    font-size: 24px;
+  }
+
+  .btn--continue-buying {
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
   }
 }

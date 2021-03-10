@@ -1,6 +1,4 @@
 
-AOS.init();
-window.addEventListener('load', AOS.refresh);
 
 //slick
 $(document).ready(function(){
@@ -244,29 +242,32 @@ $(document).ready(function(){
 .main-info__toggler-indicator 
 ------------------------- 
 */
-let mainInfoToggler = document.getElementsByClassName("main-info__toggler");
+let mainInfoToggler = document.querySelectorAll(".main-info__toggler");
 
-function mainInfoIndicatorToggler1() {
-  if (this.childNodes[1].childNodes[0].className.match(/(?:^|\s)fa-chevron-up(?!\S)/)) {
-    this.childNodes[1].childNodes[0].className = "fas fa-chevron-down";
-  } else {
-    this.childNodes[1].childNodes[0].className = "fas fa-chevron-up";
+if (mainInfoToggler.length > 0) {
+  function mainInfoIndicatorToggler1() {
+    if (this.childNodes[1].childNodes[0].className.match(/(?:^|\s)fa-chevron-up(?!\S)/)) {
+      this.childNodes[1].childNodes[0].className = "fas fa-chevron-down";
+    } else {
+      this.childNodes[1].childNodes[0].className = "fas fa-chevron-up";
+    }
+  }
+  
+  mainInfoToggler[0].addEventListener("click", mainInfoIndicatorToggler1); 
+  
+  function mainInfoIndicatorToggler2() {
+    if (this.childNodes[1].childNodes[1].className.match(/(?:^|\s)fa-chevron-up(?!\S)/)) {
+      this.childNodes[1].childNodes[1].className = "fas fa-chevron-down";
+    } else {
+      this.childNodes[1].childNodes[1].className = "fas fa-chevron-up";
+    }
+  }
+  
+  for (let i = 1; i < mainInfoToggler.length; i++) {
+    mainInfoToggler[i].addEventListener("click", mainInfoIndicatorToggler2)
   }
 }
 
-/* mainInfoToggler[0].addEventListener("click", mainInfoIndicatorToggler1);  */
-
-function mainInfoIndicatorToggler2() {
-  if (this.childNodes[1].childNodes[1].className.match(/(?:^|\s)fa-chevron-up(?!\S)/)) {
-    this.childNodes[1].childNodes[1].className = "fas fa-chevron-down";
-  } else {
-    this.childNodes[1].childNodes[1].className = "fas fa-chevron-up";
-  }
-}
-
-for (let i = 1; i < mainInfoToggler.length; i++) {
-  mainInfoToggler[i].addEventListener("click", mainInfoIndicatorToggler2)
-}
 /* 
 ------------------------- 
  hết .main-info__toggler-indicator 
@@ -378,7 +379,7 @@ for (let i = 0; i < addQuantityBtn.length; i++) {
     * 
     //singlePrice (số hóa)
     parseInt(singlePrice);
-    console.log(multiplePrice);
+
     //update thành tiền
     let multipleInner = this.parentElement.nextElementSibling.innerHTML;
     this.parentElement.nextElementSibling.innerHTML = multipleInner
@@ -400,7 +401,7 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
   minusQuantityBtn[i].addEventListener("click", function() {
     //Xác định giá trị số đếm hiện tại: element sau nút - (số hóa)
     let currentNum = parseInt(this.nextElementSibling.innerHTML);
-    console.log(currentNum);
+
     //Tránh trường hợp số đếm <= 0
     if (currentNum > 1) {
       //khi click: giảm giá trị của element sau nút - (chính là số đếm hiện tại) đi 1

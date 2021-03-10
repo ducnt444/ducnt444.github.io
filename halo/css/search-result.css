@@ -42,7 +42,7 @@
   .result-item-area {
     max-width: none;
     justify-content: flex-start;
-    margin: 0px -10px;
+    margin: 0px;
   }
 
   .search__banner {

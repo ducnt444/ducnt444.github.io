@@ -1,3 +1,36 @@
+
+flow:
+
+1.index
+  a. banners
+2.camera-hub (primary category)
+  a. banners
+  b. collections (secondary category)
+3.dslr-hub
+  a. filters
+  b. pagination
+4.item details
+  a. swap main img
+  b. sections
+  c. process to cart
+5. cart
+  a. add/subtract/remove items
+  b. process to payment
+6. payment 
+  a. confirmation
+  b. faq
+  c. info
+  d. payment method
+7. checkout
+  a. summary
+  b. continue shopping
+8. features: login/register
+8. features: review
+  
+
+
+  
+
 alt cho img
 gộp indicator styles vào layout.css
 review details

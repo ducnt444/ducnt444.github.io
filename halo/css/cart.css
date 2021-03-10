@@ -200,6 +200,7 @@
   .cart__item .col--remove {
     height: 30px;
     transition: color 0.5s;
+    cursor: pointer;
   }
 
   .col--remove.hidden-till-md:hover {
