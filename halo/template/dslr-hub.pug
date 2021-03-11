@@ -2,9 +2,13 @@ extends parts/layout.pug
 
 block css
   link(rel="stylesheet", href="css/dslr-hub.css")
+  link(rel="stylesheet", href="css/item.css")
 
 block title
   title Máy ảnh DSLR
+
+block script
+  script(src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js')  
 
 block content
   .container-xl.breadcrumb-wrapper

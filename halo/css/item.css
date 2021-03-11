@@ -1,0 +1,286 @@
+
+
+/* 
+------------------------- 
+  item mobile ver 
+------------------------- 
+*/
+
+/* --------------- settings --------------- */
+
+.item {
+  /* width 250, height 360 */
+  width: 200px; 
+  padding: 25px 10px 20px 10px;
+  border-radius: 12px;
+  border: 1px solid #bbbbbb;
+  margin: 0px 10px;
+  position: relative;
+}
+
+.item:hover {
+  border: 1px solid #555555;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.item .card-img-top {
+  /*thumbnail 180*/
+  width: 100%; 
+  padding: 0px 5%;
+}
+
+.item .card-body {
+  padding: 15px 0px 0px 0px;
+}
+
+.item__header {
+  min-height: 63px;
+}
+
+.item__name {
+  line-height: 1.3;
+  font-size: 17px;
+}
+
+.item__price {
+  color: #CC2929;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+/* --------------- item__sale-module --------------- */
+
+.item__sale-module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 46px;
+  margin-bottom: 15px;
+}
+
+.item__sale-module * {
+  display: none !important;
+}
+
+.item--sale .item__sale-module * {
+  display: initial !important;
+}
+
+.sale-module__old-price {
+  font-size: 18px;
+  text-decoration: line-through;
+}
+
+.item .btn--seemore {
+  margin: 0px auto;
+}
+
+/* --------------- item__badge --------------- */
+
+.item__badge {
+  position: absolute;
+  top: 5px;
+  height: 20px;
+  display: none !important;
+}
+
+.item--hot .item__badge--hot {
+  display: block !important;
+  left: 10px;
+}
+
+.item--love .item__badge--love {
+  display: block !important;
+  right: 10px;
+}
+
+.item--sale .item__badge--sale {
+  position: static;
+  margin-left: 5px;
+}
+
+@media only screen and (min-width: 375px) {
+  .item {
+    /* width 250, height 360 */
+    width: 220px; 
+    padding: 25px 10px;
+  }
+
+  .item__badge {
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .item {
+    /* width 250, height 360 */
+    width: calc(50vw - 45px);
+    max-width: 250px;
+    padding: 15px 10px;
+    margin: 15px 10px;
+  }  
+
+  .item__name {
+    min-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* ---------- update card (hub) styles ---------- */
+  .item.card {
+    /* width 222 */
+    width: 222px;
+    padding: 20px 10px;
+    margin: 0px 10px;
+  }
+
+  .item .card-body {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .price {
+    line-height: 30px;
+    font-size: 24px;
+    margin: 15px 0px;
+  }
+
+  .item .seemore-btn {
+    margin: 15px auto 0px auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 15px;
+    width: 120px;
+  }
+
+  /* ---------- sale items module ---------- */
+  .sale-text {
+    flex-wrap: nowrap;
+  }
+
+  /* ---------- hết update card (hub) styles ---------- */
+
+
+
+    /* ---------- update item styles ---------- */
+
+    .main-area__items-area {
+      margin: 0px -10px;
+      justify-content: flex-start;
+    }
+  
+    .item.card {
+      /* width 222 */
+      width: 222px;
+      padding: 30px 10px;
+      margin: 15px 10px;
+    }
+  
+    .item__badge {
+      height: 25px;
+    }
+  
+    .item .card-body {
+      padding: 20px 0px 0px 0px;
+    }
+  
+    .item__subtext {
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  
+    .price {
+      line-height: 32px;
+      font-size: 28px;
+      margin: 15px 0px 10px 0px;
+    }
+  
+    .sale-text {
+      min-height: 59px;
+    }
+  
+    .old-price {
+      font-size: 20px;
+    }
+  
+    .sale-amount {
+      font-size: 18px;
+    }
+  
+    .item .seemore-btn {
+      margin: 15px auto 0px auto;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 5px 15px;
+    }
+  
+    /* ----- sale items module ----- */
+    .sale-text {
+      flex-wrap: wrap;
+    }
+  
+    /* ---------- hết update item styles ---------- */
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+  /* ---------- update card (hub) styles ---------- */
+  .hub-row .card {
+    /* width 222 */
+    width: 237.5px;
+    padding: 20px 10px;
+    margin: 0px 15px;
+  }
+
+  .hub-row .card-body {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .hub-row .seemore-btn {
+    margin: 15px auto 0px auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 15px;
+  }
+
+  /* ---------- sale items module ---------- */
+  .sale-text {
+    flex-wrap: nowrap;
+  }
+
+  /* ---------- hết update card (hub) styles ---------- */
+
+
+  .item .card-img-top {
+    /*thumbnail 180*/
+    max-width: 200px;
+  }
+
+  .item.card {
+    /* width 260 */
+    width: 280px;
+    max-width: 280px;
+    margin: 15px;
+  }
+
+  .item__badge {
+    height: 30px;
+  }
+
+  .item__name {
+    font-size: 24px;
+  }
+
+  .item__subtext {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  
+}

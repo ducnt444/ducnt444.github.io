@@ -73,6 +73,9 @@
 .sub-filter:hover {
   background-color: #222;
   color: white;
+  border: 1px solid #555555;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .sub-filter img {
@@ -87,111 +90,7 @@
   flex-wrap: wrap;
 }
 
-/* --------------- .item styles --------------- */
 
-.item {
-  /* width 250, height 360 */
-  width: calc(50vw - 20px); 
-  padding: 20px 10px 15px 10px;
-  border-radius: 8px;
-  border: 1px solid #bbbbbb;
-  margin: 10px 5px;
-  justify-content: flex-end;
-  position: relative;
-}
-
-.item:hover,
-.sub-filter:hover {
-  border: 1px solid #555555;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-.item .card-img-top {
-  /*thumbnail 180*/
-  width: 100%; 
-  max-width: 180px;
-  margin: auto;
-}
-
-.item__badge {
-  position: absolute;
-  top: 5px;
-  height: 15px;
-  display: none;
-}
-
-.item--hot .item__badge--hot {
-  display: block;
-  left: 5px;
-}
-
-.item--love .item__badge--love {
-  display: block;
-  right: 5px;
-}
-
-.item--sale .item__badge--sale {
-  position: static;
-  margin-left: 5px;
-}
-
-.item .card-body {
-  padding: 10px 0px 0px 0px;
-}
-
-.item__name {
-  line-height: 1;
-  min-height: 56px;
-  font-size: 18px;
-}
-
-.item__subtext {
-  font-size: 13px;
-  display: block;
-}
-
-.price {
-  color: #CC2929;
-  line-height: 24px;
-  font-size: 16px;
-  margin: 5px 0px;
-}
-
-.item .seemore-btn {
-  width: fit-content;
-  margin: 15px auto 0px auto;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 5px 10px;
-}
-
-/* ---------- sale items module ---------- */
-.sale-text * {
-  display: none;
-}
-
-.sale-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  min-height: 37px;
-}
-
-.item--sale .sale-text * {
-  display: initial;
-}
-
-.old-price {
-  font-size: 13px;
-  text-decoration: line-through;
-}
-
-.sale-amount {
-  font-size: 11px;
-  margin-top: 2px;
-}
 
 /* ---------- .main-area__pagination ---------- */
 
@@ -252,10 +151,6 @@
 }
 
 @media only screen and (min-width: 576px) {
-  .item__name {
-    min-height: 30px;
-  }
-  
   .dslr-hub__banner {
     padding-left: 30px;
   }
@@ -289,13 +184,7 @@
     justify-content: center;
   }
 
-  .item {
-    /* width 250, height 360 */
-    width: calc(50vw - 45px);
-    max-width: 250px;
-    padding: 15px 10px;
-    margin: 15px 10px;
-  }  
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -425,64 +314,7 @@
 
   /* ---------- hết update .main-area__pagination ---------- */
 
-  /* ---------- update item styles ---------- */
 
-  .main-area__items-area {
-    margin: 0px -10px;
-    justify-content: flex-start;
-  }
-
-  .item.card {
-    /* width 222 */
-    width: 222px;
-    padding: 30px 10px;
-    margin: 15px 10px;
-  }
-
-  .item__badge {
-    height: 25px;
-  }
-
-  .item .card-body {
-    padding: 20px 0px 0px 0px;
-  }
-
-  .item__subtext {
-    margin-top: 5px;
-    font-size: 16px;
-  }
-
-  .price {
-    line-height: 32px;
-    font-size: 28px;
-    margin: 15px 0px 10px 0px;
-  }
-
-  .sale-text {
-    min-height: 59px;
-  }
-
-  .old-price {
-    font-size: 20px;
-  }
-
-  .sale-amount {
-    font-size: 18px;
-  }
-
-  .item .seemore-btn {
-    margin: 15px auto 0px auto;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 5px 15px;
-  }
-
-  /* ----- sale items module ----- */
-  .sale-text {
-    flex-wrap: wrap;
-  }
-
-  /* ---------- hết update item styles ---------- */
 }
 
 @media only screen and (min-width: 992px) {
@@ -565,29 +397,5 @@
   .main-area__items-area {
     margin: 0px -15px;
     width: 930px;
-  }
-
-  .item .card-img-top {
-    /*thumbnail 180*/
-    max-width: 200px;
-  }
-
-  .item.card {
-    /* width 260 */
-    width: 280px;
-    max-width: 280px;
-    margin: 15px;
-  }
-
-  .item__badge {
-    height: 30px;
-  }
-
-  .item__name {
-    font-size: 24px;
-  }
-
-  .item__subtext {
-    font-size: 18px;
   }
 }
