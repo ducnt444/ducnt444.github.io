@@ -42,19 +42,18 @@ $(document).ready(function(){
     slidesToScroll: 1,
     variableWidth: true,
     autoplay: false,
+    autoplaySpeed: 3000,
     arrows: true,
     prevArrow: "<button type='button' class='slick-prev pull-left'><img src ='img/img--misc/prev-arrow--black.png'></button>",
     nextArrow: "<button type='button' class='slick-next pull-right'><img src ='img/img--misc/next-arrow--black.png'></button>",
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 768,
         settings: {
-          arrows: true,
-          prevArrow: "<button type='button' class='slick-prev pull-left'><img src ='img/img--misc/prev-arrow--black.png'></button>",
-          nextArrow: "<button type='button' class='slick-next pull-right'><img src ='img/img--misc/next-arrow--black.png'></button>",
           centerMode: false,
-          slidesToShow: 3
-          
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          variableWidth: true
         }
       },
       {

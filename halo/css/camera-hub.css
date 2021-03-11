@@ -39,7 +39,7 @@ section {
 }
 
 .section__header {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .portal__header {
@@ -49,8 +49,8 @@ section {
   z-index: 5;
 }
 
-.hub-row__btn {
-  margin-top: 30px;
+.hub-row .btn--seemore {
+  margin: 10px auto 0px auto;
 }
 
 /* ---------- hết settings chung ---------- */
@@ -169,20 +169,13 @@ section {
     font-size: 16px;
   }
 
-  .banner-carousel__btn,
-  .hub-row__btn {
-    font-size: 12px;
-  }
-
   /* --------------- hết update banner-carousel --------------- */
 
 }
 
 @media only screen and (min-width: 768px) {
 
-  .hub-row__btn {
-    margin-top: 40px;
-  }
+
 
   .nav-item:first-child a {
     padding-bottom: 0px !important;
@@ -286,7 +279,7 @@ section {
   /* --------------- hết banner-full --------------- */
 
   .hub-row__banner {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
 }
@@ -314,7 +307,7 @@ section {
 
 @media only screen and (min-width: 1200px) {
 
-  .hub-row__btn {
+  .hub-row .btn--seemore {
     margin-top: 50px;
   }
 
@@ -398,7 +391,7 @@ section {
     right: -50px;
   }
 
-  .hub-row__btn {
+  .btn--seemore {
     font-size: 16px;
     width: 130px;
     line-height: 25px;

@@ -352,20 +352,7 @@ h1, h2 {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
 }
 
-/* ----- hover item ----- */
-.item, .item * {
-  transition: all 0.4s;
-}
 
-.item:hover {
-  border: 1px solid #555555;
-  box-shadow: 0px 0px 25px rgb(0 0 0 / 20%);
-  cursor: pointer;
-}
-
-.item:hover > .card-img-top {
-  transform: scale(1.1);
-}
 
 
 /* -------------------- kết thúc effect -------------------- */
@@ -834,6 +821,10 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
+  main {
+    font-size: 15px;
+  }
+
   .hidden-till-md {   /* hiện element từ md */
     display: block !important;
   }
@@ -881,10 +872,6 @@ footer {
     font-size: 16px;
   }
 
-  .copyright {
-    font-size: 12px;
-  }
-
   .search-bar {
     display: flex !important;
   }
@@ -909,11 +896,11 @@ footer {
   }
 
   .navbar-collapse { /* collapse từ full màn giảm về auto */
-  position: static;
-  width: auto;
-  padding: 0px !important;
-  justify-content: flex-start;
-  margin-left: 20px;
+    position: static;
+    width: auto;
+    padding: 0px !important;
+    justify-content: flex-start;
+    margin-left: 20px;
   }
 
   .log-max {   /* giãn cách menu thông qua log-reg */
@@ -925,6 +912,19 @@ footer {
 
   .copyright {
     font-size: 14px;
+  }
+
+  .btn {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .btn--seemore {
+    width: 130px;
+  }
+
+  .copyright {
+    font-size: 13px;
   }
 
 }

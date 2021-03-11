@@ -63,53 +63,101 @@ block content
 
 
       .technical-filter--max.hidden-till-md
-        .technical-filter--max__filter-group
-          button(data-toggle='collapse' data-target='#filter--arrange') Sắp xếp theo
-          ul#filter--arrange.collapse.show
-            li 
-              a(href="#") Giá từ cao đến thấp 
-            li 
-              a(href="#") Giá từ thấp đến cao 
-            li 
-              a(href="#") Mới nhất
 
-        .technical-filter--max__filter-group
-          button(data-toggle='collapse' data-target='#filter--brand') Thương hiệu
-          ul#filter--brand.collapse.show
-            li 
-              a(href="#") Canon 
-            li 
-              a(href="#") Nikon
-            li 
-              a(href="#") Khác
+        form.technical-filter--max__filter-group
+          .technical-filter--max__header Sắp xếp theo
+          .technical-filter--max__item 
+            label(for="filter--new") Mới nhất
+            .input-container
+              input.technical-filter--max__radio#filter--new(type="radio" name="arrange" checked)
+              span.customize-radio
+          .technical-filter--max__item
+            label(for="filter--high") Giá từ cao đến thấp
+            .input-container
+              input.technical-filter--max__radio#filter--high(type="radio" name="arrange")
+              span.customize-radio
+          .technical-filter--max__item 
+            label(for="filter--low") Giá từ thấp đến cao
+            .input-container
+              input.technical-filter--max__radio#filter--low(type="radio" name="arrange") 
+              span.customize-radio
 
-        .technical-filter--max__filter-group
-          button(data-toggle='collapse' data-target='#filter--size') Kích cỡ cảm biến
-          ul#filter--size.collapse.show
-            li 
-              a(href="#") Crop  
-            li 
-              a(href="#") Full-frame
+        form.technical-filter--max__filter-group
+          .technical-filter--max__header Thương hiệu
+          .technical-filter--max__item
+            label(for="filter--all-brand") Tất cả 
+            .input-container
+              input.technical-filter--max__radio#filter--all-brand(type="radio" name="brand" checked)
+              span.customize-radio
+          .technical-filter--max__item
+            label(for="filter--canon") Canon 
+            .input-container
+              input.technical-filter--max__radio#filter--canon(type="radio" name="brand")
+              span.customize-radio
+          .technical-filter--max__item 
+            label(for="filter--nikon") Nikon
+            .input-container
+              input.technical-filter--max__radio#filter--nikon(type="radio" name="brand")
+              span.customize-radio
+          .technical-filter--max__item 
+            label(for="filter--other") Khác
+            .input-container
+              input.technical-filter--max__radio#filter--other(type="radio" name="brand")
+              span.customize-radio
 
-        .technical-filter--max__filter-group
-          button(data-toggle='collapse' data-target='#filter--mp') Độ phân giải
-          ul#filter--mp.collapse.show
-            li 
-              a(href="#") 10 - 18 MP  
-            li 
-              a(href="#") 19 - 25 MP
-            li 
-              a(href="#") Trên 25 MP
+        form.technical-filter--max__filter-group
+          .technical-filter--max__header Kích cỡ cảm biến
+          .technical-filter--max__item
+            label(for="filter--all-size") Tất cả 
+            .input-container
+              input.technical-filter--max__radio#filter--all-size(type="radio" name="size" checked)
+              span.customize-radio
+          .technical-filter--max__item
+            label(for="filter--crop") Crop
+            .input-container
+              input.technical-filter--max__radio#filter--crop(type="radio" name="size")
+              span.customize-radio
+          .technical-filter--max__item 
+            label(for="filter--ff") Full-frame
+            .input-container
+              input.technical-filter--max__radio#filter--ff(type="radio" name="size")
+              span.customize-radio
 
-        .technical-filter--max__filter-group
-          button(data-toggle='collapse' data-target='#filter--iso') ISO đối đa
-          ul#filter--iso.collapse.show
-            li 
-              a(href="#") Dưới 6400 
-            li 
-              a(href="#") 6400 - 25600
-            li 
-              a(href="#") Trên 25600
+        form.technical-filter--max__filter-group
+          .technical-filter--max__header Độ phân giải
+          .technical-filter--max__item 
+            label(for="filter--18mp") 10 - 18 MP
+            .input-container
+              input.technical-filter--max__radio#filter--18mp(type="radio" name="mp" checked)
+              span.customize-radio
+          .technical-filter--max__item
+            label(for="filter--25mp") 19 - 25 MP
+            .input-container
+              input.technical-filter--max__radio#filter--25mp(type="radio" name="mp")
+              span.customize-radio
+          .technical-filter--max__item
+            label(for="filter--26mp") Trên 25 MP
+            .input-container
+              input.technical-filter--max__radio#filter--26mp(type="radio" name="mp")
+              span.customize-radio
+
+        form.technical-filter--max__filter-group
+          .technical-filter--max__header ISO đối đa
+          .technical-filter--max__item
+            label(for="filter--6400") Dưới 6400
+            .input-container
+              input.technical-filter--max__radio#filter--6400(type="radio" name="iso" checked)
+              span.customize-radio
+          .technical-filter--max__item
+            label(for="filter--25600") 6400 - 25600
+            .input-container
+              input.technical-filter--max__radio#filter--25600(type="radio" name="iso")
+              span.customize-radio
+          .technical-filter--max__item 
+            label(for="filter--25601") Trên 25600
+            .input-container
+              input.technical-filter--max__radio#filter--25601(type="radio" name="iso")
+              span.customize-radio
 
 
       .promo--aside.hidden-till-md

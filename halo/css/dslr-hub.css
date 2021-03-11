@@ -85,12 +85,11 @@
 }
 
 .main-area__items-area {
-  margin: 15px -5px;
+  margin: 15px -15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
-
 
 /* ---------- .main-area__pagination ---------- */
 
@@ -150,6 +149,13 @@
   }
 }
 
+@media only screen and (min-width: 500px) {
+  .main-area__items-area .item:last-child {
+    margin-left: 0px;
+    margin-right: 255px;
+  }
+}  
+
 @media only screen and (min-width: 576px) {
   .dslr-hub__banner {
     padding-left: 30px;
@@ -183,7 +189,6 @@
   .main-area__items-area {
     justify-content: center;
   }
-
 
 }
 
@@ -224,7 +229,7 @@
 
   /* ---------- update aside area ---------- */
   .dslr-hub__aside-area {
-    width: 190px;
+    width: 180px;
   }
 
   .technical-filter--max__filter-group {
@@ -234,20 +239,70 @@
     border-bottom: none;
   }
 
-  .technical-filter--max__filter-group button {
+  .technical-filter--max__header {
     border: none;
     width: 100%;
-    font-size: 13px;
+    font-size: 17px;
     text-align: start;
-    padding: 5px 15px;
+    padding: 5px 10px;
     background-color: #C4C4C4;
     font-weight: bold;
   }
 
-  .technical-filter--max__filter-group li {
-    padding: 5px 15px;
-    font-size: 12px;
+  .technical-filter--max__item {
+    padding: 5px 10px;
+    font-size: 14px;
     border-bottom: 1px solid #BFBFBF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .technical-filter--max__item * {
+    cursor: pointer;
+  }
+
+  .technical-filter--max__item label {
+    width: calc(100% - 20px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .input-container {
+    display: block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .technical-filter--max__radio {
+    position: absolute;
+    opacity: 0;
+    height: 15px;
+    width: 15px;
+    z-index: 2;
+  }
+
+  .customize-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-image: url("/halo/img/img--misc/halo-logo-black.png");
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .input-container input:checked ~ .customize-radio {
+    background-image: url("/halo/img/img--misc/halo-logo-black--active.png");
   }
 
   .promo--aside h1 {
@@ -278,7 +333,7 @@
   
   /* ---------- update main area ---------- */
   .dslr-hub__main-area {
-    width: calc(100% - 244px);
+    width: calc(100% - 220px); /*aside 190 + 50 margin*/
   }
 
   .main-area__sub-filter-area {

@@ -122,45 +122,117 @@
             </div>
           </div>
           <div class="technical-filter--max hidden-till-md">
-            <div class="technical-filter--max__filter-group">
-              <button data-toggle="collapse" data-target="#filter--arrange">Sắp xếp theo</button>
-              <ul class="collapse show" id="filter--arrange">
-                <li> <a href="#">Giá từ cao đến thấp </a></li>
-                <li> <a href="#">Giá từ thấp đến cao </a></li>
-                <li> <a href="#">Mới nhất</a></li>
-              </ul>
-            </div>
-            <div class="technical-filter--max__filter-group">
-              <button data-toggle="collapse" data-target="#filter--brand">Thương hiệu</button>
-              <ul class="collapse show" id="filter--brand">
-                <li> <a href="#">Canon </a></li>
-                <li> <a href="#">Nikon</a></li>
-                <li> <a href="#">Khác</a></li>
-              </ul>
-            </div>
-            <div class="technical-filter--max__filter-group">
-              <button data-toggle="collapse" data-target="#filter--size">Kích cỡ cảm biến</button>
-              <ul class="collapse show" id="filter--size">
-                <li> <a href="#">Crop  </a></li>
-                <li> <a href="#">Full-frame</a></li>
-              </ul>
-            </div>
-            <div class="technical-filter--max__filter-group">
-              <button data-toggle="collapse" data-target="#filter--mp">Độ phân giải</button>
-              <ul class="collapse show" id="filter--mp">
-                <li> <a href="#">10 - 18 MP  </a></li>
-                <li> <a href="#">19 - 25 MP</a></li>
-                <li> <a href="#">Trên 25 MP</a></li>
-              </ul>
-            </div>
-            <div class="technical-filter--max__filter-group">
-              <button data-toggle="collapse" data-target="#filter--iso">ISO đối đa</button>
-              <ul class="collapse show" id="filter--iso">
-                <li> <a href="#">Dưới 6400 </a></li>
-                <li> <a href="#">6400 - 25600</a></li>
-                <li> <a href="#">Trên 25600</a></li>
-              </ul>
-            </div>
+            <form class="technical-filter--max__filter-group">
+              <div class="technical-filter--max__header">Sắp xếp theo</div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--new">Mới nhất</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--new" type="radio" name="arrange" checked><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item">
+                <label for="filter--high">Giá từ cao đến thấp</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--high" type="radio" name="arrange"><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--low">Giá từ thấp đến cao</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--low" type="radio" name="arrange"><span class="customize-radio"></span>
+                </div>
+              </div>
+            </form>
+            <form class="technical-filter--max__filter-group">
+              <div class="technical-filter--max__header">Thương hiệu</div>
+              <div class="technical-filter--max__item">
+                <label for="filter--all-brand">Tất cả </label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--all-brand" type="radio" name="brand" checked><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item">
+                <label for="filter--canon">Canon </label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--canon" type="radio" name="brand"><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--nikon">Nikon</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--nikon" type="radio" name="brand"><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--other">Khác</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--other" type="radio" name="brand"><span class="customize-radio"></span>
+                </div>
+              </div>
+            </form>
+            <form class="technical-filter--max__filter-group">
+              <div class="technical-filter--max__header">Kích cỡ cảm biến</div>
+              <div class="technical-filter--max__item">
+                <label for="filter--all-size">Tất cả </label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--all-size" type="radio" name="size" checked><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item">
+                <label for="filter--crop">Crop</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--crop" type="radio" name="size"><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--ff">Full-frame</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--ff" type="radio" name="size"><span class="customize-radio"></span>
+                </div>
+              </div>
+            </form>
+            <form class="technical-filter--max__filter-group">
+              <div class="technical-filter--max__header">Độ phân giải</div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--18mp">10 - 18 MP</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--18mp" type="radio" name="mp" checked><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item">
+                <label for="filter--25mp">19 - 25 MP</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--25mp" type="radio" name="mp"><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item">
+                <label for="filter--26mp">Trên 25 MP</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--26mp" type="radio" name="mp"><span class="customize-radio"></span>
+                </div>
+              </div>
+            </form>
+            <form class="technical-filter--max__filter-group">
+              <div class="technical-filter--max__header">ISO đối đa</div>
+              <div class="technical-filter--max__item">
+                <label for="filter--6400">Dưới 6400</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--6400" type="radio" name="iso" checked><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item">
+                <label for="filter--25600">6400 - 25600</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--25600" type="radio" name="iso"><span class="customize-radio"></span>
+                </div>
+              </div>
+              <div class="technical-filter--max__item"> 
+                <label for="filter--25601">Trên 25600</label>
+                <div class="input-container">
+                  <input class="technical-filter--max__radio" id="filter--25601" type="radio" name="iso"><span class="customize-radio"></span>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="promo--aside hidden-till-md">
             <h1>Tin khuyến mại</h1>
