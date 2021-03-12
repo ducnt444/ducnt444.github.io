@@ -3,6 +3,10 @@ section {
   padding: 20px 0px;
 }
 
+.btn--seemore {
+  margin: auto;
+}
+
 .review__main-banner {
   background-image: url(/halo/img/img--review/review-banner-2.png);
   background-repeat: no-repeat;
@@ -108,7 +112,7 @@ section {
 
   .review__sub-banner--big {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: white;
     flex-direction: column;
@@ -118,10 +122,16 @@ section {
     height: calc((100vw - 60px)/3.65 + 15px);
     margin-right: 20px;
     border-radius: 8px;
-    background-image: url(/halo/img/img--review/review-sub-banner-big.jpg);
+    background-image: url(/halo/img/img--review/review-big-banner-max-v6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
+  }
+
+  .review__sub-banner--big span{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.35);
   }
 
   .review__sub-banner--big:hover {
@@ -134,10 +144,22 @@ section {
   
   .review__sub-banner--small {
     display: block;
+    position: relative;
   }
 
-  .review__sub-banner--small:first-child {
-    margin-bottom: 20px;
+  .review__sub-banner--small:nth-child(2) {
+    margin: 20px 0px;
+  }
+
+  .easter-egg {
+    position: absolute;
+    bottom: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
   }
 
   .review__sub-banner--small img {
@@ -229,18 +251,25 @@ section {
 
 @media only screen and (min-width: 1200px) {
   .review__main-banner {
-    min-height: 250px;
-    max-height: 300px;
+    height: 200px;
+  }
+
+  .main-banner__logo {
+    max-width: 220px;
+  }
+
+  .main-banner__text {
+    max-width: 160px;
   }
 
   .review__sub-banner--big {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     font-size: 28px;
     width: 75%;
-    height: calc(1140px/4.35 + 15px);
+    height: 428px;
     background-position: left;
   }
 
@@ -266,6 +295,18 @@ section {
     height: 48px;
   }
 
-
-
 }
+@media only screen and (min-width: 1400px) {
+  .review__main-banner {
+    height: 250px;
+  }
+  
+  .main-banner__logo {
+    max-width: 270px;
+  }
+  
+  .main-banner__text {
+    max-width: 180px;
+  }
+}
+

@@ -448,11 +448,12 @@ for (let i = 0; i < removeItemBtn.length; i++) {
 /* ---------- live invoice ---------- */
 
 let inputCoupon = document.querySelector(".coupon__input");
+let submitCoupon = document.querySelector(".coupon__submit");
 let displayCoupon = document.querySelector(".coupon__content");
 let summaryGrandTotal = document.querySelector(".summary__grand-total span");
 
 if (inputCoupon != null) {
-  inputCoupon.addEventListener("input", function() {
+  submitCoupon.addEventListener("click", function() {
     if (inputCoupon.value.toUpperCase() == "KM2021") {
       displayCoupon.style.display = "block";
       summaryGrandTotal.innerText = "389.270.000đ"

@@ -8,6 +8,12 @@ block title
   title HALO Đánh giá
 
 block content
+  .breadcrumb-wrapper.container-xl
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href='index.html') Trang chủ
+      li.breadcrumb-item.active Đánh giá
+
   .review__main-banner
     img.main-banner__logo(src="img/img--misc/logo-white.png", alt="")
     img.main-banner__text(src="img/img--review/banner-text.png", alt="")
@@ -24,8 +30,8 @@ block content
         a.carousel-item.active(href="review-details.html") 
           img(src='/halo/img/img--review/sub-banner-big--min.jpg' alt='')
           .carousel-caption
-            h3 Nikon Z7 Review:&nbsp; 
-            p Canh bạc cho tương lai của Nikon
+            h3 Một ngày cùng Canon 35mm f/1.4&nbsp;L:
+            p Mối tình đầu với team "viền đỏ"
         a.carousel-item(href="review-details.html") 
           img(src='img/img--review/review-sub-banner-1.png' alt='')
         a.carousel-item(href="review-details.html") 
@@ -39,8 +45,8 @@ block content
   section#sub-banner-area--max.container-xl.hidden-till-md
 
     a.review__sub-banner--big(href="review-details.html")
-      span Nikon Z7 Review: 
-      span Canh bạc cho tương lai của Nikon
+      span Một ngày cùng Canon 35mm f/1.4&nbsp;L:
+      span Mối tình đầu với team "viền đỏ"
 
     .review__sub-banner--small-area 
       a.review__sub-banner--small(href="review-details.html")
@@ -48,6 +54,10 @@ block content
 
       a.review__sub-banner--small(href="review-details.html")
         img(src="img/img--review/review-sub-banner-2.png", alt="") 
+
+      a.review__sub-banner--small(href="review-details.html")
+        span.easter-egg 60D Review 
+        img(src="img/img--review/review-small-banner-max-v3.jpg", alt="") 
 
   section.main-area.container-xl
     .review__post-area
@@ -62,7 +72,7 @@ block content
         .spinner-grow.text-dark.mx-3
         .spinner-grow.text-dark
 
-      button.btn.seemore-btn.btn--dark Xem thêm
+      button.btn.btn--seemore.btn--dark Xem thêm
 
     aside.review__aside-area.hidden-till-md
       h3.aside__header Đọc nhiều nhất

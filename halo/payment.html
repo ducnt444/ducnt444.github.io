@@ -127,6 +127,7 @@
               <div class="summary__row"><span class="summary__row--left inner-header">Mã giảm giá:</span>
                 <div class="summary__row--right coupon">
                   <input class="coupon__input" type="text" placeholder="KM2021">
+                  <button class="coupon__submit btn btn--confirmation">Gửi</button>
                   <div class="coupon__content">
                     <p class="coupon__text">Giảm 15% giá trị đơn hàng (tối đa 1.000.000đ)</p>
                     <p class="coupon__text">-1.000.000đ</p>
@@ -136,7 +137,7 @@
               <p class="summary__grand-total inner-header text-center">Tổng tiền hàng: <span>390.270.000đ</span></p>
             </div>
             <div class="faq sub-section">
-              <h2 class="sub-header">Đặt hàng &#38; thanh toán: câu hỏi thường gặp</h2>
+              <h2 class="sub-header">Đặt hàng &#38; thanh toán: câu&nbsp;hỏi&nbsp;thường&nbsp;gặp</h2>
               <div class="faq__item"> 
                 <p class="faq__item--question" data-toggle="collapse" data-target="#answer1"> <span>Chi phí vận chuyển tính như thế nào?</span><span> <i class="fas fa-plus"></i></span></p>
                 <ul class="faq__item--answer collapse" id="answer1">
@@ -175,7 +176,7 @@
               <p>2. Quý khách hàng kiểm tra hàng hóa kỹ lưỡng, cẩn thận trước khi ký nhận và thanh toán.</p>
               <p>3. Nếu quá thời gian quy định, Quý khách hàng vẫn chưa nhận được sản phẩm, hãy liên lạc ngay với chúng tôi để được hỗ trợ.</p>
               <p>4. Trường hợp Quý khách hàng thay đổi quyết định mua hàng khi sản phẩm đã được giao, khách hàng sẽ phải chịu hoàn toàn chi phí vận chuyển.</p>
-            </div><a class="btn btn--confirmation payment__toggler" href="#" data-toggle="collapse" data-target="#payment__info">Xác nhận</a>
+            </div><a class="btn btn--confirmation final-btn payment__toggler" href="#" data-toggle="collapse" data-target="#payment__info">Xác nhận</a>
           </div>
         </section>
         <section class="payment-wrapper">
@@ -188,7 +189,7 @@
                 <input class="guess__info--phone form-control" type="text" placeholder="Số điện thoại">
                 <input class="guess__info--address form-control" type="text" placeholder="Địa chỉ nhận hàng">
                 <textarea class="guess__info--note form-control" name="" cols="20" rows="5" placeholder="Ghi chú"></textarea>
-              </form><a class="btn btn--confirmation payment__toggler" href="#method-wrapper" data-toggle="collapse" data-target="#payment__method">Xác nhận </a>
+              </form><a class="btn btn--confirmation final-btn payment__toggler" href="#method-wrapper" data-toggle="collapse" data-target="#payment__method">Xác nhận </a>
             </div>
             <div class="sub-section collapse" id="payment__method">
               <h2 class="sub-header">Phương thức thanh toán</h2>
@@ -228,7 +229,7 @@
                         <div class="form-group">
                           <label for="input__name">Nhập tên chủ thẻ:&nbsp; <i>(Viết cách, không dấu)</i></label>
                           <input class="form-control front-input" id="input__name" type="text" required>
-                        </div><a class="btn btn--confirmation" href="checkout.html">Xác nhận</a>
+                        </div><a class="btn btn--confirmation final-btn" href="checkout.html">Xác nhận</a>
                       </form>
                     </div>
                   </div>
@@ -271,14 +272,14 @@
                         <div class="form-group">
                           <label for="visa-master-input__name">Mã số CVV:</label>
                           <input class="form-control back-input" id="visa-master-input__cvv" type="number" min="1" max="999" required>
-                        </div><a class="btn btn--confirmation" href="checkout.html">Xác nhận</a>
+                        </div><a class="btn btn--confirmation final-btn" href="checkout.html">Xác nhận</a>
                       </form>
                     </div>
                   </div>
                   <div class="method__toggler" data-toggle="collapse" data-target="#cod"> 
                     <input type="radio" name="payment-method" id="cod-radio" form="methods-selection">
                     <label for="cod-radio">Thanh toán khi nhận hàng (COD)</label>
-                  </div><a class="method__content collapse btn btn--confirmation payment__toggler" id="cod" href="checkout.html" data-parent="#methods-selection">Xác nhận</a>
+                  </div><a class="method__content collapse btn btn--confirmation final-btn payment__toggler" id="cod" href="checkout.html" data-parent="#methods-selection">Xác nhận</a>
                 </div>
               </form>
             </div>

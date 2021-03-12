@@ -17,39 +17,38 @@ flow:
   a. add/subtract/remove items
   b. process to payment
 6. payment 
-  a. confirmation
-  b. faq
-  c. info
+  a. confirmation (coupon)
+  b. faq (aside)
+  c. info (user)
   d. payment method
   f. process to checkout
 7. checkout
   a. summary
   b. continue shopping
 8. features: login/register
-8. features: review (SEO)
-9. responsive:
+8. features: review 
+10. features: review details 
+11. responsive:
   a. built with mobile-first
-  b. x-axis (mobile) VS y-axis (desktop) 
+  b. x-axis (mobile) VS y-axis (desktop): banners
 
 
 banner 3 cho xs -> ok
-alt cho img
-gộp indicator styles vào layout.css
 review details -> ok
 fix header bug khi bật modal -> ok
-tách style trong layout
 set max length text, input -> ok
-nút clear text trong input
-nút ẩn hiện password
-đếm số comment
-reply feature
 dóng hàng -> ok
-layout term
-layout slick mobile ->
-filter simulator ->
+layout term -> ok
+layout slick mobile -> ok
+filter simulator -> ok
 nút chat -> ok
 nút cuộn -> ok
 
+tách style trong layout
+validate 
+reply feature
+alt cho img
+gộp indicator styles vào layout.css
 
 
 

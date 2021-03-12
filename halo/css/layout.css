@@ -1074,3 +1074,15 @@ footer {
   }
 
 }
+
+@media only screen and (min-width: 1400px) {
+  nav, .breadcrumb {
+    height: 60px !important;
+    font-size: 20px;
+  }
+
+  main {
+    padding-top: 60px;
+    font-size: 16px;
+  }
+}

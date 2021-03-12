@@ -20,15 +20,20 @@ section {
   font-size: 14px;
   margin-bottom: 15px;
   font-weight: bold;
+  line-height: 1.5;
 }
 
 .inner-header {
   font-weight: bold;
 }
 
-.btn--confirmation {
-  font-size: 12px;
-  margin-top: 15px;
+.btn {
+  font-size: 13px;
+}
+
+.final-btn {
+  width: 100px;
+  margin: 15px auto 0px auto;
 }
 
 .summary__row--right,
@@ -51,9 +56,22 @@ section {
   border-bottom: 1px solid #777777;
 }
 
+.coupon {
+  display: flex;
+  justify-content: space-between;
+  max-width: 160px;
+  flex-wrap: wrap;
+}
+
 .coupon__input {
   padding-left: 5px;
   width: 80px;
+}
+
+.coupon__submit {
+  margin: 0px 0px 0px 15px !important;
+  width: 50%;
+  max-width: 40px;
 }
 
 .coupon__content {
@@ -61,7 +79,7 @@ section {
 }
 
 .coupon__text:first-child {
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
   margin: 5px 0px;
   text-align: end;
@@ -102,6 +120,10 @@ section {
   margin-bottom: 10px;
   border-radius: 8px;
   resize: none;
+}
+
+textarea.form-control {
+  padding-top: 10px;
 }
 
 #payment__method input {
@@ -332,6 +354,19 @@ section {
     align-items: flex-start;
   }
 
+  .confirmation__summary {
+    width: calc(60% - 30px);
+  }
+
+  .coupon__submit {
+    max-width: 60px;
+  }
+
+  .coupon__text:first-child {
+    font-size: 14px;
+    margin: 10px 0px;
+  }
+
   .summary__grand-total {
     margin-bottom: 0px;
   }
@@ -352,6 +387,10 @@ section {
 
   .confirmation__term p:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  .faq {
+    width: calc(40%);
   }
 
   .faq h3 {
@@ -409,17 +448,29 @@ section {
 }
 
 @media only screen and (min-width: 1200px) {
+
+  main {
+    font-size: 16px;
+  }
+
+  .form-control {
+    font-size: 16px;
+  }
+
   .sub-section {
     width: calc(50% - 25px);
   }
 
-  section {
-    padding: 50px 0px;
+  .confirmation__summary {
+    width: calc(60% - 50px);
   }
 
-  .coupon__text:first-child {
-    font-size: 12px;
-    margin: 10px 0px;
+  .faq {
+    width: 40%;
+  }
+
+  section {
+    padding: 50px 0px;
   }
 }
 

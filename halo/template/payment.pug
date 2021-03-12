@@ -54,6 +54,7 @@ block content
             span.summary__row--left.inner-header Mã giảm giá:
             .summary__row--right.coupon
               input.coupon__input(type="text" placeholder="KM2021")
+              button.coupon__submit.btn.btn--confirmation Gửi
               .coupon__content
                 p.coupon__text Giảm 15% giá trị đơn hàng (tối đa 1.000.000đ)
                 p.coupon__text -1.000.000đ
@@ -62,7 +63,7 @@ block content
             span 390.270.000đ
         
         .faq.sub-section
-          h2.sub-header Đặt hàng &#38; thanh toán: câu hỏi thường gặp
+          h2.sub-header Đặt hàng &#38; thanh toán: câu&nbsp;hỏi&nbsp;thường&nbsp;gặp
 
           .faq__item 
             p.faq__item--question(data-toggle="collapse" data-target="#answer1") 
@@ -120,7 +121,7 @@ block content
 
           p 4. Trường hợp Quý khách hàng thay đổi quyết định mua hàng khi sản phẩm đã được giao, khách hàng sẽ phải chịu hoàn toàn chi phí vận chuyển.
 
-        a.btn.btn--confirmation.payment__toggler(href="#" data-toggle="collapse" data-target="#payment__info") Xác nhận
+        a.btn.btn--confirmation.final-btn.payment__toggler(href="#" data-toggle="collapse" data-target="#payment__info") Xác nhận
 
     section.payment-wrapper
 
@@ -138,7 +139,7 @@ block content
             input.guess__info--address.form-control(type="text" placeholder="Địa chỉ nhận hàng")
             textarea.guess__info--note.form-control(name="" cols="20" rows="5" placeholder="Ghi chú")
 
-          a.btn.btn--confirmation.payment__toggler(href="#method-wrapper" data-toggle="collapse" data-target="#payment__method") Xác nhận 
+          a.btn.btn--confirmation.final-btn.payment__toggler(href="#method-wrapper" data-toggle="collapse" data-target="#payment__method") Xác nhận 
 
         #payment__method.sub-section.collapse
           h2.sub-header Phương thức thanh toán
@@ -165,7 +166,7 @@ block content
                 input(type="radio" name="payment-method", id="cod-radio" form="methods-selection")
                 label(for="cod-radio") Thanh toán khi nhận hàng (COD)
 
-              a#cod.method__content.collapse.btn.btn--confirmation.payment__toggler(href="checkout.html" data-parent="#methods-selection") Xác nhận
+              a#cod.method__content.collapse.btn.btn--confirmation.final-btn.payment__toggler(href="checkout.html" data-parent="#methods-selection") Xác nhận
          
 
 

@@ -42,27 +42,44 @@ figcaption {
   }
 
   figure {
-    padding: 15px 30px;
+    padding: 15px 50px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   figure {
-    padding: 15px 50px;
+    padding: 15px 15%;
   }
 
 }
 
 @media only screen and (min-width: 1200px) {
   main {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  .article__section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .article__header {
+    width: 100%;
   }
 
   .review-article__content {
     padding: 50px 0px;
   }
 
-  figure {
-    padding: 15px 100px;
+  .figure--full {
+    padding: 25px 25%;
+    width: 100%;
+  }
+
+  .figure--half {
+    padding: 25px;
+    width: calc(50% - 50px);
   }
 }
