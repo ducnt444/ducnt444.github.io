@@ -372,6 +372,10 @@ section {
     padding: 50px;
   }
 
+  .section__header {
+    margin-bottom: 20px;
+  }
+
   .slick-prev,
   .slick-next {
     display: block !important;

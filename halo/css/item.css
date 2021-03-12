@@ -19,7 +19,7 @@
 }
 
 .main-area__items-area .item {
-  margin-bottom: 20px;
+  margin-bottom: 12.5px;
 }
 
 .item, .item * {
@@ -140,13 +140,13 @@
 
   /* --------------- update settings --------------- */
   .item {
-    /* width 250, height 360 */
-    width: 230px; 
     margin: 12.5px;
+    padding-top: 30px;
   }
 
   .item__header {
     min-height: 70px;
+    margin-bottom: 5px;
   }
 
   .item__name {
@@ -196,15 +196,26 @@
 
 @media only screen and (min-width: 1200px) {
   /* ---------- update card (hub) styles ---------- */
-  .hub-row .card {
-    /* width 222 */
-    width: 237.5px;
-    padding: 20px 10px;
+  .item {
+    width: 265px; 
     margin: 0px 15px;
+    padding: 25px 10px 20px 10px;
   }
 
-  .hub-row .card-body {
-    padding: 20px 0px 0px 0px;
+  .item .card-img-top {
+    
+  }
+
+  .item__header {
+    min-height: 86px;
+  }
+
+  .item__name {
+    font-size: 24px;
+  }
+
+  .item__subtext {
+    font-size: 16px;
   }
 
   .hub-row .seemore-btn {
@@ -214,37 +225,16 @@
     padding: 5px 15px;
   }
 
-  /* ---------- sale items module ---------- */
-  .sale-text {
-    flex-wrap: nowrap;
-  }
 
   /* ---------- hết update card (hub) styles ---------- */
 
 
-  .item .card-img-top {
-    /*thumbnail 180*/
-    max-width: 200px;
-  }
 
-  .item.card {
-    /* width 260 */
-    width: 280px;
-    max-width: 280px;
-    margin: 15px;
-  }
 
-  .item__badge {
-    height: 30px;
-  }
 
-  .item__name {
-    font-size: 24px;
-  }
 
-  .item__subtext {
-    font-size: 18px;
-  }
+
+
 }
 
 @media only screen and (min-width: 1400px) {

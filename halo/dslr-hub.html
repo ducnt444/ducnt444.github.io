@@ -241,17 +241,18 @@
         </aside>
         <div class="dslr-hub__main-area">
           <div class="main-area__sub-filter-area"><span class="sub-filter-header hidden-till-sm">Bộ lọc:</span>
-            <div class="sub-filter-wrapper">
-              <div class="sub-filter"><img src="img/img--misc/badge--hot.png" alt=""><span>Bán chạy</span></div>
-              <div class="sub-filter"><img src="img/img--misc/badge--love.png" alt=""><span>Đánh giá tốt</span></div>
-              <div class="sub-filter"><img src="img/img--misc/badge--sale-v2.png" alt=""><span>Khuyến mại</span></div>
+            <div class="sub-filter-wrapper button-group filters-button-group">
+              <button class="sub-filter button is-checked" data-filter="*">Tất cả</button>
+              <button class="sub-filter button" data-filter=".item--hot">Bán chạy</button>
+              <button class="sub-filter button" data-filter=".item--love">Đánh giá tốt</button>
+              <button class="sub-filter button" data-filter=".item--sale">Khuyến mại</button>
             </div>
           </div>
-          <div class="main-area__items-area">
+          <div class="main-area__items-area grid">
             <div class="card item item--hot item--love item--sale"><img class="card-img-top" src="img/img--camera-body/canon-eos-5d-mark-iv-card.jpg" alt=""><img class="item__badge item__badge--hot" src="img/img--misc/badge--hot.png" alt=""><img class="item__badge item__badge--love" src="img/img--misc/badge--love.png" alt="">
               <div class="card-body text-center">
                 <div class="item__header">
-                  <p class="item__name font-weight-bold font-18">Canon EOS 5D Mark IV</p>
+                  <p class="item__name font-weight-bold font-18">Canon EOS 5D Mark&nbsp;IV</p>
                   <p class="item__subtext font-italic font-weight-light">(Mới 100% fullbox)</p>
                 </div>
                 <p class="item__price font-weight-bold">50.090.000đ</p>
@@ -271,7 +272,7 @@
             <div class="card item item--sale"><img class="card-img-top" src="img/img--item/item-3.jpg" alt=""><img class="item__badge item__badge--hot" src="img/img--misc/badge--hot.png" alt=""><img class="item__badge item__badge--love" src="img/img--misc/badge--love.png" alt="">
               <div class="card-body text-center">
                 <div class="item__header">
-                  <p class="item__name font-weight-bold">Sony Alpha A7 Mark II</p>
+                  <p class="item__name font-weight-bold">Sony Alpha A7 Mark&nbsp;II</p>
                   <p class="item__subtext font-italic font-weight-light">(Mới 100% fullbox)</p>
                 </div>
                 <p class="item__price font-weight-bold">23.990.000đ</p>
@@ -291,7 +292,7 @@
             <div class="card item"><img class="card-img-top" src="img/img--item/item-5.jpg" alt=""><img class="item__badge item__badge--hot" src="img/img--misc/badge--hot.png" alt=""><img class="item__badge item__badge--love" src="img/img--misc/badge--love.png" alt="">
               <div class="card-body text-center">
                 <div class="item__header">
-                  <p class="item__name font-weight-bold">Canon 1DX Mark III</p>
+                  <p class="item__name font-weight-bold">Canon EOS 1DX Mark&nbsp;III</p>
                   <p class="item__subtext font-italic font-weight-light">(Mới 100% fullbox)</p>
                 </div>
                 <p class="item__price font-weight-bold">130.090.000đ</p>
@@ -301,7 +302,7 @@
             <div class="card item item--hot item--love item--sale"><img class="card-img-top" src="img/img--camera-body/canon-eos-5d-mark-iv-card.jpg" alt=""><img class="item__badge item__badge--hot" src="img/img--misc/badge--hot.png" alt=""><img class="item__badge item__badge--love" src="img/img--misc/badge--love.png" alt="">
               <div class="card-body text-center">
                 <div class="item__header">
-                  <p class="item__name font-weight-bold font-18">Canon EOS 5D Mark IV</p>
+                  <p class="item__name font-weight-bold font-18">Canon EOS 5D Mark&nbsp;IV</p>
                   <p class="item__subtext font-italic font-weight-light">(Mới 100% fullbox)</p>
                 </div>
                 <p class="item__price font-weight-bold">50.090.000đ</p>
@@ -321,7 +322,7 @@
             <div class="card item item--sale"><img class="card-img-top" src="img/img--item/item-3.jpg" alt=""><img class="item__badge item__badge--hot" src="img/img--misc/badge--hot.png" alt=""><img class="item__badge item__badge--love" src="img/img--misc/badge--love.png" alt="">
               <div class="card-body text-center">
                 <div class="item__header">
-                  <p class="item__name font-weight-bold">Sony Alpha A7 Mark II</p>
+                  <p class="item__name font-weight-bold">Sony Alpha A7 Mark&nbsp;II</p>
                   <p class="item__subtext font-italic font-weight-light">(Mới 100% fullbox)</p>
                 </div>
                 <p class="item__price font-weight-bold">23.990.000đ</p>
@@ -364,8 +365,8 @@
     <script src="https://kit.fontawesome.com/d8c5e3f38e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"> </script>
+    <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="js/isotope-init.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

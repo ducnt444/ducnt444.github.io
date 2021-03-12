@@ -1,4 +1,4 @@
-
+/* ---------- body styles ----------*/
 body,
 main {
   overflow-x: hidden;
@@ -8,13 +8,35 @@ main {
   position: relative;
   top: 2px;
 }
+/* ---------- kết thúc body styles ----------*/
+
 
 /* ---------- carousel styles ----------*/
+@keyframes animatedBanner1 {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: right center;
+  }
+}
 
-/*
-Carousel map: 
+@keyframes spinningRing {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
 
-*/
+@keyframes flashingRing {
+  0% {opacity: 0.1;}
+  50% {opacity: 0.35;}
+  100% {opacity: 0.1;}
+}
+
+@keyframes flashingRingBright {
+  0% {opacity: 0.3;}
+  50% {opacity: 0.95;}
+  100% {opacity: 0.3;}
+}
 
 #main-carousel, 
 .carousel-inner, 
@@ -43,15 +65,6 @@ Carousel map:
 
 #main-carousel .carousel-indicators .active {
   background-image: url("../img/img--misc/halo-logo-white--active.png");
-}
-
-@keyframes animatedBanner1 {
-  from {
-    background-position: left center;
-  }
-  to {
-    background-position: right center;
-  }
 }
 
 .banner-1 {
@@ -199,11 +212,24 @@ Carousel map:
 }
 
 .banner-3 .carousel-caption__img {
-  background-image: url("../img/img--carousel/e-mount-banner-min.png");
+  background-position: bottom;
+  background-image: url("../img/img--carousel/e-mount-banner-min-v3.png");
 }
-/* ---------- body styles ----------*/
 
-/* ---------- kết thúc body styles ----------*/
+.inner-ring {
+  position: absolute;
+  width: 100%;
+  bottom: -27%;
+  right: 0px;
+  animation: spinningRing 20s linear 0s infinite reverse, flashingRingBright 3s linear 0s infinite normal;
+}
+
+.banner-3 .seemore-btn,
+.banner-3  .main-carousel__text {
+  position: relative;
+  z-index: 100;
+}
+
 
 /* ---------- intros styles ----------*/
 /* 
@@ -393,6 +419,10 @@ Carousel map:
   .review-item__content {
     padding: 3%;
   }
+
+  .inner-ring {
+    bottom: -30%;
+  }
 }
 
 @media only screen and (min-width: 576px) {
@@ -455,6 +485,10 @@ Carousel map:
 
   .lotr-logo {
     height: 78px;
+  }
+
+  .inner-ring {
+    bottom: -32%;
   }
 
   .policy {
@@ -572,6 +606,11 @@ Carousel map:
     margin: auto;
     display: flex !important;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .carousel-caption__img {
+    background-position: center !important;
   }
 
   /* ----- kích hoạt, update extra ----- */
@@ -711,23 +750,6 @@ Carousel map:
     background-position: center;
   }
 
-  @keyframes spinningRing {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-  }
-
-  @keyframes flashingRing {
-    0% {opacity: 0.1;}
-    50% {opacity: 0.35;}
-    100% {opacity: 0.1;}
-  }
-
-  @keyframes flashingRingBright {
-    0% {opacity: 0.3;}
-    50% {opacity: 0.95;}
-    100% {opacity: 0.3;}
-  }
-
   .outer-ring {
     position: absolute;
     top: 0px;
@@ -737,9 +759,9 @@ Carousel map:
 
   .inner-ring {
     position: absolute;
-    width: 260px;
-    top: calc(50% - 133px);
-    right: calc(50% - 130px);
+    width: 240px;
+    top: calc(50% - 125px);
+    right: calc(50% - 120px);
     animation: spinningRing 20s linear 0s infinite reverse, flashingRingBright 3s linear 0s infinite normal;
   }
 
@@ -1065,12 +1087,6 @@ Carousel map:
     width: 320px;
     top: calc(50% - 158px);
     right: calc(50% - 160px);
-  }
-
-  .banner-3 .seemore-btn,
-  .banner-3  .main-carousel__text {
-    position: relative;
-    z-index: 100;
   }
 
   .banner-3 .main-carousel__text:first-of-type {

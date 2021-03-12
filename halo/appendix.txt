@@ -32,7 +32,7 @@ flow:
   b. x-axis (mobile) VS y-axis (desktop) 
 
 
-banner 3 cho xs 
+banner 3 cho xs -> ok
 alt cho img
 gộp indicator styles vào layout.css
 review details -> ok
@@ -45,8 +45,8 @@ nút ẩn hiện password
 reply feature
 dóng hàng -> ok
 layout term
-layout slick mobile
-filter simulator
+layout slick mobile ->
+filter simulator ->
 nút chat -> ok
 nút cuộn -> ok
 

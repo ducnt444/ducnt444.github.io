@@ -8,7 +8,8 @@ block title
   title Máy ảnh DSLR
 
 block script
-  script(src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js')  
+  script(src='https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js')
+  script(src='js/isotope-init.js')
 
 block content
   .container-xl.breadcrumb-wrapper
@@ -171,18 +172,13 @@ block content
     .dslr-hub__main-area
       .main-area__sub-filter-area
         span.sub-filter-header.hidden-till-sm Bộ lọc:
-        .sub-filter-wrapper
-          .sub-filter
-            img(src="img/img--misc/badge--hot.png", alt="")
-            span Bán chạy
-          .sub-filter
-            img(src="img/img--misc/badge--love.png", alt="")
-            span Đánh giá tốt
-          .sub-filter
-            img(src="img/img--misc/badge--sale-v2.png", alt="")
-            span Khuyến mại
+        .sub-filter-wrapper.button-group.filters-button-group
+          button.sub-filter.button.is-checked(data-filter="*") Tất cả
+          button.sub-filter.button(data-filter=".item--hot") Bán chạy
+          button.sub-filter.button(data-filter=".item--love") Đánh giá tốt
+          button.sub-filter.button(data-filter=".item--sale") Khuyến mại
 
-      .main-area__items-area
+      .main-area__items-area.grid
         include parts/card-1.pug
         include parts/card-2.pug
         include parts/card-3.pug
