@@ -322,7 +322,7 @@ section {
     font-size: 14px;
     padding: 7px 15px; 
     width: 120px;
-    margin-top: 20px;
+    margin: 20px auto 0px auto;
   }
 
   #confirmation, #payment {
