@@ -162,42 +162,6 @@ for (let i = 0; i < subImgs.length; i++) {
 
 
 /* 
--------------------------
- add to cart animation 
-------------------------- 
-*/
-/* function addToCartAnimation() {
-  let mainImgClone = mainImg.cloneNode(true);
-  let detailImgArea = document.querySelector(".details__img-area");
-  detailImgArea.insertBefore(mainImgClone, mainImg.nextSibling);
-  mainImgClone.style.position = "absolute";
-  mainImgClone.style.top = "0px";
-  mainImgClone.style.right = "calc(50% - 570px)";
-}
-
-let addToCartBtn = document.querySelector(".summary__btn-wrapper .summary__btn:last-child");
-
-addToCartBtn.addEventListener("click", addToCartAnimation); 
-
-$(document).ready(function(){
-  $(".summary__btn-wrapper .summary__btn:last-child").click(function(){
-    let detailImgArea = $(".details__img-area");
-    var mainImgClone = $(".details__main-img").clone(true).appendTo(".details__img-area");
-    mainImgClone.appendTo(".details__img-area");
-    mainImgClone[0].style.position = "absolute";
-    mainImgClone[0].style.top = "219px";
-    mainImgClone.animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow");
-/*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
-/*   });
-}); */
-/* 
--------------------------
- hết add to cart animation 
-------------------------- 
-*/
-
-
-/* 
 ------------------------- 
 .main-info__toggler-indicator 
 ------------------------- 
@@ -572,24 +536,30 @@ if (inputValue.length != 0 ) {
 
 /* --------------- hết update input lên thẻ --------------- */
 
-
-/* test
-let inputNum = document.getElementById("input__num");
-
-inputNum.addEventListener("input", function(){
-  let result = "" + inputNum.value;
-  document.querySelector(".front__num").innerText = 
-  result.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-});
-
-inputCVV.addEventListener("input", function(){
-  document.querySelector(".cvv").innerHTML = "" + inputCVV.value;
-});
- */
-
 /* 
 -------------------------
  hết card animation 
+------------------------- 
+*/
+
+
+/* 
+-------------------------
+ validate card
+------------------------- 
+*/
+function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+  }
+  return true;
+}
+
+/* 
+-------------------------
+ hết validate card
 ------------------------- 
 */
 
@@ -677,6 +647,45 @@ hết infinite review
 
 
 
+
+
+/* 
+-------------------------
+ add to cart animation 
+------------------------- 
+*/
+/* function addToCartAnimation() {
+  let mainImgClone = mainImg.cloneNode(true);
+  let detailImgArea = document.querySelector(".details__img-area");
+  detailImgArea.insertBefore(mainImgClone, mainImg.nextSibling);
+  mainImgClone.style.position = "absolute";
+  mainImgClone.style.top = "0px";
+  mainImgClone.style.right = "calc(50% - 570px)";
+}
+
+let addToCartBtn = document.querySelector(".summary__btn-wrapper .summary__btn:last-child");
+
+addToCartBtn.addEventListener("click", addToCartAnimation); 
+
+$(document).ready(function(){
+  $(".summary__btn-wrapper .summary__btn:last-child").click(function(){
+    let detailImgArea = $(".details__img-area");
+    var mainImgClone = $(".details__main-img").clone(true).appendTo(".details__img-area");
+    mainImgClone.appendTo(".details__img-area");
+    mainImgClone[0].style.position = "absolute";
+    mainImgClone[0].style.top = "219px";
+    mainImgClone.animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow");
+/*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
+/*   });
+}); */
+/* 
+-------------------------
+ hết add to cart animation 
+------------------------- 
+*/
+
+
+
 /* test timer banner
 let i = 0;
 
@@ -689,3 +698,19 @@ let counter = setInterval(function(){
     i = -10;
   }  
 }, 100); */
+
+
+
+/* test
+let inputNum = document.getElementById("input__num");
+
+inputNum.addEventListener("input", function(){
+  let result = "" + inputNum.value;
+  document.querySelector(".front__num").innerText = 
+  result.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+});
+
+inputCVV.addEventListener("input", function(){
+  document.querySelector(".cvv").innerHTML = "" + inputCVV.value;
+});
+ */

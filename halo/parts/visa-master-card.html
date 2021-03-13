@@ -19,7 +19,7 @@
   <form autocomplete="off">
     <div class="form-group">
       <label for="visa-master-input__num">Nhập số thẻ:&nbsp;<i>(Viết liền)</i></label>
-      <input class="form-control front-input" id="visa-master-input__num" type="number" required="required"/>
+      <input class="form-control front-input card-num-input" id="visa-master-input__num" type="text" required="required" minlength="16" maxlength="16" onkeypress="return isNumber(event)"/>
     </div>
     <div class="form-group input__dates">
       <label for="visa-master-input__month">Ngày hết hạn:&nbsp; <i>(chỉ nhập 2 số cuối của năm)</i></label>
@@ -32,7 +32,7 @@
     </div>
     <div class="form-group">
       <label for="visa-master-input__name">Mã số CVV:</label>
-      <input class="form-control back-input" id="visa-master-input__cvv" type="number" min="1" max="999" required="required"/>
+      <input class="form-control back-input" id="visa-master-input__cvv" type="text" required="required" minlength="3" maxlength="3" onkeypress="return isNumber(event)"/>
     </div><a class="btn btn--confirmation final-btn" href="checkout.html">Xác nhận</a>
   </form>
 </div>

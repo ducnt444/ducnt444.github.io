@@ -23,7 +23,7 @@
     .form-group
       label(for='input__num') Nhập số thẻ:&nbsp;
         i (Viết liền)
-      input#input__num.form-control.front-input(type="text" required)
+      input#input__num.form-control.front-input.card-num-input(type="text" required minlength="16" maxlength="16" onkeypress="return isNumber(event)")
 
     .form-group.input__dates
       label(for='domestic-input__month') Ngày hết hạn:&nbsp; 
@@ -35,6 +35,6 @@
     .form-group
       label(for='input__name') Nhập tên chủ thẻ:&nbsp; 
         i (Viết cách, không dấu)
-      input#input__name.form-control.front-input(type="text" required)
+      input#input__name.form-control.front-input(type="text" required maxlength="30")
 
     a.btn.btn--confirmation.final-btn(href='checkout.html') Xác nhận

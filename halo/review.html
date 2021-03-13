@@ -14,25 +14,7 @@
     <title>HALO Đánh giá</title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript-->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat Plugin code-->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
+    <!--include fb-chat.pug-->
     <header id="header">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
@@ -125,25 +107,25 @@
         </div>
       </section>
       <section class="container-xl hidden-till-md" id="sub-banner-area--max"><a class="review__sub-banner--big" href="review-details.html"><span>Một ngày cùng Canon 35mm f/1.4&nbsp;L:</span><span>Mối tình đầu với team "viền đỏ"</span></a>
-        <div class="review__sub-banner--small-area"> <a class="review__sub-banner--small" href="review-details.html"><img src="img/img--review/review-sub-banner-1.png" alt=""></a><a class="review__sub-banner--small" href="review-details.html"><img src="img/img--review/review-sub-banner-2.png" alt=""></a><a class="review__sub-banner--small" href="review-details.html"><span class="easter-egg">60D Review </span><img src="img/img--review/review-small-banner-max-v3.jpg" alt=""></a></div>
+        <div class="review__sub-banner--small-area"> <a class="review__sub-banner--small" href="review-details.html"><img src="img/img--review/review-sub-banner-3.png" alt=""><span class="easter-egg">Sigma 17-50mm Review </span></a><a class="review__sub-banner--small" href="review-details.html"><img src="img/img--review/review-sub-banner-4.jpg" alt=""><span class="easter-egg">Canon 85mm Review </span></a><a class="review__sub-banner--small" href="review-details.html"><img src="img/img--review/review-sub-banner-5.png" alt=""><span class="easter-egg">Canon 60D Review </span></a></div>
       </section>
       <section class="main-area container-xl">
         <div class="review__post-area">
-          <div class="review__post-collection"><a class="review__post" href="review-details.html"><img class="review__post--img" src="img/img--review/review-img.png" alt="">
+          <div class="review__post-collection"><a class="review__post" href="review-details.html"><img class="review__post--img" src="img/img--review/review-post-img-1.jpg" alt="">
               <div class="review__post--content"> 
-                <h1 class="post__header text-left">Top 5 DSLR đáng mua năm 2021</h1>
+                <h1 class="post__header text-left">Canon EOS 1DX Mark III: Vua của các vị&nbsp;vua</h1>
                 <p class="post__subtext font-italic"> <span class="post__author">Trung Đức</span><span class="post__time-icon mx-2 mx-md-3 mx-xl-4"> <i class="far fa-clock"></i></span><span class="post__time-dates">01/01/2021</span></p>
-                <p class="post__preview">Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,...  lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản.</p>
-              </div></a><a class="review__post" href="review-details.html"><img class="review__post--img" src="img/img--review/review-img.png" alt="">
+                <p class="post__preview">Cầm 1DX mark III không chỉ mang lại sự phấn khích với thiết bị công nghệ cao mà còn là niềm cảm hứng bất tận khi tác&nbsp;nghiệp.</p>
+              </div></a><a class="review__post" href="review-details.html"><img class="review__post--img" src="img/img--review/review-post-img-2.png" alt="">
               <div class="review__post--content"> 
-                <h1 class="post__header text-left">Top 5 DSLR đáng mua năm 2021</h1>
+                <h1 class="post__header text-left">Top 5 DSLR đáng mua năm&nbsp;2021</h1>
                 <p class="post__subtext font-italic"> <span class="post__author">Trung Đức</span><span class="post__time-icon mx-2 mx-md-3 mx-xl-4"> <i class="far fa-clock"></i></span><span class="post__time-dates">01/01/2021</span></p>
-                <p class="post__preview">Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,...  lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản.</p>
-              </div></a><a class="review__post" href="review-details.html"><img class="review__post--img" src="img/img--review/review-img.png" alt="">
+                <p class="post__preview">Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,...  lựa chọn một chiếc máy ảnh phù hợp là điều không&nbsp;đơn&nbsp;giản.</p>
+              </div></a><a class="review__post" href="review-details.html"><img class="review__post--img" src="img/img--review/review-post-img-3.jpg" alt="">
               <div class="review__post--content"> 
-                <h1 class="post__header text-left">Top 5 DSLR đáng mua năm 2021</h1>
+                <h1 class="post__header text-left">Canon EF 70-200mm f/2.8L IS III USM: Ống kính tele "trấn&nbsp;phái"</h1>
                 <p class="post__subtext font-italic"> <span class="post__author">Trung Đức</span><span class="post__time-icon mx-2 mx-md-3 mx-xl-4"> <i class="far fa-clock"></i></span><span class="post__time-dates">01/01/2021</span></p>
-                <p class="post__preview">Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,...  lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản.</p>
+                <p class="post__preview">Sự kiên nhẫn chờ đợi dài đằng đẵng của các Canonian về một ống kính 70-200mm mới giờ đã được đền đáp, mà thậm chí là vượt cả mong&nbsp;đợi.</p>
               </div></a></div>
           <div class="loading-indicator justify-content-center mb-5">
             <div class="spinner-grow text-dark"></div>

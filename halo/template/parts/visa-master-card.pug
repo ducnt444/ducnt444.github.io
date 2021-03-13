@@ -1,5 +1,4 @@
 
-
 .payment-card__content 
 
   .front 
@@ -25,7 +24,7 @@
     .form-group
       label(for='visa-master-input__num') Nhập số thẻ:&nbsp;
         i (Viết liền)
-      input#visa-master-input__num.form-control.front-input(type="number" required)
+      input#visa-master-input__num.form-control.front-input.card-num-input(type="text" required minlength="16" maxlength="16" onkeypress="return isNumber(event)")
 
     .form-group.input__dates
       label(for='visa-master-input__month') Ngày hết hạn:&nbsp; 
@@ -41,6 +40,6 @@
 
     .form-group
       label(for='visa-master-input__name') Mã số CVV:
-      input#visa-master-input__cvv.form-control.back-input(type="number" min="1" max="999" required)
+      input#visa-master-input__cvv.form-control.back-input(type="text" required minlength="3" maxlength="3" onkeypress="return isNumber(event)")
 
     a.btn.btn--confirmation.final-btn(href='checkout.html') Xác nhận

@@ -68,6 +68,10 @@ section {
   width: 80px;
 }
 
+.coupon__input:focus {
+  outline-color: black !important;
+}
+
 .coupon__submit {
   margin: 0px 0px 0px 15px !important;
   width: 50%;
@@ -220,6 +224,10 @@ textarea.form-control {
   margin-left: auto;
 }
 
+.display-value {
+  font-weight: 700;
+}
+
 .front__num,
 .front__name {
   width: 100%;
@@ -234,18 +242,13 @@ textarea.form-control {
   font-family: 'Orbitron', sans-serif;
   font-size: 14px;
   margin-top: 3%;
-  font-weight: 500;
   letter-spacing: 2px;
 }
 
 .front__valid-text {
-  font-size: 7px;
+  font-size: 11px;
   margin-right: 10px;
   margin-top: 3px;
-}
-
-.front__name {
-  font-weight: 500;
 }
 
 .back {
@@ -395,6 +398,8 @@ textarea.form-control {
 
   .faq h3 {
     margin-top: 20px;
+    line-height: 1.5;
+    font-size: 16px;
   }
 
   .guess__info *

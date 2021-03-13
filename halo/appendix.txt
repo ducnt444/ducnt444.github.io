@@ -44,8 +44,8 @@ filter simulator -> ok
 nút chat -> ok
 nút cuộn -> ok
 
+validate -> tạm ok
 tách style trong layout
-validate 
 reply feature
 alt cho img
 gộp indicator styles vào layout.css

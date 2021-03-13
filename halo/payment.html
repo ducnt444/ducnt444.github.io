@@ -16,25 +16,7 @@
     <title>Cổng thanh toán</title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript-->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat Plugin code-->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
+    <!--include fb-chat.pug-->
     <header id="header">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
@@ -167,7 +149,7 @@
                   <li class="font-weight-bold">- Always has been.</li>
                 </ul>
               </div>
-              <h3 class="text-center">Các câu hỏi khác cần tư vấn, vui lòng liên hệ hotline: 012.345.6789</h3>
+              <h3 class="text-center">Các câu hỏi khác cần tư vấn, vui lòng liên hệ hotline: <a class="text-primary" href="#">012.345.6789</a></h3>
             </div>
             <p class="term-toggler__wrapper text-center">Khi bấm xác nhận, quý khách đã đồng ý với <span class="term-toggler text-primary font-italic" data-toggle="collapse" data-target=".confirmation__term">các điều khoản đặt hàng và thanh toán của chúng tôi.</span></p>
             <div class="confirmation__term sub-section collapse">
@@ -219,7 +201,7 @@
                         </div>
                         <div class="form-group">
                           <label for="input__num">Nhập số thẻ:&nbsp;<i>(Viết liền)</i></label>
-                          <input class="form-control front-input" id="input__num" type="text" required>
+                          <input class="form-control front-input card-num-input" id="input__num" type="text" required minlength="16" maxlength="16" onkeypress="return isNumber(event)">
                         </div>
                         <div class="form-group input__dates">
                           <label for="domestic-input__month">Ngày hết hạn:&nbsp; <i>(chỉ nhập 2 số cuối của năm)</i></label>
@@ -228,7 +210,7 @@
                         </div>
                         <div class="form-group">
                           <label for="input__name">Nhập tên chủ thẻ:&nbsp; <i>(Viết cách, không dấu)</i></label>
-                          <input class="form-control front-input" id="input__name" type="text" required>
+                          <input class="form-control front-input" id="input__name" type="text" required maxlength="30">
                         </div><a class="btn btn--confirmation final-btn" href="checkout.html">Xác nhận</a>
                       </form>
                     </div>
@@ -258,7 +240,7 @@
                       <form autocomplete="off">
                         <div class="form-group">
                           <label for="visa-master-input__num">Nhập số thẻ:&nbsp;<i>(Viết liền)</i></label>
-                          <input class="form-control front-input" id="visa-master-input__num" type="number" required>
+                          <input class="form-control front-input card-num-input" id="visa-master-input__num" type="text" required minlength="16" maxlength="16" onkeypress="return isNumber(event)">
                         </div>
                         <div class="form-group input__dates">
                           <label for="visa-master-input__month">Ngày hết hạn:&nbsp; <i>(chỉ nhập 2 số cuối của năm)</i></label>
@@ -271,7 +253,7 @@
                         </div>
                         <div class="form-group">
                           <label for="visa-master-input__name">Mã số CVV:</label>
-                          <input class="form-control back-input" id="visa-master-input__cvv" type="number" min="1" max="999" required>
+                          <input class="form-control back-input" id="visa-master-input__cvv" type="text" required minlength="3" maxlength="3" onkeypress="return isNumber(event)">
                         </div><a class="btn btn--confirmation final-btn" href="checkout.html">Xác nhận</a>
                       </form>
                     </div>
