@@ -303,6 +303,7 @@ section {
 
 .review__btn {
   font-size: 14px;
+  margin: 0x auto;
 }
 
 /* ----- main-info: sample ----- */
