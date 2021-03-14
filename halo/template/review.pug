@@ -19,24 +19,32 @@ block content
     img.main-banner__text(src="img/img--review/banner-text.png", alt="")
 
   section.display-till-md
-    #sub-banner-area--min.carousel.slide(data-ride='carousel' data-touch='true')
+    #sub-banner-area--min.carousel.slide(data-ride='carousel' data-touch='true' data-interval="false")
 
       ul.carousel-indicators
         li.active(data-target='#sub-banner-area--min' data-slide-to='0')
         li(data-target='#sub-banner-area--min' data-slide-to='1')
         li(data-target='#sub-banner-area--min' data-slide-to='2')
+        li(data-target='#sub-banner-area--min' data-slide-to='3')
         
       .carousel-inner
         a.carousel-item.active(href="review-details.html") 
-          img(src='/halo/img/img--review/review-big-banner-max-v7.jpg' alt='')
+          img(src='/halo/img/img--review/review-sub-banner-2.jpg' alt='')
           .carousel-caption
-            h3 Một ngày cùng Canon 35mm f/1.4&nbsp;L:
-            p Mối tình đầu với team "viền đỏ"
+            h3 Một ngày cùng Canon 35mm f/1.4&nbsp;L
         a.carousel-item(href="review-details.html") 
           img(src='img/img--review/review-sub-banner-3.png' alt='')
-          span.easter-egg Sigma 17-50mm Review 
+          .carousel-caption
+            h3 Sigma 17-50mm&nbsp;Review 
+          span.easter-egg 
         a.carousel-item(href="review-details.html") 
           img(src='img/img--review/review-sub-banner-4.jpg' alt='')
+          .carousel-caption
+            h3 Canon 85mm Review         
+        a.carousel-item(href="review-details.html") 
+          img(src='img/img--review/review-sub-banner-5.png' alt='')
+          .carousel-caption
+            h3 Canon 60D Review       
             
       a.carousel-control-prev(href='#sub-banner-area--min' data-slide='prev')
         span.carousel-control-prev-icon
@@ -46,22 +54,29 @@ block content
   section#sub-banner-area--max.container-xl.hidden-till-md
 
     a.review__sub-banner--big(href="review-details.html")
-      span Một ngày cùng Canon 35mm f/1.4&nbsp;L:
-      span Mối tình đầu với team "viền đỏ"
+      img.display-till-xl(src="/halo/img/img--review/review-big-banner-md-v1.jpg", alt="")
+      img.hidden-till-xl(src="/halo/img/img--review/review-big-banner-xl-v7.jpg", alt="")
+      .sub-banner__caption
+        span Một ngày cùng Canon 35mm f/1.4&nbsp;L:
+        br
+        span Mối tình đầu với team "viền đỏ"
 
     .review__sub-banner--small-area 
 
       a.review__sub-banner--small(href="review-details.html")
         img(src="img/img--review/review-sub-banner-3.png", alt="") 
-        span.easter-egg Sigma 17-50mm Review 
+        .sub-banner__caption
+          span Sigma 17-50mm Review 
 
       a.review__sub-banner--small(href="review-details.html")
         img(src="img/img--review/review-sub-banner-4.jpg", alt="") 
-        span.easter-egg Canon 85mm Review 
+        .sub-banner__caption
+          span Canon 85mm Review 
 
       a.review__sub-banner--small(href="review-details.html")
         img(src="img/img--review/review-sub-banner-5.png", alt="") 
-        span.easter-egg Canon 60D Review 
+        .sub-banner__caption
+          span Canon 60D Review 
 
   section.main-area.container-xl
     .review__post-area

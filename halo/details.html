@@ -15,25 +15,7 @@
     <title>Máy ảnh 1DX Mark III </title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript-->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat Plugin code-->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
+    <!--include fb-chat.pug-->
     <header id="header">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
@@ -308,48 +290,28 @@
             </form>
             <div class="comment__old-comment media"><img class="avatar rounded-circle" src="img/img--details/avatar-1.jpg" alt="">
               <div class="old-comment__content media-body">
-                <h3 class="details__sub-header">Đánh giá: <span class="mr-auto ml-2">x / 5</span><small class="font-italic"><i class="far fa-clock"></i> 01/01/2021</small></h3>
-                <h3 class="username details__sub-header">Harry "Styles" Potter</h3>
-                <p class="comment-text">Sản phẩm tốt mà lại rẻ, ai cũng nên mua 2 3 cái chụp hoa cỏ chó mèo.</p>
+                <h3 class="details__sub-header">Đánh giá: <span class="mr-auto ml-2">4 / 5</span><small class="font-italic"><i class="far fa-clock"></i> 01/01/2021</small></h3>
+                <h3 class="username details__sub-header">John Doe</h3>
+                <p class="comment-text">Chất lượng tương xứng với giá tiền</p>
                 <p class="reply-report"> <a class="replyToggler disabled" href="#"> <i class="fas fa-reply mr-3"></i>Trả lời</a><a class="reportToggler" href="#"><i class="fas fa-flag mr-3"></i>Báo cáo</a></p>
               </div>
             </div>
             <div class="comment__old-comment reply media"><img class="avatar rounded-circle" src="img/img--details/avatar-2.png" alt="">
               <div class="old-comment__content media-body">
-                <h3 class="details__sub-header">Đánh giá: <span class="mr-auto ml-2">x / 5</span><small class="font-italic"><i class="far fa-clock"></i> 01/01/2021</small></h3>
-                <h3 class="username details__sub-header">Meme Lót</h3>
-                <p class="comment-text">Tin gì quả seeder này các bạn ơi</p>
+                <h3 class="details__sub-header">Đánh giá: <span class="mr-auto ml-2">4 / 5</span><small class="font-italic"><i class="far fa-clock"></i> 01/01/2021</small></h3>
+                <h3 class="username details__sub-header">John Also Doe</h3>
+                <p class="comment-text">Đồng ý</p>
                 <p class="reply-report"> <a class="replyToggler" href="#"> <i class="fas fa-reply mr-3"></i>Trả lời</a><a class="reportToggler" href="#"><i class="fas fa-flag mr-3"></i>Báo cáo</a></p>
               </div>
             </div>
             <div class="comment__old-comment media"><img class="avatar rounded-circle" src="img/img--details/avatar-3.jpg" alt="">
               <div class="old-comment__content media-body">
-                <h3 class="details__sub-header">Đánh giá: <span class="mr-auto ml-2">x / 5</span><small class="font-italic"><i class="far fa-clock"></i> 01/01/2021</small></h3>
-                <h3 class="username details__sub-header">Mr. Steal your girl</h3>
-                <p class="comment-text">Hàng đẹp y hình, quay tiktok uy tín luôn.</p>
+                <h3 class="details__sub-header">Đánh giá: <span class="mr-auto ml-2">4 / 5</span><small class="font-italic"><i class="far fa-clock"></i> 01/01/2021</small></h3>
+                <h3 class="username details__sub-header">John Still Doe</h3>
+                <p class="comment-text">Hơi nặng và khó dùng.</p>
                 <p class="reply-report"> <a class="replyToggler" href="#"> <i class="fas fa-reply mr-3"></i>Trả lời</a><a class="reportToggler" href="#"><i class="fas fa-flag mr-3"></i>Báo cáo</a></p>
               </div>
             </div>
-            <!--.comment__old-comment 
-            .old-comment__row 
-              img.old-commen_avatar(src="img/img--details/avatar.png", alt="") 
-              .old-comment__content
-                h3.main-info__inner-header Đánh giá
-                  span x / 5
-                p.username Mr. XY 
-                p.comment-text Lorem ipsum dolor sit amet, consectetdolornt occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit, unt in culpa qui officia deserunt mollit anim id est laborum.
-            
-            .old-comment__row 
-              img.old-commen_avatar(src="img/img--details/avatar.png", alt="") 
-              .old-comment__content
-                h3.main-info__inner-header Đánh giá
-                  span x / 5
-                p.username Mr. XY 
-                p.comment-text Lorem ipsum dolor sit amet, consectetdolornt occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit, unt in culpa qui officia deserunt mollit anim id est laborum.
-            
-            button.comment__btn.btn.btn--dark Xem thêm
-            
-            -->
           </div>
         </section>
         <section class="details__recommend">
@@ -387,7 +349,7 @@
           <li class="footer__item d-flex justify-content-center align-items-center"><a class="footer__link text-center font-weight-bold" href="#">Chính sách</a></li>
           <li class="footer__item d-flex justify-content-center align-items-center"><a class="footer__link text-center font-weight-bold" href="#">Liên hệ</a></li>
         </ul>
-        <p class="footer__info">Địa chỉ: Số Math.pow(n+1, 2), phố “ABC”, Hà Nội <br>Tổng đài tư vấn mua hàng: 099.999.9999<br>Email: info@halo.vn<br>ĐKKD số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 01/01/2021</p>
+        <p class="footer__info">Địa chỉ: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Hà Nội<br>Tổng đài tư vấn mua hàng: 099.999.9999<br>Email: info@halo.vn<br>ĐKKD số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 01/01/2021</p>
         <p class="copyright font-italic">Bản quyền thuộc Công ty TNHH HALO Việt Nam</p>
       </div>
     </footer>

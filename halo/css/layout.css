@@ -105,6 +105,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 1000;
+}  
 /* --------------- kết thúc reset css --------------- */
 
 /* Table of contents
@@ -131,7 +135,8 @@ Hệ thống .container:
 */
 
 .hidden-till-md,
-.hidden-till-sm {
+.hidden-till-sm,
+.hidden-till-xl {
 /* ẩn khi màn <= 768px, sẽ đổi ở @media */  
   display: none !important;
 }
@@ -837,13 +842,23 @@ footer {
     display: none !important;
   }
 
+  .nav-item:hover a, .footer__item:hover {
+    padding-bottom: 0px !important;
+    border-bottom: 2px solid white;
+  }
+
   .nav-item a {
     transition: border 0.3s;
   }
 
-  .nav-item:hover a {
-    padding-bottom: 0px !important;
-    border-bottom: 2px solid white;
+  .footer__item {
+    border-bottom: 2px solid transparent;
+    transition: all 0.4s;
+  }
+
+  .footer__menu {
+    max-width: 450px;
+    margin: 35px 0px;
   }
 
   .review-preview {
@@ -971,6 +986,14 @@ footer {
 
   .modal-open .navbar {
     width: calc(100% - 17px);
+  }
+
+  .hidden-till-xl {
+    display: block!important;
+  }
+
+  .display-till-xl {
+    display: none!important;
   }
   
   .container, 

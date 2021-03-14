@@ -112,7 +112,7 @@ scrollTopBtn.addEventListener("click", function(){
  camera-hub hover
 ------------------------- 
 */
-let dslrHalf = document.querySelectorAll(".dslr-half")
+/* let dslrHalf = document.querySelectorAll(".dslr-half")
 
 let mrlHalf = document.querySelectorAll(".mrl-half")
 
@@ -129,7 +129,7 @@ for (let i = 0; i < dslrHalf.length; i++) {
   mrlHalf[i].addEventListener("mouseout", function(){
     document.querySelector(".portal__bg--pink").style.backgroundColor = "#dba8db"
   })
-}
+} */
 /* 
 ------------------------- 
  hết camera-hub hover
@@ -388,7 +388,15 @@ let removeItemBtn = document.querySelectorAll(".col--remove");
 
 for (let i = 0; i < removeItemBtn.length; i++) {
   removeItemBtn[i].addEventListener("click", function() {
-    this.parentElement.parentElement.remove();
+    //hộp thoại confirm khi xóa sản phẩm
+    if(confirm("Quý khách muốn xóa sản phẩm này?")) {
+      /*
+      truy cập: this (nút xóa được click: .col--remove ) 
+      -> parent của this (nhóm các col chứa nút xóa được click: .col-group )
+      -> parent của parent của this (item chứa nhóm các col chứa nút xóa được click: .cart__item)
+      */
+      this.parentElement.parentElement.remove(); 
+    }
   });
 
   removeItemBtn[i].addEventListener("click", grandFinalCalc);

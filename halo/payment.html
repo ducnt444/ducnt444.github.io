@@ -16,25 +16,7 @@
     <title>Cổng thanh toán</title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript-->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat Plugin code-->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
+    <!--include fb-chat.pug-->
     <header id="header">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
@@ -162,7 +144,7 @@
                 </ul>
               </div>
               <div class="faq__item"> 
-                <p class="faq__item--question" data-toggle="collapse" data-target="#answer4"> <span>Wait, the Earth is flat?</span><span> <i class="fas fa-minus"></i></span></p>
+                <p class="faq__item--question" data-toggle="collapse" data-target="#answer4"> <span>Wait, HTML is not a programming language?</span><span> <i class="fas fa-minus"></i></span></p>
                 <ul class="faq__item--answer collapse show" id="answer4"> 
                   <li class="font-weight-bold">- Always has been.</li>
                 </ul>
@@ -195,6 +177,10 @@
               <h2 class="sub-header">Phương thức thanh toán</h2>
               <form id="methods-selection">
                 <div id="method-wrapper">
+                  <div class="method__toggler" data-toggle="collapse" data-target="#cod"> 
+                    <input type="radio" name="payment-method" id="cod-radio" form="methods-selection">
+                    <label for="cod-radio">Thanh toán khi nhận hàng (COD)            </label>
+                  </div>
                   <div class="method__toggler" data-toggle="collapse" data-target="#domestic-card"> 
                     <input type="radio" name="payment-method" id="domestic-card-radio" form="methods-selection">
                     <label for="domestic-card-radio">Thanh toán bằng thẻ ngân hàng nội địa </label>
@@ -275,10 +261,6 @@
                         </div><a class="btn btn--confirmation final-btn" href="checkout.html">Xác nhận</a>
                       </form>
                     </div>
-                  </div>
-                  <div class="method__toggler" data-toggle="collapse" data-target="#cod"> 
-                    <input type="radio" name="payment-method" id="cod-radio" form="methods-selection">
-                    <label for="cod-radio">Thanh toán khi nhận hàng (COD)</label>
                   </div><a class="method__content collapse btn btn--confirmation final-btn payment__toggler" id="cod" href="checkout.html" data-parent="#methods-selection">Xác nhận</a>
                 </div>
               </form>
@@ -295,7 +277,7 @@
           <li class="footer__item d-flex justify-content-center align-items-center"><a class="footer__link text-center font-weight-bold" href="#">Chính sách</a></li>
           <li class="footer__item d-flex justify-content-center align-items-center"><a class="footer__link text-center font-weight-bold" href="#">Liên hệ</a></li>
         </ul>
-        <p class="footer__info">Địa chỉ: Số Math.pow(n+1, 2), phố “ABC”, Hà Nội <br>Tổng đài tư vấn mua hàng: 099.999.9999<br>Email: info@halo.vn<br>ĐKKD số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 01/01/2021</p>
+        <p class="footer__info">Địa chỉ: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Hà Nội<br>Tổng đài tư vấn mua hàng: 099.999.9999<br>Email: info@halo.vn<br>ĐKKD số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 01/01/2021</p>
         <p class="copyright font-italic">Bản quyền thuộc Công ty TNHH HALO Việt Nam</p>
       </div>
     </footer>

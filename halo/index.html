@@ -14,45 +14,17 @@
     <title>HALO</title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript-->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- Your Chat Plugin code-->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="103550388473714" theme_color="#6699cc" logged_in_greeting="Xin chào, HALO có thể giúp gì cho bạn?" logged_out_greeting="Xin chào, HALO có thể giúp gì cho bạn?"></div>
+    <!--include fb-chat.pug-->
     <header id="header">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-xl px-4 px-sm-5 px-xl-0">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">
-            <img class="header__logo" src="img/img--misc/logo-white.png" alt="">
-          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="index.html"><img class="header__logo" src="img/img--misc/logo-white.png" alt=""></a>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <div class="search-bar-till-md">
-              <input class="search-area" type="text" placeholder="Tìm kiếm...">
-              <a class="btn search-btn" href="search-result.html">
-                <i class="fas fa-search"></i>
-              </a>
+              <input class="search-area" type="text" placeholder="Tìm kiếm..."><a class="btn search-btn" href="search-result.html"><i class="fas fa-search"></i></a>
             </div>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link py-3 px-md-3" href="camera-hub.html">Máy ảnh</a>
-              </li>
+              <li class="nav-item"><a class="nav-link py-3 px-md-3" href="camera-hub.html">Máy ảnh</a></li>
               <li class="nav-item"><a class="nav-link py-3 px-md-3" href="camera-hub.html">Ống kính</a></li>
               <li class="nav-item"><a class="nav-link py-3 px-md-3" href="camera-hub.html">Phụ kiện</a></li>
               <li class="nav-item"><a class="nav-link py-3 px-md-3" href="review.html">Đánh giá</a></li>
@@ -222,12 +194,12 @@
       </section>
       <section class="intro intro--equip">
         <div class="container-xl px-sm-5 px-xl-0 mw-900">
-          <div class="intro__text d-flex flex-column" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+          <div class="intro__text d-flex flex-column" data-aos="fade-down" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <h1>Phụ kiện máy ảnh</h1>
             <h3 class="font-italic">Dù “pro” đến mấy cũng cần các trợ thủ đắc lực</h3>
           </div>
-          <div class="intro__img display-till-md" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"><img src="img/img--equip/equip-intro--min.png" alt=""></div>
-          <div class="intro__img card-columns hidden-till-md" id="intro__img" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+          <div class="intro__img display-till-md" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000"><img src="img/img--equip/equip-intro--min.png" alt=""></div>
+          <div class="intro__img card-columns hidden-till-md" id="intro__img" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             <div class="card"><img class="card-img" src="img/img--equip/equip-1.png" alt=""></div>
             <div class="card"><img class="card-img" src="img/img--equip/equip-5.png" alt=""></div>
             <div class="card"><img class="card-img" src="img/img--equip/equip-3.jpg" alt=""></div>
@@ -268,13 +240,13 @@
       <section class="promo">
         <div class="container-xl px-sm-5 px-xl-0">
           <h1>Tin khuyến mại</h1>
-          <div class="promo__collection row"><img class="promo-item col-md-4" src="img/img--misc/promo-img-1.jpg" alt="" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="700"><img class="promo-item col-md-4" src="img/img--misc/promo-img-2.jpg" alt="" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="700"><img class="promo-item col-md-4" src="img/img--misc/promo-img-1.jpg" alt="" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="700"></div>
+          <div class="promo__collection row"><img class="promo-item col-md-4" src="img/img--misc/promo-img-1.jpg" alt="" data-aos="zoom-in" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="700"><img class="promo-item col-md-4" src="img/img--misc/promo-img-2.jpg" alt="" data-aos="zoom-in" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="700"><img class="promo-item col-md-4" src="img/img--misc/promo-img-1.jpg" alt="" data-aos="zoom-in" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="700"></div>
           <button class="btn btn--dark seemore-btn mx-auto" type="button">Xem thêm</button>
         </div>
       </section>
       <section class="review dark-side">
         <div class="container-xl px-sm-5 mw-900">
-          <h1>HALO review</h1><a class="review-item d-flex" href="review-details.html" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000"><img class="review-item__img" src="img/img--misc/review-img-v2.png" alt="">
+          <h1>HALO review</h1><a class="review-item d-flex" href="review-details.html" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000"><img class="review-item__img" src="img/img--misc/review-img-v2.png" alt="">
             <div class="review-item__content d-flex flex-column justify-content-between">
               <div class="review-header d-flex flex-wrap align-items-start align-content-start">
                 <h2 class="w-100 font-weight-bold">Top 5 DSLR đáng mua năm 2021</h2>
@@ -282,7 +254,7 @@
                 <p class="subtext font-italic font-weight-light"><i class="far fa-clock mx-2"></i>01/01/2021</p>
               </div>
               <p class="review-preview">Trên thị trường có rất nhiều máy ảnh DSLR đến từ các hãng lớn như Nikon, Canon, Sony,... lựa chọn một chiếc máy ảnh phù hợp là điều không đơn giản.</p>
-            </div></a><a class="review-item d-flex" href="review-details.html" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000"><img class="review-item__img" src="img/img--misc/review-img-v2.png" alt="">
+            </div></a><a class="review-item d-flex" href="review-details.html" data-aos="fade-left" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="1000"><img class="review-item__img" src="img/img--misc/review-img-v2.png" alt="">
             <div class="review-item__content d-flex flex-column justify-content-between">
               <div class="review-header d-flex flex-wrap align-items-start align-content-start">
                 <h2 class="w-100 font-weight-bold">Top 5 DSLR đáng mua năm 2021</h2>
@@ -311,7 +283,7 @@
           <li class="footer__item d-flex justify-content-center align-items-center"><a class="footer__link text-center font-weight-bold" href="#">Chính sách</a></li>
           <li class="footer__item d-flex justify-content-center align-items-center"><a class="footer__link text-center font-weight-bold" href="#">Liên hệ</a></li>
         </ul>
-        <p class="footer__info">Địa chỉ: Số Math.pow(n+1, 2), phố “ABC”, Hà Nội <br>Tổng đài tư vấn mua hàng: 099.999.9999<br>Email: info@halo.vn<br>ĐKKD số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 01/01/2021</p>
+        <p class="footer__info">Địa chỉ: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Hà Nội<br>Tổng đài tư vấn mua hàng: 099.999.9999<br>Email: info@halo.vn<br>ĐKKD số 0123456789 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 01/01/2021</p>
         <p class="copyright font-italic">Bản quyền thuộc Công ty TNHH HALO Việt Nam</p>
       </div>
     </footer>

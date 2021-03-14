@@ -100,7 +100,7 @@ block content
 
           .faq__item 
             p.faq__item--question(data-toggle="collapse" data-target="#answer4") 
-              span Wait, the Earth is flat?
+              span Wait, HTML is not a programming language?
               span 
                 i.fas.fa-minus
             ul#answer4.faq__item--answer.collapse.show 
@@ -149,6 +149,10 @@ block content
 
             #method-wrapper
 
+              .method__toggler(data-toggle="collapse" data-target="#cod") 
+                input(type="radio" name="payment-method", id="cod-radio" form="methods-selection")
+                label(for="cod-radio") Thanh toán khi nhận hàng (COD)            
+
               .method__toggler(data-toggle="collapse" data-target="#domestic-card") 
                 input(type="radio" name="payment-method", id="domestic-card-radio" form="methods-selection")
                 label(for="domestic-card-radio") Thanh toán bằng thẻ ngân hàng nội địa 
@@ -162,10 +166,6 @@ block content
 
               #visa-master-card.method__content.collapse(data-parent="#methods-selection")
                 include parts/visa-master-card.pug
-
-              .method__toggler(data-toggle="collapse" data-target="#cod") 
-                input(type="radio" name="payment-method", id="cod-radio" form="methods-selection")
-                label(for="cod-radio") Thanh toán khi nhận hàng (COD)
 
               a#cod.method__content.collapse.btn.btn--confirmation.final-btn.payment__toggler(href="checkout.html" data-parent="#methods-selection") Xác nhận
          

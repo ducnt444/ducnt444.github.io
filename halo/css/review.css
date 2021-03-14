@@ -18,7 +18,16 @@ section {
   align-items: center;
   width: 100%;
   height: 30vh;
+}
 
+.carousel-caption {
+  padding: 0px 0px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  line-height: 1.8 !important;
+}
+
+.carousel-caption h3 {
+  line-height: 1.5 !important;
 }
 
 .main-banner__logo {
@@ -102,12 +111,12 @@ section {
     justify-content: space-between;
   }
 
-  #sub-banner-area--max a {
-    transition: all 0.3s;
+  #sub-banner-area--max img {
+    transition: all 0.5s;
   }
 
-  #sub-banner-area--max a:hover {
-    transform: scale(1.015);
+  #sub-banner-area--max a:hover > img {
+    transform: scale(1.1);
   }
 
   .review__sub-banner--big {
@@ -119,20 +128,14 @@ section {
     font-size: 18px;
     font-weight: bold;
     width: 70%;
-    height: calc((100vw - 60px)/3.65 + 15px);
     margin-right: 20px;
     border-radius: 8px;
-    background-image: url(/halo/img/img--review/review-big-banner-max-v7.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
+    position: relative;
   }
 
-  .review__sub-banner--big span{
+  .review__sub-banner--big img{
     width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.35);
   }
 
   .review__sub-banner--big:hover {
@@ -147,23 +150,28 @@ section {
     display: block;
     position: relative;
     border-radius: 8px;
+    overflow: hidden;
   }
 
   .review__sub-banner--small:nth-child(2) {
     margin: 20px 0px;
   }
 
-  .easter-egg {
+  .sub-banner__caption {
     position: absolute;
     bottom: 0px;
     left: 0px;
     font-size: 20px;
-    font-weight: bold;
-    padding-left: 5%;
+    font-weight: 500;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.45);
     color: white;
     border-radius: 0px 0px 8px 8px;
+    text-align: center;
+  }
+
+  .review__sub-banner--small .sub-banner__caption {
+    font-size: 16px;
   }
 
   .review__sub-banner--small img {
@@ -232,6 +240,12 @@ section {
   }
 }
 
+@media only screen and (min-width: 800px) {
+  .review__sub-banner--big {
+    height: calc(((100vw - 80px)/6.5625)*3);
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .review__post:hover .post__header,
   .aside__post:hover .aside__post--header {
@@ -290,6 +304,17 @@ section {
   .review__aside-area {
     width: 25%;
   }
+
+  .sub-banner__caption {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .review__sub-banner--small .sub-banner__caption {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
 
   .post__subtext {
     margin: 5px 0px 25px 0px;
