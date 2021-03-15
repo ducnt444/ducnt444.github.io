@@ -107,7 +107,7 @@ input[type=number] {
 
 .carousel-control-prev,
 .carousel-control-next {
-  z-index: 1000;
+  z-index: 900;
 }  
 /* --------------- kết thúc reset css --------------- */
 
@@ -352,12 +352,15 @@ h1, h2 {
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 /* ----- big white shadow ----- */
-
 #logreg .modal-content {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
 }
 
-
+@keyframes cartAnimation {
+  0% {left: 5px; right: 0px;}
+  50% {left: 0px; right: 5px;}
+  100% {left: 0px; right: 0px;}
+}
 
 
 /* -------------------- kết thúc effect -------------------- */
@@ -478,6 +481,31 @@ Map: chung -> cart -> search bar -> search min -> search btn
 
 .log-cart-search {
   display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  position: relative;
+  animation-duration: 0.12s;
+  animation-iteration-count: 3;
+  animation-fill-mode: none;
+  animation-timing-function: ease-out;
+}
+
+.cart__badge-wrapper {
+  background-color: red;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 0.8;
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  width: 17px;
+  height: 17px;
+  color: white;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
   align-items: center;
 }
 
@@ -869,6 +897,17 @@ footer {
     margin: 0px 10px 0px 20px;
   }
 
+  .cart__badge-wrapper {
+    font-size: 14px;
+    top: -9px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 50%;
+  }
+
+
   .fa-search, 
   .fa-shopping-cart {
     font-size: 22px;
@@ -960,7 +999,7 @@ footer {
   }
 
   .cart-icon {
-    margin: 0px 30px !important;
+    margin: 0px 35px !important;
   }
 
   .search-bar .search-btn {

@@ -236,6 +236,33 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 
 /* 
 -------------------------
+ cart badge
+-------------------------
+*/
+
+let addToCartBtn = document.querySelector(".btn--add-to-cart");
+let cartBadge = document.querySelector(".cart__badge-wrapper");
+let cartIcon =  document.querySelector(".cart-icon")
+
+if (addToCartBtn) {
+  addToCartBtn.addEventListener("click", () => {
+    cartIcon.style.animationName = "cartAnimation";
+    cartBadge.style.display = "flex";
+    cartBadge.firstChild.innerHTML = parseInt(cartBadge.firstChild.innerHTML) + 1;
+    setTimeout(function(){
+      cartIcon.style.animationName = "none";
+    }, 500)
+  })
+}
+/* 
+-------------------------
+ hết cart badge
+-------------------------
+*/
+
+
+/* 
+-------------------------
  all quantity calc 
 -------------------------
 */
@@ -389,7 +416,7 @@ let removeItemBtn = document.querySelectorAll(".col--remove");
 for (let i = 0; i < removeItemBtn.length; i++) {
   removeItemBtn[i].addEventListener("click", function() {
     //hộp thoại confirm khi xóa sản phẩm
-    if(confirm("Quý khách muốn xóa sản phẩm này?")) {
+    if(confirm(`Quý khách muốn xóa sản phẩm ${this.parentElement.querySelector(".col--name").firstElementChild.innerHTML} ?`)) {
       /*
       truy cập: this (nút xóa được click: .col--remove ) 
       -> parent của this (nhóm các col chứa nút xóa được click: .col-group )

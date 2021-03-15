@@ -32,6 +32,11 @@ section {
   position: relative;
 } */
 
+.score--user, .score--shop {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .details__main-img {
   display: block;
   width: 100%;
@@ -39,7 +44,7 @@ section {
   height: auto;
   margin: auto;
   transition: all 0.3s;
-  margin: 20px auto 5px auto;
+  margin: 5px auto;
 }
 
 .details__sub-img-area {
@@ -183,20 +188,21 @@ section {
 
 .special__list {
   margin: 15px auto;
-  text-align: center;
+  max-width: 350px;
 }
 
 .offers__btn {
   font-size: 14px;
-  background-color: #DE847F;
+  background-color: #d15953;
   height: 50px;
   color: white;
   padding-left: 15px;
   padding-right: 15px;
+  margin-right: auto;
 }
 
 .offers__btn:hover {
-  background-color: #d15953;
+  background-color: #DE847F;
   color: white;
 }
 
@@ -303,7 +309,7 @@ section {
 
 .review__btn {
   font-size: 14px;
-  margin: 0x auto;
+  margin: 0px auto;
 }
 
 /* ----- main-info: sample ----- */
@@ -594,7 +600,7 @@ section {
     width: 100%;
   }
 
-  .gift-wrapper {
+  .gift-wrapper, .special__list {
     max-width: 270px;
     margin: 15px 0px 0px 0px;
   }
@@ -603,14 +609,20 @@ section {
     width: 40%;
   }
 
-  .special__list {
-    text-align: left;
-  }
-
   .offers__contact {
     width: 100%;
     text-align: center;
     margin-top: 20px;
+  }
+
+  .special__list {
+    max-width: 350px;
+  }
+
+  .offers__btn {
+    font-size: 16px;
+    height: 50px;
+    margin: 30px auto 0px auto;
   }
 
   /* --------------- hết .details__offers --------------- */
@@ -734,7 +746,7 @@ section {
   }
 
   .gift-wrapper {
-    margin: 15px auto 0px auto;
+    margin: 15px auto 0px 0px;
   }
 
   .offers__special {

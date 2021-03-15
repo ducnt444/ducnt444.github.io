@@ -45,6 +45,10 @@
   align-content: center;
 }
 
+.col--single-price {
+  min-width: 145px;
+}
+
 .col--quantity {
   display: flex;
   margin: 7px 0px;
@@ -178,6 +182,10 @@
 
   .col--img-max {
     padding: 0px 5px;
+  }
+
+  .col--single-price {
+    min-width: 0px;
   }
 
   .col--quantity {
