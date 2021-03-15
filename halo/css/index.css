@@ -261,16 +261,12 @@ main {
   margin: 10px 0px 30px 0px;
 }
 
+.intro__img {
+  margin-bottom: 30px;
+}
+
 .intro .seemore-btn {
   margin: auto;
-}
-
-.intro--equip .seemore-btn {
-  margin-top: 20px;
-}
-
-.card {
-  border-radius: 16px;
 }
 
 .specials h1 {
@@ -316,12 +312,19 @@ main {
 
 /* ---------- promo styles ----------*/
 .promo__collection {
-  padding-top: 25px;
+  margin: 25px 0px;
 }
 
 .promo-item {
-  margin: 0px auto 25px auto;
-  max-width: 450px;
+  cursor: unset;
+}
+
+.promo-item img {
+  cursor: pointer;
+}
+
+.promo-item:nth-child(2) {
+  margin: 15px auto;
 }
 /* ---------- kết thúc promo styles ----------*/
 
@@ -504,6 +507,10 @@ main {
     min-height: 250px;
     padding: 10px 5px;
     border-radius: 8px;
+  }
+
+  .promo-item:nth-child(2) {
+    margin: 0px;
   }
 
   .review-item h2 {
@@ -801,7 +808,7 @@ main {
     margin: 25px auto 0px auto;
   }
 
-  .intro__text {
+  .intro__text:not(.intro--equip  .intro__text) {
     padding: 0px;
   }
 
@@ -813,10 +820,10 @@ main {
     order: 2;
   }
 
-  .promo-item {
+/*   .promo-item {
     margin: 0px auto 30px auto;
     max-width: 33.33333%;
-  }
+  } */
 
   .connection__submit-btn {
     margin: 0px;

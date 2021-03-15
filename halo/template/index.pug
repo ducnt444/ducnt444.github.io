@@ -49,36 +49,27 @@ block content
         h1 Phụ kiện máy ảnh
         h3.font-italic Dù “pro” đến mấy cũng cần các trợ thủ đắc lực
 
-      .intro__img.display-till-md(data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000")
-        img(src="img/img--equip/equip-intro--min.png", alt="")
+        a.btn.btn--dark.seemore-btn.mx-auto(href="camera-hub.html" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000") Xem chi tiết
 
-      .intro__img.card-columns.hidden-till-md#intro__img(data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000")
-        .card
-          img.card-img(src="img/img--equip/equip-1.png", alt="")
-        .card
-          img.card-img(src="img/img--equip/equip-5.png", alt="")
-        .card
-          img.card-img(src="img/img--equip/equip-3.jpg", alt="")
-        .card
-          img.card-img(src="img/img--equip/equip-4.png", alt="")
-
-      a.btn.btn--dark.seemore-btn.mx-auto(href="camera-hub.html" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000") Xem chi tiết
+      .intro__img(data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000")
+        a(href="camera-hub.html") 
+          img(src="img/img--equip/equip-intro--xl.jpg", alt="")
 
   section.specials.dark-side
     .container-xl.px-sm-5.px-xl-0.d-flex.flex-column.align-items-center
       h1 Đối tác chiến lược
       .brands__img.row
-        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-sony.png", alt="" data-aos="flip-left" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-duration="700")
-        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-nikon.png", alt="" data-aos="flip-left" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-duration="900")
-        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-canon.png", alt="" data-aos="flip-left" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-duration="1100")
-        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-sigma.png", alt="" data-aos="flip-left" data-aos-offset="150" data-aos-easing="ease-in-sine" data-aos-duration="1300")
+        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-sony.png", alt="")
+        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-nikon.png", alt="")
+        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-canon.png", alt="")
+        img.brands-item.col-6.col-md-3(src="img/img--misc/brands-sigma.png", alt="")
       .brands__text
         h3.font-italic.text-center.mw-900 Là đối tác chiến lược của Sony, Canon, Nikon và Sigma, HALO sẽ miễn phí nâng thời hạn bảo hành sản phẩm chính hãng của các thương hiệu này: 
           span.font-weight-bold từ 12 tháng lên 24 tháng
 
       h1 Chính sách độc quyền
       .policy.d-flex.justify-content-between
-        .policy__item.border.border-white.d-flex.flex-column.justify-content-between(data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="700")
+        .policy__item.border.border-white.d-flex.flex-column.justify-content-between
           p.policy__text.text-center
             span.font-weight-bold Miễn phí 
             | vận chuyển nội thành Hà Nội
@@ -89,7 +80,7 @@ block content
             i.fas.fa-truck
             p.font-weight-bold FREE
 
-        .policy__item.border.border-white.d-flex.flex-column.justify-content-between(data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000")
+        .policy__item.border.border-white.d-flex.flex-column.justify-content-between
           p.policy__text.text-center Đổi mới sản phẩm hoặc
             span.font-weight-bold  hoàn tiền 100% 
             | giá trị sản phẩm trong 14 ngày nếu có lỗi từ nhà sản xuất
@@ -98,7 +89,7 @@ block content
             i.fas.fa-history
             p.font-weight-bold 100%
 
-        .policy__item.border.border-white.d-flex.flex-column.justify-content-between(data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1300")
+        .policy__item.border.border-white.d-flex.flex-column.justify-content-between
           p.policy__text.text-center Hỗ trợ trả góp mọi sản phẩm với 
             span.font-weight-bold 0% lãi suất 
             br
@@ -113,11 +104,14 @@ block content
       h1 Tin khuyến mại
 
       .promo__collection.row
-        img.promo-item.col-md-4(src="img/img--misc/promo-img-1.jpg", alt="" data-aos="zoom-in" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="700")
-        img.promo-item.col-md-4(src="img/img--misc/promo-img-2.jpg", alt="" data-aos="zoom-in" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="700") 
-        img.promo-item.col-md-4(src="img/img--misc/promo-img-1.jpg", alt="" data-aos="zoom-in" data-aos-offset="50" data-aos-easing="ease-in-sine" data-aos-duration="700")
+        a.promo-item.col-sm-4(href="#")
+          img(src="img/img--misc/promo-img-1.jpg", alt="")
+        a.promo-item.col-sm-4(href="#")   
+          img(src="img/img--misc/promo-img-2.jpg", alt="") 
+        a.promo-item.col-sm-4(href="#")
+          img(src="img/img--misc/promo-img-1.jpg", alt="")
 
-      button.btn.btn--dark.seemore-btn.mx-auto(type='button') Xem thêm
+      a.btn.btn--dark.seemore-btn.mx-auto(href="#") Xem thêm
 
   section.review.dark-side
     .container-xl.px-sm-5.mw-900
