@@ -416,7 +416,7 @@ let removeItemBtn = document.querySelectorAll(".col--remove");
 for (let i = 0; i < removeItemBtn.length; i++) {
   removeItemBtn[i].addEventListener("click", function() {
     //hộp thoại confirm khi xóa sản phẩm
-    if(confirm(`Quý khách muốn xóa sản phẩm ${this.parentElement.querySelector(".col--name").firstElementChild.innerHTML.replace("&nbsp;", " ")} ?`)) {
+    if(confirm(`Quý khách muốn xóa sản phẩm ${this.parentElement.querySelector(".col--name").firstElementChild.innerHTML.replaceAll("&nbsp;", " ")} ?`)) {
       /*
       truy cập: this (nút xóa được click: .col--remove ) 
       -> parent của this (nhóm các col chứa nút xóa được click: .col-group )
