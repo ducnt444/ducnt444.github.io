@@ -65,6 +65,15 @@ logRegPortal.click(() => {
 */
 
 if (typeof(Storage) !== "undefined") {
+  //Tạo obj tương ứng người dùng hiện tại
+  let currentUser = {
+    userMail: "", 
+    userPass: "", 
+    userName: "", 
+    userPhone: "",
+    userCart: ""
+  };
+
   //Xác định 2 nút register và login
   let regBtn = $(".logreg__submit--reg");
   let logBtn = $(".logreg__submit--log");
@@ -74,7 +83,8 @@ if (typeof(Storage) !== "undefined") {
     userMail: "test#123", 
     userPass: "test#123", 
     userName: "test#123", 
-    userPhone: "test#123"
+    userPhone: "test#123",
+    userCart: "test#123"
   }];
 
   /* --------------- register simulation --------------- */
@@ -95,16 +105,17 @@ if (typeof(Storage) !== "undefined") {
     //gắn cờ validation: tài khoản chưa tồn tại
     let isExistAccount = false;
 
+    //validation:
     //loop: từng account có trong danh sách các account đã register (accountsArray)
     for (let i = 0; i < accountsArray.length; i++) {
 
       //nếu email user muốn đăng ký trùng với email của 1 account nào đã register 
       if (emailRegInput == accountsArray[i].userMail) {
-
+        
         //Thông báo lỗi
         alert(`Email ${emailRegInput} đã được sử dụng`)
 
-        //gắn cờ validation: tài khoản đã tồn tại
+        //gắn cờ validation: tài khoản đã tồn tại, kết thúc validation
         isExistAccount = true
         break
       }
@@ -129,6 +140,15 @@ if (typeof(Storage) !== "undefined") {
 
       //Thông báo thành công
       alert(`Đăng ký thành công!`)
+
+      //update current user
+      currentUser = {
+        userMail: $('.reg__input--mail').val(), 
+        userPass: $('.reg__input--password').val(), 
+        userName: $('.reg__input--name').val(), 
+        userPhone: $('.reg__input--phone').val(),
+        userCart: ""
+      };
     }
  
   });
@@ -165,6 +185,15 @@ if (typeof(Storage) !== "undefined") {
 
     //hiển thị thông báo
     alert(message);
+    
+    //update current user
+    currentUser = {
+      userMail: $('.reg__input--mail').val(), 
+      userPass: $('.reg__input--password').val(), 
+      userName: $('.reg__input--name').val(), 
+      userPhone: $('.reg__input--phone').val(),
+      userCart: ""
+    };
   });
 }
 /* 
