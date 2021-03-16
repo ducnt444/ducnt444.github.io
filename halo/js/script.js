@@ -1,8 +1,8 @@
 
 /* 
--------------------------
+-----------------------------------
  search bar toggler 
-------------------------- 
+-----------------------------------
 */
 
 let searchBarStatus = 0;
@@ -20,17 +20,17 @@ function searchBarToggler() {
 }
 
 /* 
--------------------------
+-----------------------------------
  hết search bar toggler 
-------------------------- 
+-----------------------------------
 */
 
 
 
 /* 
--------------------------
+-----------------------------------
  login/register toggler 
-------------------------- 
+-----------------------------------
 */
 let logregStatus = "login";
 let logElements = $(".log");
@@ -49,88 +49,27 @@ logRegPortal.click(() => {
     logregStatus = "login";
   }
 });
-//legacy
+
 /* 
-let logregStatus = "login";
-let regPart = document.getElementsByClassName("reg");
-let logPart = document.getElementsByClassName("log");
-let logreg = document.getElementById("logreg");
-
-function logregSwitch() {
-  if (logregStatus == "login") {
-    for (let i = 0; i < logPart.length; i++) {
-      logPart[i].style.display = "none";
-    }
-
-    regPart[0].style.display = "block";
-    for (let i = 1; i < 3; i++) {
-      regPart[i].style.display = "flex";
-    }
-    for (let i = 3; i < regPart.length; i++) {
-      regPart[i].style.display = "block";
-    }
-
-    logregStatus = "register";
-  } else {
-    for (let i = 0; i < regPart.length; i++) {
-      regPart[i].style.display = "none";
-    }
-
-    for (let i = 0; i < 4; i++) {
-      logPart[i].style.display = "block";
-    }
-
-    logPart[4].style.display = "flex";
-    logPart[5].style.display = "block";
-
-    logregStatus = "login";
-  }
-}
-  */
-/* 
--------------------------
+-----------------------------------
  hết login/register toggler 
-------------------------- 
+-----------------------------------
 */
 
 
 
 /* 
--------------------------
+-----------------------------------
  login/register simulation
-------------------------- 
+-----------------------------------
 */
-
-/* if (typeof(Storage) !== "undefined") {
-  let logBtn = $(".logreg__submit--log");
-  let regBtn = $(".logreg__submit--reg");
-  let accountsStorageObj = {
-    accounts: []
-  };
-  localStorage.setItem("accounts storage", JSON.stringify(accountsStorageObj));
-  
-  regBtn.click(() => {
-    let accountsStorageObjClone = 
-    accountsStorageObj.accounts.push(
-      { userMail: $('.reg__input--mail').val(), 
-      userPass: $('.reg__input--password').val(),
-      userName: $('.reg__input--name').val(),
-      userPhone: $('.reg__input--phone').val(),
-      }
-      );
-
-  });
-
-  //localStorage.setItem("accounts storage", JSON.stringify(obj));
-
-  //document.getElementById("result").innerHTML = JSON.parse( localStorage.getItem("accounts storage") );
-} 
- */
 
 if (typeof(Storage) !== "undefined") {
   //Xác định 2 nút register và login
   let regBtn = $(".logreg__submit--reg");
   let logBtn = $(".logreg__submit--log");
+
+  //Array chứa user demo
   let demoAccArray = [{
     userMail: "test#123", 
     userPass: "test#123", 
@@ -140,7 +79,7 @@ if (typeof(Storage) !== "undefined") {
 
   /* --------------- register simulation --------------- */
 
-  //nếu chưa có, khởi tạo local storage "HALO accounts storage", có rồi thì bỏ qua tránh tạo lại sẽ xóa đè. "HALO accounts storage" sẽ là 1 JSON array chứa các accounts được register
+  //nếu chưa có, khởi tạo local storage "HALO accounts storage", là 1 JSON array chứa các accounts được register. Nếu có rồi thì bỏ qua (tránh tạo lại sẽ xóa đè)
   if (localStorage.getItem("HALO accounts storage") == null) {
     localStorage.setItem("HALO accounts storage", JSON.stringify(demoAccArray));
   }
@@ -228,35 +167,20 @@ if (typeof(Storage) !== "undefined") {
     alert(message);
   });
 }
-
-
-    
-
-/*     accountsArray.map((account) => {
-      if (account.userMail == emailLoginInput && account.userPass == passwordLoginInput) {
-        return true
-      } else { 
-        return false
-      }
-    }); */
-
-
-/*   console.log(`Xin chào ${account.userName}`)
-  console.log(`Tài khoản hoặc mật khẩu chưa đúng`) */
-
 /* 
--------------------------
+-----------------------------------
  hết login/register simulation 
-------------------------- 
+-----------------------------------
 */
 
 
 
 /* 
-------------------------- 
+----------------------------------- 
  scroll top
-------------------------- 
+-----------------------------------
 */
+
 //Xác định nút scroll up
 scrollTopBtn = document.querySelector(".scroll-up-btn");
 
@@ -276,18 +200,21 @@ scrollTopBtn.addEventListener("click", function(){
   document.body.scrollTop = 0; // Safari
   document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
 })
+
 /* 
-------------------------- 
+----------------------------------- 
  hết scroll top
-------------------------- 
+-----------------------------------
 */
+
 
 
 /* 
-------------------------- 
- camera-hub hover
-------------------------- 
+----------------------------------- 
+ camera-hub hover (hiatus)
+-----------------------------------
 */
+
 /* let dslrHalf = document.querySelectorAll(".dslr-half")
 
 let mrlHalf = document.querySelectorAll(".mrl-half")
@@ -306,17 +233,19 @@ for (let i = 0; i < dslrHalf.length; i++) {
     document.querySelector(".portal__bg--pink").style.backgroundColor = "#dba8db"
   })
 } */
+
 /* 
-------------------------- 
- hết camera-hub hover
-------------------------- 
+----------------------------------- 
+ hết camera-hub hover (hiatus)
+-----------------------------------
 */
 
 
+
 /* 
--------------------------
+-----------------------------------
  swap detail image 
-------------------------- 
+-----------------------------------
 */
 
 let mainImg = document.getElementsByClassName("details__main-img")[0];
@@ -331,16 +260,17 @@ for (let i = 0; i < subImgs.length; i++) {
 }
 
 /* 
--------------------------
+-----------------------------------
  hết swap detail image 
-------------------------- 
+-----------------------------------
 */
 
 
+
 /* 
-------------------------- 
+----------------------------------- 
 .main-info__toggler-indicator 
-------------------------- 
+-----------------------------------
 */
 let mainInfoToggler = document.querySelectorAll(".main-info__toggler");
 
@@ -369,23 +299,20 @@ if (mainInfoToggler.length > 0) {
 }
 
 /* 
-------------------------- 
+----------------------------------- 
  hết .main-info__toggler-indicator 
-------------------------- 
+-----------------------------------
 */
+
 
 
 /* 
--------------------------
+-----------------------------------
  sample full screen 
--------------------------
+-----------------------------------
 */
 let sampleImgModal = document.querySelector("#sample--full-size img");
 let imgToggler = document.querySelectorAll("#sample img");
-
-
-/* console.log(imgToggler[2].src);
-sampleImgModal.src = "img/img--details/sample-2.png"; */
 
 function sampleToggler() {
   sampleImgModal.src = this.src;
@@ -404,43 +331,68 @@ let mainImgModal = document.querySelector("#main-img--full-size img");
 /* console.log(mainImg.style.backgroundImage); */
 
 /* 
--------------------------
+-----------------------------------
  hết sample full screen 
--------------------------
+-----------------------------------
 */
 
 
+
 /* 
--------------------------
- cart badge
--------------------------
+-----------------------------------
+ add to cart simulation
+-----------------------------------
 */
 
 let addToCartBtn = document.querySelector(".btn--add-to-cart");
 let cartBadge = document.querySelector(".cart__badge-wrapper");
 let cartIcon =  document.querySelector(".cart-icon")
 
+if (localStorage.getItem("cardBagde") == null) {
+  localStorage.setItem("cardBagde", "0");
+} else {
+  cartBadge.firstChild.innerHTML = parseInt(localStorage.cardBagde)
+}
+
+if (cartBadge.firstChild.innerHTML == 0) {
+  cartBadge.style.display = "none";
+}
+
 if (addToCartBtn) {
   addToCartBtn.addEventListener("click", () => {
+
+    /* --------------- update cart badge --------------- */
+
     cartIcon.style.animationName = "cartAnimation";
     cartBadge.style.display = "flex";
-    cartBadge.firstChild.innerHTML = parseInt(cartBadge.firstChild.innerHTML) + 1;
+    
+    if (typeof(Storage) !== "undefined") {
+      localStorage.cardBagde = parseInt(localStorage.cardBagde) + 1;
+    }
+
+    cartBadge.firstChild.innerHTML = parseInt(localStorage.cardBagde);
+
     setTimeout(function(){
       cartIcon.style.animationName = "none";
     }, 500)
+
+    /* --------------- update cart item --------------- */
+
   })
 }
+
 /* 
--------------------------
- hết cart badge
--------------------------
+-----------------------------------
+ hết add to cart simulation
+-----------------------------------
 */
 
 
+
 /* 
--------------------------
- all quantity calc 
--------------------------
+-----------------------------------
+ all quantity calc (grand final calc, add calc, minus calc)
+-----------------------------------
 */
 
 /* --------------- grand final calc --------------- */
@@ -566,16 +518,17 @@ for (let i = 0; i < minusQuantityBtn.length; i++) {
 }
 
 /* 
--------------------------
- hết all quantity calc 
--------------------------
+-----------------------------------
+ hết all quantity calc (grand final calc, add calc, minus calc)
+-----------------------------------
 */
 
 
+
 /* 
--------------------------
+-----------------------------------
  remove cart item 
-------------------------- 
+-----------------------------------
 */
 
 /* --------------- check empty cart --------------- */
@@ -608,19 +561,18 @@ for (let i = 0; i < removeItemBtn.length; i++) {
 }
 
 /* 
--------------------------
+-----------------------------------
  hết remove cart item 
-------------------------- 
+-----------------------------------
 */
+
 
 
 /* 
 --------------------
- summary invoice 
+ summary live invoice 
 -------------------- 
 */
-
-/* ---------- live invoice ---------- */
 
 let inputCoupon = document.querySelector(".coupon__input");
 let submitCoupon = document.querySelector(".coupon__submit");
@@ -636,7 +588,6 @@ if (inputCoupon != null) {
       displayCoupon.style.display = "none";
       summaryGrandTotal.innerText = "390.270.000đ"
     }
-  
   })
 }
 
@@ -647,14 +598,14 @@ if (inputCoupon != null) {
 */
 
 
+
 /* 
--------------------------
+-----------------------------------
  card animation 
-------------------------- 
+-----------------------------------
 */
 
 /* --------------- quay thẻ trước sau --------------- */
-
 /* ---------- quay thẻ ra sau ---------- */
 
 //xác định ô input CVV (focus ô này sẽ quay thẻ ra sau)
@@ -747,18 +698,7 @@ if (inputValue.length != 0 ) {
 
 /* --------------- hết update input lên thẻ --------------- */
 
-/* 
--------------------------
- hết card animation 
-------------------------- 
-*/
-
-
-/* 
--------------------------
- validate card
-------------------------- 
-*/
+/* --------------- validate card --------------- */
 function isNumber(evt) {
   evt = (evt) ? evt : window.event;
   var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -767,18 +707,20 @@ function isNumber(evt) {
   }
   return true;
 }
+/* --------------- hết validate card --------------- */
 
 /* 
--------------------------
- hết validate card
-------------------------- 
+-----------------------------------
+ hết card animation 
+-----------------------------------
 */
 
 
+
 /* 
--------------------------
+-----------------------------------
  faq toggler 
-------------------------- 
+-----------------------------------
 */
 
 let faqToggler = document.querySelectorAll(".faq__item--question");
@@ -796,16 +738,16 @@ $(document).ready(function(){
 });
 
 /* 
--------------------------
+-----------------------------------
  hết faq toggler 
-------------------------- 
+-----------------------------------
 */
 
 
 /* 
--------------------------
+-----------------------------------
  scroll to payment method 
-------------------------- 
+-----------------------------------
 */
 
 let methodToggler = document.querySelector(".payment__toggler");
@@ -822,16 +764,16 @@ if (methodToggler != null) {
 }
 
 /* 
--------------------------
+-----------------------------------
  hết scroll to payment method 
-------------------------- 
+-----------------------------------
 */
 
 
 /* 
--------------------------
+-----------------------------------
  infinite review 
-------------------------- 
+-----------------------------------
 */
 
 let reviewOriginal = document.querySelector(".review__post-collection");
@@ -850,21 +792,62 @@ if (reviewOriginal) {
 }
 
 /* 
-------------------------- 
+----------------------------------- 
 hết infinite review 
-------------------------- 
+-----------------------------------
 */
-
-
-
 
 
 
 /* 
--------------------------
- add to cart animation 
-------------------------- 
+----------------------------------- 
+unused, test... 
+-----------------------------------
 */
+
+
+// login/register toggler legacy
+/* 
+let logregStatus = "login";
+let regPart = document.getElementsByClassName("reg");
+let logPart = document.getElementsByClassName("log");
+let logreg = document.getElementById("logreg");
+
+function logregSwitch() {
+  if (logregStatus == "login") {
+    for (let i = 0; i < logPart.length; i++) {
+      logPart[i].style.display = "none";
+    }
+
+    regPart[0].style.display = "block";
+    for (let i = 1; i < 3; i++) {
+      regPart[i].style.display = "flex";
+    }
+    for (let i = 3; i < regPart.length; i++) {
+      regPart[i].style.display = "block";
+    }
+
+    logregStatus = "register";
+  } else {
+    for (let i = 0; i < regPart.length; i++) {
+      regPart[i].style.display = "none";
+    }
+
+    for (let i = 0; i < 4; i++) {
+      logPart[i].style.display = "block";
+    }
+
+    logPart[4].style.display = "flex";
+    logPart[5].style.display = "block";
+
+    logregStatus = "login";
+  }
+}
+  */
+
+
+//add to cart animation legacy
+
 /* function addToCartAnimation() {
   let mainImgClone = mainImg.cloneNode(true);
   let detailImgArea = document.querySelector(".details__img-area");
@@ -889,15 +872,10 @@ $(document).ready(function(){
 /*     $(mainImgClone).animate({top: '0px', right: "50px", width: "0px", height: "0px"}, "slow"); */
 /*   });
 }); */
+
+
 /* 
--------------------------
- hết add to cart animation 
-------------------------- 
-*/
-
-
-
-/* test timer banner
+test timer banner legacy
 let i = 0;
 
 let counter = setInterval(function(){

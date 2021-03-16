@@ -503,7 +503,7 @@ Map: chung -> cart -> search bar -> search min -> search btn
   height: 17px;
   color: white;
   border-radius: 50%;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
