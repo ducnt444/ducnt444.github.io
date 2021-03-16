@@ -8,8 +8,7 @@
 }
 
 *:focus {
-  outline-color: transparent !important;
-  box-shadow: none !important;
+  outline: none;
 }
 
 p {
@@ -239,7 +238,7 @@ h3,
 .policy__icon,
 .log-max,
 #logreg .modal,
-.logreg--login-form input,
+.logreg__form input,
 .footer__menu { 
   font-size: 14px; 
 }
@@ -662,15 +661,15 @@ footer {
   height: 20px;
 }
 
-.logreg--login-form .input-group {
+.logreg__form .input-group {
   margin-bottom: 15px;
 }
 
-.logreg--login-form .input-group:last-child {
+.logreg__form .input-group:last-child {
   margin-bottom: 10px;
 }
 
-.logreg--login-form input {
+.logreg__form input {
   border: 1px solid rgba(0, 0, 0, 0.54);
   border-left: none;
   border-radius: 8px;
@@ -678,7 +677,7 @@ footer {
   padding: 5px;
 }
 
-.logreg--login-form input:focus{
+.logreg__form input:focus{
   box-shadow: none;
   border: 1px solid rgba(0, 0, 0, 0.54);
   border-left: none;

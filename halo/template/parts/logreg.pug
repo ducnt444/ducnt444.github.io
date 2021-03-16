@@ -12,39 +12,51 @@
 
       .modal-body.px-4.d-flex.flex-column.align-items-center
 
-        form.logreg--login-form.w-100(action="" role="form")
+        form.logreg__form.w-100(action="" role="form")
 
-          .input-group.w-100
+          .input-group.w-100.log.required
             .input-group-prepend
               span.input-group-text
                 i.far.fa-user-circle
-            input.form-control.login-form--username(type='text' placeholder='Email')
+            input.form-control.log__input--mail(type='text' placeholder='Email')
 
-          .input-group.w-100
+          .input-group.w-100.log
             .input-group-prepend
               span.input-group-text
                 i.fas.fa-lock
-            input.form-control.login-form--password(type='text' placeholder='Mật khẩu')
+            input.form-control.log__input--password(type='text' placeholder='Mật khẩu')
+
+          .input-group.w-100.reg.required
+            .input-group-prepend
+              span.input-group-text
+                i.far.fa-user-circle
+            input.form-control.reg__input--mail(type='text' placeholder='Email')
+
+          .input-group.w-100.reg
+            .input-group-prepend
+              span.input-group-text
+                i.fas.fa-lock
+            input.form-control.reg__input--password(type='text' placeholder='Mật khẩu')
 
           .input-group.w-100.reg
             .input-group-prepend
               span.input-group-text
                 i.far.fa-address-card
-            input.form-control.login-form--password(type='text' placeholder='Họ tên')
+            input.form-control.reg__input--name(type='text' placeholder='Họ tên')
 
           .input-group.w-100.reg
             .input-group-prepend
               span.input-group-text
                 i.fas.fa-phone
-            input.form-control.login-form--password(type='text' placeholder='Số điện thoại')
+            input.form-control.reg__input--phone(type='text' placeholder='Số điện thoại')
 
         a.forget.align-self-end.log(href="#") Quên mật khẩu?
         p.forget.align-self-start.font-11.font-italic.reg
           | Khi đăng ký, bạn xác nhận đã đọc và đồng ý với 
           a(style="color: #007bff" href="#") các điều khoản của chúng tôi
 
-        button.btn.logreg__submit.btn--dark.log Đăng nhập
-        button.btn.logreg__submit.btn--dark.font-14.reg Gia nhập cộng đồng HALO
+        button.btn.logreg__submit.logreg__submit--log.btn--dark.log Đăng nhập
+        button.btn.logreg__submit.logreg__submit--reg.btn--dark.reg Gia nhập cộng đồng HALO
 
         p.log Hoặc đăng nhập với 
 
@@ -57,9 +69,9 @@
             img.platform__img(src="img/img--misc/logo-apple.png", alt="halo thế giới máy ảnh")
 
       .modal-footer
-        a.logreg-portal.mx-auto.reg(onclick="logregSwitch()") Quay lại đăng nhập
         p.mx-auto.log
           | Chưa có tài khoản? 
-          a.logreg-portal(onclick="logregSwitch()") Đăng ký ngay 
+          span.logreg-portal.logreg-portal--to-reg Đăng ký ngay
 
+        span.logreg-portal.logreg-portal--to-log.mx-auto.reg Quay lại đăng nhập
         

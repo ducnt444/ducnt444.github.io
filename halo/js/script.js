@@ -27,12 +27,30 @@ function searchBarToggler() {
 
 
 
-
 /* 
 -------------------------
  login/register toggler 
 ------------------------- 
 */
+let logregStatus = "login";
+let logElements = $(".log");
+let regElements = $(".reg");
+let logRegPortal = $(".logreg-portal");
+
+logRegPortal.click(() => {
+  if (logregStatus === "login") {
+    logElements.hide();
+    regElements.show();
+    $(".input-group.reg").css("display","flex");
+    logregStatus = "register";
+  } else {
+    logElements.show();
+    regElements.hide();
+    logregStatus = "login";
+  }
+});
+//legacy
+/* 
 let logregStatus = "login";
 let regPart = document.getElementsByClassName("reg");
 let logPart = document.getElementsByClassName("log");
@@ -68,12 +86,170 @@ function logregSwitch() {
     logregStatus = "login";
   }
 }
-
+  */
 /* 
 -------------------------
  hết login/register toggler 
 ------------------------- 
 */
+
+
+
+/* 
+-------------------------
+ login/register simulation
+------------------------- 
+*/
+
+/* if (typeof(Storage) !== "undefined") {
+  let logBtn = $(".logreg__submit--log");
+  let regBtn = $(".logreg__submit--reg");
+  let accountsStorageObj = {
+    accounts: []
+  };
+  localStorage.setItem("accounts storage", JSON.stringify(accountsStorageObj));
+  
+  regBtn.click(() => {
+    let accountsStorageObjClone = 
+    accountsStorageObj.accounts.push(
+      { userMail: $('.reg__input--mail').val(), 
+      userPass: $('.reg__input--password').val(),
+      userName: $('.reg__input--name').val(),
+      userPhone: $('.reg__input--phone').val(),
+      }
+      );
+
+  });
+
+  //localStorage.setItem("accounts storage", JSON.stringify(obj));
+
+  //document.getElementById("result").innerHTML = JSON.parse( localStorage.getItem("accounts storage") );
+} 
+ */
+
+if (typeof(Storage) !== "undefined") {
+  //Xác định 2 nút register và login
+  let regBtn = $(".logreg__submit--reg");
+  let logBtn = $(".logreg__submit--log");
+  let demoAccArray = [{
+    userMail: "test#123", 
+    userPass: "test#123", 
+    userName: "test#123", 
+    userPhone: "test#123"
+  }];
+
+  /* --------------- register simulation --------------- */
+
+  //nếu chưa có, khởi tạo local storage "HALO accounts storage", có rồi thì bỏ qua tránh tạo lại sẽ xóa đè. "HALO accounts storage" sẽ là 1 JSON array chứa các accounts được register
+  if (localStorage.getItem("HALO accounts storage") == null) {
+    localStorage.setItem("HALO accounts storage", JSON.stringify(demoAccArray));
+  }
+
+  //event: click lên nút register
+  regBtn.click(() => {
+    //chuyển JSON array "HALO accounts storage" về dạng array bình thường để tương tác
+    let accountsArray = JSON.parse(localStorage.getItem("HALO accounts storage"));
+
+    //xác định giá trị input user muốn đăng ký làm email
+    let emailRegInput = $(".reg__input--mail").val();
+
+    //gắn cờ validation: tài khoản chưa tồn tại
+    let isExistAccount = false;
+
+    //loop: từng account có trong danh sách các account đã register (accountsArray)
+    for (let i = 0; i < accountsArray.length; i++) {
+
+      //nếu email user muốn đăng ký trùng với email của 1 account nào đã register 
+      if (emailRegInput == accountsArray[i].userMail) {
+
+        //Thông báo lỗi
+        alert(`Email ${emailRegInput} đã được sử dụng`)
+
+        //gắn cờ validation: tài khoản đã tồn tại
+        isExistAccount = true
+        break
+      }
+    }
+
+    //nếu không có account đã register nào trùng email với email user muốn đăng ký
+    if (!isExistAccount) {
+      
+      //thì push 1 object mới vào accountsArray -> accountsArray sẽ update thêm 1 account mới (chính là object này)
+      accountsArray.push(
+
+        //thông tin của account mới này sẽ là các giá trị input mà user đăng ký
+        { userMail: $('.reg__input--mail').val(), 
+        userPass: $('.reg__input--password').val(),
+        userName: $('.reg__input--name').val(),
+        userPhone: $('.reg__input--phone').val(),
+        }
+      );
+
+      //sau khi push, dùng JSON để update accountsArray phiên bản mới này về local storage để lưu lại
+      localStorage.setItem("HALO accounts storage", JSON.stringify(accountsArray));
+
+      //Thông báo thành công
+      alert(`Đăng ký thành công!`)
+    }
+ 
+  });
+
+
+  /* --------------- login simulation --------------- */
+
+  //event: click lên nút login
+  logBtn.click(() => {
+    //chuyển JSON array "HALO accounts storage" về dạng array bình thường để tương tác
+    let accountsArray = JSON.parse(localStorage.getItem("HALO accounts storage"));    
+    
+    //xác định giá trị email user nhập để login
+    let emailLoginInput = $(".log__input--mail").val();
+
+    //xác định giá trị password user nhập để login
+    let passwordLoginInput = $(".log__input--password").val();
+
+    //Tạo một messase thông báo lỗi (sẽ đổi thành báo thành công nếu validate đúng)
+    let message = "Tài khoản hoặc mật khẩu chưa đúng";
+
+    //loop: từng account có trong danh sách các account đã register (accountsArray)
+    for (let i = 0; i < accountsArray.length; i++) {
+
+      //validate: nếu một account đã register nào có email VÀ password khớp với email và password user nhập để login
+      if (accountsArray[i].userMail == emailLoginInput 
+        && accountsArray[i].userPass == passwordLoginInput) {
+
+          //Validate ok -> Đổi message thành thông báo thành công (còn không sẽ vẫn là báo lỗi)
+          message = `Xin chào ${accountsArray[i].userName}`
+          break
+      }
+    }
+
+    //hiển thị thông báo
+    alert(message);
+  });
+}
+
+
+    
+
+/*     accountsArray.map((account) => {
+      if (account.userMail == emailLoginInput && account.userPass == passwordLoginInput) {
+        return true
+      } else { 
+        return false
+      }
+    }); */
+
+
+/*   console.log(`Xin chào ${account.userName}`)
+  console.log(`Tài khoản hoặc mật khẩu chưa đúng`) */
+
+/* 
+-------------------------
+ hết login/register simulation 
+------------------------- 
+*/
+
 
 
 /* 
@@ -747,5 +923,4 @@ inputNum.addEventListener("input", function(){
 
 inputCVV.addEventListener("input", function(){
   document.querySelector(".cvv").innerHTML = "" + inputCVV.value;
-});
- */
+}); */
