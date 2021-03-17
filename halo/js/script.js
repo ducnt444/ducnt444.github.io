@@ -29,7 +29,7 @@ function searchBarToggler() {
 
 /* 
 -----------------------------------
- login/register toggler 
+ login/register switch 
 -----------------------------------
 */
 let logregStatus = "login";
@@ -52,7 +52,7 @@ logRegPortal.click(() => {
 
 /* 
 -----------------------------------
- hết login/register toggler 
+ hết login/register switch 
 -----------------------------------
 */
 
@@ -65,14 +65,20 @@ logRegPortal.click(() => {
 */
 
 if (typeof(Storage) !== "undefined") {
-  //Tạo obj tương ứng người dùng hiện tại
-  let currentUser = {
-    userMail: "", 
-    userPass: "", 
-    userName: "", 
-    userPhone: "",
-    userCart: ""
-  };
+
+  /*
+  0. Khởi tạo biến
+  I. Khi load trang
+  II. Đăng ký
+  III. Đăng nhập
+  IV. Đăng xuất
+  */
+
+  /* -------------------- 0. Khởi tạo biến -------------------- */
+
+  //Xác định 2 nút long reg toggler min, max 
+  let logregTogglers = $(".logreg-togglers");
+  let logregTogglersWrapper = $(".logreg-togglers-wrapper");
 
   //Xác định 2 nút register và login
   let regBtn = $(".logreg__submit--reg");
@@ -87,7 +93,61 @@ if (typeof(Storage) !== "undefined") {
     userCart: "test#123"
   }];
 
-  /* --------------- register simulation --------------- */
+  /* -------------------- I. Khi load trang -------------------- */
+
+  /*
+  1. Tạo {currentUser} là 1 obj rỗng, để làm frame cho user thật 
+
+  2. Khi load page sẽ check xem user đã từng vào trang chưa,
+
+  3.1 Nếu chưa, tạo 1 local "currentUser" cho chức năng lưu user đang đăng nhập, data là {currentUser} rỗng để khởi đầu
+
+  3.2 Nếu rồi, check local "currentUser": {currentUser} rỗng (đã từng vào trang nhưng không đăng nhập/đã đăng xuất) hay {currentUser} có data (đang đăng nhập)
+
+    3.2.1 Nếu có, JSON.parse ra {currentUser} từ data của local, update UI theo {currentUser} này (khóa logreg, update info, cart)
+    3.2.2 Nếu không, bỏ qua
+  */
+
+  //1. Tạo {currentUser} là 1 obj rỗng, để làm frame cho user thật 
+  let currentUser = {
+    userMail: "", 
+    userPass: "", 
+    userName: "", 
+    userPhone: "",
+    userCart: ""
+  };
+
+  //2. Khi load page sẽ check xem user đã từng vào trang chưa,
+  if (localStorage.getItem("currentUser") == null) {
+
+    //3.1 Nếu chưa, tạo 1 local "currentUser" cho chức năng lưu user đang đăng nhập, data là {currentUser} rỗng để khởi đầu
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  } else {
+
+    //3.2 Nếu rồi, check local "currentUser": {currentUser} rỗng (đã từng vào trang nhưng không đăng nhập/đã đăng xuất) hay {currentUser} có data (đang đăng nhập)
+
+    //3.2.1 Nếu {currentUser} có data (đang đăng nhập)
+    if (JSON.parse(localStorage.getItem("currentUser")).userMail != "") {
+
+      //thì update {currentUser} (đang là rỗng từ lúc load trang) theo JSON.parse ra từ data của local "currentUser"
+      currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      
+      //và update UI theo {currentUser} này:
+
+      //khóa logreg toggler
+      logregTogglers.removeAttr("data-target data-toggle");
+
+      //chuyển sang dropdown sub menu
+      logregTogglersWrapper.addClass("dropdown")
+      logregTogglers.attr("data-toggle", "dropdown")
+
+      //update cho current user
+      logregTogglers.html(`<img class="current-user__avatar" src="/halo/img/img--misc/user-avatar-default-ultra-min.jpg" alt=""><span class="username">
+      ${currentUser.userName}</span><span><i class="fas fa-caret-down"></i></span>`)
+    }
+  }
+
+  /* -------------------- II. Đăng ký -------------------- */
 
   //nếu chưa có, khởi tạo local storage "HALO accounts storage", là 1 JSON array chứa các accounts được register. Nếu có rồi thì bỏ qua (tránh tạo lại sẽ xóa đè)
   if (localStorage.getItem("HALO accounts storage") == null) {
@@ -137,63 +197,115 @@ if (typeof(Storage) !== "undefined") {
 
       //sau khi push, dùng JSON để update accountsArray phiên bản mới này về local storage để lưu lại
       localStorage.setItem("HALO accounts storage", JSON.stringify(accountsArray));
+      
+      //update {curentUser}
+      currentUser = { 
+        userMail: $('.reg__input--mail').val(), 
+        userPass: $('.reg__input--password').val(),
+        userName: $('.reg__input--name').val(),
+        userPhone: $('.reg__input--phone').val(),
+      }
+
+      //update local "currentUser"
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
       //Thông báo thành công
       alert(`Đăng ký thành công!`)
 
-      //update current user
-      currentUser = {
-        userMail: $('.reg__input--mail').val(), 
-        userPass: $('.reg__input--password').val(), 
-        userName: $('.reg__input--name').val(), 
-        userPhone: $('.reg__input--phone').val(),
-        userCart: ""
-      };
+      location.reload()
     }
  
   });
 
 
-  /* --------------- login simulation --------------- */
+  /* -------------------- III. Đăng nhập -------------------- */
 
   //event: click lên nút login
   logBtn.click(() => {
-    //chuyển JSON array "HALO accounts storage" về dạng array bình thường để tương tác
+    //chuyển local array "HALO accounts storage" về dạng array bình thường để tương tác
     let accountsArray = JSON.parse(localStorage.getItem("HALO accounts storage"));    
     
-    //xác định giá trị email user nhập để login
+    //xác định giá trị email, password user nhập để login
     let emailLoginInput = $(".log__input--mail").val();
-
-    //xác định giá trị password user nhập để login
     let passwordLoginInput = $(".log__input--password").val();
 
-    //Tạo một messase thông báo lỗi (sẽ đổi thành báo thành công nếu validate đúng)
+    //Tạo một messase, default sẽ báo lỗi (sẽ đổi thành báo thành công nếu validate đúng)
     let message = "Tài khoản hoặc mật khẩu chưa đúng";
 
-    //loop: từng account có trong danh sách các account đã register (accountsArray)
+    
+
+    //VALIDATION STARTS: loop từng account có trong danh sách các account đã register (accountsArray)
     for (let i = 0; i < accountsArray.length; i++) {
 
-      //validate: nếu một account đã register nào có email VÀ password khớp với email và password user nhập để login
+    //VALIDATION PASSED: nếu user nhập login email VÀ password khớp với một account đã register nào đó
       if (accountsArray[i].userMail == emailLoginInput 
         && accountsArray[i].userPass == passwordLoginInput) {
 
-          //Validate ok -> Đổi message thành thông báo thành công (còn không sẽ vẫn là báo lỗi)
-          message = `Xin chào ${accountsArray[i].userName}`
-          break
-      }
+        //update {currentUser}
+        currentUser = {
+          userMail: accountsArray[i].userMail, 
+          userPass: accountsArray[i].userPass, 
+          userName: accountsArray[i].userName, 
+          userPhone: accountsArray[i].userPhone,
+          userCart: ""
+        };
+
+        //update local "currentUser"
+        localStorage.setItem("currentUser", JSON.stringify(currentUser)); 
+
+        //update logreg togglers
+        logregTogglers.html(
+          JSON.parse(localStorage.currentUser).userName
+          )
+
+        //Đổi message thành thông báo thành công, bật message
+        message = `Xin chào ${accountsArray[i].userName}`;
+        alert(message);
+
+        location.reload()
+      } 
     }
 
-    //hiển thị thông báo
-    alert(message);
-    
-    //update current user
-    currentUser = {
-      userMail: $('.reg__input--mail').val(), 
-      userPass: $('.reg__input--password').val(), 
-      userName: $('.reg__input--name').val(), 
-      userPhone: $('.reg__input--phone').val(),
-      userCart: ""
-    };
+    //VALIDATION FAILED: Nếu không validate được (message vẫn sẽ là báo lỗi)
+    if (message == "Tài khoản hoặc mật khẩu chưa đúng") {
+
+      //bật message lỗi
+      alert(message)
+    }
+  });
+
+  /* -------------------- IV. Đăng xuất -------------------- */
+
+  let logoutBtn = $('.logout');
+  let dropdownSubMenu = $('.dropdown-menu')
+
+  logoutBtn.click(() => {
+
+    if (confirm("Quý khách có muốn đăng xuất?")) {
+      //hủy dropdown sub menu
+      logregTogglersWrapper.removeClass("dropdown");
+      logregTogglers.removeAttr("data-toggle");
+      dropdownSubMenu.removeClass("show");
+
+      //mở khóa và update lại logreg toggler
+      logregTogglers.attr({"data-toggle":"modal", "data-target":"#logreg"});
+      logregTogglers.html(`<span>Đăng nhập/Đăng ký</span>`);
+
+      //clear {currentUser}
+      currentUser = {
+        userMail: "", 
+        userPass: "", 
+        userName: "", 
+        userPhone: "",
+        userCart: ""
+      }
+
+      //clear local "currentUser"
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+      location.reload()
+    } 
+
   });
 }
 /* 

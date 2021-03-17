@@ -29,10 +29,13 @@
               <li class="nav-item"><a class="nav-link py-3 px-md-3" href="camera-hub.html">Ống kính</a></li>
               <li class="nav-item"><a class="nav-link py-3 px-md-3" href="camera-hub.html">Phụ kiện</a></li>
               <li class="nav-item"><a class="nav-link py-3 px-md-3" href="review.html">Đánh giá</a></li>
-              <li class="nav-item display-till-md log-min"><a class="nav-link py-3" href="#" data-toggle="modal" data-target="#logreg">Đăng nhập/Đăng ký</a></li>
+              <li class="nav-item display-till-md log-min"><a class="nav-link py-3 logreg-togglers" href="#" data-toggle="modal" data-target="#logreg"> <span>Đăng nhập/Đăng ký</span></a></li>
             </ul>
           </div>
-          <div class="log-cart-search"><a class="hidden-till-md log-max" id="logregToggler" href="#" data-toggle="modal" data-target="#logreg">Đăng nhập/Đăng ký</a><a class="cart-icon" href="cart.html"><i class="fas fa-shopping-cart"></i>
+          <div class="log-cart-search">
+            <div class="logreg-togglers-wrapper"><a class="hidden-till-md log-max logreg-togglers" id="logregToggler" href="#" data-toggle="modal" data-target="#logreg"> <span>Đăng nhập/Đăng ký</span></a>
+              <div class="dropdown-menu"><a class="dropdown-item" href="#"> <span class="mr-4"> <i class="fas fa-id-card"></i></span><span>Thông tin cá nhân</span></a><a class="dropdown-item logout" href="#"> <span class="mr-4"> <i class="fas fa-sign-out-alt"></i></span><span>Đăng xuất  </span></a></div>
+            </div><a class="cart-icon" href="cart.html"><i class="fas fa-shopping-cart"></i>
               <div class="cart__badge-wrapper"><span class="cart__badge">0</span></div></a>
             <button class="btn search-btn hidden-till-md d-flex align-items-center" onclick="searchBarToggler()"><i class="fas fa-search"></i></button>
           </div>
