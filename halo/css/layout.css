@@ -981,12 +981,14 @@ footer {
 
   .logreg-togglers-wrapper .dropdown-menu {
     background-color: #222222;
-    width: 100%;
+    min-width: 100%;
+    top: 44px ;
   }
 
   .logreg-togglers-wrapper .dropdown-item {
     color: white;
     font-size: 16px;
+    transition: all 0.3s;
   }
 
   .logreg-togglers-wrapper .dropdown-item:hover {
@@ -1117,6 +1119,10 @@ footer {
     min-width: 200px;
   }
 
+  .logreg-togglers-wrapper .dropdown-item {
+    padding: 7.5px 15px;
+  }
+
   .nav-item:nth-child(-n+4) {   /* giãn cách lại các menu item */
     margin: 0px 20px !important;
   }
@@ -1186,4 +1192,11 @@ footer {
     padding-top: 60px;
     font-size: 16px;
   }
+
+  .logreg-togglers-wrapper .dropdown-menu {
+    background-color: #222222;
+    min-width: 100%;
+    top: 48px ;
+  }
 }
+
