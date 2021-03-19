@@ -117,14 +117,14 @@ if (typeof(Storage) !== "undefined") {
     userCart: ""
   };
 
-  //2. Khi load page sẽ check xem user đã từng vào trang chưa,
+  //2. Khi load page sẽ check xem user đã từng vào trang chưa (chưa vào sẽ không có local storage "currentUser")
   if (localStorage.getItem("currentUser") == null) {
 
     //3.1 Nếu chưa, tạo 1 local "currentUser" cho chức năng lưu user đang đăng nhập, data là {currentUser} rỗng để khởi đầu
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   } else {
 
-    //3.2 Nếu rồi, check local "currentUser": {currentUser} rỗng (đã từng vào trang nhưng không đăng nhập/đã đăng xuất) hay {currentUser} có data (đang đăng nhập)
+    //3.2 Nếu rồi, check tiếp đến local "currentUser": {currentUser} rỗng (đã từng vào trang nhưng không đăng nhập/đã đăng xuất) hay {currentUser} có data (đang đăng nhập)
 
     //3.2.1 Nếu {currentUser} có data (đang đăng nhập)
     if (JSON.parse(localStorage.getItem("currentUser")).userMail != "") {
