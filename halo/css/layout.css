@@ -807,6 +807,55 @@ footer {
  hết utilities buttons group
  -------------------- */
 
+/* --------------------
+ loading screen
+ -------------------- */
+
+@keyframes spinningLogo {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}
+
+#loading {
+   width: 100%;
+   height: 100vh;
+   position: fixed;
+   top:0px;
+   background-color: #222222;
+   z-index: 10000;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transition: 0.5s;
+}
+
+.loading__content {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.loading__img {
+  width: 200px;
+  animation: spinningLogo 5s linear 0s infinite normal;
+}
+
+.loading__counter {
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading__text {
+  font-size: 16px;
+}
+
+/* --------------------
+ hết loading screen
+ -------------------- */
 
 /* --------------------
  media queries 

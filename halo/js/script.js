@@ -60,6 +60,33 @@ logRegPortal.click(() => {
 
 /* 
 -----------------------------------
+ loading screen
+-----------------------------------
+*/
+//counter
+let loading =  document.getElementById("loading");
+let counter =  document.getElementById("counter__num");
+
+let loadingCounter = setInterval(() => {
+  counter.innerHTML = parseInt(counter.innerHTML) + 1
+  }, 30)
+
+setTimeout(() => {
+  clearTimeout(loadingCounter);
+  loading.style.visibility = "hidden";
+  loading.style.opacity = "0";
+}, 3000)
+
+/* 
+-----------------------------------
+ hết loading screen
+-----------------------------------
+*/
+
+
+
+/* 
+-----------------------------------
  login/register simulation
 -----------------------------------
 */
