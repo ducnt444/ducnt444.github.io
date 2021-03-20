@@ -1,5 +1,5 @@
 #updates.modal.fade
-  .modal-dialog.modal-dialog-centered
+  .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
     .modal-content
       // Modal Header
       .modal-header
@@ -8,8 +8,19 @@
       // Modal body
       .modal-body
         ul 
-          li - v1.1 (14/03): Tối ưu
-          li - v1.2 (16/03): Giả lập đăng ký/đăng nhập/đăng xuất cơ bản (sử dụng local storage, chỉ hiển thị được tên người dùng trên thanh nav)
+          li.mb-3
+            h2.font-weight-bold.text-left v1.1: 
+            ul 
+              li - Tối ưu mục review
+              li - Fix bug mất viền item khi focus
+              li - Giản lược animation
+
+          li.mb-3
+            h2.font-weight-bold.text-left v1.2: 
+            ul 
+              li - Mô phỏng đăng ký/đăng nhập/đăng xuất cơ bản (sử dụng local storage, chỉ hiển thị được tên người dùng trên thanh nav)
+              li - Mô phỏng loading trang
+
       // Modal footer
       .modal-footer.justify-content-between
         span.updates__hide-warning Sau khi đóng, thông báo này sẽ không hiển thị nữa cho đến khi mở trang chủ trong 1 tab mới 
