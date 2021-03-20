@@ -684,7 +684,7 @@ section {
   /* ---------- update item styles ---------- */
 
   .details__recommend .item {
-    margin: 0px 15px;
+    margin: 15px;
   }
 
   .item .card-body {
