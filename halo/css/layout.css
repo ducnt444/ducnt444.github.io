@@ -828,7 +828,7 @@ footer {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   transition: 0.5s;
+   transition: all 0.5s;
 }
 
 .loading__content {

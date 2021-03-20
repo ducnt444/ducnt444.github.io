@@ -64,6 +64,7 @@ logRegPortal.click(() => {
 -----------------------------------
 */
 //counter
+
 let loading =  document.getElementById("loading");
 let counter =  document.getElementById("counter__num");
 
@@ -75,6 +76,9 @@ setTimeout(() => {
   clearTimeout(loadingCounter);
   loading.style.visibility = "hidden";
   loading.style.opacity = "0";
+  if (sessionStorage.getItem("loading") == null) {
+    sessionStorage.setItem("loading", "done")
+  }
 }, 3000)
 
 /* 
