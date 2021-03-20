@@ -1,3 +1,22 @@
+/* ---------- update ----------*/
+
+#updates .modal-content {
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+#updates .modal-content .close {
+  font-size: 36px;
+  padding: 5px;
+}
+
+.updates__hide-warning {
+  font-size: 16px;
+  font-style: italic;
+}
+
 /* ---------- body styles ----------*/
 body,
 main {
