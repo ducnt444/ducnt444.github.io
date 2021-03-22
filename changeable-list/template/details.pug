@@ -11,6 +11,7 @@ head
 
 body
   .container.d-flex.flex-column.justify-content-center.align-items-center.mt-5
+    
     h1.text-center Thêm mới học viên
 
     form.w-100(action="")
@@ -52,7 +53,8 @@ body
 
     script.
       $("#save").click(() => {
-        let confirmPopup = confirm(`Thêm học viên mới ${$("input")[0].value} thành công!
+        let confirmPopup = confirm(`
+        Thêm học viên mới ${$("input")[0].value} thành công!
         Bạn có muốn quay về trang chủ?`)
         if (confirmPopup == true) {
           location.replace("index.html")
