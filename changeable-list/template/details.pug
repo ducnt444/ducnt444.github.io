@@ -39,7 +39,7 @@ body
             i.fas.fa-angle-left
           span Quay lại 
          
-        a.ml-3.btn.bg-success.text-light#save(href="index.html")
+        button.ml-3.btn.bg-success.text-light#save(type="button")
           span.mr-2
             i.fas.fa-save
           span Lưu
@@ -49,6 +49,23 @@ body
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
 
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns' crossorigin='anonymous')
-    
-    script(src="script.js")
+
+    script.
+      $("#save").click(() => {
+        let confirmPopup = confirm(`Thêm học viên mới ${$("input")[0].value} thành công!
+        Bạn có muốn quay về trang chủ?`)
+        if (confirmPopup == true) {
+          location.replace("index.html")
+        }
+        $.post(
+          "http://localhost:3000/users",
+          {
+          "name": $("input")[0].value,
+          "birthday": $("input")[1].value,
+          "email": $("input")[2].value,
+          "phone": $("input")[3].value
+          }
+        );
+      });
+
             

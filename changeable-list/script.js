@@ -38,15 +38,3 @@ function loadDoc() {
 
 loadDoc();
 
-$("#save").click(() => {
-  $.post(
-    "http://localhost:3000/users",
-    {
-      "name": $("input")[0].value,
-      "birthday": $("input")[1].value,
-      "email": $("input")[2].value,
-      "phone": $("input")[3].value
-    }
-  );
-});
-
