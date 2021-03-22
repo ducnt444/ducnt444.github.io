@@ -11,7 +11,17 @@ head
 
 body
   .container.d-flex.flex-column.justify-content-center.align-items-center.mt-5
-    
+    #add-finish.modal.fade
+      .modal-dialog
+        .modal-content
+
+          .modal-body
+            p.body-text
+
+          .modal-footer.d-flex.justify-content-center
+            button.btn.btn-success.modal--back.mr-4(type='button' data-dismiss='modal') Quay về trang chủ
+            button.btn.btn-info.modal--continue(type='button' data-dismiss='modal') Thêm học viên khác
+
     h1.text-center Thêm mới học viên
 
     form.w-100(action="")
@@ -40,7 +50,7 @@ body
             i.fas.fa-angle-left
           span Quay lại 
          
-        button.ml-3.btn.bg-success.text-light#save(type="button")
+        button.ml-3.btn.bg-success.text-light#save(type="button" data-toggle="modal" data-target="#add-finish" data-backdrop="static" data-keyboard="false")
           span.mr-2
             i.fas.fa-save
           span Lưu
@@ -52,13 +62,17 @@ body
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns' crossorigin='anonymous')
 
     script.
+
       $("#save").click(() => {
-        let confirmPopup = confirm(`
+        $(".body-text").html(`
         Thêm học viên mới ${$("input")[0].value} thành công!
-        Bạn có muốn quay về trang chủ?`)
-        if (confirmPopup == true) {
-          location.replace("index.html")
-        }
+        <br>
+        Bạn có muốn quay về trang chủ?`
+        )
+      });
+
+      $(".modal--back").click(() => {
+        location.replace("index.html");
         $.post(
           "http://localhost:3000/users",
           {
@@ -69,5 +83,18 @@ body
           }
         );
       });
+
+      $(".modal--continue").click(() => {
+        $.post(
+          "http://localhost:3000/users",
+          {
+          "name": $("input")[0].value,
+          "birthday": $("input")[1].value,
+          "email": $("input")[2].value,
+          "phone": $("input")[3].value
+          }
+        );
+      });
+
 
             

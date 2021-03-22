@@ -103,7 +103,7 @@ input[type=number] {
 
 /* --------------- kết thúc reset css --------------- */
 
-*:not(i) {
+*:not(i, .close, h1) {
   font-size: 16px !important;
   font-weight: 500 !important;
   transition: all 0.3s;
