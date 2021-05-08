@@ -1,0 +1,19 @@
+.transition-screen {
+  top: 0vh;
+}
+
+@keyframes animated-bg {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: right center;
+  }
+}
+
+.screen {
+  background-image: url("../images/lobby-bg.jpg");
+  background-position: left center;
+  background-size: 110%;
+  animation: animated-bg 25s linear 0s infinite alternate;
+}

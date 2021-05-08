@@ -130,13 +130,6 @@ input[type=number] {
 
 /* --------------- kết thúc reset css --------------- */
 
-@keyframes swipeUpScreen {
-  0% {top: 100vh;}
-  30% {top: 0;}
-  70% {top: 0;}
-  100% {top: -100vh;}
-}
-
 h1 {
   font-size: 36px;
   font-weight: 700;
@@ -149,8 +142,16 @@ body {
   overflow: hidden;
 }
 
+.version-info {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 10000;
+  color: #000;
+  cursor: default;
+}
+
 .screen {
-  background-image: url("../images/bg--title.webp");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -163,7 +164,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7)
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
 }
 
 .transition-screen {
@@ -175,7 +177,7 @@ body {
   transition: all 1s;
 }
 
-.login-box {
+.title-box {
   position: relative;
   z-index: 1001;
   background-color: #fff;
@@ -183,25 +185,26 @@ body {
   border-radius: 16px;
   padding: 30px;
   transition: all 0.5s;
+  min-width: 268px;
 }
 
-.login-box form {
-  margin: 40px 0px;
-}
+.title-box form, .title-box h1 {
+  margin-bottom: 40px;
+} 
 
-.login-box input {
+.title-box input {
   margin-bottom: 20px;
   padding: 5px 15px;
   border-radius: 8px;
 }
 
-.login-box button {
+.title-box .btn {
   border: 1px solid rgb(68, 68, 68);
   border-radius: 8px;
   font-size: 16px;
 }
 
-.login-box button:hover {
+.title-box .btn:hover {
   background-color: black;
   color: #fff;
 }

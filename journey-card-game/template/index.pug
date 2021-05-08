@@ -1,7 +1,7 @@
 extends parts/layout.pug
 
 block title 
-  title Mulligan stage - Journey the card game
+  title Journey the card game
 
 block css
   link(rel="stylesheet", href="css/title.css")
@@ -11,17 +11,17 @@ block script
 block content
 
   .screen.d-flex.justify-content-center.align-items-center
-    .login-box.box-1
-      h1.login-header.text-center Đăng nhập 
-      h1.register-header.text-center.hidden Đăng ký
+    .title-box.box-1
+      h1.login-header.text-center Login
+      h1.register-header.text-center.hidden Register
 
       form.d-flex.flex-column.align-items-center(action="")
         input(type="text" placeholder="Username") 
-        button.btn.btn--login(type="button") Xác nhận 
-        button.btn.btn--register.hidden(type="button") Xác nhận 
+        button.btn.btn--login(type="button") Confirm
+        button.btn.btn--register.hidden(type="button") Confirm
       .log-reg-wrapper 
-        p.to-register.text-center Tạo username mới 
-        p.to-login.text-center.hidden Quay về đăng nhập
+        p.to-register.text-center Create new profile
+        p.to-login.text-center.hidden Return to login
 
     .loading.d-flex.justify-content-center.align-items-end.hidden--fade
       h1.loading-header.me-3 Loading
