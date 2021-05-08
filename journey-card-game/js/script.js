@@ -44,6 +44,10 @@ $(".btn--register").click(() => {
     transitionSwipeUp()
   }, 2000);
 
+  setTimeout(() => {
+    window.location.replace("mulligan.html");
+  }, 4000);
+
 })
 
 
