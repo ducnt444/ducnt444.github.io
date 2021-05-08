@@ -10,6 +10,37 @@ block script
   script(src="js/lobby.js") 
 
 block content
-  .screen
+  .screen.d-flex.justify-content-between.align-items-center
+
+    img.logo(src="./images/logo-white.png", alt="")
+
+    .menu 
+      .user-info.d-flex.justify-content-between.align-items-center 
+        h1.username Player One
+        h1.userlevel 1
+      ul.menu-list 
+        li.menu-start.d-flex.justify-content-center.align-items-center 
+          h2 Start
+        li.menu-store.d-flex.justify-content-center.align-items-center 
+          h2 Store
+        li.menu-deck.d-flex.justify-content-center.align-items-center 
+          h2 Deck
+        li.menu-stats.d-flex.justify-content-center.align-items-center 
+          h2 Stats 
+        li.menu-logout.d-flex.justify-content-center.align-items-center 
+          h2 Logout
     
+    .process
+      h1.process-stage Chapter I: Dying Light
+      h1.process-stage Chapter I: Again All Odds
+      h1.process-stage Chapter I: Shadow Die Twice
+      h1.process-stage Chapter I: Redemption
+      h1.process-stage Chapter I: Celeste
+      h1.process-stage Chapter I: Celeste
+
+    .news
+      h2 What's new
+      ul.news-list 
+        li Beta! 
+      
 

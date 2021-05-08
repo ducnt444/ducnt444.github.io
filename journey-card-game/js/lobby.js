@@ -1,7 +1,5 @@
 
-
-$(document).ready(
-  setTimeout(() => {
-  transitionSwipeDown()
-  console.log(transitionPosition)
-}, 1000))
+$(".menu-logout").click(()=> {
+  $(".title-box, .loading, .modal-bg").toggleClass("hidden--fade");
+  redirectPage("index")
+})

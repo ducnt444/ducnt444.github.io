@@ -1,0 +1,50 @@
+
+.menu-btn-group .btn {
+  width: 200px;
+  margin: 10px 0px;
+}
+
+.screen {
+  background-image: url("../images/bg--title.webp");
+}
+
+.modal-bg {
+  display: block;
+}
+
+.title-box {
+  position: relative;
+  z-index: 1001;
+  background-color: #fff;
+  box-shadow: 0 0 20px #fff;
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.5s;
+  min-width: 268px;
+}
+
+.title-box form, .title-box h1 {
+  margin-bottom: 40px;
+} 
+
+.title-box input {
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+.title-box .btn {
+  border: 1px solid rgb(68, 68, 68);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.title-box .btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.to-register, .to-login {
+  color: #0d6efd;
+  cursor: pointer;
+}
