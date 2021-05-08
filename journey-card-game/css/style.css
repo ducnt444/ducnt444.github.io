@@ -145,7 +145,7 @@ body {
 }
 
 .screen {
-  background-image: url("/images/bg--title.webp");
+  background-image: url("../images/bg--title.webp");
   background-position: center;
   background-size: cover;
   width: 100%;
