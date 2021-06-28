@@ -1,0 +1,139 @@
+
+
+
+/* --------------- main --------------- */
+/* ----- sections settings ----- */
+/* main {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+} */
+.section {
+/*     border-radius: 8px;
+    margin-bottom: 30px; */
+    padding: 0px 15px;
+}
+.section-info {
+    text-align: center;
+}
+.section-intro {
+    margin: 15px 0;
+}
+.btn--section {
+    border-radius: 16px;
+    width: 120px;
+    padding: 7.5px 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ---------- coloring ---------- */
+/* ----- section html + java ----- */
+.section--html,
+.section--java {
+    color: #fff;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* ----- section css + go ----- */
+.section--css, 
+.section--go {
+    color: #fff;
+    background: #136a8a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    
+}
+
+/* ----- section javascript + flutter ----- */
+.section--javascript,
+.section--flutter {
+    color: #000;
+    background: #ffe259;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+/* ----- section reactjs + react-native----- */
+.section--reactjs,
+.section--react-native {
+    color: #fff;
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           
+}
+
+/* ----- section nodejs ----- */
+.section--nodejs {
+    color: #fff;
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    
+}
+
+/* ---------- sections details ---------- */
+/* ----- html ----- */
+
+/* ---------- footer ---------- */
+
+@media screen and (min-width: 768px) {
+    pre[class*="language-"] {
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 100%;
+        margin: 0 auto 30px auto;
+    }
+    pre[class*="language-"] code {
+        display: block;
+        margin-left: -250px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section .row {
+        align-items: center;
+        padding: 70px 0px;
+    }
+    .section-header {
+        font-size: 60px;
+    }
+    .section-intro {
+        margin: 30px 0;
+    }
+    .btn--section {
+        border-radius: 16px;
+        width: 150px;
+        padding: 7.5px 15px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+/*     .section .row .col-xl-8, 
+    .section .row .col-xl-4 {
+        padding-right: 30px;
+        padding-left: 30px;
+    } */
+    pre[class*="language-"] {
+        margin: 0;
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* ----- swapping ----- */
+    .section--css .section-info,
+    .section--reactjs .section-info,
+    .section--java .section-info,
+    .section--flutter .section-info {
+        order: 2;
+    }
+    .section--css .section-demo,
+    .section--reactjs .section-demo,
+    .section--java .section-demo,
+    .section--flutter .section-demo {
+        order: 1;
+    }
+}

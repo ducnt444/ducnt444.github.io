@@ -1,0 +1,95 @@
+/* --------------- OpenSans --------------- */
+/* OpenSans regular + italic */
+@font-face {
+    font-family: OpenSans;
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: OpenSans;
+    font-weight: normal;
+    font-style: italic;
+    src: url('../fonts/OpenSans-Italic.ttf');
+}
+
+/* OpenSans semi-bold + italic*/
+@font-face {
+    font-family: OpenSans;
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/OpenSans-SemiBold.ttf');
+}
+@font-face {
+    font-family: OpenSans;
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/OpenSans-SemiBoldItalic.ttf');
+}
+
+/* OpenSans bold + italic*/
+@font-face {
+    font-family: OpenSans;
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: OpenSans;
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/OpenSans-BoldItalic.ttf');
+}
+
+
+/* --------------- SFMono --------------- */
+/* SFMono regular + italic */
+@font-face {
+    font-family: SFMono;
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SFMonoRegular.woff');
+}
+@font-face {
+    font-family: SFMono;
+    font-weight: normal;
+    font-style: italic;
+    src: url('../fonts/SFMonoRegularItalic.woff');
+}
+
+/* SFMono semi-bold + italic*/
+@font-face {
+    font-family: SFMono;
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/SFMonoSemibold.woff');
+}
+@font-face {
+    font-family: SFMono;
+    font-weight: 500;
+    font-style: italic;
+    src: url('../fonts/SFMonoSemiboldItalic.woff');
+}
+
+/* SFMono bold + italic*/
+@font-face {
+    font-family: SFMono;
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/SFMonoBold.woff');
+}
+@font-face {
+    font-family: SFMono;
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/SFMonoBoldItalic.woff');
+}
+
+body {
+    font-family: OpenSans;
+    font-size: 16px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    font-family: SFMono;
+}

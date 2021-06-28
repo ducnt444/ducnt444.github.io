@@ -1,0 +1,130 @@
+
+main {
+    padding: 0 15px;
+}
+
+/* --------------- aside left --------------- */
+.aside-left {
+    width: 280px;
+    height: calc(100vh - 60px);
+    background-color: rgb(250, 250, 250);
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1049;
+    left: -280px;
+    top: 60px;
+    transition: all 0.3s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.aside-left.aside-left-active {
+    left: 0px;
+}
+.aside-section {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.aside-section-header,
+.aside-section-link {
+    padding-left: 15px;
+}
+.aside-section-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.aside-section-link {
+    width: 100%;
+    display: block;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    font-weight: 500;
+}
+.aside-section-link-active,
+.aside-section-link:hover {
+    background: #24c6dc; /* fallback for old browsers */
+    background: linear-gradient(269.34deg, #3db2dd -4.2%, #2d6fb6 80.75%);
+    color: #fff;
+}
+
+/* --------------- main content --------------- */
+/* ----- navigator panel ----- */
+.navigator-panel {
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.navigator-panel .nav-link{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+.navigator-panel .nav-link span {
+    margin: 0 10px;
+}
+.navigator-panel .nav-link i {
+    vertical-align: baseline;
+}
+.nav-current {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.nav-prev {
+    order: 1;
+}
+.nav-next {
+    order: 2;
+}
+
+/* ----- main content sections ----- */
+.main-content section {
+    margin: 40px 0;
+}
+.section-header {
+    margin-bottom: 10px;
+}
+.main-content p {
+    margin-bottom: 1rem;
+}
+.main-content code {
+    display: block;
+    margin-left: -220px;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    main {
+        padding: 0;
+        display: flex;
+    }
+    
+    /* ----- asides full ver ----- */
+    .aside-left, .promotion {
+        width: 250px;
+        height: 100%;
+        padding: 30px 0 0 0;
+        position: static;
+        z-index: 1040;
+    }
+    .aside-left {
+        transition: none;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    .main-content,
+    .container {
+        width: calc(100% - 500px);
+        max-width: calc(100% - 500px);
+        padding: 0 30px;
+    }
+    .navigator-panel .nav-link span {
+        font-size: 18px;
+    } 
+}
