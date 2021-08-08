@@ -15,7 +15,7 @@ export default Vue.extend({
   name: "Home",
   data: function () {
     return {
-      content: "VUE!"
+      content: "VUE121212!"
     };
   },
 });
