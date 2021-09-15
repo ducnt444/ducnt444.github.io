@@ -187,12 +187,8 @@ textarea.form-control {
   flex-wrap: wrap;
   align-items: flex-start;
   padding: 15px 20px;
-  background-image: url("../img/img--carousel/banner-bg-1-min.jpg");
+  background-image: url("../img/img--payment/banner-bg-1-min.jpg");
 }
-
-
-
-
 
 #domestic-card .front {
   background-image: url("../img/img--payment/vcb-card.png");
