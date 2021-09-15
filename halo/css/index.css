@@ -75,7 +75,7 @@ main {
   height: 14px;
   border-radius: 50%;
   background-color: transparent;
-  background-image: url("../img/img--misc/halo-logo-white.png");
+  background-image: url("../img/img--misc/halo-logo-white2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -83,7 +83,7 @@ main {
 }
 
 #main-carousel .carousel-indicators .active {
-  background-image: url("../img/img--misc/halo-logo-white--active.png");
+  background-image: url("../img/img--misc/halo-logo-white--active2.png");
 }
 
 .banner-1 {
@@ -994,7 +994,7 @@ main {
   }
 
   .banner-1 {
-    background-image: url('../img/img--carousel/banner-bg-1-ultra-max.jpg');
+    background-image: url('../img/img--carousel/banner-bg-1-ultra-max2.jpg');
     animation: animatedBanner1 30s linear 0s infinite alternate;
     background-size: 2133px 1200px;
     background-repeat: no-repeat;
