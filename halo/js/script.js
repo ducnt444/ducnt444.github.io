@@ -1029,11 +1029,8 @@ inputCVV.addEventListener("input", function(){
 let isFacebookLoaded = false;
 $(window).on("scroll", function () {
   if (!isFacebookLoaded) {
-    let hT = $(".intro--lens").offset().top,
-      hH = $(".intro--lens").outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-    if (wS > hT + hH - wH) {
+    let scrolled = $(this).scrollTop();
+    if (scrolled > 900) {
       $("body").append(`
             <script>
       window.fbAsyncInit = function() {
@@ -1056,20 +1053,3 @@ $(window).on("scroll", function () {
   }
 });
 
-// #fb-root
-// script.
-//   window.fbAsyncInit = function() {
-//   FB.init({
-//   xfbml            : true,
-//   version          : 'v10.0'
-//   });
-//   };
-//   (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-//   fjs.parentNode.insertBefore(js, fjs);
-//   }(document, 'script', 'facebook-jssdk'));
-// // Your Chat Plugin code
-// .fb-customerchat(attribution='setup_tool' page_id='103550388473714' theme_color='#6699cc' logged_in_greeting='Xin chào, HALO có thể giúp gì cho bạn?' logged_out_greeting='Xin chào, HALO có thể giúp gì cho bạn?')
